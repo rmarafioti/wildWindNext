@@ -65,7 +65,7 @@ export default function Navbar() {
           <Link id={styles.faqContainer} href="/Faqs">
             <TbMessageCircleQuestion id={styles.faqIcon} />
           </Link>
-          <Link id={styles.contactContainer} href="/contact">
+          <Link id={styles.contactContainer} href="/Contact">
             <button id={styles.contactButton}>Contact Us</button>
           </Link>
         </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
             </div>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navContainer} href="/contact">
+            <Link className={styles.navContainer} href="/Contact">
               <HiOutlineEnvelope className={styles.linkIcon} />
               <h4 className={styles.link}>CONTACT</h4>
             </Link>
