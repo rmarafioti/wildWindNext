@@ -168,7 +168,7 @@ export default function Navbar() {
               <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
               <IoIosArrowForward />
             </Link>
-            <Link className={styles.dropLink} href="/mercedestats">
+            <Link className={styles.dropLink} href="/MercyTats">
               <h4 className={styles.dropLinkName}>Mercedes Wright</h4>
               <IoIosArrowForward />
             </Link>

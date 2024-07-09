@@ -43,7 +43,7 @@ export default function Tattoos() {
         <Link href="/RichTats" className={styles.artistLink}>
           <h3>Rich Marafioti</h3>
         </Link>
-        <Link href="/Mercedestats" className={styles.artistLink}>
+        <Link href="/MercyTats" className={styles.artistLink}>
           <h3>Mercedes Wright</h3>
         </Link>
       </div>
