@@ -26,6 +26,23 @@
     overflow-x: hidden;
     border-radius: 0px;
   }
+
+  #iconButton,
+  #popUpButton {
+    color: var(--wildGreen);
+    display: flex;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 15px;
+    background-color: rgb(229, 223, 223);
+    cursor: pointer;
+    transition: border 0.1s;
+  }
+  
+  #popUpButton {
+    font-size: 20px;
+    padding: 5px;
+  }
   
   /* Faq Pop Up */
   
