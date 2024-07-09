@@ -163,7 +163,7 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkTop}
-              href="/richtats"
+              href="/RichTats"
             >
               <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
               <IoIosArrowForward />
