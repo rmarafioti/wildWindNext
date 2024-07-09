@@ -74,7 +74,7 @@ export default function Navbar() {
       <div id={styles.menuContainer}>
         <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
           <li id={styles.aboutItem}>
-            <Link className={styles.navContainer} href="/aboutus">
+            <Link className={styles.navContainer} href="/AboutUs">
               <GoBook className={styles.linkIcon} />
               <h4 className={styles.link} id={styles.aboutUs}>
                 ABOUT US
