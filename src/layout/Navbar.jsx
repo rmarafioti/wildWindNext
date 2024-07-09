@@ -112,7 +112,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navContainer} href="/aftercare">
+            <Link className={styles.navContainer} href="/Aftercare">
               <IoHeartOutline className={styles.linkIcon} />
               <h4 className={styles.link}>AFTERCARE</h4>
             </Link>

@@ -1,0 +1,66 @@
+.afterCare {
+    color: var(--wildGreen);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+  
+  .afterHeader {
+    font-weight: bold;
+  }
+  
+  .afterTagline {
+    color: black;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px var(--wildGreen);
+  }
+  
+  .aftercaresContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .careContainer,
+  .careContainerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px var(--wildGreen);
+  }
+  
+  .careContainer {
+    margin-top: 2rem;
+  }
+  
+  .careContainerBottom {
+    border-bottom: none;
+  }
+  
+  .instructions {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: var(--wildGreen);
+    margin-right: 0.5rem;
+  }
+  
+  @media (max-width: 586px) {
+    #afterTagline {
+      text-align: center;
+    }
+    .careContainer {
+      margin-top: 1rem;
+    }
+    .instructions {
+      font-size: 20px;
+    }
+    .popUpContent {
+      border-radius: 0px;
+    }
+  }
