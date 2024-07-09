@@ -142,7 +142,7 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkMiddle}
-              href="/media"
+              href="/Media"
             >
               <h4 className={styles.dropLinkName}>Media</h4>
               <IoIosArrowForward />
