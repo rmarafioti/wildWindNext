@@ -8,7 +8,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 0px solid green;
+    border: px solid green;
   
     --wildBlue: rgb(101, 193, 220);
     --wildBackground: rgb(226, 209, 189);

@@ -134,7 +134,7 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkTop}
-              href="/reviews"
+              href="/Reviews"
             >
               <h4 className={styles.dropLinkName}>Reviews</h4>
               <IoIosArrowForward />
