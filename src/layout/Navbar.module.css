@@ -1,4 +1,4 @@
-nav {
+#nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,6 +45,7 @@ nav {
     padding: 0.3rem 1rem 0.3rem 1rem;
     margin-right: 1rem;
     border: 2.5px solid var(--wildGreen);
+    border-radius: 5px;
   }
   
   /* hamburger */
@@ -116,8 +117,8 @@ nav {
   /* menu */
   
   .menu {
-    margin: 0.5rem 1rem 0.5rem 1rem;
-    padding-bottom: 0.5rem;
+    margin: 0rem 1rem 0rem 1rem;
+    padding-bottom: 0rem;
     background-color: white;
     display: none;
     z-index: 1000;
@@ -172,6 +173,7 @@ nav {
     border-radius: 5px;
     padding: 0.5rem;
     transition: background-color 0.5s ease;
+    font-weight: 400;
   }
   
   #aboutUs,
@@ -223,17 +225,19 @@ nav {
     flex-direction: column;
     align-items: start;
     justify-content: left;
+    padding: 0rem .5rem 0rem .5rem;
   }
   
   .dropLink {
+    color: inherit;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     border-radius: 5px;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    padding: 0rem ;
+    margin: .5rem;
     transition: background-color 0.5s ease;
   }
   
@@ -253,7 +257,7 @@ nav {
   }
   
   @media (max-width: 586px) {
-    nav {
+    #nav {
       padding-bottom: 0.5rem;
     }
     #navLogo {
