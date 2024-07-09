@@ -90,7 +90,7 @@ export default function Navbar() {
             </div>
           </li>
           <li id={styles.tattooItem}>
-            <Link className={styles.navContainer} href="/tattoos">
+            <Link className={styles.navContainer} href="/Tattoos">
               <IoSkullOutline className={styles.linkIcon} />
               <h4 className={styles.link} id={styles.tats}>
                 TATTOOS
