@@ -62,7 +62,7 @@ export default function Navbar() {
           />
         </Link>
         <div id={styles.navRight}>
-          <Link id={styles.faqContainer} href="/faqs">
+          <Link id={styles.faqContainer} href="/Faqs">
             <TbMessageCircleQuestion id={styles.faqIcon} />
           </Link>
           <Link id={styles.contactContainer} href="/contact">
@@ -147,7 +147,7 @@ export default function Navbar() {
               <h4 className={styles.dropLinkName}>Media</h4>
               <IoIosArrowForward />
             </Link>
-            <Link className={styles.dropLink} href="/faqs">
+            <Link className={styles.dropLink} href="/Faqs">
               <h4 className={styles.dropLinkName}>FAQs</h4>
               <IoIosArrowForward />
             </Link>
