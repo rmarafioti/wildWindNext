@@ -1,0 +1,44 @@
+.label {
+    font-weight: bold;
+    color: var(--wildGreen);
+  }
+
+  .tattooSizeForm,
+.tattooLocation,
+.tattooSizeContainer {
+  width: 480px;
+}
+
+  .attachFile,
+.tattooSizeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.form,
+.messageForm,
+.formSubmit {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 586px) {
+    .requestContact {
+      margin: 0rem 1rem 1rem 1rem;
+    }
+    .requestHeader {
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .contactForm,
+    .tattooSizeForm,
+    .tattooLocation,
+    .tattooSizeOption {
+      width: 100%;
+    }
+    .tattooSizeContainer {
+      width: 100%;
+    }
+  }
