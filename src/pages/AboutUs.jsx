@@ -56,7 +56,7 @@ export default function Shop() {
           name="description"
           content="This is the about page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/aboutus" />
+        <link rel="canonical" href="/AboutUs" />
       </Head>
       <h1 className={styles.mainShopHeader}>About Us</h1>
       <img

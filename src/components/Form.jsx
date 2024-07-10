@@ -161,7 +161,7 @@ export default function Form() {
           form.current.reset();
           setFormValues(inputForm);
 
-          router.push("/RequestSent");
+          router.push("/requestsent");
         },
         (error) => {
           console.log("MESSAGE FAILED", error.text);
