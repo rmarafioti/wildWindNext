@@ -1,0 +1,123 @@
+.shopAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+  
+  .mainShopHeader {
+    color: var(--wildGreen);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .shopHeader {
+    color: var(--wildGreen);
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--wildGreen);
+    margin: 2rem 0rem 1rem 0rem;
+  }
+  
+  .ourMission {
+    border-bottom: none;
+    margin-bottom: 0rem;
+  }
+  
+  .shopIconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .shopIcon {
+    padding: 0rem 0.5rem 0rem 0.5rem;
+  }
+  
+  .shopImages {
+    margin: 1rem;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    max-width: 480px;
+    max-height: 480px;
+    border-radius: 8px;
+  }
+  
+  .shopImages.fade-out {
+    opacity: 0;
+  }
+  
+  .firstParagraph {
+    border-top: 1px solid var(--wildGreen);
+    padding-top: 1rem;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .unorderedList {
+    display: flex;
+    flex-direction: row;
+    margin: 0rem;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .missionItem {
+    color: black;
+    font-size: 18px;
+    font-style: italic;
+    padding: 0rem 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--wildGreen);
+  }
+  
+  .shopParagraphs {
+    text-align: center;
+    max-width: 480px;
+  }
+  
+  .shopMiddleParagraphs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 480px;
+  }
+  
+  .middleParagraph {
+    margin: 1rem 0rem 1rem 0rem;
+  }
+  
+  .bottomParagraph, .midParagraph {
+    margin-top: 0rem;
+  }
+  
+  .shopLinksContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .shopLinks {
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--wildGreen);
+    border-radius: 5px;
+    border: 2px solid var(--wildGreen);
+    width: 300px;
+  }
+  
+  @media (max-width: 586px){
+    #shopLinksContainer {
+      width: 100%;
+    }
+    .shopLinks {
+      width: 100%;
+    }
+    #shopImages {
+      width: 100%;
+    }
+  }
+  

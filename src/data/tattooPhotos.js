@@ -101,7 +101,7 @@ export const richPhotos = [
   },
 ];
 
-export const mercedesPhotos = [
+export const mercyPhotos = [
   {
     id: 1,
     image:

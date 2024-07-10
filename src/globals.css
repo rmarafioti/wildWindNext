@@ -14,3 +14,34 @@ body {
     --wildBackground: rgb(226, 209, 189);
     --wildGreen: rgb(124, 155, 63);
   }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #iconButton,
+#popUpButton {
+  color: var(--wildGreen);
+  display: flex;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 15px;
+  background-color: rgb(229, 223, 223);
+  cursor: pointer;
+  transition: border 0.1s;
+}
+
+#popUpButton {
+  font-size: 20px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: rgba(101, 193, 220, 0.2);
+}
+
+#checkout {
+  width: 100vw;
+}

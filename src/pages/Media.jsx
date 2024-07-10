@@ -15,7 +15,7 @@ export default function Media() {
           name="description"
           content="This is the media page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/Media" />
+        <link rel="canonical" href="/media" />
       </Head>
       <h1 id={styles.mediaHeader}>MEDIA</h1>
       <h3 className={styles.mediaHeader}>
@@ -60,7 +60,7 @@ export default function Media() {
         ></iframe>
       </div>
       <div className={styles.mediaLinksContainer}>
-        <Link className={styles.mediaLinks} href="/Reviews">
+        <Link className={styles.mediaLinks} href="/reviews">
           <h3>Reviews</h3>
         </Link>
         <Link className={styles.mediaLinks} href="/aboutus">
