@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node src/server/server.js",
+    "start": "node src/api/payments.js",
     "lint": "next lint"
   },
   "dependencies": {
