@@ -149,7 +149,7 @@ export default function Home() {
         </p>
       </li>
       <div className={styles.homeLinksContainer}>
-        <Link href="/Reviews" className={styles.homeLink}>
+        <Link href="/reviews" className={styles.homeLink}>
           <h4>Read more reviews</h4>
         </Link>
       </div>

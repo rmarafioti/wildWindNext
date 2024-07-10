@@ -118,10 +118,10 @@ export default function Shop() {
         Trans Now initiative.
       </p>
       <div className={styles.shopLinksContainer}>
-        <Link href="/Reviews" className={styles.shopLinks}>
+        <Link href="/reviews" className={styles.shopLinks}>
           <h3>Reviews</h3>
         </Link>
-        <Link href="/Media" className={styles.shopLinks}>
+        <Link href="/media" className={styles.shopLinks}>
           <h3>Media</h3>
         </Link>
       </div>

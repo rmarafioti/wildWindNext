@@ -62,10 +62,10 @@ export default function Navbar() {
           />
         </Link>
         <div id={styles.navRight}>
-          <Link id={styles.faqContainer} href="/Faqs">
+          <Link id={styles.faqContainer} href="/faqs">
             <TbMessageCircleQuestion id={styles.faqIcon} />
           </Link>
-          <Link id={styles.contactContainer} href="/Contact">
+          <Link id={styles.contactContainer} href="/contact">
             <button id={styles.contactButton}>Contact Us</button>
           </Link>
         </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
       <div id={styles.menuContainer}>
         <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
           <li id={styles.aboutItem}>
-            <Link className={styles.navContainer} href="/AboutUs">
+            <Link className={styles.navContainer} href="/aboutus">
               <GoBook className={styles.linkIcon} />
               <h4 className={styles.link} id={styles.aboutUs}>
                 ABOUT US
@@ -90,7 +90,7 @@ export default function Navbar() {
             </div>
           </li>
           <li id={styles.tattooItem}>
-            <Link className={styles.navContainer} href="/Tattoos">
+            <Link className={styles.navContainer} href="/tattoos">
               <IoSkullOutline className={styles.linkIcon} />
               <h4 className={styles.link} id={styles.tats}>
                 TATTOOS
@@ -106,13 +106,13 @@ export default function Navbar() {
             </div>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navContainer} href="/Contact">
+            <Link className={styles.navContainer} href="/contact">
               <HiOutlineEnvelope className={styles.linkIcon} />
               <h4 className={styles.link}>CONTACT</h4>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navContainer} href="/Aftercare">
+            <Link className={styles.navContainer} href="/aftercare">
               <IoHeartOutline className={styles.linkIcon} />
               <h4 className={styles.link}>AFTERCARE</h4>
             </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkTop}
-              href="/Reviews"
+              href="/reviews"
             >
               <h4 className={styles.dropLinkName}>Reviews</h4>
               <IoIosArrowForward />
@@ -142,12 +142,12 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkMiddle}
-              href="/Media"
+              href="/media"
             >
               <h4 className={styles.dropLinkName}>Media</h4>
               <IoIosArrowForward />
             </Link>
-            <Link className={styles.dropLink} href="/Faqs">
+            <Link className={styles.dropLink} href="/faqs">
               <h4 className={styles.dropLinkName}>FAQs</h4>
               <IoIosArrowForward />
             </Link>
@@ -163,12 +163,12 @@ export default function Navbar() {
             <Link
               className={styles.dropLink}
               id={styles.dropLinkTop}
-              href="/RichTats"
+              href="/richtats"
             >
               <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
               <IoIosArrowForward />
             </Link>
-            <Link className={styles.dropLink} href="/MercyTats">
+            <Link className={styles.dropLink} href="/mercytats">
               <h4 className={styles.dropLinkName}>Mercedes Wright</h4>
               <IoIosArrowForward />
             </Link>

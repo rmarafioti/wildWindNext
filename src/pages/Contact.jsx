@@ -32,7 +32,7 @@ export default function Contact() {
         </h4>
       </section>
       <section>
-        <Link className={styles.contactLink} href="/RequestAppt">
+        <Link className={styles.contactLink} href="/requestappt">
           <h3 className={styles.contactButtons}>Request an appointment</h3>
         </Link>
       </section>
