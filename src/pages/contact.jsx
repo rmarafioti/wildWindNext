@@ -19,28 +19,31 @@ export default function Contact() {
       </Head>
       <h1 className={styles.header}>Contact Us</h1>
       <section className={styles.contactHeader}>
-        <h3 className={styles.headerTagline}>
+        <h2 className={styles.headerTagline}>
           Reach out to request an appointment or inquire about day of
           availability
-        </h3>
-        <h4 className={styles.headerTaglineTwo}>
+        </h2>
+        <p className={styles.headerTaglineTwo}>
           For general questions please review our{" "}
           <Link className={styles.reviewLink} href="/faqs">
             FAQs
           </Link>{" "}
           first
-        </h4>
+        </p>
       </section>
-      <section>
+      <section className={styles.contactButtonSection}>
         <Link className={styles.contactLink} href="/requestappt">
           <h3 className={styles.contactButtons}>Request an appointment</h3>
         </Link>
       </section>
       <section className={styles.contactInfoContainer}>
         <div className={styles.contactInfo}>
-          ADDRESS:
+          <p>ADDRESS:</p>
           <p className={styles.contactInfoValue}>
-            <a href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082731,-87.6874096,15z/data=!4m6!3m5!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!16s%2Fg%2F11bw5xqdp7?entry=ttu">
+            <a
+              id={styles.address}
+              href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082731,-87.6874096,15z/data=!4m6!3m5!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!16s%2Fg%2F11bw5xqdp7?entry=ttu"
+            >
               1452 N. Western Ave. Chicago, IL 60622
             </a>
           </p>

@@ -1,219 +1,236 @@
 .contact {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contactHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--wildGreen);
-  }
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
 
-  .requestContact {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
 
-  .requestHeader {
-    margin: 1rem 1rem 2rem 1rem;
-    font-weight: bold;
-    border-bottom: 1px solid var(--wildGreen);
+.requestContact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.requestHeader {
+  margin: 1rem 1rem 2rem 1rem;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.headerTagline,
+.headerTaglineTwo {
+  color: black;
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+}
+
+.headerTagline {
+  font-size: 20px;
+}
+
+.reviewLink {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 0.2rem;
+}
+
+.contactLink {
+  text-decoration: none;
+}
+
+.contactButtonSection {
+  margin: 1rem;
+}
+
+.contactButtons {
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+.contactInfoContainer {
+  border-top: 1px solid var(--wildGreen);
+}
+
+
+.contactInfo {
+  color: black;
+  display: flex;
+  align-items: start;
+  margin: 1rem;
+}
+
+.contactInfoValue {
+  margin-left: 1rem;
+}
+
+#phone {
+  margin-left: 1rem;
+}
+
+#email {
+  margin-left: 1.5rem;
+}
+
+.contactInfo a:link,
+.contactInfo a:visited {
+  color: black;
+  margin: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--wildGreen);
+}
+#address {
+  margin: 0rem;
+  text-align: center;
+}
+
+.hoursContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#hour {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  color: black;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+#timesTop {
+  margin-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: bold;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+/* RequestAppt.jsx */
+
+#requestContact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.requestHeader {
+  margin: 1rem 1rem 2rem 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  #contactHeader {
+    margin: 1rem;
+    text-align: center;
   }
-  
-  .header {
-    margin-top: 1rem;
-    font-weight: bold;
+  .contactButtonSection {
+    width: 100%;
   }
-  
+  #contactInfoContainer {
+    margin: 1rem;
+  }
+  .headerTagline {
+    margin-bottom: 1rem;
+  }
   .headerTagline,
   .headerTaglineTwo {
-    color: black;
-    font-weight: normal;
-    padding-bottom: 0.5rem;
-  }
-  
-  .reviewLink {
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-    font-weight: bolder;
-    padding: 0.2rem;
-  }
-  
-  .contactLink {
-    text-decoration: none;
-  }
-  
-  .contactButtons {
-    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
     text-align: center;
-    text-decoration: none;
-    color: var(--wildGreen);
-    border-radius: 5px;
-    border: 2px solid var(--wildGreen);
-    margin-bottom: 2rem;
   }
-  
-  .contactButtonBottom {
-    margin-bottom: 2rem;
-  }
-  
-  .contactInfoContainer {
-    margin-bottom: 2rem;
-    border-top: 1px solid var(--wildGreen);
-  }
-  
-  .contactInfo {
-    display: flex;
-    margin: 1rem;
-  }
-  
-  .contactInfoValue {
-    margin: 0rem;
-  }
-  
-  #phone {
-    margin-left: 1rem;
-  }
-  
-  #email {
-    margin-left: 1.5rem;;
-  }
-  
-  .contactInfo a:link,
-  .contactInfo a:visited {
-    color: black;
-    margin: 1rem;
-    text-decoration: none;
-    border-bottom: 1px solid var(--wildGreen);
-  }
-  
-  .hoursContainer {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  #hour {
-    margin: 0rem 1rem 0rem 1rem;
-  }
-  
-  .hours {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .times {
-    color: black;
-    margin: 0rem 1rem 0rem 1rem;
-  }
-  
-  #timesTop {
-    margin-bottom: 0.5rem;
-  }
-  
-  .bold {
-    font-weight: bold;
-    border-bottom: 1px solid var(--wildGreen);
-  }
-  
-  /* RequestAppt.jsx */
-  
-  #requestContact {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .requestHeader {
-    margin: 1rem 1rem 2rem 1rem;
-    font-weight: bold;
-    border-bottom: 1px solid var(--wildGreen);
-  }
-  
-  @media (max-width: 586px) {
-    #contactHeader {
-      margin: 1rem;
-      text-align: center;
-    }
-    .contactButtons {
-      margin-top: 1rem;
-    }
-    #contactInfoContainer {
-      margin: 1rem;
-    }
-  }
-  
-  /* RequestSent.jsx */
-  
+}
+
+/* RequestSent.jsx */
+
+#requestSent {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#requestSentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+#requestSentMessage {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+.requestMessage {
+  color: black;
+  padding-bottom: 1rem;
+}
+
+#requestMessageTop {
+  border-bottom: none;
+  margin-bottom: 0rem;
+}
+
+.messageTag {
+  color: black;
+}
+
+#messageTagBottom {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+#returnLink {
+  text-decoration: none;
+}
+
+#returnHome {
+  margin: 1rem;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
   #requestSent {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  
-  #requestSentContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid var(--wildGreen);
-    margin-bottom: 1rem;
-  }
-  
-  #requestSentMessage {
-    font-weight: bold;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--wildGreen);
-    margin-bottom: 1rem;
-  }
-  
-  .requestMessage {
-    color: black;
-    padding-bottom: 1rem;
-  }
-  
-  #requestMessageTop {
-    border-bottom: none;
-    margin-bottom: 0rem;
-  }
-  
-  .messageTag {
-    color: black;
-  }
-  
-  #messageTagBottom {
-    font-weight: bold;
-    padding-bottom: 1rem;
-  }
-  
-  #returnLink {
-    text-decoration: none;
-  }
-  
-  #returnHome {
     margin: 1rem;
-    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
     text-align: center;
-    text-decoration: none;
-    color: var(--wildGreen);
-    border-radius: 5px;
-    border: 2px solid var(--wildGreen);
   }
-  
-  @media (max-width: 586px) {
-    #requestSent {
-      margin: 1rem;
-      text-align: center;
-    }
-  }
+}
