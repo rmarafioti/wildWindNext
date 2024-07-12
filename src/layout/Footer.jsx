@@ -24,17 +24,19 @@ export default function Footer() {
         <a
           className={styles.footerIcon}
           href="https://www.instagram.com/wildwindtattoo/?hl=en"
+          aria-label="icon which links to the Wild Wind Tattoo's Instagram page."
         >
           <FaInstagram />
         </a>
         <a
           className={styles.footerIcon}
           href="https://www.facebook.com/wildwindtattoo/"
+          aria-label="icon which links to the Wild Wind Tattoo's Facebook page."
         >
           <FaFacebookSquare />
         </a>
       </div>
-      <h4 id={styles.footerTag}>copyright 2024 Marf inc.</h4>
+      <p id={styles.footerTag}>copyright 2024 Marf inc.</p>
     </footer>
   );
 }

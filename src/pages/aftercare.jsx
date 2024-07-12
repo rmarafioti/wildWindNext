@@ -48,7 +48,7 @@ export default function Care() {
   }
 
   return (
-    <main className={styles.afterCare}>
+    <article className={styles.afterCare}>
       <Head>
         <title>Aftercare Page - wildwindtattoo.com</title>
         <meta
@@ -58,10 +58,10 @@ export default function Care() {
         <link rel="canonical" href="/aftercare" />
       </Head>
       <h1 className={styles.afterHeader}>Aftercare</h1>
-      <h3 className={styles.afterTagline}>
-        everything you need to know about taking care of your tattoo.
-      </h3>
-      <ul className={styles.aftercaresContainer}>
+      <p className={styles.afterTagline}>
+        Everything you need to know about taking care of your tattoo.
+      </p>
+      <section className={styles.aftercaresContainer}>
         {aftercare.map((aftercareInstructions) => (
           <AftercareCard
             key={aftercareInstructions.id}
@@ -74,10 +74,10 @@ export default function Care() {
             instructionsTag={aftercareInstructions.instructionsTag}
           />
         ))}
-      </ul>
+      </section>
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
-    </main>
+    </article>
   );
 }

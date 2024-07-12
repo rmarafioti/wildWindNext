@@ -8,11 +8,13 @@
   }
   
   .afterHeader {
-    font-weight: bold;
+    font-size: 30px;
+    font-weight:normal;
   }
   
   .afterTagline {
     color: black;
+    font-size: 20px;
     font-weight: normal;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
@@ -46,7 +48,7 @@
     display: flex;
     align-items: center;
     font-weight: normal;
-    color: var(--wildGreen);
+    color: black;
     margin-right: 0.5rem;
   }
 
@@ -68,7 +70,7 @@
   }
   
   @media (max-width: 586px) {
-    #afterTagline {
+    .afterTagline {
       text-align: center;
     }
     .careContainer {

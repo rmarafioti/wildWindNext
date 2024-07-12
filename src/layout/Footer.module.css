@@ -72,7 +72,7 @@
   
   #footerTag,
   #logoTag {
-    color: var(--wildGreen);
+    color: black;
     margin-bottom: 1rem;
   }
   
