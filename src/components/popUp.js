@@ -22,9 +22,9 @@ function usePopUp() {
   ) => {
     const content = (
       <div>
-        <h3 className={popUpstyles.popHeader}>{headerOne}</h3>
+        <h2 className={popUpstyles.popHeader}>{headerOne}</h2>
         <p className={popUpstyles.popInstructions}>{instructionsOne}</p>
-        <h3 className={popUpstyles.popHeader}>{headerTwo}</h3>
+        <h2 className={popUpstyles.popHeader}>{headerTwo}</h2>
         <p className={popUpstyles.popInstructions}>{instructionsTwo}</p>
         <p className={popUpstyles.instructionsTag}>{instructionsTag}</p>
       </div>
@@ -74,6 +74,7 @@ const PopUp = ({ isOpen, children, closePopUp }) => {
       <div
         className={popUpstyles.popUpContent}
         onClick={(e) => e.stopPropagation()}
+        tabIndex={0}
       >
         <div className={popUpstyles.buttonSection}>
           <div id={popUpstyles.popUpButton} onClick={handleClose}>

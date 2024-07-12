@@ -9,10 +9,13 @@
 }
 
 #headerFaqs {
-  font-weight: bold;
+  font-size: 30px;
+  font-weight:normal;
 }
 #faqTagline {
   color: black;
+  font-size: 20px;
+    font-weight: normal;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--wildGreen);
@@ -27,6 +30,7 @@
 }
 
 .faq {
+  color: black;
   font-weight: normal;
   margin-right: 1rem;
   border-bottom: solid 1px var(--wildGreen);

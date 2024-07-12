@@ -59,9 +59,9 @@ export default function Care() {
       </Head>
       <h1 className={styles.afterHeader}>Aftercare</h1>
       <p className={styles.afterTagline}>
-        Everything you need to know about taking care of your tattoo.
+        Everything you need to know about taking care of your tattoo
       </p>
-      <section className={styles.aftercaresContainer}>
+      <section>
         {aftercare.map((aftercareInstructions) => (
           <AftercareCard
             key={aftercareInstructions.id}

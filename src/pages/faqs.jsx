@@ -29,7 +29,7 @@ export default function Faq() {
   }
 
   return (
-    <main id={styles.faqs}>
+    <article id={styles.faqs}>
       <Head>
         <title>FAQs Page - wildwindtattoo.com</title>
         <meta
@@ -39,10 +39,10 @@ export default function Faq() {
         <link rel="canonical" href="/faqs" />
       </Head>
       <h1 id={styles.headerFaqs}>FAQs</h1>
-      <h3 id={styles.faqTagline}>
+      <p id={styles.faqTagline}>
         General questions before you fill out our contact form
-      </h3>
-      <ul id={styles.questions}>
+      </p>
+      <section id={styles.questions}>
         {faqs.map((faq) => (
           <FaqCard
             key={faq.id}
@@ -51,10 +51,10 @@ export default function Faq() {
             answer={faq.answer}
           />
         ))}
-      </ul>
+      </section>
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
-    </main>
+    </article>
   );
 }

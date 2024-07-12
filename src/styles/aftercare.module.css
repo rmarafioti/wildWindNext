@@ -1,85 +1,96 @@
 .afterCare {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 1rem 2rem 1rem;
-  }
-  
-  .afterHeader {
-    font-size: 30px;
-    font-weight:normal;
-  }
-  
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.afterHeader {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.afterTagline {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px var(--wildGreen);
+}
+
+.aftercaresContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.careContainer,
+.careContainerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--wildGreen);
+}
+
+.careContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.careContainerBottom {
+  border-bottom: none;
+}
+
+.instructions {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.iconButton,
+.popUpButton {
+  color: var(--wildGreen);
+  display: flex;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 15px;
+  background-color: rgb(229, 223, 223);
+  cursor: pointer;
+  transition: border 0.1s;
+}
+
+.popUpButton {
+  font-size: 20px;
+  padding: 5px;
+}
+
+@media (max-width: 586px) {
   .afterTagline {
-    color: black;
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: solid 1px var(--wildGreen);
+    text-align: center;
   }
-  
-  .aftercaresContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .careContainer,
-  .careContainerBottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: solid 1px var(--wildGreen);
-  }
-  
   .careContainer {
-    margin-top: 2rem;
-  }
-  
-  .careContainerBottom {
-    border-bottom: none;
-  }
-  
-  .instructions {
-    display: flex;
+    text-align: left;
+    width: 100%;
     align-items: center;
-    font-weight: normal;
-    color: black;
-    margin-right: 0.5rem;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--wildGreen);
   }
 
-  .iconButton,
-  .popUpButton {
-    color: var(--wildGreen);
-    display: flex;
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 15px;
-    background-color: rgb(229, 223, 223);
-    cursor: pointer;
-    transition: border 0.1s;
-  }
-  
-  .popUpButton {
+  .instructions {
     font-size: 20px;
-    padding: 5px;
+    text-wrap: wrap;
+    padding-bottom: 1rem 0rem 1rem 0rem;
   }
-  
-  @media (max-width: 586px) {
-    .afterTagline {
-      text-align: center;
-    }
-    .careContainer {
-      margin-top: 1rem;
-    }
-    .instructions {
-      font-size: 20px;
-    }
-    .popUpContent {
-      border-radius: 0px;
-    }
+  .popUpContent {
+    border-radius: 0px;
   }
+}
