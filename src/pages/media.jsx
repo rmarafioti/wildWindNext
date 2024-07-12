@@ -8,7 +8,7 @@ import styles from "../styles/media.module.css";
  */
 export default function Media() {
   return (
-    <main className={styles.media}>
+    <article className={styles.media}>
       <Head>
         <title>Media Page - wildwindtattoo.com</title>
         <meta
@@ -17,10 +17,10 @@ export default function Media() {
         />
         <link rel="canonical" href="/media" />
       </Head>
-      <h1 id={styles.mediaHeader}>MEDIA</h1>
-      <h3 className={styles.mediaHeader}>
+      <h1 id={styles.mediaHeader}>Media</h1>
+      <h2 className={styles.mediaHeader}>
         Harley-Davidson <b className={styles.targetText}>X</b> Wild Wind Tattoo
-      </h3>
+      </h2>
       <div className={styles.mediaContainer}>
         <iframe
           className={styles.video}
@@ -34,10 +34,10 @@ export default function Media() {
           allowFullScreen
         ></iframe>
       </div>
-      <h3 className={styles.mediaHeader} id={styles.mediaHeaderBottom}>
+      <h2 className={styles.mediaHeader} id={styles.mediaHeaderBottom}>
         Breakfast for Dinner <b className={styles.targetText}>X</b> Wild Wind
         Tattoo <b className={styles.targetText}>X</b> At-Bay
-      </h3>
+      </h2>
       <div
         className={`${styles.mediaContainer} ${styles.mediaContainerBottom}`}
       >
@@ -67,6 +67,6 @@ export default function Media() {
           <h3>About Us</h3>
         </Link>
       </div>
-    </main>
+    </article>
   );
 }
