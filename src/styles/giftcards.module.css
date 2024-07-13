@@ -1,16 +1,15 @@
-#giftCards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
+.giftCards {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 3rem 1rem;
   }
   
-  #giftCardHeader {
-    color: var(--wildGreen);
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 0.5rem;
+  .giftCardHeader {
+    font-size: 30px;
+    font-weight: normal;
     border-bottom: 1px solid var(--wildGreen);
     margin-bottom: 1rem;
   }
