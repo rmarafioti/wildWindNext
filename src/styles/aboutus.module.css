@@ -1,20 +1,21 @@
 .shopAbout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
     margin: 1rem 1rem 2rem 1rem;
   }
   
   .mainShopHeader {
-    color: var(--wildGreen);
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 30px;
+    font-weight: normal;
   }
   
   .shopHeader {
     color: var(--wildGreen);
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: normal;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--wildGreen);
     margin: 2rem 0rem 1rem 0rem;
@@ -32,7 +33,12 @@
   }
   
   .shopIcon {
+    font-size: 30px;
     padding: 0rem 0.5rem 0rem 0.5rem;
+  }
+
+  .shopIcon:visited, .shopIcon:link {
+    color: var(--wildGreen);
   }
   
   .shopImages {
@@ -50,6 +56,7 @@
   
   .firstParagraph {
     border-top: 1px solid var(--wildGreen);
+    color: black;
     padding-top: 1rem;
     max-width: 480px;
     text-align: center;
@@ -73,11 +80,13 @@
   }
   
   .shopParagraphs {
+    color: black;
     text-align: center;
     max-width: 480px;
   }
   
   .shopMiddleParagraphs {
+    color: black;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -110,13 +119,13 @@
   }
   
   @media (max-width: 586px){
-    #shopLinksContainer {
+    .shopLinksContainer {
       width: 100%;
     }
     .shopLinks {
       width: 100%;
     }
-    #shopImages {
+    .shopImages {
       width: 100%;
     }
   }
