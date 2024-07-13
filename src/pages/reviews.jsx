@@ -15,16 +15,16 @@ export default function Reviews() {
   function ReviewCard({ name, review }) {
     return (
       <li className={styles.review}>
-        <h2>{name}</h2>
+        <h2 className={styles.name}>{name}</h2>
         <div className={styles.ratingSection}>
           <h3 className={styles.rating}>Rating: </h3>
-          <h3 className={styles.stars}>
+          <p className={styles.stars}>
             <FaStar />
             <FaStar />
             <FaStar />
             <FaStar />
             <FaStar />
-          </h3>
+          </p>
         </div>
         <p className={styles.clientReview}>"{review}"</p>
       </li>
@@ -32,7 +32,7 @@ export default function Reviews() {
   }
 
   return (
-    <main className={styles.reviewPage}>
+    <article className={styles.reviewPage}>
       <Head>
         <title>Reviews Page - wildwindtattoo.com</title>
         <meta
@@ -41,10 +41,10 @@ export default function Reviews() {
         />
         <link rel="canonical" href="/reviews" />
       </Head>
-      <h1 className={styles.reviewHeader}>REVIEWS</h1>
-      <h3 className={styles.reviewTag}>
+      <h1 className={styles.reviewHeader}>Reviews</h1>
+      <p className={styles.reviewTag}>
         Take a look at what our clients have to say about us!
-      </h3>
+      </p>
       <ul className={styles.reviews}>
         {reviews.map((review) => (
           <ReviewCard
@@ -65,6 +65,6 @@ export default function Reviews() {
           <h3>Read Google Reviews</h3>
         </a>
       </div>
-    </main>
+    </article>
   );
 }
