@@ -9,7 +9,7 @@ import styles from "../styles/contact.module.css";
  */
 export default function RequestAppt() {
   return (
-    <main className={styles.requestContact}>
+    <article className={styles.requestContact}>
       <Head>
         <title>Request Appointment Page - wildwindtattoo.com</title>
         <meta
@@ -20,6 +20,6 @@ export default function RequestAppt() {
       </Head>
       <h1 className={styles.requestHeader}>Request An Appointment</h1>
       <Form />
-    </main>
+    </article>
   );
 }

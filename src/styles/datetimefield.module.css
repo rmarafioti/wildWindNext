@@ -61,20 +61,20 @@
   }
   
   @media (max-width: 586px) {
-    #requestContact {
+    .requestContact {
       margin: 0rem 1rem 1rem 1rem;
     }
-    #requestHeader {
+    .requestHeader {
       text-align: center;
       padding-bottom: 1rem;
     }
-    #contactForm,
-    #tattooSizeForm,
-    #tattooLocation,
-    #tattooSizeOption {
+    .contactForm,
+    .tattooSizeForm,
+    .tattooLocation,
+    .tattooSizeOption {
       width: 100%;
     }
-    #tattooSizeContainer {
+    .tattooSizeContainer {
       width: 100%;
     }
   }
