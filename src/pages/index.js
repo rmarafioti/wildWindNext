@@ -12,7 +12,7 @@ import styles from "../styles/home.module.css";
  */
 export default function Home() {
   return (
-    <main className={styles.home}>
+    <article className={styles.home}>
       <Head>
         <title>Wild Wind Tattoo - wildwindtattoo.com</title>
         <meta
@@ -62,7 +62,7 @@ export default function Home() {
       </p>
 
       <Link href="/aboutus" className={styles.homeLink}>
-        <h4>Learn more</h4>
+        <h3>Learn more</h3>
       </Link>
       <h2 className={styles.headerTwo}>Expert Tattoo Services</h2>
       <ul className={styles.tattooServices}>
@@ -86,13 +86,13 @@ export default function Home() {
       </ul>
 
       <Link href="/tattoos" className={styles.homeLink}>
-        <h4>View tattoos</h4>
+        <h3>View tattoos</h3>
       </Link>
 
       <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
 
-      <ul className={styles.whyChoose}>
-        <li className={styles.listItem}>
+      <section className={styles.whyChoose}>
+        <div className={styles.listItem}>
           <h3 className={styles.headerThree}>
             <IoCheckmark className={styles.checkmark} />
             Experienced Artists:
@@ -100,8 +100,8 @@ export default function Home() {
           <p className={styles.homeParagraph}>
             Our team brings years of expertise and passion to every tattoo.
           </p>
-        </li>
-        <li className={styles.listItem}>
+        </div>
+        <div className={styles.listItem}>
           <h3 className={styles.headerThree}>
             <IoCheckmark className={styles.checkmark} />
             Community Focus:
@@ -110,8 +110,8 @@ export default function Home() {
             We actively engage with and support our local community through
             various initiatives and partnerships.
           </p>
-        </li>
-        <li className={styles.listItem}>
+        </div>
+        <div className={styles.listItem}>
           <h3 className={styles.headerThree}>
             <IoCheckmark className={styles.checkmark} />
             Inclusive Space:
@@ -120,21 +120,21 @@ export default function Home() {
             We are committed to providing a welcoming environment for all
             clients, ensuring everyone feels comfortable and respected.
           </p>
-        </li>
-      </ul>
+        </div>
+      </section>
 
       <h2 className={styles.headerTwo}>Client Testimonials</h2>
-      <li className={styles.homeReview}>
-        <h2>Margaux S.</h2>
+      <section className={styles.homeReview}>
+        <h2 className={styles.reviewerName}> Margaux S.</h2>
         <div className={styles.ratingSection}>
           <h3 className={styles.rating}>Rating: </h3>
-          <h3 className={styles.stars}>
+          <p className={styles.stars}>
             <FaStar />
             <FaStar />
             <FaStar />
             <FaStar />
             <FaStar />
-          </h3>
+          </p>
         </div>
         <p className={`${styles.homeParagraph} ${styles.homeParagraphReview}`}>
           {" "}
@@ -147,12 +147,11 @@ export default function Home() {
           see how it healed. I've told my friends to go see Rich and I can't
           recommend enough! Thank you!"
         </p>
-      </li>
-      <div className={styles.homeLinksContainer}>
-        <Link href="/reviews" className={styles.homeLink}>
-          <h4>Read more reviews</h4>
-        </Link>
-      </div>
-    </main>
+      </section>
+
+      <Link href="/reviews" className={styles.homeLink}>
+        <h3>Read more reviews</h3>
+      </Link>
+    </article>
   );
 }

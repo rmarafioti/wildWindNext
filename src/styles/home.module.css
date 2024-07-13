@@ -5,11 +5,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
   }
   
   .headerHome {
-    font-weight: bold;
+    font-size: 30px;
+  font-weight: normal;
   }
   
   .shopPhoto {
@@ -19,8 +20,9 @@
   }
   
   .headerTwo {
-    color: black;
-    padding-bottom: .5rem;
+    font-size: 30px;
+    font-weight: normal;
+    
     border-bottom: 1px solid var(--wildGreen);
     margin: 1rem 0rem 1rem 0rem;
   }
@@ -57,6 +59,7 @@
   }
   
   .homeParagraph {
+    color: black;
     margin: .25rem 1rem 1rem 1rem;
     max-width: 480px;
   }
@@ -71,13 +74,21 @@
     font-weight: bold;
     color: black;
     background-color: white;
-    border: none;
     padding: .5rem;
+    border-radius: 5px;
     border: 2.5px solid var(--wildGreen);
   }
   
   .homeParagraphReview {
     color: black;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .reviewerName {
+    color: black;
+    text-align: left;
+    font-weight: normal;
   }
   
   .ratingSection {
@@ -85,7 +96,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--wildGreen);
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     margin-bottom: 1.5rem;
   }
   
@@ -100,7 +111,6 @@
   }
   
   .homeReview {
-    font-style: italic;
     margin-bottom: 1rem;
   }
   
