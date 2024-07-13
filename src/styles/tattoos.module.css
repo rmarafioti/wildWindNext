@@ -5,16 +5,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 1rem 1rem 2rem 1rem;
   }
   
   .tattooHeader,
   .artistHeader {
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: normal;
   }
   
   .artistHeader {
+    margin: 1rem 0rem 1rem 0rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--wildGreen);
   }
@@ -36,9 +37,11 @@
   .unorderedList {
     display: flex;
     flex-direction: row;
-    margin: 0rem;
+   
+    margin-bottom: 1rem;
     padding: 0;
     list-style-type: none;
+    border-bottom: 1px solid var(--wildGreen);
   }
   
   .missionItem {
@@ -46,25 +49,23 @@
     font-size: 18px;
     font-style: italic;
     padding: 0rem 1rem 1rem 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--wildGreen);
   }
   
   .artistLinksContainer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
   
   .artistLink {
-    margin: .5rem 0rem .5rem 0rem;
-    padding: 0rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 0.5rem;
     text-align: center;
     text-decoration: none;
     color: var(--wildGreen);
     border-radius: 5px;
     border: 2px solid var(--wildGreen);
     width: 300px;
-    height: auto;
   }
   
   @media (max-width: 586px) {
