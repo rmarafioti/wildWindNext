@@ -8,7 +8,7 @@ import styles from "@/styles/requestsent.module.css";
  */
 export default function RequestSent() {
   return (
-    <main className={styles.requestSent}>
+    <article className={styles.requestSent}>
       <Head>
         <title>Request Sent Page - wildwindtattoo.com</title>
         <meta
@@ -21,9 +21,9 @@ export default function RequestSent() {
         <h1 className={styles.requestSentMessage}>
           Thank you for your message!
         </h1>
-        <h3 className={`${styles.requestMessage} ${styles.requestMessageTop}`}>
+        <h2 className={`${styles.requestMessage} ${styles.requestMessageTop}`}>
           Your request has been sent
-        </h3>
+        </h2>
         <h3 className={styles.requestMessage}>
           You can expect a response within 1-3 days. We are excited to work with
           you soon!
@@ -34,8 +34,8 @@ export default function RequestSent() {
         </h3>
       </div>
       <Link className={styles.returnHome} href="/">
-        <h4>Return Home</h4>
+        <h3>Return Home</h3>
       </Link>
-    </main>
+    </article>
   );
 }

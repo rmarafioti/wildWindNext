@@ -18,7 +18,7 @@ export default function Tattoos() {
         />
         <link rel="canonical" href="/tattoos" />
       </Head>
-      <h1 className={styles.tattooHeader}>TATTOOS</h1>
+      <h1 className={styles.tattooHeader}>Tattoos</h1>
       <ul className={styles.unorderedList}>
         <li className={styles.missionItem}>Variety</li>
         <li className={styles.missionItem}>Comfort</li>
