@@ -185,13 +185,14 @@ export default function Form() {
       <label className={styles.label}>
         Name{" "}
         {validationError.user_name && (
-          <p className={styles.error}>**Please enter your name.</p>
+          <p className={styles.error}>*Please enter your name*</p>
         )}
       </label>
       <input
         className={styles.form}
         type="text"
         name="user_name"
+        aria-label="user_name"
         value={formValues.user_name}
         onChange={handleInputChange}
         onFocus={() => handleInputFocus("user_name")}
@@ -200,13 +201,14 @@ export default function Form() {
       <label className={styles.label}>
         Email{" "}
         {validationError.user_email && (
-          <p className={styles.error}>*Please enter a valid email address.</p>
+          <p className={styles.error}>*Please enter a valid email address*</p>
         )}
       </label>
       <input
         className={styles.form}
         type="email"
         name="user_email"
+        aria-label="user_email"
         value={formValues.user_email}
         onChange={handleInputChange}
         onFocus={() => handleInputFocus("user_email")}
@@ -215,13 +217,14 @@ export default function Form() {
       <label className={styles.label}>
         Phone{" "}
         {validationError.user_phone && (
-          <p className={styles.error}>*Please enter a valid phone number.</p>
+          <p className={styles.error}>*Please enter a valid phone number*</p>
         )}
       </label>
       <InputMask
         className={styles.form}
         type="text"
         name="user_phone"
+        aria-label="user_phone_number"
         mask="(999) 999-9999"
         value={formValues.user_phone}
         onChange={handleInputChange}
@@ -240,7 +243,7 @@ export default function Form() {
         Specify your desired tattoo location{" "}
         {validationError.user_location && (
           <p className={styles.error}>
-            Please enter the desired location of your tattoo.
+            *Please enter the desired location of your tattoo*
           </p>
         )}
       </label>
@@ -250,6 +253,7 @@ export default function Form() {
           id={styles.tattooLocation}
           type="text"
           name="user_location"
+          aria-label="users_tattoo_location"
           value={formValues.user_location}
           placeholder="Ex. Right arm bicep"
           onChange={handleInputChange}
@@ -273,13 +277,14 @@ export default function Form() {
           id={styles.file}
           type="file"
           name="my_file"
+          aria-label="users_attached_tattoo_reference"
           onChange={handleInputChange}
           onFocus={() => handleInputFocus("my_file")}
         />
         {fileSizeError && (
           <p className={styles.error}>
-            Attachment file error. The maximum allowed attachments size is
-            500Kb.
+            *Attachment file error. The maximum allowed attachments size is
+            500Kb*
           </p>
         )}
       </div>
@@ -287,6 +292,7 @@ export default function Form() {
       <textarea
         className={styles.messageForm}
         name="message"
+        aria-label="users_additional_information"
         value={formValues.message}
         onChange={handleInputChange}
         placeholder=""
@@ -294,37 +300,38 @@ export default function Form() {
       <input
         className={styles.formSubmit}
         type="submit"
+        aria-label="form_submot_button"
         value={isLoading ? "Sending..." : "Send"}
         disabled={isLoading || !isFormValid()}
       />
       {validationError.user_name && (
-        <p className={styles.error}>**Please enter your name.</p>
+        <p className={styles.error}>*Please enter your name*</p>
       )}
       {validationError.user_email && (
-        <p className={styles.error}>*Please enter a valid email address.</p>
+        <p className={styles.error}>*Please enter a valid email address*</p>
       )}
       {validationError.user_phone && (
-        <p className={styles.error}>*Please enter a valid phone number.</p>
+        <p className={styles.error}>*Please enter a valid phone number*</p>
       )}
       {validationError.user_size && (
-        <p className={styles.error}>*Please select a tattoo size.</p>
+        <p className={styles.error}>*Please select a tattoo size*</p>
       )}
       {validationError.user_location && (
         <p className={styles.error}>
-          Please enter the desired location of your tattoo.
+          *Please enter the desired location of your tattoo*
         </p>
       )}
       {validationError.user_times && (
-        <p className={styles.error}>*Please provide your availability.</p>
+        <p className={styles.error}>*Please provide your availability*</p>
       )}
       {fileSizeError && (
         <p className={styles.error}>
-          Attachment file error. The maximum allowed attachments size is 500Kb.
+          *Attachment file error. The maximum allowed attachments size is 500Kb*
         </p>
       )}
       {messageStatus === "error" && (
         <p className={styles.errorMessage}>
-          Message failed to send. Please try again.
+          **Message failed to send. Please try again**
         </p>
       )}
     </form>

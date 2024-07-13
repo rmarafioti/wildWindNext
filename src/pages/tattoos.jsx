@@ -9,7 +9,7 @@ import styles from "../styles/tattoos.module.css";
  */
 export default function Tattoos() {
   return (
-    <main className={styles.tattoos}>
+    <article className={styles.tattoos}>
       <Head>
         <title>Tattoos Page - wildwindtattoo.com</title>
         <meta
@@ -18,7 +18,7 @@ export default function Tattoos() {
         />
         <link rel="canonical" href="/tattoos" />
       </Head>
-      <h1 className={styles.tattooHeader}>TATTOOS</h1>
+      <h1 className={styles.tattooHeader}>Tattoos</h1>
       <ul className={styles.unorderedList}>
         <li className={styles.missionItem}>Variety</li>
         <li className={styles.missionItem}>Comfort</li>
@@ -38,7 +38,7 @@ export default function Tattoos() {
         want in an inclusive, safe space. While you get tattooed, enjoy a clean,
         creative, and artistic environment.
       </p>
-      <h1 className={styles.artistHeader}>Our Artists</h1>
+      <h2 className={styles.artistHeader}>Our Artists</h2>
       <div className={styles.artistLinksContainer}>
         <Link href="/richtats" className={styles.artistLink}>
           <h3>Rich Marafioti</h3>
@@ -47,6 +47,6 @@ export default function Tattoos() {
           <h3>Mercedes Wright</h3>
         </Link>
       </div>
-    </main>
+    </article>
   );
 }

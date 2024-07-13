@@ -10,7 +10,7 @@ import styles from "@/styles/giftcards.module.css";
  */
 export default function GiftCards() {
   return (
-    <main className={styles.giftCards}>
+    <article className={styles.giftCards}>
       <Head>
         <title>Gift Cards Page - wildwindtattoo.com</title>
         <meta
@@ -19,8 +19,8 @@ export default function GiftCards() {
         />
         <link rel="canonical" href="/giftcards" />
       </Head>
-      <h1 className={styles.giftCardHeader}>GIFT CARDS</h1>
+      <h1 className={styles.giftCardHeader}>Gift Cards</h1>
       <CheckoutForm />
-    </main>
+    </article>
   );
 }

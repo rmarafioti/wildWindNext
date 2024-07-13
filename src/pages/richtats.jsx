@@ -19,7 +19,7 @@ export default function RichTats() {
     usePhotoGallery(richPhotos);
 
   return (
-    <main className={styles.tattoos}>
+    <article className={styles.tattoos}>
       <Head>
         <title>Rich Marafioti Tattoo Page - wildwindtattoo.com</title>
         <meta
@@ -34,6 +34,7 @@ export default function RichTats() {
           <a
             className={styles.artistIgIcon}
             href="https://www.instagram.com/wild_coma/"
+            aria-label="icon which links to Rich Marafioti's Instagram page"
           >
             <FaInstagram />
           </a>
@@ -71,6 +72,6 @@ export default function RichTats() {
           ))}
         </ul>
       </section>
-    </main>
+    </article>
   );
 }

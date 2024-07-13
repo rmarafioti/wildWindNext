@@ -92,6 +92,7 @@ export default function DateTimeField({
         <select
           className={styles.timeForm}
           value={selectedDay}
+          aria-label="users_selected_day"
           onChange={(e) => setSelectedDay(e.target.value)}
         >
           <option value="">Select a day</option>
@@ -104,6 +105,7 @@ export default function DateTimeField({
         <select
           className={styles.timeForm}
           value={selectedTime}
+          aria-label="users_selected_time"
           onChange={(e) => setSelectedTime(e.target.value)}
         >
           <option className={styles.selectValue} value="">

@@ -49,7 +49,7 @@ export default function Shop() {
   const imageurl = currentImageObj ? currentImageObj.image : "";
 
   return (
-    <main className={styles.shopAbout}>
+    <article className={styles.shopAbout}>
       <Head>
         <title>About Us Page - wildwindtattoo.com</title>
         <meta
@@ -65,13 +65,21 @@ export default function Shop() {
         alt="tattoo shop photos"
       />
       <div className={styles.shopIconContainer}>
-        <h1 className={styles.shopIcon}>
-          <a href="https://www.instagram.com/wildwindtattoo/?hl=en">
+        <h1>
+          <a
+            href="https://www.instagram.com/wildwindtattoo/?hl=en"
+            className={styles.shopIcon}
+            aria-label="icon which links to Wild Wind Tattoo's Instagram page"
+          >
             <FaInstagram />
           </a>
         </h1>
-        <h1 className={styles.shopIcon}>
-          <a href="https://www.facebook.com/wildwindtattoo/">
+        <h1>
+          <a
+            href="https://www.facebook.com/wildwindtattoo/"
+            className={styles.shopIcon}
+            aria-label="icon which links to Wild Wind Tattoo's Facebook page"
+          >
             <FaFacebookSquare />
           </a>
         </h1>
@@ -86,7 +94,7 @@ export default function Shop() {
         tattoo.
       </p>
       <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
-        OUR MISSION
+        Our Mission
       </h2>
       <ul className={styles.unorderedList}>
         <li className={styles.missionItem}>Variety</li>
@@ -109,7 +117,7 @@ export default function Shop() {
           clean, creative, and artistic environment.
         </p>
       </section>
-      <h2 className={styles.shopHeader}>COMMUNITY</h2>
+      <h2 className={styles.shopHeader}>Community</h2>
       <p className={styles.shopParagraphs}>
         Wild Wind Tattoo is proud to serve and work with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
@@ -125,6 +133,6 @@ export default function Shop() {
           <h3>Media</h3>
         </Link>
       </div>
-    </main>
+    </article>
   );
 }

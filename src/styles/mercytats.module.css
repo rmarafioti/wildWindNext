@@ -1,26 +1,26 @@
-/* artist pages */
-
 .tattoos {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
 .artistContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   
   .artistHeader {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-size: 30px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   
   .artistIgIcon {
@@ -29,8 +29,8 @@
     margin-left: 1rem;
   }
   
-  .artistIgIcon a:visited,
-  .artistIgIcon a:link {
+  .artistIgIcon:visited,
+  .artistIgIcon:link {
     color: var(--wildGreen);
   }
   
@@ -39,6 +39,7 @@
     color: black;
     max-width: 480px;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--wildGreen);
   }
   

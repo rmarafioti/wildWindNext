@@ -3,12 +3,11 @@
     flex-direction: column;
     width: 480px;
     padding-bottom: 1rem;
-    margin-bottom: 2rem;
   }
   
   .label {
     font-weight: bold;
-    color: var(--wildGreen);
+    color: black;
   }
   .form,
   .messageForm,
@@ -63,7 +62,9 @@
   }
   
   .error {
+    
     color: black;
+    font-weight: normal;
   }
 
   @media (max-width: 586px) {

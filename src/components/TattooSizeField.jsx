@@ -32,6 +32,7 @@ export default function TattooSizeField({
         className={styles.form}
         name={name}
         value={value}
+        aria-label="users_selected_tattoo_size"
         onChange={onChange}
         onFocus={onFocus}
         required

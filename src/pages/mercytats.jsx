@@ -19,7 +19,7 @@ export default function MercedesTats() {
     usePhotoGallery(mercyPhotos);
 
   return (
-    <main className={styles.tattoos}>
+    <article className={styles.tattoos}>
       <Head>
         <title>Mercedes Wright Tattoo Page - wildwindtattoo.com</title>
         <meta
@@ -34,6 +34,7 @@ export default function MercedesTats() {
           <a
             className={styles.artistIgIcon}
             href="https://www.instagram.com/tattoomercy/"
+            aria-label="icon which links to Mercedes Wright's Instagram page"
           >
             <FaInstagram />
           </a>
@@ -73,6 +74,6 @@ export default function MercedesTats() {
           ))}
         </ul>
       </section>
-    </main>
+    </article>
   );
 }
