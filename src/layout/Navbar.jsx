@@ -79,12 +79,16 @@ export default function Navbar() {
         </div>
       </nav>
       {/*hamburger menu open*/}
-      <div id={styles.menuContainer}>
+      <section id={styles.menuContainer}>
         <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
           <li id={styles.aboutItem}>
             <Link className={styles.navContainer} href="/aboutus">
               <GoBook className={styles.linkIcon} />
-              <h4 className={styles.link} id={styles.aboutUs}>
+              <h4
+                className={styles.link}
+                id={styles.aboutUs}
+                role="navbar element About Us"
+              >
                 ABOUT US
               </h4>
             </Link>
@@ -100,7 +104,11 @@ export default function Navbar() {
           <li id={styles.tattooItem}>
             <Link className={styles.navContainer} href="/tattoos">
               <IoSkullOutline className={styles.linkIcon} />
-              <h4 className={styles.link} id={styles.tats}>
+              <h4
+                className={styles.link}
+                id={styles.tats}
+                role="navbar element Tattoos"
+              >
                 TATTOOS
               </h4>
             </Link>
@@ -116,19 +124,25 @@ export default function Navbar() {
           <li className={styles.navItem}>
             <Link className={styles.navContainer} href="/contact">
               <HiOutlineEnvelope className={styles.linkIcon} />
-              <h4 className={styles.link}>CONTACT</h4>
+              <h4 className={styles.link} role="navbar element Contact">
+                CONTACT
+              </h4>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link className={styles.navContainer} href="/aftercare">
               <IoHeartOutline className={styles.linkIcon} />
-              <h4 className={styles.link}>AFTERCARE</h4>
+              <h4 className={styles.link} role="navbar element Aftercare">
+                AFTERCARE
+              </h4>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link className={styles.navContainer} href="/giftcards">
               <IoGiftOutline className={styles.linkIcon} />
-              <h4 className={styles.link}>GIFTCARDS</h4>
+              <h4 className={styles.link} role="navbar element Giftcars">
+                GIFTCARDS
+              </h4>
             </Link>
           </li>
         </menu>
@@ -182,7 +196,7 @@ export default function Navbar() {
             </Link>
           </menu>
         </div>
-      </div>
+      </section>
     </>
   );
 }
