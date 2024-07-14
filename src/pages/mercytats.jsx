@@ -26,7 +26,7 @@ export default function MercedesTats() {
           name="description"
           content="This is the Mercedes Wright tattoo page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/mercedestats" />
+        <link rel="canonical" href="https://wildwindtattoo.com/mercedestats" />
       </Head>
       <div className={styles.artistContainer}>
         <h1 className={styles.artistHeader}>

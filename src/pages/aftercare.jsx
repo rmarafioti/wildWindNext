@@ -55,7 +55,7 @@ export default function Care() {
           name="description"
           content="This is the aftercare page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/aftercare" />
+        <link rel="canonical" href="https://wildwindtattoo.com/aftercare" />
       </Head>
       <h1 className={styles.afterHeader}>Aftercare</h1>
       <p className={styles.afterTagline}>
