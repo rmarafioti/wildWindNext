@@ -292,8 +292,9 @@
     .drop {
       position: absolute;
       top: 17%;
-      left: 48%;
+      left: 49%;
       margin: 0.5rem;
+      padding: .5rem;
       background-color: white;
       border: 1px solid var(--wildGreen);
       display: none;
@@ -302,9 +303,10 @@
   
     .droptats {
       position: absolute;
-      top: 27.5%;
-      left: 2%;
-      margin: 0.5rem;
+      top: 32%;
+      left: 5%;
+      padding: .5rem;
+      margin: .5rem;
       width: 150px;
       background-color: white;
       border: 1px solid var(--wildGreen);
