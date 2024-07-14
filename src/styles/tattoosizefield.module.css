@@ -1,6 +1,15 @@
 .label {
     font-weight: bold;
-    color: var(--wildGreen);
+    color: black;
+  }
+
+  .error {
+    display: inline-block;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
   }
 
   .tattooSizeForm,

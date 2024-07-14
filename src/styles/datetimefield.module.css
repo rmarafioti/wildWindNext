@@ -1,81 +1,96 @@
 /* DateTimeField.jsx */
 
 .selectTimeContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+
+  align-items: center;
+}
+
+.label {
+  color: black;
+  font-weight: bold;
+}
+
+.error {
+  display: inline-block;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-weight: normal;
+}
+
+.timeForm {
+  background-color: rgb(236, 232, 232);
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  border: 1px solid black;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.addTime {
+  color: black;
+  margin-left: 0.5rem;
+}
+
+.addMoreButton {
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: rgb(236, 232, 232);
+  font-size: 12px;
+  border: 1px solid var(--wildGreen);
+  padding: 0.2rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.addSymbol {
+  font-size: 20px;
+}
+
+.selectedTimesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timeEntry {
+  color: black;
+  display: flex;
+  margin: 0.5rem 0.5rem 0.5rem 0rem; 
+  align-items: center;
+  padding: 0.3rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.removeButton {
+  color: var(--wildGreen);
+  display: flex;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: rgb(229, 223, 223);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 586px) {
+  .requestContact {
+    margin: 0rem 1rem 1rem 1rem;
   }
-  
-  .timeForm {
-    background-color: rgb(236, 232, 232);
-    margin: 0.5rem 0.5rem 0.5rem 0rem;
-    border: 1px solid black;
-    padding: 0.2rem;
-    border-radius: 5px;
+  .requestHeader {
+    text-align: center;
+    padding-bottom: 1rem;
   }
-  
-  .addTime {
-    margin-left: 0.5rem;
+  .contactForm,
+  .tattooSizeForm,
+  .tattooLocation,
+  .tattooSizeOption {
+    width: 100%;
   }
-  
-  .addMoreButton {
-    display: flex;
-    align-items: center;
-    color: black;
-    background-color: rgb(236, 232, 232);
-    font-size: 12px;
-    border: 1px solid var(--wildGreen);
-    padding: 0.2rem;
-    border-radius: 5px;
-    margin-left: 0.5rem;
-    cursor: pointer;
+  .tattooSizeContainer {
+    width: 100%;
   }
-  
-  .addSymbol {
-    font-size: 20px;
-  }
-  
-  .selectedTimesContainer {
-    display: flex;
-  }
-  
-  .timeEntry {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.3rem;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    margin: 1rem 0.5rem 0.5rem 1rem;
-  }
-  
-  .removeButton {
-    color: var(--wildGreen);
-    display: flex;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: rgb(229, 223, 223);
-    cursor: pointer;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 0.5rem;
-  }
-  
-  @media (max-width: 586px) {
-    .requestContact {
-      margin: 0rem 1rem 1rem 1rem;
-    }
-    .requestHeader {
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .contactForm,
-    .tattooSizeForm,
-    .tattooLocation,
-    .tattooSizeOption {
-      width: 100%;
-    }
-    .tattooSizeContainer {
-      width: 100%;
-    }
-  }
-  
+}
