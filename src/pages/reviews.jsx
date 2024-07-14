@@ -39,7 +39,7 @@ export default function Reviews() {
           name="description"
           content="This is the reviews page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/reviews" />
+        <link rel="canonical" href="https://wildwindtattoo.com/reviews" />
       </Head>
       <h1 className={styles.reviewHeader}>Reviews</h1>
       <p className={styles.reviewTag}>

@@ -23,7 +23,7 @@ export default function TattooSizeField({
   return (
     <div className={styles.tattooSizeContainer}>
       <label className={styles.label}>
-        Tattoo size{" "}
+        Tattoo size:{" "}
         {validationError && (
           <p className={styles.error}>*Please select a tattoo size.</p>
         )}

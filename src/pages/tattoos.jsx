@@ -16,7 +16,7 @@ export default function Tattoos() {
           name="description"
           content="This is the tattoos page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/tattoos" />
+        <link rel="canonical" href="https://wildwindtattoo.com/tattoos" />
       </Head>
       <h1 className={styles.tattooHeader}>Tattoos</h1>
       <ul className={styles.unorderedList}>

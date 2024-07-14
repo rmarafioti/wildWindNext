@@ -17,7 +17,7 @@ export default function GiftCards() {
           name="description"
           content="This is the gift cards page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/giftcards" />
+        <link rel="canonical" href="https://wildwindtattoo.com/giftcards" />
       </Head>
       <h1 className={styles.giftCardHeader}>Gift Cards</h1>
       <CheckoutForm />

@@ -183,7 +183,7 @@ export default function Form() {
       method="post"
     >
       <label className={styles.label}>
-        Name{" "}
+        Name:{" "}
         {validationError.user_name && (
           <p className={styles.error}>*Please enter your name*</p>
         )}
@@ -199,7 +199,7 @@ export default function Form() {
         required
       />
       <label className={styles.label}>
-        Email{" "}
+        Email:{" "}
         {validationError.user_email && (
           <p className={styles.error}>*Please enter a valid email address*</p>
         )}
@@ -215,7 +215,7 @@ export default function Form() {
         required
       />
       <label className={styles.label}>
-        Phone{" "}
+        Phone:{" "}
         {validationError.user_phone && (
           <p className={styles.error}>*Please enter a valid phone number*</p>
         )}
@@ -240,7 +240,7 @@ export default function Form() {
         validationError={validationError.user_size}
       />
       <label className={styles.label}>
-        Specify your desired tattoo location{" "}
+        Desired tattoo location:{" "}
         {validationError.user_location && (
           <p className={styles.error}>
             *Please enter the desired location of your tattoo*
@@ -250,7 +250,6 @@ export default function Form() {
       <div className={styles.formSectionContainer}>
         <input
           className={styles.form}
-          id={styles.tattooLocation}
           type="text"
           name="user_location"
           aria-label="users_tattoo_location"
@@ -271,7 +270,7 @@ export default function Form() {
         />
       </div>
       <div className={styles.formSectionContainer} id={styles.attachFile}>
-        <label>Attach tattoo reference:</label>
+        <label className={styles.label}>Attach tattoo reference:</label>
         <input
           className={styles.form}
           id={styles.file}
@@ -288,7 +287,7 @@ export default function Form() {
           </p>
         )}
       </div>
-      <label className={styles.label}>Additional information</label>
+      <label className={styles.label}>Additional information:</label>
       <textarea
         className={styles.messageForm}
         name="message"
@@ -305,27 +304,31 @@ export default function Form() {
         disabled={isLoading || !isFormValid()}
       />
       {validationError.user_name && (
-        <p className={styles.error}>*Please enter your name*</p>
+        <p className={styles.errorBottom}>*Please enter your name*</p>
       )}
       {validationError.user_email && (
-        <p className={styles.error}>*Please enter a valid email address*</p>
+        <p className={styles.errorBottom}>
+          *Please enter a valid email address*
+        </p>
       )}
       {validationError.user_phone && (
-        <p className={styles.error}>*Please enter a valid phone number*</p>
+        <p className={styles.errorBottom}>
+          *Please enter a valid phone number*
+        </p>
       )}
       {validationError.user_size && (
-        <p className={styles.error}>*Please select a tattoo size*</p>
+        <p className={styles.errorBottom}>*Please select a tattoo size*</p>
       )}
       {validationError.user_location && (
-        <p className={styles.error}>
+        <p className={styles.errorBottom}>
           *Please enter the desired location of your tattoo*
         </p>
       )}
       {validationError.user_times && (
-        <p className={styles.error}>*Please provide your availability*</p>
+        <p className={styles.errorBottom}>*Please provide your availability*</p>
       )}
       {fileSizeError && (
-        <p className={styles.error}>
+        <p className={styles.errorBottom}>
           *Attachment file error. The maximum allowed attachments size is 500Kb*
         </p>
       )}

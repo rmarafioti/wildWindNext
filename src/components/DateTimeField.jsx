@@ -83,9 +83,9 @@ export default function DateTimeField({
   return (
     <div>
       <label className={styles.label}>
-        Days and times you are available to get tattooed{" "}
+        Preffered availablity:{" "}
         {validationError && (
-          <p className={styles.error}>*Please provide your availability.</p>
+          <p className={styles.error}>*Please provide your availability*</p>
         )}
       </label>
       <div className={styles.selectTimeContainer}>

@@ -19,7 +19,7 @@ export default function Home() {
           name="description"
           content="This is the home page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="https://wildwindtattoo.com/" />
       </Head>
       <h1 className={styles.headerHome}>Welcome to Wild Wind Tattoo</h1>
       <img
