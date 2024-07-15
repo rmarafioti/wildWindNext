@@ -5,138 +5,137 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
 .artistContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-  
-  .artistHeader {
-    font-size: 30px;
+}
+
+.artistHeader {
+  font-size: 30px;
   font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.artistIgIcon {
+  padding-top: 0.5rem;
+  font-size: 30px;
+  margin-left: 1rem;
+}
+
+.artistIgIcon:visited,
+.artistIgIcon:link {
+  color: var(--wildGreen);
+}
+
+.artistAbout {
+  line-height: 1.8;
+  color: var(--wildBlack);
+  max-width: 480px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+.tattooSection {
+  margin: 2rem 10rem 2rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tattooSlide {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.tattoo {
+  border-radius: 5px;
+  height: 500px;
+}
+
+.mercedesTattoo {
+  border-radius: 5px;
+  height: 400px;
+}
+
+.arrowSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  background-color: white;
+  border-radius: 5px;
+  margin: 0rem 1rem 0rem 1rem;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.tattooGallery,
+#mercedesGallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.tattooGallery img {
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
+  max-width: 100%;
+  height: 120px;
+}
+
+.mercedesGallery img {
+  margin: 0rem 0.1rem 0.1rem 0.1rem;
+  max-width: 100%;
+  height: 100px;
+}
+
+.indicator {
+  border-radius: 5px;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.indicator:hover {
+  border: 2px solid var(--wildGreen);
+}
+
+@media (max-width: 1380px) {
+  .tattoos {
+    margin: 1rem;
   }
-  
-  .artistIgIcon {
-    padding-top: 0.5rem;
-    font-size: 30px;
-    margin-left: 1rem;
+
+  .artistHeader {
+    flex-direction: row;
   }
-  
-  .artistIgIcon:visited,
-  .artistIgIcon:link {
-    color: var(--wildGreen);
-  }
-  
-  .artistAbout {
-    line-height: 1.8;
-    color: black;
-    max-width: 480px;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--wildGreen);
-  }
-  
+
   .tattooSection {
-    margin: 2rem 10rem 2rem 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 1rem 0rem 2rem 0rem;
   }
-  
-  .tattooSlide {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-  }
-  
-  .tattoo {
-    border-radius: 5px;
-    height: 500px;
-  }
-  
+
+  .tattoo,
   .mercedesTattoo {
-    border-radius: 5px;
-    height: 400px;
+    width: 300px;
+    height: auto;
   }
-  
-  .arrowSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
   .arrow {
-    background-color: white;
-    border-radius: 5px;
-    margin: 0rem 1rem 0rem 1rem;
-    font-size: 40px;
-    cursor: pointer;
+    position: absolute;
+    margin-left: -1.3rem;
+    text-align: center;
   }
-  
   .tattooGallery,
-  #mercedesGallery {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: start;
+  .mercedesGallery {
+    display: none;
   }
-  
-  .tattooGallery img {
-    margin: 0rem 0.5rem 0.5rem 0.5rem;
-    max-width: 100%;
-    height: 120px;
-  }
-  
-  .mercedesGallery img {
-    margin: 0rem 0.1rem 0.1rem 0.1rem;
-    max-width: 100%;
-    height: 100px;
-  }
-  
-  .indicator {
-    border-radius: 5px;
-    padding: 0.3rem;
-    cursor: pointer;
-  }
-  
-  .indicator:hover {
-    border: 2px solid var(--wildGreen);
-  }
-  
-  @media (max-width: 1380px) {
-    .tattoos {
-      margin: 1rem;
-    }
-  
-    .artistHeader {
-      flex-direction: row;
-    }
-  
-    .tattooSection {
-      margin: 1rem 0rem 2rem 0rem;
-    }
-  
-    .tattoo,
-    .mercedesTattoo {
-      width: 300px;
-      height: auto;
-    }
-    .arrow {
-      position: absolute;
-      margin-left: -1.3rem;
-      text-align: center;
-    }
-    .tattooGallery,
-    .mercedesGallery {
-      display: none;
-    }
-  }
-  
+}

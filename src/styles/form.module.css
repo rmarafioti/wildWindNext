@@ -7,12 +7,12 @@
 
 .label {
   font-weight: bold;
-  color: black;
+  color: var(--wildBlack);
 }
 .form,
 .messageForm,
 .formSubmit {
-  border: 1px solid black;
+  border: 1px solid var(--wildBlack);
   border-radius: 4px;
   padding: 0.25rem;
   margin-bottom: 1rem;
@@ -37,7 +37,7 @@
 }
 
 #file {
-  color: black;
+  color: var(--wildBlack);
   border: none;
   padding: 0.25rem 0rem 0rem 0rem;
 }
@@ -56,9 +56,9 @@
 .formSubmit {
   margin-top: 1rem;
   font-size: 16px;
-  border: 1px solid black;
+  border: 1px solid var(--wildBlack);
   background-color: rgb(236, 232, 232);
-  color: black;
+  color: var(--wildBlack);
   cursor: pointer;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .errorBottom {
-  color:black;
+  color: var(--wildBlack);
   font-weight: bold;
 }
 
@@ -84,10 +84,11 @@
     text-align: center;
     padding-bottom: 1rem;
   }
- 
-.messageForm,
-.formSubmit,
-  .form, .contactForm,
+
+  .messageForm,
+  .formSubmit,
+  .form,
+  .contactForm,
   .tattooSizeForm,
   .tattooSizeOption {
     width: 100%;

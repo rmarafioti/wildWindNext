@@ -1,24 +1,24 @@
 .label {
-    font-weight: bold;
-    color: black;
-  }
+  font-weight: bold;
+  color: var(--wildBlack);
+}
 
-  .error {
-    display: inline-block;
-    background-color: yellowgreen;
-    border-radius: 5px;
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-    font-weight: normal;
-    margin-bottom: 0.5rem;
-  }
+.error {
+  display: inline-block;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
 
-  .tattooSizeForm,
+.tattooSizeForm,
 .tattooLocation,
 .tattooSizeContainer {
   width: 480px;
 }
 
-  .attachFile,
+.attachFile,
 .tattooSizeContainer {
   display: flex;
   flex-direction: column;
@@ -27,27 +27,27 @@
 .form,
 .messageForm,
 .formSubmit {
-  border: 1px solid black;
+  border: 1px solid var(--wildBlack);
   border-radius: 4px;
   padding: 0.25rem;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 586px) {
-    .requestContact {
-      margin: 0rem 1rem 1rem 1rem;
-    }
-    .requestHeader {
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .contactForm,
-    .tattooSizeForm,
-    .tattooLocation,
-    .tattooSizeOption {
-      width: 100%;
-    }
-    .tattooSizeContainer {
-      width: 100%;
-    }
+  .requestContact {
+    margin: 0rem 1rem 1rem 1rem;
   }
+  .requestHeader {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .contactForm,
+  .tattooSizeForm,
+  .tattooLocation,
+  .tattooSizeOption {
+    width: 100%;
+  }
+  .tattooSizeContainer {
+    width: 100%;
+  }
+}

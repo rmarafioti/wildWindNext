@@ -22,7 +22,6 @@
 .headerTwo {
   font-size: 30px;
   font-weight: normal;
-
   border-bottom: 1px solid var(--wildGreen);
   margin: 1rem 0rem 1rem 0rem;
 }
