@@ -1,165 +1,167 @@
 .home {
-    color: var(--wildGreen);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 1rem 1rem 2rem 1rem;
-  }
-  
-  .headerHome {
-    font-size: 30px;
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.headerHome {
+  font-size: 30px;
   font-weight: normal;
-  }
-  
-  .shopPhoto {
-    max-width: 800px;
-    border-radius: 8px;
-    margin: 1rem 0rem 2rem 0rem;
-  }
-  
-  .headerTwo {
-    font-size: 30px;
-    font-weight: normal;
-    
-    border-bottom: 1px solid var(--wildGreen);
-    margin: 1rem 0rem 1rem 0rem;
-  }
+}
 
-  .listItem {
-    list-style-type: none;
+.shopPhoto {
+  max-width: 800px;
+  border-radius: 8px;
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+.headerTwo {
+  font-size: 30px;
+  font-weight: normal;
+
+  border-bottom: 1px solid var(--wildGreen);
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.listItem {
+  list-style-type: none;
+}
+
+.comEngagement,
+.tattooServices,
+.whyChoose,
+.homeReview {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.whyChoose {
+  text-align: justify;
+}
+
+.headerThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.checkmark {
+  font-size: 20px;
+  color: var(--wildBlack);
+  margin-right: 0.5rem;
+}
+
+.homeParagraph {
+  color: var(--wildBlack);
+  margin: 0.25rem 1rem 1rem 1rem;
+  max-width: 480px;
+}
+
+.contactParagraph {
+  display: none;
+}
+
+.contactHomeButton {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2.5px solid var(--wildGreen);
+}
+
+.homeParagraphReview {
+  color: var(--wildBlack);
+  font-style: italic;
+  text-align: center;
+}
+
+.reviewerName {
+  color: var(--wildBlack);
+  text-align: left;
+  font-weight: normal;
+}
+
+.ratingSection {
+  color: var(--wildGreen);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--wildGreen);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating {
+  margin-right: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  color: var(--wildGreen);
+}
+
+.homeReview {
+  margin-bottom: 1rem;
+}
+
+.homeLinksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLink {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildGreen);
+  border-radius: 5px;
+  border: 2px solid var(--wildGreen);
+  width: 300px;
+}
+
+@media (max-width: 586px) {
+  .shopPhoto {
+    width: 100%;
   }
-  
-  .comEngagement, .tattooServices, .whyChoose, .homeReview {
+  .contactContainer {
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    border: 1px solid lightgray;
-    padding: 1rem;
-    margin: .5rem;
-  }
-  
-  .whyChoose {
-    text-align: justify;
-  }
-  
-  .headerThree {
-    display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    padding-bottom: .5rem;
   }
-  
-  .checkmark {
-    font-size: 20px;
-    color: black;
-    margin-right: .5rem;
-  }
-  
-  .homeParagraph {
-    color: black;
-    margin: .25rem 1rem 1rem 1rem;
-    max-width: 480px;
-  }
-  
-  .contactParagraph {
-    display: none;
-  }
-  
   .contactHomeButton {
-    display: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    background-color: white;
-    padding: .5rem;
-    border-radius: 5px;
-    border: 2.5px solid var(--wildGreen);
+    margin: 1rem;
+    width: 100%;
+    display: block;
   }
-  
-  .homeParagraphReview {
+  .contactParagraph {
     color: black;
-    font-style: italic;
-    text-align: center;
+    display: block;
   }
-
-  .reviewerName {
-    color: black;
-    text-align: left;
-    font-weight: normal;
-  }
-  
-  .ratingSection {
-    color: var(--wildGreen);
-    display: flex;
-    align-items: center;
+  .contactParagraphBottom {
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--wildGreen);
-    padding-bottom: .5rem;
-    margin-bottom: 1.5rem;
   }
-  
-  .rating {
-    margin-right: 0.5rem;
+  .headerTwo {
+    padding-bottom: 1rem;
   }
-  
-  .stars {
-    display: flex;
-    align-items: center;
-    color: var(--wildGreen);
+  .homeLink,
+  #homeLinksContainer {
+    width: 100%;
   }
-  
-  .homeReview {
-    margin-bottom: 1rem;
-  }
-  
-  .homeLinksContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .homeLink {
-    margin: 1rem 0rem 1rem 0rem;
-    padding: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--wildGreen);
-    border-radius: 5px;
-    border: 2px solid var(--wildGreen);
-    width: 300px;
-  }
-  
-  @media (max-width: 586px) {
-    .shopPhoto {
-      width: 100%;
-    }
-    .contactContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .contactHomeButton {
-      margin: 1rem;
-      width: 100%;
-      display: block;
-    }
-    .contactParagraph {
-      color: black;
-      display: block;
-    }
-    .contactParagraphBottom {
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--wildGreen);
-    }
-    .headerTwo {
-      padding-bottom: 1rem;
-    }
-    .homeLink, #homeLinksContainer {
-      width: 100%
-    }
-  }
-  
-  
+}
