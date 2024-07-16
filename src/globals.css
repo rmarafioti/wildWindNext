@@ -16,7 +16,7 @@ body {
   line-height: 1.5;
   font-style: normal;
 
-  --wildBlue: rgb(101, 193, 220);
+  --wildBlue: rgb(101, 193, 220, 0.5);
   --wildBackground: rgb(226, 209, 189);
   --wildGreen: rgb(124, 155, 63);
   --wildDarkGreen: rgba(56, 70, 28, 1);

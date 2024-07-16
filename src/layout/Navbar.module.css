@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: start;
     z-index: 999;
-    background-color: rgb(226, 209, 189);
+    background-color: var(--wildBackground);
+    /*border-bottom: solid 1px var(--wildGreen);*/
   }
   
   #navLogo {
@@ -28,7 +29,7 @@
   }
   
   #faqIcon {
-    color: var(--wildGreen);
+    color: var(--wildDarkGreen);
     font-size: 35px;
   }
   
@@ -37,15 +38,15 @@
   }
   
   #contactButton {
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    background-color: white;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    background-color: var(--wildDarkGreen);
     border: none;
-    padding: 0.3rem 1rem 0.3rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     margin-right: 1rem;
-    border: 2.5px solid var(--wildGreen);
     border-radius: 5px;
+    cursor: pointer;
   }
   
   /* hamburger */
@@ -65,7 +66,7 @@
     position: relative;
     width: 25px;
     height: 3px;
-    background: var(--wildGreen);
+    background: var(--wildDarkGreen);
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     display: block;
@@ -78,7 +79,7 @@
     position: absolute;
     width: 25px;
     height: 3px;
-    background: var(--wildGreen);
+    background: var(--wildDarkGreen);
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     transform-origin: center;
@@ -117,12 +118,12 @@
   /* menu */
   
   .menu {
-    margin: 0rem 1rem 0rem 1rem;
+    /*margin: 0rem 1rem 0rem 1rem;*/
     padding-bottom: 0rem;
     background-color: white;
     display: none;
     z-index: 1000;
-    border-bottom: solid 1px var(--wildBackground);
+    border-bottom: solid 1px var(--wildGreen);
   }
   
   .menu.active {
@@ -137,6 +138,13 @@
     text-decoration: none;
   }
   
+  #aboutItem {
+    margin-left: 1rem;
+  }
+
+  #giftCards{
+    margin-right: 1rem;
+  }
   .navItem,
   #aboutItem,
   #tattooItem {
@@ -161,7 +169,7 @@
   
   .linkIcon {
     font-size: 25px;
-    margin-right: 0.5rem;
+    margin-right: 0rem;
   }
   
   .link {
@@ -175,7 +183,7 @@
     padding: 0.5rem;
     transition: background-color 0.5s ease;
     font-weight: 400;
-    margin: 1rem;
+    margin: 1rem 0rem 1rem .5rem;
   }
   
   #aboutUs,
@@ -200,7 +208,7 @@
   .drop {
     position: absolute;
     top: 26%;
-    left: 4%;
+    left: 3%;
     margin: 0.5rem;
     background-color: white;
     display: none;
@@ -243,11 +251,14 @@
     transition: background-color 0.5s ease;
   }
   
-  .dropLink:hover,
   .link:hover {
     color: black;
     font-weight: normal;
-    background-color: lightgrey;
+    background-color: var(--wildGold);
+  }
+
+  .dropLink:hover {
+    background-color: var(--wildBlue);
   }
   
   #dropLinkTop,
@@ -280,6 +291,9 @@
       flex-direction: column;
       align-items: start;
       border-bottom: none;
+    }
+    #aboutItem {
+      margin-left: 0rem;
     }
     .navItem a,
     #aboutItem,

@@ -140,7 +140,11 @@ export default function Navbar() {
           <li className={styles.navItem}>
             <Link className={styles.navContainer} href="/giftcards">
               <IoGiftOutline className={styles.linkIcon} />
-              <h4 className={styles.link} role="navbar element Giftcars">
+              <h4
+                className={styles.link}
+                id={styles.giftCards}
+                role="navbar element Giftcars"
+              >
                 GIFTCARDS
               </h4>
             </Link>
