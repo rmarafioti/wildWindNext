@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { IoAdd } from "react-icons/io5";
+import { LuPlus } from "react-icons/lu";
 
 import styles from "../styles/datetimefield.module.css";
 
@@ -108,9 +108,7 @@ export default function DateTimeField({
           aria-label="users_selected_time"
           onChange={(e) => setSelectedTime(e.target.value)}
         >
-          <option className={styles.selectValue} value="">
-            Select a time
-          </option>
+          <option value="">Select a time</option>
           {times.map((time, index) => (
             <option key={index} value={time}>
               {time}
@@ -121,7 +119,7 @@ export default function DateTimeField({
           {selectedTimes.length > 0 ? "Add More" : "Add Time"}
         </p>
         <div className={styles.addMoreButton} onClick={handleAddTime}>
-          <IoAdd className={styles.addSymbol} />
+          <LuPlus className={styles.addSymbol} />
         </div>
       </div>
 

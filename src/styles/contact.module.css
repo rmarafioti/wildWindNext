@@ -60,12 +60,14 @@
 }
 
 .contactButtons {
-  padding: 0.5rem;
   text-align: center;
-  text-decoration: none;
-  color: var(--wildGreen);
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: var(--wildDarkGreen);
+  padding: .5rem;
+  width: 400px;
   border-radius: 5px;
-  border: 2px solid var(--wildGreen);
   margin-bottom: 1rem;
 }
 
@@ -130,6 +132,13 @@
 .bold {
   font-weight: bold;
   border-bottom: 1px solid var(--wildGreen);
+}
+
+@media (max-width: 586px) {
+  .contactButtons {
+    padding: .5rem;
+    width: 100%;
+  }
 }
 
 /* RequestAppt.jsx */

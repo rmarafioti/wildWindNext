@@ -81,12 +81,14 @@
   text-decoration: none;
   color: var(--wildBlack);
   border-radius: 5px;
+  
   background-color: var(--wildGoldTrans);
   width: 300px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
-.reviewLinks:hover{
+.reviewLinks:hover {
+  
   background-color: var(--wildGold);
 }
 

@@ -58,14 +58,22 @@
 
 .iconButton,
 .popUpButton {
-  color: var(--wildGreen);
+  color: var(--wildBlack);
   display: flex;
   border-radius: 5px;
   padding: 8px;
   font-size: 15px;
-  background-color: rgb(229, 223, 223);
+  background-color: var(--wildGoldTrans);
   cursor: pointer;
-  transition: border 0.1s;
+  transition: background-color 0.3s ease;
+}
+
+#popUpButton {
+  background-color: var(--wildGold);
+}
+
+.iconButton:hover {
+  background-color: var(--wildGold);
 }
 
 .popUpButton {

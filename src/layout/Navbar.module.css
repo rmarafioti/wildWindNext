@@ -206,7 +206,7 @@
 
 .drop {
   position: absolute;
-  top: 26%;
+  top: 24%;
   left: 3%;
   margin: 0.5rem;
   background-color: white;
@@ -218,7 +218,7 @@
 
 .droptats {
   position: absolute;
-  top: 26%;
+  top: 24%;
   left: 26%;
   margin: 0.5rem;
   background-color: white;
@@ -257,7 +257,7 @@
 }
 
 .dropLink:hover {
-  background-color: var(--wildBlue);
+  background-color: var(--wildGoldTrans);
 }
 
 #dropLinkTop,
@@ -316,8 +316,8 @@
 
   .droptats {
     position: absolute;
-    top: 32%;
-    left: 5%;
+    top: 34%;
+    left: 2%;
     padding: 0.5rem;
     margin: 0.5rem;
     width: 150px;
@@ -329,5 +329,16 @@
   .dropLink {
     padding: 1rem;
     margin: 0;
+  }
+}
+
+@media (min-width: 2000px){
+  .droptats {
+    top: 14%;
+    left: 25.5%;
+  }
+  .drop {
+    top: 14%;
+    left: 2%;
   }
 }

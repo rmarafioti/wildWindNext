@@ -34,7 +34,7 @@ export default function RequestSent() {
         </h3>
       </div>
       <Link className={styles.returnHome} href="/">
-        <h3>Return Home</h3>
+        <h3 className={styles.returnHomeHeader}>Return Home</h3>
       </Link>
     </article>
   );
