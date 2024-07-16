@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 1rem;
 }
 
 .tattooHeader,
@@ -54,7 +54,8 @@
 .artistLinksContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .artistLink {
@@ -62,13 +63,30 @@
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
-  color: var(--wildGreen);
+  color: var(--wildBlack);
   border-radius: 5px;
-  border: 2px solid var(--wildGreen);
+  background-color: var(--wildDarkGreenTrans);
   width: 300px;
+  transition: background-color 0.3s ease; 
+}
+
+.artistLink:hover{
+  color: white;
+  background-color: var(--wildDarkGreen);
+}
+
+.linkHeader {
+  font-weight: normal;
 }
 
 @media (max-width: 586px) {
+  .artistLinksContainer {
+    width: 100%;
+  }
+  .artistLink {
+    width: 100%;
+  }
+ 
   .tattoos {
     margin: 1rem;
   }

@@ -61,10 +61,10 @@ export default function Media() {
       </div>
       <div className={styles.mediaLinksContainer}>
         <Link className={styles.mediaLinks} href="/reviews">
-          <h3>Reviews</h3>
+          <h3 className={styles.linkHeader}>Reviews</h3>
         </Link>
         <Link className={styles.mediaLinks} href="/aboutus">
-          <h3>About Us</h3>
+          <h3 className={styles.linkHeader}>About Us</h3>
         </Link>
       </div>
     </article>

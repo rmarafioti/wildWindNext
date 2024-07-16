@@ -62,13 +62,13 @@ export default function Navbar() {
           />
         </Link>
         <div id={styles.navRight}>
-          <Link
+          {/*<Link
             id={styles.faqContainer}
             href="/faqs"
             aria-label="icon which links to the website's frequently asked questions page"
           >
             <TbMessageCircleQuestion id={styles.faqIcon} />
-          </Link>
+          </Link>*/}
           <Link
             id={styles.contactContainer}
             href="/contact"
