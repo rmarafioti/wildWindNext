@@ -10,12 +10,12 @@
 
 #headerFaqs {
   font-size: 30px;
-  font-weight:normal;
+  font-weight: normal;
 }
 #faqTagline {
-  color: black;
+  color: var(--wildBlack);
   font-size: 20px;
-    font-weight: normal;
+  font-weight: normal;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--wildGreen);
@@ -30,7 +30,7 @@
 }
 
 .faq {
-  color: black;
+  color: var(--wildBlack);
   font-weight: normal;
   margin-right: 1rem;
   border-bottom: solid 1px var(--wildGreen);
@@ -52,7 +52,6 @@
   font-size: 20px;
   padding: 5px;
 }
-
 
 @media (max-width: 586px) {
   #faqs {

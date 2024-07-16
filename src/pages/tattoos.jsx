@@ -41,10 +41,10 @@ export default function Tattoos() {
       <h2 className={styles.artistHeader}>Our Artists</h2>
       <div className={styles.artistLinksContainer}>
         <Link href="/richtats" className={styles.artistLink}>
-          <h3>Rich Marafioti</h3>
+          <h3 className={styles.linkHeader}>Rich Marafioti</h3>
         </Link>
         <Link href="/mercytats" className={styles.artistLink}>
-          <h3>Mercedes Wright</h3>
+          <h3 className={styles.linkHeader}>Mercedes Wright</h3>
         </Link>
       </div>
     </article>

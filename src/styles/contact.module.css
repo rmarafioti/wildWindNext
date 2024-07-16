@@ -34,7 +34,7 @@
 
 .headerTagline,
 .headerTaglineTwo {
-  color: black;
+  color: var(--wildBlack);
   font-weight: normal;
   padding-bottom: 0.5rem;
 }
@@ -45,7 +45,7 @@
 
 .reviewLink {
   font-size: 20px;
-  color: black;
+  color: var(--wildBlack);
   text-decoration: none;
   font-weight: bolder;
   padding: 0.2rem;
@@ -60,7 +60,7 @@
 }
 
 .contactButtons {
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--wildGreen);
@@ -73,9 +73,8 @@
   border-top: 1px solid var(--wildGreen);
 }
 
-
 .contactInfo {
-  color: black;
+  color: var(--wildBlack);
   display: flex;
   align-items: start;
   margin: 1rem;
@@ -95,7 +94,7 @@
 
 .contactInfo a:link,
 .contactInfo a:visited {
-  color: black;
+  color: var(--wildBlack);
   margin: 1rem;
   text-decoration: none;
   border-bottom: 1px solid var(--wildGreen);
@@ -120,7 +119,7 @@
 }
 
 .times {
-  color: black;
+  color: var(--wildBlack);
   margin: 0rem 1rem 0rem 1rem;
 }
 
@@ -148,7 +147,7 @@
   font-size: 30px;
   font-weight: normal;
   text-align: center;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--wildGreen);
 }
 
@@ -200,7 +199,7 @@
 }
 
 .requestMessage {
-  color: black;
+  color: var(--wildBlack);
   padding-bottom: 1rem;
 }
 
@@ -210,7 +209,7 @@
 }
 
 .messageTag {
-  color: black;
+  color: var(--wildBlack);
 }
 
 #messageTagBottom {

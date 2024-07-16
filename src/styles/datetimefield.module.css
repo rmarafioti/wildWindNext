@@ -7,7 +7,7 @@
 }
 
 .label {
-  color: black;
+  color: var(--wildBlack);
   font-weight: bold;
 }
 
@@ -22,20 +22,20 @@
 .timeForm {
   background-color: rgb(236, 232, 232);
   margin: 0.5rem 0.5rem 0.5rem 0rem;
-  border: 1px solid black;
+  border: 1px solid var(--wildBlack);
   padding: 0.2rem;
   border-radius: 5px;
 }
 
 .addTime {
-  color: black;
+  color: var(--wildBlack);
   margin-left: 0.5rem;
 }
 
 .addMoreButton {
   display: flex;
   align-items: center;
-  color: black;
+  color: var(--wildBlack);
   background-color: rgb(236, 232, 232);
   font-size: 12px;
   border: 1px solid var(--wildGreen);
@@ -55,9 +55,9 @@
 }
 
 .timeEntry {
-  color: black;
+  color: var(--wildBlack);
   display: flex;
-  margin: 0.5rem 0.5rem 0.5rem 0rem; 
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
   align-items: center;
   padding: 0.3rem;
   border: 1px solid lightgrey;
