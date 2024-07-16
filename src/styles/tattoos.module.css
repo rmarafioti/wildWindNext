@@ -65,14 +65,14 @@
   text-decoration: none;
   color: var(--wildBlack);
   border-radius: 5px;
-  background-color: var(--wildDarkGreenTrans);
+  border: 1px solid var(--wildGreen);
   width: 300px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
-.artistLink:hover{
-  color: white;
-  background-color: var(--wildDarkGreen);
+.artistLink:hover {
+  border: 1px solid var(--wildGold);
+  background-color: var(--wildGold);
 }
 
 .linkHeader {
@@ -86,7 +86,7 @@
   .artistLink {
     width: 100%;
   }
- 
+
   .tattoos {
     margin: 1rem;
   }
