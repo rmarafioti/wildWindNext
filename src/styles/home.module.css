@@ -72,13 +72,15 @@
 
 .contactHomeButton {
   display: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  background-color: white;
+  background-color: var(--wildDarkGreen);
   padding: 0.5rem;
   border-radius: 5px;
-  border: 2.5px solid var(--wildGreen);
+}
+
+.linkContactHeader {
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .homeParagraphReview {
@@ -127,10 +129,19 @@
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
-  color: var(--wildGreen);
+  color: var(--wildBlack);
+  background-color: var(--wildGoldTrans);
   border-radius: 5px;
-  border: 2px solid var(--wildGreen);
   width: 300px;
+  transition: background-color 0.3s ease; 
+}
+
+.homeLink:hover{
+  background-color: var(--wildGold);
+}
+
+.linkHeader {
+  font-weight: normal;
 }
 
 @media (max-width: 586px) {

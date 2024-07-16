@@ -31,7 +31,9 @@ export default function Home() {
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
         IL 60622.
       </p>
-      <button className={styles.contactHomeButton}>Contact Us</button>
+      <Link className={styles.contactHomeButton} href="/contact">
+        <p className={styles.linkContactHeader}>Contact Us</p>
+      </Link>
       <p
         className={`${styles.contactParagraph} ${styles.contactParagraphBottom}`}
       >
@@ -62,7 +64,7 @@ export default function Home() {
       </p>
 
       <Link href="/aboutus" className={styles.homeLink}>
-        <h3>Learn more</h3>
+        <h3 className={styles.linkHeader}>Learn more</h3>
       </Link>
       <h2 className={styles.headerTwo}>Expert Tattoo Services</h2>
       <ul className={styles.tattooServices}>
@@ -86,7 +88,7 @@ export default function Home() {
       </ul>
 
       <Link href="/tattoos" className={styles.homeLink}>
-        <h3>View tattoos</h3>
+        <h3 className={styles.linkHeader}>View tattoos</h3>
       </Link>
 
       <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
@@ -150,7 +152,7 @@ export default function Home() {
       </section>
 
       <Link href="/reviews" className={styles.homeLink}>
-        <h3>Read more reviews</h3>
+        <h3 className={styles.linkHeader}>Read more reviews</h3>
       </Link>
     </article>
   );
