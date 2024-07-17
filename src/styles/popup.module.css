@@ -26,8 +26,8 @@
   overflow-x: hidden;
   border-radius: 0px;
 }
-#popUpButton,
-#iconButton {
+
+#popUpButton {
   color: var(--wildBlack);
   display: flex;
   border-radius: 5px;
@@ -39,10 +39,6 @@
 }
 
 #popUpButton {
-  background-color: var(--wildGold);
-}
-
-#iconButton:hover {
   background-color: var(--wildGold);
 }
 
