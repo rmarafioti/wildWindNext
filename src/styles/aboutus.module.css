@@ -134,7 +134,9 @@
 }
 
 @media (max-width: 586px) {
-  .shopLinksContainer, .shopLinks, .shopImages {
+  .shopLinksContainer,
+  .shopLinks,
+  .shopImages {
     width: 100%;
   }
 }
