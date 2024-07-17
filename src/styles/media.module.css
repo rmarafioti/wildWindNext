@@ -7,14 +7,14 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
-#mediaHeader {
+.mediaHeader {
   border-bottom: 1px solid var(--wildGreen);
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 1rem;
 }
 
-.mediaHeader {
+.mediaHeaderTag {
   color: var(--wildBlack);
   font-weight: normal;
   font-size: 20px;
@@ -22,7 +22,7 @@
   margin: 0rem 1rem 0rem 1rem;
 }
 
-#mediaHeaderBottom {
+#mediaHeaderTagBottom {
   margin-top: 1rem;
 }
 
@@ -49,7 +49,7 @@
   margin-bottom: 2rem;
 }
 
-.videoBottom {
+#videoBottom {
   margin-bottom: 1rem;
 }
 
@@ -75,10 +75,10 @@
   border-radius: 5px;
   background-color: var(--wildGoldTrans);
   width: 300px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
-.mediaLinks:hover{
+.mediaLinks:hover {
   background-color: var(--wildGold);
 }
 
@@ -87,15 +87,9 @@
 }
 
 @media (max-width: 586px) {
-  .video {
-    width: 100%;
-  }
-  .atBayPhoto {
-    width: 100%;
-  }
-  .mediaLinksContainer {
-    width: 100%;
-  }
+  .video,
+  .atBayPhoto,
+  .mediaLinksContainer,
   .mediaLinks {
     width: 100%;
   }
