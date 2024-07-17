@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 .tattooHeader,
@@ -14,30 +14,9 @@
   font-weight: normal;
 }
 
-.artistHeader {
-  margin: 1rem 0rem 1rem 0rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
-.shopMiddleParagraphs {
-  max-width: 480px;
-}
-
-.shopMiddleParagraphs {
-  color: var(--wildBlack);
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-.bottomParagraph {
-  margin-bottom: 0;
-}
-
 .unorderedList {
   display: flex;
   flex-direction: row;
-
   margin-bottom: 1rem;
   padding: 0;
   list-style-type: none;
@@ -51,11 +30,27 @@
   padding: 0rem 1rem 0.5rem 1rem;
 }
 
+.shopMiddleParagraphs {
+  max-width: 480px;
+  color: var(--wildBlack);
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.bottomParagraph {
+  margin-bottom: 0;
+}
+
+.artistHeader {
+  margin: 1rem 0rem 1rem 0rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
 .artistLinksContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .artistLink {
@@ -65,7 +60,6 @@
   text-decoration: none;
   color: var(--wildBlack);
   border-radius: 5px;
-  
   background-color: var(--wildGoldTrans);
   width: 300px;
   transition: background-color 0.3s ease;
@@ -80,14 +74,8 @@
 }
 
 @media (max-width: 586px) {
-  .artistLinksContainer {
-    width: 100%;
-  }
+  .artistLinksContainer,
   .artistLink {
     width: 100%;
-  }
-
-  .tattoos {
-    margin: 1rem;
   }
 }
