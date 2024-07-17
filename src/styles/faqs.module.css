@@ -58,6 +58,33 @@
   padding: 5px;
 }
 
+.faqLinksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqLinks {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildBlack);
+  border-radius: 5px;
+  
+  background-color: var(--wildGoldTrans);
+  width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.faqLinks:hover {
+  
+  background-color: var(--wildGold);
+}
+
+.linkHeader {
+  font-weight: normal;
+}
+
 @media (max-width: 586px) {
   #faqs {
     text-align: center;
@@ -80,5 +107,11 @@
   }
   .popUpContent {
     border-radius: 0px;
+  }
+  .faqLinksContainer {
+    width: 100%;
+  }
+  .faqLinks {
+    width: 100%;
   }
 }

@@ -60,9 +60,6 @@ export default function Media() {
         ></iframe>
       </div>
       <div className={styles.mediaLinksContainer}>
-        <Link className={styles.mediaLinks} href="/reviews">
-          <h3 className={styles.linkHeader}>Reviews</h3>
-        </Link>
         <Link className={styles.mediaLinks} href="/aboutus">
           <h3 className={styles.linkHeader}>About Us</h3>
         </Link>

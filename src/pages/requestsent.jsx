@@ -21,9 +21,6 @@ export default function RequestSent() {
         <h1 className={styles.requestSentMessage}>
           Thank you for your message!
         </h1>
-        <h2 className={`${styles.requestMessage} ${styles.requestMessageTop}`}>
-          Your request has been sent
-        </h2>
         <h3 className={styles.requestMessage}>
           You can expect a response within 1-3 days. We are excited to work with
           you soon!

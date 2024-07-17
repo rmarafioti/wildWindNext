@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Head from "next/head";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
@@ -55,6 +56,11 @@ export default function Faq() {
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
+      <div className={styles.faqLinksContainer}>
+        <Link className={styles.faqLinks} href="/aboutus">
+          <h3 className={styles.linkHeader}>About Us</h3>
+        </Link>
+      </div>
     </article>
   );
 }

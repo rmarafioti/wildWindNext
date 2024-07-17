@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import usePhotoGallery from "../components/photoGallery";
 import TattooCard from "../components/TattooCard";
 import { FaInstagram } from "react-icons/fa";
@@ -74,6 +75,11 @@ export default function MercedesTats() {
           ))}
         </ul>
       </section>
+      <div className={styles.tattooLinksContainer}>
+        <Link className={styles.tattooLinks} href="/tattoos">
+          <h3 className={styles.linkHeader}>Tattoos</h3>
+        </Link>
+      </div>
     </article>
   );
 }

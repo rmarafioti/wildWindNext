@@ -132,6 +132,9 @@ export default function Shop() {
         <Link href="/media" className={styles.shopLinks}>
           <h3 className={styles.linkHeader}>Media</h3>
         </Link>
+        <Link href="/faqs" className={styles.shopLinks}>
+          <h3 className={styles.linkHeader}>Faqs</h3>
+        </Link>
       </div>
     </article>
   );
