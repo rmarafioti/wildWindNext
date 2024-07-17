@@ -1,0 +1,30 @@
+/* RequestAppt.jsx */
+
+.requestContact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.requestHeader {
+  margin: 0rem 1rem 2rem 1rem;
+  font-weight: bold;
+}
+
+.requestContact {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.requestHeader {
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wildGreen);
+}

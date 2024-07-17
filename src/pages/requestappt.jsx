@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Form from "@/components/Form";
 
-import styles from "../styles/contact.module.css";
+import styles from "@/styles/requestappt.module.css";
 
 /**
  * @component RequestAppt features a functional form by way of Form.jsx for a client to request an appointmmet via email
