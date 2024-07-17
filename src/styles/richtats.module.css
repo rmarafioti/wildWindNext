@@ -139,6 +139,8 @@
   .tattooGallery {
     display: none;
   }
+}
+@media (max-width: 586px) {
   .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
