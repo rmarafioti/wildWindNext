@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import InputMask from "react-input-mask";
+import MaskedInput from "react-text-mask";
 import { useRouter } from "next/router";
 import TattooSizeField from "./TattooSizeField";
 import DateTimeField from "./DateTimeField";
@@ -220,12 +220,27 @@ export default function Form() {
           <p className={styles.error}>*Please enter a valid phone number*</p>
         )}
       </label>
-      <InputMask
+      <MaskedInput
         className={styles.form}
         type="text"
         name="user_phone"
         aria-label="user_phone_number"
-        mask="(999) 999-9999"
+        mask={[
+          "(",
+          /[1-9]/,
+          /\d/,
+          /\d/,
+          ")",
+          " ",
+          /\d/,
+          /\d/,
+          /\d/,
+          "-",
+          /\d/,
+          /\d/,
+          /\d/,
+          /\d/,
+        ]}
         value={formValues.user_phone}
         onChange={handleInputChange}
         onFocus={() => handleInputFocus("user_phone")}

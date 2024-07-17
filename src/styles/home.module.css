@@ -133,10 +133,10 @@
   background-color: var(--wildGoldTrans);
   border-radius: 5px;
   width: 300px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
-.homeLink:hover{
+.homeLink:hover {
   background-color: var(--wildGold);
 }
 
@@ -170,8 +170,7 @@
   .headerTwo {
     padding-bottom: 1rem;
   }
-  .homeLink,
-  #homeLinksContainer {
+  .homeLink {
     width: 100%;
   }
 }

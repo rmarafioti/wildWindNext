@@ -21,11 +21,6 @@
   border-bottom: solid 1px var(--wildGreen);
 }
 
-.aftercaresContainer {
-  display: flex;
-  flex-direction: column;
-}
-
 .careContainer,
 .careContainerBottom {
   display: flex;
@@ -38,10 +33,7 @@
 
 .careContainer {
   margin-top: 2rem;
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  padding-bottom: 1rem;
 }
 
 .careContainerBottom {
@@ -56,8 +48,12 @@
   margin-right: 0.5rem;
 }
 
-.iconButton,
-.popUpButton {
+.aftercaresContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconButton {
   color: var(--wildBlack);
   display: flex;
   border-radius: 5px;
@@ -68,17 +64,8 @@
   transition: background-color 0.3s ease;
 }
 
-#popUpButton {
-  background-color: var(--wildGold);
-}
-
 .iconButton:hover {
   background-color: var(--wildGold);
-}
-
-.popUpButton {
-  font-size: 20px;
-  padding: 5px;
 }
 
 @media (max-width: 586px) {
@@ -92,13 +79,9 @@
     justify-content: space-between;
     border-bottom: solid 1px var(--wildGreen);
   }
-
   .instructions {
     font-size: 20px;
     text-wrap: wrap;
     padding-bottom: 1rem 0rem 1rem 0rem;
-  }
-  .popUpContent {
-    border-radius: 0px;
   }
 }

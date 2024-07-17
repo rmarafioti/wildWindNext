@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 
-import popUpstyles from "../styles/popup.module.css";
+import popUpstyles from "@/styles/popup.module.css";
 
 /**
  * @function usePopUp handles opening the pop up && setting the pop up content for Care.jsx && Faq.jsx

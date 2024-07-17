@@ -17,8 +17,8 @@ export default function Media() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/media" />
       </Head>
-      <h1 id={styles.mediaHeader}>Media</h1>
-      <h2 className={styles.mediaHeader}>
+      <h1 className={styles.mediaHeader}>Media</h1>
+      <h2 className={styles.mediaHeaderTag}>
         Harley-Davidson <b className={styles.targetText}>X</b> Wild Wind Tattoo
       </h2>
       <div className={styles.mediaContainer}>
@@ -34,7 +34,7 @@ export default function Media() {
           allowFullScreen
         ></iframe>
       </div>
-      <h2 className={styles.mediaHeader} id={styles.mediaHeaderBottom}>
+      <h2 className={styles.mediaHeaderTag} id={styles.mediaHeaderTagBottom}>
         Breakfast for Dinner <b className={styles.targetText}>X</b> Wild Wind
         Tattoo <b className={styles.targetText}>X</b> At-Bay
       </h2>

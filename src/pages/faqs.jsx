@@ -39,8 +39,8 @@ export default function Faq() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/faqs" />
       </Head>
-      <h1 id={styles.headerFaqs}>FAQs</h1>
-      <p id={styles.faqTagline}>
+      <h1 className={styles.headerFaqs}>FAQs</h1>
+      <p className={styles.faqTagline}>
         General questions before you fill out our contact form
       </p>
       <section id={styles.questions}>

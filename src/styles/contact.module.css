@@ -6,6 +6,11 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.header {
+  font-size: 30px;
+  font-weight: normal;
+}
+
 .contactHeader {
   display: flex;
   flex-direction: column;
@@ -13,23 +18,6 @@
   align-items: center;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--wildGreen);
-}
-
-.requestContact {
-  color: var(--wildGreen);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.requestHeader {
-  margin: 0rem 1rem 2rem 1rem;
-  font-weight: bold;
-}
-
-.header {
-  font-size: 30px;
-  font-weight: normal;
 }
 
 .headerTagline,
@@ -51,12 +39,12 @@
   padding: 0.2rem;
 }
 
-.contactLink {
-  text-decoration: none;
-}
-
 .contactButtonSection {
   margin: 1rem;
+}
+
+.contactLink {
+  text-decoration: none;
 }
 
 .contactButtons {
@@ -78,20 +66,8 @@
 .contactInfo {
   color: var(--wildBlack);
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin: 1rem;
-}
-
-.contactInfoValue {
-  margin-left: 1rem;
-}
-
-#phone {
-  margin-left: 1rem;
-}
-
-#email {
-  margin-left: 1.5rem;
 }
 
 .contactInfo a:link,
@@ -101,6 +77,11 @@
   text-decoration: none;
   border-bottom: 1px solid var(--wildGreen);
 }
+
+.contactInfoValue {
+  margin-left: 1rem;
+}
+
 #address {
   margin: 0rem;
   text-align: center;
@@ -134,30 +115,12 @@
   border-bottom: 1px solid var(--wildGreen);
 }
 
-@media (max-width: 586px) {
-  .contactButtons {
-    padding: .5rem;
-    width: 100%;
-  }
+#phone {
+  margin-left: 1rem;
 }
 
-/* RequestAppt.jsx */
-
-.requestContact {
-  color: var(--wildGreen);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 1rem 2rem 1rem;
-}
-
-.requestHeader {
-  font-size: 30px;
-  font-weight: normal;
-  text-align: center;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
+#email {
+  margin-left: 1.5rem;
 }
 
 @media (max-width: 586px) {
@@ -166,6 +129,10 @@
     text-align: center;
   }
   .contactButtonSection {
+    width: 100%;
+  }
+  .contactButtons {
+    padding: .5rem;
     width: 100%;
   }
   #contactInfoContainer {
@@ -179,6 +146,7 @@
     text-align: center;
   }
 }
+
 
 /* RequestSent.jsx */
 
