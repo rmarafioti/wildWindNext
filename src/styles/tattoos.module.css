@@ -78,4 +78,7 @@
   .artistLink {
     width: 100%;
   }
+  .artistLink {
+    background-color: var(--wildGold);
+  }
 }

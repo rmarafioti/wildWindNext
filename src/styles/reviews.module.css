@@ -98,4 +98,7 @@
   .reviewLinks {
     width: 100%;
   }
+  .reviewLinks {
+    background-color: var(--wildGold);
+  }
 }

@@ -172,5 +172,6 @@
   }
   .homeLink {
     width: 100%;
+    background-color: var(--wildGold);
   }
 }

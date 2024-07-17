@@ -145,4 +145,7 @@
   .tattooLinks {
     width: 100%;
   }
+  .tattooLinks {
+    background-color: var(--wildGold);
+  }
 }

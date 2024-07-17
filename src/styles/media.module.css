@@ -93,4 +93,7 @@
   .mediaLinks {
     width: 100%;
   }
+  .mediaLinks {
+    background-color: var(--wildGold);
+  }
 }

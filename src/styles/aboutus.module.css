@@ -139,4 +139,7 @@
   .shopImages {
     width: 100%;
   }
+  .shopLinks {
+    background-color: var(--wildGold);
+  }
 }

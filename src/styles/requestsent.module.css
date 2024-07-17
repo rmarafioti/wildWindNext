@@ -68,4 +68,7 @@
   .returnHomeHeader {
     width: 100%;
   }
+  .returnHome {
+    background-color: var(--wildGold);
+  }
 }
