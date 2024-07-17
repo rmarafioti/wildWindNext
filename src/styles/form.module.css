@@ -83,10 +83,16 @@
 @media (max-width: 586px) {
   .requestContact {
     margin: 0rem 1rem 1rem 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width and height */
   }
   .requestHeader {
     text-align: center;
     padding-bottom: 1rem;
+  }
+
+  .contactForm {
+    width: 100%;
   }
 
   .messageForm,
@@ -96,8 +102,20 @@
   .tattooSizeForm,
   .tattooSizeOption {
     width: 100%;
+    padding: 0.5rem; /* Ensure consistent padding */
+    /*box-sizing: border-box; /* Ensure padding and borders are included in the element's width and height */
+    /*position: relative; /* Ensure inputs are positioned correctly */
   }
   .tattooSizeContainer {
     width: 100%;
+    /*box-sizing: border-box; /* Ensure padding and borders are included in the element's width and height */
+  }
+
+  .formSectionContainer {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--wildGreen);
+    width: 100%;
+    /*box-sizing: border-box;*/
   }
 }

@@ -53,7 +53,7 @@
 .tattooSlide {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .tattoo {
@@ -86,7 +86,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: start;
+  align-content: flex-start;
 }
 
 .tattooGallery img {
