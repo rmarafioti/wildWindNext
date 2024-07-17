@@ -57,7 +57,7 @@ export default function Navbar() {
         <Link href="/">
           <img
             id={styles.navLogo}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/f_webp/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
             alt="shop logo"
           />
         </Link>

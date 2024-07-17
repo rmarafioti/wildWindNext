@@ -14,7 +14,7 @@
 .formSubmit {
   border: 1px solid var(--wildBlack);
   border-radius: 4px;
-  padding: 0.25rem;
+  padding: .5rem;
   margin-bottom: 1rem;
   width: 480px;
 }
@@ -54,17 +54,21 @@
 }
 
 .formSubmit {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: var(--wildDarkGreen);
+  padding: .5rem;
+  width: 480px;
+  border-radius: 5px;
   margin-top: 1rem;
-  font-size: 16px;
-  border: 1px solid var(--wildBlack);
-  background-color: rgb(236, 232, 232);
-  color: var(--wildBlack);
   cursor: pointer;
 }
 
 .error {
   display: inline-block;
-  background-color: yellowgreen;
+  background-color: var(--wildGold);
   border-radius: 5px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   font-weight: normal;

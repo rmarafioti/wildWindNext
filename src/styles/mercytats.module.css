@@ -111,6 +111,33 @@
   border: 2px solid var(--wildGreen);
 }
 
+.tattooLinksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tattooLinks {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildBlack);
+  border-radius: 5px;
+  
+  background-color: var(--wildGoldTrans);
+  width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.tattooLinks:hover {
+  
+  background-color: var(--wildGold);
+}
+
+.linkHeader {
+  font-weight: normal;
+}
+
 @media (max-width: 1380px) {
   .tattoos {
     margin: 1rem;
@@ -137,5 +164,11 @@
   .tattooGallery,
   .mercedesGallery {
     display: none;
+  }
+  .tattooLinksContainer {
+    width: 100%;
+  }
+  .tattooLinks {
+    width: 100%;
   }
 }

@@ -2,7 +2,6 @@
 
 .selectTimeContainer {
   display: flex;
-
   align-items: center;
 }
 
@@ -13,36 +12,45 @@
 
 .error {
   display: inline-block;
-  background-color: yellowgreen;
+  background-color:var(--wildGold);
   border-radius: 5px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   font-weight: normal;
 }
 
 .timeForm {
-  background-color: rgb(236, 232, 232);
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
-  border: 1px solid var(--wildBlack);
-  padding: 0.2rem;
+  border: solid 1px var(--wildBlack);
+ background-color: rgb(240, 236, 236);
+  margin: 0.5rem .5rem 0.5rem 0rem;
+ 
+ padding: .5rem 0rem .5rem 0rem;
   border-radius: 5px;
 }
 
+
+
 .addTime {
   color: var(--wildBlack);
-  margin-left: 0.5rem;
+  margin-left: .5rem;
+
 }
 
 .addMoreButton {
   display: flex;
   align-items: center;
   color: var(--wildBlack);
-  background-color: rgb(236, 232, 232);
-  font-size: 12px;
-  border: 1px solid var(--wildGreen);
-  padding: 0.2rem;
+  background-color: var(--wildGoldTrans);
+  
+ 
+  padding: 0.4rem;
   border-radius: 5px;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addMoreButton:hover {
+  background-color: var(--wildGold);
 }
 
 .addSymbol {
@@ -65,15 +73,20 @@
 }
 
 .removeButton {
-  color: var(--wildGreen);
+  color: var(--wildBlack);
   display: flex;
   border-radius: 5px;
-  font-size: 15px;
-  background-color: rgb(229, 223, 223);
+ 
+  background-color: var(--wildGoldTrans);
   cursor: pointer;
   font-size: 20px;
   padding: 5px;
   margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+  background-color: var(--wildGold);
 }
 
 @media (max-width: 586px) {
@@ -92,5 +105,8 @@
   }
   .tattooSizeContainer {
     width: 100%;
+  }
+  .addMoreButton {
+    background-color: var(--wildGold);
   }
 }

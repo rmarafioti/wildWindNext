@@ -127,10 +127,13 @@ export default function Shop() {
       </p>
       <div className={styles.shopLinksContainer}>
         <Link href="/reviews" className={styles.shopLinks}>
-          <h3>Reviews</h3>
+          <h3 className={styles.linkHeader}>Reviews</h3>
         </Link>
         <Link href="/media" className={styles.shopLinks}>
-          <h3>Media</h3>
+          <h3 className={styles.linkHeader}>Media</h3>
+        </Link>
+        <Link href="/faqs" className={styles.shopLinks}>
+          <h3 className={styles.linkHeader}>Faqs</h3>
         </Link>
       </div>
     </article>

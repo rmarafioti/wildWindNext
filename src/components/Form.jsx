@@ -299,7 +299,7 @@ export default function Form() {
       <input
         className={styles.formSubmit}
         type="submit"
-        aria-label="form_submot_button"
+        aria-label="form_submit_button"
         value={isLoading ? "Sending..." : "Send"}
         disabled={isLoading || !isFormValid()}
       />

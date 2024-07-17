@@ -5,7 +5,7 @@
 
 .error {
   display: inline-block;
-  background-color: yellowgreen;
+  background-color: var(--wildGold);
   border-radius: 5px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   font-weight: normal;
