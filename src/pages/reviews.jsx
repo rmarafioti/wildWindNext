@@ -26,7 +26,7 @@ export default function Reviews() {
             <FaStar />
           </p>
         </div>
-        <p className={styles.clientReview}>"{review}"</p>
+        <p className={styles.clientReview}>&quot;{review}&quot;</p>
       </li>
     );
   }

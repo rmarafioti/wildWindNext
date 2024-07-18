@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { IoCheckmark } from "react-icons/io5";
@@ -22,10 +23,15 @@ export default function Home() {
         <link rel="canonical" href="https://wildwindtattoo.com/" />
       </Head>
       <h1 className={styles.headerHome}>Welcome to Wild Wind Tattoo</h1>
-      <img
+      <Image
         className={styles.shopPhoto}
-        src="https://res.cloudinary.com/dzpne110u/image/upload/v1720321542/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
+        src="https://res.cloudinary.com/dzpne110u/image/upload/c_scale,q_auto,w_1000/v1720322083/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
         alt="Wild Wind Tattoo's storefront"
+        priority
+        quality={75}
+        width={1776}
+        height={1184}
+        sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <p className={styles.contactParagraph}>
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
@@ -40,7 +46,7 @@ export default function Home() {
         Have questions? Contact us at 773.230.0223 or wildwindtattoo@gmail.com.
       </p>
       <h2 className={styles.headerTwo}>
-        Expert Tattooing in Chicago's Vibrant Wicker Park
+        Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
       </h2>
       <p className={styles.homeParagraph}>
         Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon of
@@ -58,13 +64,13 @@ export default function Home() {
         Wild Wind Tattoo proudly serves and works with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
         Nightclub shooting victims, Project Fierce, and the Chicago Abortion
-        Fund. Currently, we are partnered with the Chicago Therapy Collective's
-        Hire Trans Now initiative. Our commitment to community and inclusivity
-        is at the core of our mission.
+        Fund. Currently, we are partnered with the Chicago Therapy
+        Collective&apos;s Hire Trans Now initiative. Our commitment to community
+        and inclusivity is at the core of our mission.
       </p>
 
       <Link href="/aboutus" className={styles.homeLink}>
-        <h3 className={styles.linkHeader}>Learn more</h3>
+        <h3 className={styles.linkHeader}>About us</h3>
       </Link>
       <h2 className={styles.headerTwo}>Expert Tattoo Services</h2>
       <ul className={styles.tattooServices}>
@@ -140,14 +146,15 @@ export default function Home() {
         </div>
         <p className={`${styles.homeParagraph} ${styles.homeParagraphReview}`}>
           {" "}
-          "This place is fantastic! I loved my experience working with Rich. He
-          had such passion and he's very helpful guiding the experience. I
-          relied on his expertise when I was getting two tattoos covered up with
-          a bigger tattoo. He was great to talk with, I loved the relaxing jazz
-          music in the shop and the vibrant art was so cheerful, so inviting.
-          Rich and I kept in touch and he checked my tattoo out a month later to
-          see how it healed. I've told my friends to go see Rich and I can't
-          recommend enough! Thank you!"
+          &quot;This place is fantastic! I loved my experience working with
+          Rich. He had such passion and he&apos;s very helpful guiding the
+          experience. I relied on his expertise when I was getting two tattoos
+          covered up with a bigger tattoo. He was great to talk with, I loved
+          the relaxing jazz music in the shop and the vibrant art was so
+          cheerful, so inviting. Rich and I kept in touch and he checked my
+          tattoo out a month later to see how it healed. I&apos;ve told my
+          friends to go see Rich and I can&apos;t recommend enough! Thank
+          you!&quot;
         </p>
       </section>
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { TbMessageCircleQuestion } from "react-icons/tb";
 import { IoSkullOutline } from "react-icons/io5";
 import { GoBook } from "react-icons/go";
 import { HiOutlineEnvelope } from "react-icons/hi2";
@@ -55,28 +55,26 @@ export default function Navbar() {
           ></div>
         </div>
         <Link href="/">
-          <img
+          <Image
             id={styles.navLogo}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/f_webp/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
-            alt="shop logo"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
+            alt="shop logo in nav bar"
+            priority
+            quality={75}
+            width={7601}
+            height={2165}
+            sizes="(max-width: 300px) 100vw, 300px"
           />
         </Link>
-        <div id={styles.navRight}>
-          {/*<Link
-            id={styles.faqContainer}
-            href="/faqs"
-            aria-label="icon which links to the website's frequently asked questions page"
-          >
-            <TbMessageCircleQuestion id={styles.faqIcon} />
-          </Link>*/}
-          <Link
-            id={styles.contactContainer}
-            href="/contact"
-            aria-label="icon which links to the website's contact page"
-          >
+        <Link
+          id={styles.contactContainer}
+          href="/contact"
+          aria-label="icon which links to the website's contact page"
+        >
+          <div id={styles.navRight}>
             <button id={styles.contactButton}>Contact Us</button>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </nav>
       {/*hamburger menu open*/}
       <section id={styles.menuContainer}>

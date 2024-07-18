@@ -55,7 +55,9 @@
 
 .atBayPhoto {
   border-radius: 8px;
-  width: 560px;
+  width:100%;
+  max-width: 560px;
+  height: auto;
   margin-bottom: 1rem;
 }
 

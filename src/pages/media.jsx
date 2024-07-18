@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/media.module.css";
 
 /**
@@ -41,11 +42,16 @@ export default function Media() {
       <div
         className={`${styles.mediaContainer} ${styles.mediaContainerBottom}`}
       >
-        <img
+        <Image
           className={styles.atBayPhoto}
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1719755434/wildWindSite/atBayCampaign_osd2gw.jpg"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/wildWindSite/atBayCampaign_osd2gw.jpg"
           alt="photo of At-Bay campaign"
-        ></img>
+          priority
+          quality={75}
+          width={1300}
+          height={867}
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 560px"
+        />
         <iframe
           className={styles.video}
           id={styles.videoBottom}

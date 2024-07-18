@@ -12,16 +12,22 @@
   font-weight: normal;
 }
 
-.shopImages {
+.shopImagesContainer {
   margin: 1rem;
   transition: opacity 1s ease-in-out;
   opacity: 1;
-  max-width: 480px;
-  max-height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopImage {
+  max-width: 480px; 
   border-radius: 8px;
 }
 
-.shopImages.fade-out {
+.shopImagesContainer.fade-out {
   opacity: 0;
 }
 

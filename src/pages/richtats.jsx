@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import TattooCard from "../components/TattooCard";
 import { FaInstagram } from "react-icons/fa";
@@ -44,19 +45,25 @@ export default function RichTats() {
       <p className={styles.artistAbout}>
         Rich began tattooing in 2005, opening Wild Wind with ten years of
         experience in the industry. He is well versed in a variety of tattoo
-        styles. He earned his degree from the Rhode Island School of Design's
-        illustration department. His fine arts background is evident in his
-        tattoos, personal work, and the gallery-style design of the shop.
+        styles. He earned his degree from the Rhode Island School of
+        Design&apos;s illustration department. His fine arts background is
+        evident in his tattoos, personal work, and the gallery-style design of
+        the shop.
       </p>
       <section className={styles.tattooSection}>
         <div className={styles.tattooSlide}>
           <div className={styles.arrowSection}>
             <PiArrowSquareLeft className={styles.arrow} onClick={handlePrev} />
           </div>
-          <img
+          <Image
             className={styles.tattoo}
             src={imageUrl}
             alt="tattoo portfolio images"
+            priority
+            quality={75}
+            width={1350}
+            height={1800}
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px"
           />
           <div className={styles.arrowSection}>
             <PiArrowSquareRight className={styles.arrow} onClick={handleNext} />
@@ -75,7 +82,7 @@ export default function RichTats() {
       </section>
       <div className={styles.tattooLinksContainer}>
         <Link className={styles.tattooLinks} href="/tattoos">
-          <h3 className={styles.linkHeader}>Tattoos</h3>
+          <p className={styles.linkHeader}>Tattoos</p>
         </Link>
       </div>
     </article>

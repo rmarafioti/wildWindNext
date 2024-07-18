@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import AboutSlide from "@/components/AboutSlide";
 
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -43,10 +44,10 @@ export default function Shop() {
     };
   }, []);
 
-  const currentImageObj =
+  /*const currentImageObj =
     shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
 
-  const imageurl = currentImageObj ? currentImageObj.image : "";
+  const imagerl = currentImageObj ? currentImageObj.image : "";*/
 
   return (
     <article className={styles.shopAbout}>
@@ -56,14 +57,15 @@ export default function Shop() {
           name="description"
           content="This is the about page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="https://wildwindtattoo.com/AboutUs" />
+        <link rel="canonical" href="https://wildwindtattoo.com/aboutus" />
       </Head>
       <h1 className={styles.mainShopHeader}>About Us</h1>
-      <img
-        className={`${styles.shopImages} ${isFading ? styles["fade-out"] : ""}`}
-        src={imageurl}
-        alt="tattoo shop photos"
-      />
+      {shopPhotos.length > 0 && (
+        <AboutSlide
+          imageUrl={shopPhotos[currentIndex].image}
+          isFading={isFading}
+        />
+      )}
       <div className={styles.shopIconContainer}>
         <h1>
           <a
@@ -122,8 +124,8 @@ export default function Shop() {
         Wild Wind Tattoo is proud to serve and work with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
         Nightclub shooting victims, Project Fierce, and the Chicago Abortion
-        Fund. We are currently partnered with Chicago Therapy Collective's Hire
-        Trans Now initiative.
+        Fund. We are currently partnered with Chicago Therapy Collective&apos;s
+        Hire Trans Now initiative.
       </p>
       <div className={styles.shopLinksContainer}>
         <Link href="/reviews" className={styles.shopLinks}>
