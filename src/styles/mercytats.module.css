@@ -71,7 +71,7 @@
 
 .mercedesTattoo {
   border-radius: 5px;
-  height: 400px;
+  max-height: 400px;
   width: auto;
 }
 
@@ -122,6 +122,7 @@
 }
 
 .linkHeader {
+  font-size: 18px;
   font-weight: normal;
 }
 

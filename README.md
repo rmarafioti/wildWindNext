@@ -2,6 +2,8 @@
 
 ![Site Outline](src/images/wildWindMap.jpg)
 
+# Initial Wireframing
+
 ![Site Wireframe Mobile](src/images/wireframeMobile.png)
 
 ![SiteWireframeDesktop](src/images/wireframeDesktop.png)

@@ -69,7 +69,7 @@ export default function RichTats() {
             <PiArrowSquareRight className={styles.arrow} onClick={handleNext} />
           </div>
         </div>
-        <ul className={styles.tattooGallery}>
+        <div className={styles.tattooGallery}>
           {richPhotos.map((tattoo, index) => (
             <TattooCard
               key={index}
@@ -78,7 +78,7 @@ export default function RichTats() {
               photos={richPhotos}
             />
           ))}
-        </ul>
+        </div>
       </section>
       <div className={styles.tattooLinksContainer}>
         <Link className={styles.tattooLinks} href="/tattoos">
