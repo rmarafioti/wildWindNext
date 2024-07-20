@@ -6,14 +6,42 @@
   align-items: center;
   text-align: center;
   margin: 1rem 1rem 2rem 1rem;
+  position: relative; /* Make sure this is relative so that absolute positioning works correctly */
+}
+
+.circle {
+  position: absolute;
+  top: 13%;
+  left: 34%;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  z-index: 100;
+  background-color: var(--wildGold);
+  border: 2px solid rgba(56, 70, 28, .9);
+  box-shadow: -10px 5px 1px 1px rgba(56, 70, 28, .9);
+  background: linear-gradient(var(--wildGold), #e591d4);
+}
+
+.line {
+  position: absolute;
+  top: 3.5%;
+  left: 70%;
+  height: 350px;
+  width: 10px;
+  border-radius: 8px;
+  z-index: 100;
+  transform: rotate(15deg); /* Rotate the line by 45 degrees */
+  transform-origin: top left; /* Set the origin point for the transformation */
+  background-color: var(--wildGold);
+  box-shadow: 5px 1px 1px 1px rgba(56, 70, 28, 0.7);
 }
 
 .artContainer {
   display: flex;
   flex-direction: row;
-  height: 800px;
-  width: 800px;
-  margin-bottom: 1rem;
+  
+  margin: 2rem;
 }
 
 .artOne, .artTwo, .artThree {
@@ -24,18 +52,111 @@
 .artThreeSub {
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
 }
 
-.artOneElementOne, .artOneElementTwo,
+.artOneElementTwo,
 .artTwoElementOne, .artTwoElementTwo {
   height: 400px;
   width: 265px;
   background-color: var(--wildGold);
 }
 
+.pineapple {
+position: absolute;
+  width: 130px;
+  height: auto;
+  top: 2.2%;
+  left: 25%;
+  transform: rotate(-5deg); /* Rotate the line by 45 degrees */
+  transform-origin: top left; /* Set the origin point for the transformation */
+}
+
+.artOneElementOne {
+  
+  margin-top: 9rem;
+  height: 150px;
+  width: 268px;
+  background-color: var(--wildBlue);
+  padding: 1rem;
+}
+
+.dotRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+ 
+  background-color: rgba(238, 241, 243, 0.5);
+}
+
+.checkContainer {
+  
+  border-left: 3px solid var(--wildDarkGreen);
+  border-top: 3px solid var(--wildDarkGreen);
+  border-bottom: 3px solid var(--wildDarkGreen);
+ 
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.checker {
+  width: 53px;
+  height: 53px;
+  background-color: var(--wildDarkGreen);
+}
+
+#white {
+  background-color: white;
+}
+
 .artTwoElementOne, .artTwoElementTwo {
   background-color: var(--wildGreen);
 }
+
+.artTwoElementOne {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 150px;
+  border-top-right-radius:150px;
+  border-top: 20px solid var(--wildGold);
+  border-left: 20px solid var(--wildGold);
+  border-right: 20px solid var(--wildGold);
+  background: linear-gradient(#e66465, #9198e5);
+  height: 500px;
+  width: 300px;
+}
+
+
+.copy {
+  color: white;
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  word-wrap: break-word;
+  line-height: 1.5;
+  max-width: 100%;
+  text-align: center;
+}
+
+.artTwoElementTwo {
+  height: 120px;
+  width: 300px;
+}
+
+
 
 .artThreeElementOne, .artThreeElementTwo {
   height: 200px;
@@ -43,10 +164,41 @@
   background-color: var(--wildGoldTrans);
 }
 
+.artThreeElementTwo {
+  height: 165px;
+  width:264px;
+}
+
+.artThreeElementOne {
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  margin: 3rem;
+  margin-left: 4.5rem;
+  background-color: var(--wildGreen);
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid {
+  border: 1px solid white;
+  width: 33px;
+  height: 33px;
+}
+
+
+
 .artThreeSubElementOne, .artThreeSubElementTwo {
   height: 400px;
   width: 132.5px;
   background-color: var(--wildBlue);
+}
+
+.artThreeSubElementOne {
+  width: 50px;
 }
 
 
