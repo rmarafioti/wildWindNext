@@ -19,8 +19,8 @@
   z-index: 100;
   background-color: var(--wildGold);
   border: 2px solid rgba(56, 70, 28, .9);
-  box-shadow: -10px 5px 1px 1px rgba(56, 70, 28, .9);
-  background: linear-gradient(var(--wildGold), #e591d4);
+  box-shadow: -10px 5px 1px 1px rgba(56, 70, 28, 1);
+  background: linear-gradient(45deg, var(--wildGold), #e591d4);
 }
 
 .line {
@@ -31,7 +31,7 @@
   width: 10px;
   border-radius: 8px;
   z-index: 100;
-  transform: rotate(15deg); /* Rotate the line by 45 degrees */
+  transform: rotate(16deg); /* Rotate the line by 45 degrees */
   transform-origin: top left; /* Set the origin point for the transformation */
   background-color: var(--wildGold);
   box-shadow: 5px 1px 1px 1px rgba(56, 70, 28, 0.7);
@@ -40,8 +40,9 @@
 .artContainer {
   display: flex;
   flex-direction: row;
-  
   margin: 2rem;
+  height: 800px;
+  width: 800px;
 }
 
 .artOne, .artTwo, .artThree {
@@ -56,30 +57,36 @@
   align-items: flex-start;
 }
 
-.artOneElementTwo,
+/*.artOneElementTwo,
 .artTwoElementOne, .artTwoElementTwo {
   height: 400px;
   width: 265px;
   background-color: var(--wildGold);
-}
+}*/
 
 .pineapple {
 position: absolute;
   width: 130px;
   height: auto;
-  top: 2.2%;
-  left: 25%;
+  top: 1.9%;
+  left: 26%;
   transform: rotate(-5deg); /* Rotate the line by 45 degrees */
   transform-origin: top left; /* Set the origin point for the transformation */
+  filter: drop-shadow(-.5rem .5rem 0.50rem rgba(56, 70, 28, .9));
+  z-index: 10;
 }
 
 .artOneElementOne {
   
-  margin-top: 9rem;
-  height: 150px;
-  width: 268px;
-  background-color: var(--wildBlue);
+  margin-top: 4rem;
+  margin-left: 2rem;
+  height: 200px;
+  width: 200px;
+  background-color:var(--wildBlue);
   padding: 1rem;
+  /*margin-bottom: 1.5rem;*/
+  transform: rotate(-10deg); /* Rotate the line by 45 degrees */
+  box-shadow: -12px 9px 10px 1px rgba(56, 70, 28, .5);
 }
 
 .dotRow {
@@ -90,19 +97,19 @@ position: absolute;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50px;
  
-  background-color: rgba(238, 241, 243, 0.5);
+  background-color:  rgb(101, 193, 220, 0.5);
 }
 
 .checkContainer {
   
-  border-left: 3px solid var(--wildDarkGreen);
-  border-top: 3px solid var(--wildDarkGreen);
-  border-bottom: 3px solid var(--wildDarkGreen);
  
+
+  border-bottom: 3px solid rgba(56, 70, 28, .9);
+  background: rgb(223, 223, 139);
 }
 .checkbox {
   display: flex;
@@ -110,16 +117,16 @@ position: absolute;
 }
 
 .checker {
-  width: 53px;
+  width: 53.5px;
   height: 53px;
-  background-color: var(--wildDarkGreen);
+  background-color: rgba(56, 70, 28, .6);
 }
 
 #white {
-  background-color: white;
+  background-color: transparent;
 }
 
-.artTwoElementOne, .artTwoElementTwo {
+ .artTwoElementTwo {
   background-color: var(--wildGreen);
 }
 
@@ -134,7 +141,8 @@ position: absolute;
   border-top: 20px solid var(--wildGold);
   border-left: 20px solid var(--wildGold);
   border-right: 20px solid var(--wildGold);
-  background: linear-gradient(#e66465, #9198e5);
+  /*background: radial-gradient(#e66465, #9198e5);*/
+  background-color: white;
   height: 500px;
   width: 300px;
 }
@@ -175,16 +183,19 @@ position: absolute;
   border-radius: 100px;
   margin: 3rem;
   margin-left: 4.5rem;
-  background-color: var(--wildGreen);
+  background: linear-gradient(var(--wildGreen), rgb(209, 238, 150));
 }
 
+.artThreeElementTwo {
+  background-color: rgb(28, 234, 234);
+}
 .gridContainer {
   display: flex;
   flex-direction: row;
 }
 
 .grid {
-  border: 1px solid white;
+  border: 1px solid var(--wildBlue);
   width: 33px;
   height: 33px;
 }
@@ -198,7 +209,28 @@ position: absolute;
 }
 
 .artThreeSubElementOne {
+  margin-top: 1rem;
+  margin-left: 1rem;
   width: 50px;
+}
+
+.artThreeSubElementTwo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.halfCircle {
+  background-color: var(--wildBlue);
+  height: 80px;
+  width: 80px;
+  box-shadow: -10px 10px 10px 1px rgba(56, 70, 28, .5);
+  
+  border-top-right-radius: 100px;
+  /*border-bottom-right-radius: 100px;*/
 }
 
 
@@ -369,5 +401,30 @@ position: absolute;
   .homeLink {
     width: 100%;
     background-color: var(--wildGold);
+  }
+  .artContainer {
+    flex-direction: column;
+    margin: 0rem;
+    height: auto;
+    width: 100%;
+  }
+  .artOne, .artTwo, .artThree {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .artOneElementOne {
+    margin-top: 1rem;
+  }
+  .checkContainer {
+    width: 260px;
+    margin-left: 4.5rem;
+  }
+
+  .line {
+    top: 3%;
+    left: 90%;
+  }
+  .artThree {
+    display: none;
   }
 }

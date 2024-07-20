@@ -45,20 +45,8 @@ export default function Home() {
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
             </div>
             <div className={styles.dotRow}>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-              <div className={styles.dot}></div>
-            </div>
-            <div className={styles.dotRow}>
-              <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
@@ -75,6 +63,14 @@ export default function Home() {
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
+            </div>
+            <div className={styles.dotRow}>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
               <div className={styles.dot}></div>
             </div>
             <div className={styles.dotRow}>
@@ -85,10 +81,35 @@ export default function Home() {
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
+            </div>
+            <div className={styles.dotRow}>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
               <div className={styles.dot}></div>
             </div>
             <div className={styles.dotRow}>
               <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+            </div>
+            <div className={styles.dotRow}>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+            </div>
+            <div className={styles.dotRow}>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
               <div className={styles.dot}></div>
@@ -191,7 +212,11 @@ export default function Home() {
           </div>
           <div className={styles.artThreeSub}>
             <div className={styles.artThreeSubElementOne}></div>
-            <div className={styles.artThreeSubElementTwo}></div>
+            <div className={styles.artThreeSubElementTwo}>
+              <div className={styles.halfCircle}></div>
+              <div className={styles.halfCircle}></div>
+              <div className={styles.halfCircle}></div>
+            </div>
           </div>
         </div>
       </section>
