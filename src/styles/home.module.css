@@ -8,6 +8,49 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.artContainer {
+  display: flex;
+  flex-direction: row;
+  height: 800px;
+  width: 800px;
+  margin-bottom: 1rem;
+}
+
+.artOne, .artTwo, .artThree {
+  display: flex;
+  flex-direction: column;
+}
+
+.artThreeSub {
+  display: flex;
+  flex-direction: row;
+}
+
+.artOneElementOne, .artOneElementTwo,
+.artTwoElementOne, .artTwoElementTwo {
+  height: 400px;
+  width: 265px;
+  background-color: var(--wildGold);
+}
+
+.artTwoElementOne, .artTwoElementTwo {
+  background-color: var(--wildGreen);
+}
+
+.artThreeElementOne, .artThreeElementTwo {
+  height: 200px;
+  width: 265px;
+  background-color: var(--wildGoldTrans);
+}
+
+.artThreeSubElementOne, .artThreeSubElementTwo {
+  height: 400px;
+  width: 132.5px;
+  background-color: var(--wildBlue);
+}
+
+
+
 .headerHome {
   font-size: 30px;
   font-weight: normal;

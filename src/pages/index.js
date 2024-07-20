@@ -22,6 +22,24 @@ export default function Home() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/" />
       </Head>
+      <section className={styles.artContainer}>
+        <div className={styles.artOne}>
+          <div className={styles.artOneElementOne}></div>
+          <div className={styles.artOneElementTwo}></div>
+        </div>
+        <div className={styles.artTwo}>
+          <div className={styles.artTwoElementOne}></div>
+          <div className={styles.artTwoElementTwo}></div>
+        </div>
+        <div className={styles.artThree}>
+          <div className={styles.artThreeElementOne}></div>
+          <div className={styles.artThreeElementTwo}></div>
+          <div className={styles.artThreeSub}>
+            <div className={styles.artThreeSubElementOne}></div>
+            <div className={styles.artThreeSubElementTwo}></div>
+          </div>
+        </div>
+      </section>
       <h1 className={styles.headerHome}>Welcome to Wild Wind Tattoo</h1>
       <Image
         className={styles.shopPhoto}
