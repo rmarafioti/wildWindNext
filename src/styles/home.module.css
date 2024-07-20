@@ -31,10 +31,10 @@
   width: 10px;
   border-radius: 8px;
   z-index: 100;
-  transform: rotate(16deg); /* Rotate the line by 45 degrees */
+  transform: rotate(13deg); /* Rotate the line by 45 degrees */
   transform-origin: top left; /* Set the origin point for the transformation */
   background-color: var(--wildGold);
-  box-shadow: 5px 1px 1px 1px rgba(56, 70, 28, 0.7);
+  box-shadow: 5px 1px 1px 1px rgba(56, 70, 28, 0.9);
 }
 
 .artContainer {
@@ -130,6 +130,12 @@ position: absolute;
   background-color: var(--wildGreen);
 }
 
+.wave {
+  margin-top: 4.5rem;
+  height: 40px;
+  width: 300px;
+}
+
 .artTwoElementOne {
   position: relative;
   display: flex;
@@ -162,6 +168,8 @@ position: absolute;
 .artTwoElementTwo {
   height: 120px;
   width: 300px;
+  background: linear-gradient(var(--wildGreen), rgb(214, 243, 155));
+  box-shadow: -8px 8px 3px 1px rgba(56, 70, 28, .7);
 }
 
 

@@ -154,7 +154,18 @@ export default function Home() {
           <div className={styles.artTwoElementOne}>
             {/*<p className={styles.copy}>WHEREVER THE WIND TAKES YOU</p>*/}
           </div>
-          <div className={styles.artTwoElementTwo}></div>
+          <div className={styles.artTwoElementTwo}>
+            <Image
+              className={styles.wave}
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721480796/wildWindSite/waveLine_t14lfd.png"
+              alt="photo of a pineapple"
+              priority
+              quality={75}
+              width={2550}
+              height={889}
+              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
         </div>
         <div className={styles.artThree}>
           <div className={styles.artThreeElementOne}></div>
