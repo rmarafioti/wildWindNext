@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgb(209, 238, 150), var(--wildGreen));
+    /*background: linear-gradient(rgb(209, 238, 150), var(--wildGreen));*/
+    background: var(--wildBlue);
     margin-top: auto;
   }
   

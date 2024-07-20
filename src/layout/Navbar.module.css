@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   z-index: 999;
-  background: linear-gradient(var(--wildGreen), rgb(209, 238, 150));
+  background: linear-gradient(var(--wildGreen), rgb(180, 209, 121));
 }
 
 #navLogo {
