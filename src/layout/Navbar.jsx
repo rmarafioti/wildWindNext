@@ -57,7 +57,7 @@ export default function Navbar() {
         <Link href="/">
           <Image
             id={styles.navLogo}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717377135/wildWindSite/WWT_Green_kc8y1n.png"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1721478504/wildWindSite/WWT_WHT_hpvy19.png"
             alt="shop logo in nav bar"
             priority
             quality={75}

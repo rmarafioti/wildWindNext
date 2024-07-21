@@ -8,13 +8,14 @@
 }
 
 #navLogo {
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   margin: 1rem 0rem 1rem 8rem;
-  border-top-right-radius: 15px;
-  padding: 1rem 2rem 1rem 2rem ;
-  background: linear-gradient(rgb(153, 190, 78),  rgb(209, 238, 150));
-  box-shadow: -12px 9px 10px 1px rgba(56, 70, 28, .5);
+  
+  
+  filter: drop-shadow(4px 1px 1px var(--wildDarkGreen));
+  /*background: linear-gradient(rgb(153, 190, 78),  rgb(209, 238, 150));*/
+  /*box-shadow: -12px 9px 10px 1px rgba(56, 70, 28, .5);*/
 }
 
 #navRight {
