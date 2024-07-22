@@ -9,10 +9,12 @@
   position: relative; /* Make sure this is relative so that absolute positioning works correctly */
 }
 
-.headerHome {
-  font-size: 30px;
-  font-weight: normal;
-}
+/*.headerHome {
+  color: white;
+  font-size: 50px;
+  font-weight:800;
+  -webkit-text-stroke: 3px var(--wildGreen);
+}*/
 
 .shopPhoto {
   max-width: 800px;
@@ -175,30 +177,5 @@
   .homeLink {
     width: 100%;
     background-color: var(--wildGold);
-  }
-  .artContainer {
-    flex-direction: column;
-    margin: 0rem;
-    height: auto;
-    width: 100%;
-  }
-  .artOne, .artTwo, .artThree {
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-  }
-  .artOneElementOne {
-    margin-top: 1rem;
-  }
-  .checkContainer {
-    width: 260px;
-    margin-left: 4.5rem;
-  }
-
-  .line {
-    top: 3%;
-    left: 90%;
-  }
-  .artThree {
-    display: none;
   }
 }

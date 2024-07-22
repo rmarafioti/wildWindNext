@@ -1,7 +1,7 @@
 /* landing page art */
 .circle {
   position: absolute;
-  top: 13%;
+  top: 16%;
   left: 34%;
   height: 150px;
   width: 150px;
@@ -15,24 +15,37 @@
 
 .line {
   position: absolute;
-  top: 3.8%;
+  top: 5%;
   left: 73%;
   height: 350px;
   width: 10px;
   border-radius: 8px;
   z-index: 100;
-  transform: rotate(18deg); /* Rotate the line by 45 degrees */
-  transform-origin: top left; /* Set the origin point for the transformation */
+  transform: rotate(18deg); 
+  transform-origin: top left;
   background-color: var(--wildGold);
   box-shadow: 5px 1px 1px 1px rgba(56, 70, 28, 0.9);
 }
+
+.pineapple {
+  position: absolute;
+  width: 130px;
+  height: auto;
+  top: 1.9%;
+  left: 26%;
+  transform: rotate(-5deg); 
+  transform-origin: top left;
+  filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(56, 70, 28, 0.9));
+  z-index: 10;
+}
+
 
 .artContainer {
   display: flex;
   flex-direction: row;
   margin: 2rem;
-  margin-bottom: 0rem;
-  height: 800px;
+ margin-bottom: 0rem;
+  /*height: 800px;*/
   width: 800px;
 }
 
@@ -56,18 +69,6 @@
     width: 265px;
     background-color: var(--wildGold);
   }*/
-
-.pineapple {
-  position: absolute;
-  width: 130px;
-  height: auto;
-  top: 1.9%;
-  left: 26%;
-  transform: rotate(-5deg); /* Rotate the line by 45 degrees */
-  transform-origin: top left; /* Set the origin point for the transformation */
-  filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(56, 70, 28, 0.9));
-  z-index: 10;
-}
 
 .artOneElementOne {
   margin-top: 4rem;
@@ -230,6 +231,69 @@
 
   border-top-right-radius: 100px;
   /*border-bottom-right-radius: 100px;*/
+}
+
+@media (min-width: 1700px) {
+  .circle {
+    top: 39.5vh;
+    left: 40vw;
+    height: 11vh;
+    width: 11vh;
+  }
+  .line {
+    top: 11vh;
+    left: 62vw;
+    height: 30.5vh;
+    width: .4vw;
+  }
+  .pineapple {
+    top: 5vh;
+    left: 35.5vw;
+    width: 5.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .artContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    height: auto;
+    width: 100%;
+  }
+  .artOne, .artTwo, .artThree {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .artOneElementOne {
+    margin-top: 1rem;
+  }
+  .checkContainer {
+    width: 260px;
+    margin-left: 3rem;
+    transform: rotate(16deg); 
+  }
+  .pineapple {
+    top: 6%;
+  }
+  .circle {
+    top: 13%;
+    left: -12%;
+  }
+.artOneElementOne {
+  z-index: 4;
+}
+  .line {
+    height: 55vh;
+    top: 5%;
+   left: 90vw;
+   transform: rotate(65deg); 
+   z-index: 5;
+  }
+  .artThree {
+    display: none;
+  }
 }
 
 /* landing page art done */
