@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import HeaderArt from "@/components/HeaderArt";
 import styles from "../styles/contact.module.css";
 
 /**
@@ -18,56 +19,7 @@ export default function Contact() {
         <link rel="canonical" href="https://wildwindtattoo.com/contact" />
       </Head>
       <h1 className={styles.header}>CONTACT US</h1>
-      <section>
-        <div className={styles.artOneElementOne}>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-        </div>
-        <div className={styles.line}></div>
-      </section>
+      <HeaderArt />
       <section className={styles.contactHeader}>
         <h2 className={styles.headerTagline}>
           Reach out to request an appointment or inquire about day of

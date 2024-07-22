@@ -1,30 +1,29 @@
 .artOneElementOne {
   position: absolute;
-  margin: 0rem 1rem 0rem 1rem;
-  height: 120px;
-  width: 120px;
-  top: 2%;
-  left: 52%;
+  margin: 0 1vw; 
+  height: 16vh; 
+  width: 16vh; 
+  top: 2vh; 
+  left: 50vw; 
   background-color: var(--wildBlue);
   padding: 1rem;
-  /*margin-bottom: 1.5rem;*/
-  transform: rotate(10deg); /* Rotate the line by 45 degrees */
-  box-shadow: -12px 9px 10px 1px rgba(56, 70, 28, 0.5);
+  transform: rotate(10deg); 
+  box-shadow: -.5vw 0.5vw 1vw 0.1vw rgba(56, 70, 28, 0.5); 
   z-index: 8;
 }
 
 .line {
   position: absolute;
-  top: 7%;
-  left: 64%;
-  height: 370px;
-  width: 6px;
-  border-radius: 8px;
+  top: 10vh; 
+  left: 62vw; 
+  height: 52vh; 
+  width: 0.4vw; 
+  border-radius: 0.8vw; 
   z-index: 7;
   transform: rotate(80deg);
   transform-origin: top left;
   background-color: var(--wildGold);
-  box-shadow: 5px 1px 1px 1px var(--wildGreen);
+  box-shadow: 0.3vw 0.05vw 0.1vw 0.1vw var(--wildGreen);
 }
 
 .dotRow {
@@ -35,31 +34,57 @@
 }
 
 .dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50px;
-  background-color: rgb(101, 193, 220, 0.5);
+  width: 0.4vw; 
+  height: 0.4vw;
+  border-radius: 50%;
+  background-color: rgba(101, 193, 220, 0.5);
 }
 
 @media (min-width: 1700px) {
   .artOneElementOne {
-    top: 2%;
-    left: 51.3%;
+    height: 11vh; 
+    width: 11vh; 
+    top: 1.5vh;
+    left: 50.5vw; 
+    box-shadow: -.25vw 0.25vw .5vw 0.1vw rgba(56, 70, 28, 0.5); 
+    z-index: 8;
+  }
+  .dot {
+    width: 0.25vw; 
+    height: 0.25vw; 
+    border-radius: 50%;
+    background-color: rgba(101, 193, 220, 0.5);
   }
   .line {
-    top: 6%;
-    left: 59%;
-    height: 440px;
-  }
+    top: 6.5vh;
+    left: 59vw;
+    height: 35vh;
+    width: 0.3vw;
+    box-shadow: 0.15vw 0.05vw 0.1vw 0.1vw var(--wildGreen); 
+}
 }
 
 @media (max-width: 586px) {
   .artOneElementOne {
-    top: 2%;
+    height: 17vh;
+  width: 17vh;
+    top: 3vh;
+    left: 55vw;
+    box-shadow: 0.3vw 0.05vw 0.1vw 0.1vw var(--wildGreen);
+    box-shadow: -2vw 2vw 3vw 0.2vw rgba(56, 70, 28, 0.5);
   }
   .line {
-    top: 6%;
-    left: 100%;
-    height: 340px;
+    width: 1.5vw;
+    top: 14vh;
+    left: 90vw;
+    height: 50vh;
+    box-shadow: 0.6vw 0.1vw 0.1vw 0.1vw var(--wildGreen);
+  }
+  .dot {
+    width: 1vw; 
+    height: 1vw; 
+    border-radius: 50%;
+    background-color: rgba(101, 193, 220, 0.5);
   }
 }
+

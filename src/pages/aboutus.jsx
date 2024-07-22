@@ -62,7 +62,6 @@ export default function Shop() {
           isFading={isFading}
         />
       )}*/}
-
       <div className={styles.shopIconContainer}>
         <h1>
           <a

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import HeaderArt from "@/components/HeaderArt";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 
@@ -58,56 +59,7 @@ export default function Care() {
         <link rel="canonical" href="https://wildwindtattoo.com/aftercare" />
       </Head>
       <h1 className={styles.afterHeader}>AFTERCARE</h1>
-      <section>
-        <div className={styles.artOneElementOne}>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-        </div>
-        <div className={styles.line}></div>
-      </section>
+      <HeaderArt />
       <p className={styles.afterTagline}>
         Everything you need to know about taking care of your tattoo
       </p>
