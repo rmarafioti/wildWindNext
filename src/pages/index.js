@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <LandingPageArt />
       <h1 className={styles.headerHome}>Welcome to Wild Wind Tattoo</h1>
-      <Image
+      {/*<Image
         className={styles.shopPhoto}
         src="https://res.cloudinary.com/dzpne110u/image/upload/c_scale,q_auto,w_1000/v1720322083/wildWindSite/shopPhotos/shopFront_j9y8hf.jpg"
         alt="Wild Wind Tattoo's storefront"
@@ -34,7 +34,7 @@ export default function Home() {
         width={1776}
         height={1184}
         sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
+      />*/}
       <p className={styles.contactParagraph}>
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
         IL 60622.
