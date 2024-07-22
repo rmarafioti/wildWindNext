@@ -44,11 +44,6 @@ export default function Shop() {
     };
   }, []);
 
-  /*const currentImageObj =
-    shopPhotos.length > 0 ? shopPhotos[currentIndex] : null;
-
-  const imagerl = currentImageObj ? currentImageObj.image : "";*/
-
   return (
     <article className={styles.shopAbout}>
       <Head>
@@ -59,13 +54,64 @@ export default function Shop() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/aboutus" />
       </Head>
-      <h1 className={styles.mainShopHeader}>About Us</h1>
-      {shopPhotos.length > 0 && (
+      <h1 className={styles.mainShopHeader}>ABOUT US</h1>
+      <section>
+        <div className={styles.artOneElementOne}>
+          <div className={styles.dotRow}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+          <div className={styles.dotRow}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+          <div className={styles.dotRow}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+          <div className={styles.dotRow}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+          <div className={styles.dotRow}>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+        </div>
+        <div className={styles.line}></div>
+      </section>
+      {/*{shopPhotos.length > 0 && (
         <AboutSlide
           imageUrl={shopPhotos[currentIndex].image}
           isFading={isFading}
         />
-      )}
+      )}*/}
+
       <div className={styles.shopIconContainer}>
         <h1>
           <a
