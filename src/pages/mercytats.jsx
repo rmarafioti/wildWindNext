@@ -70,7 +70,7 @@ export default function MercedesTats() {
             <PiArrowSquareRight className={styles.arrow} onClick={handleNext} />
           </div>
         </div>
-        <ul className={styles.mercedesGallery}>
+        <div className={styles.mercedesGallery}>
           {mercyPhotos.map((tattoo, index) => (
             <TattooCard
               key={index}
@@ -79,11 +79,11 @@ export default function MercedesTats() {
               photos={mercyPhotos}
             />
           ))}
-        </ul>
+        </div>
       </section>
       <div className={styles.tattooLinksContainer}>
         <Link className={styles.tattooLinks} href="/tattoos">
-          <h3 className={styles.linkHeader}>Tattoos</h3>
+          <p className={styles.linkHeader}>Tattoos</p>
         </Link>
       </div>
     </article>

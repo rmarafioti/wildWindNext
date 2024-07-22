@@ -4,32 +4,19 @@
   justify-content: space-between;
   align-items: flex-start;
   z-index: 999;
-  background-color: var(--wildBackground);
+  background: linear-gradient(var(--wildGreen), rgb(180, 209, 121));
 }
 
 #navLogo {
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   margin: 1rem 0rem 1rem 8rem;
+  filter: drop-shadow(4px 1px 1px var(--wildDarkGreen));
 }
 
 #navRight {
   margin-top: 1rem;
   align-items: center;
-}
-
-#faqContainer {
-  display: flex;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-}
-
-#faqIcon {
-  color: var(--wildDarkGreen);
-  font-size: 35px;
 }
 
 #contactContainer {
@@ -42,8 +29,10 @@
   color: var(--wildBlack);
   background-color: white;
   padding: 1rem 1rem;
+  margin-top: 1rem;
   margin-right: 2rem;
-  border-radius: 5px;
+  border-radius: 0px;
+  transform: rotate(3deg);
   cursor: pointer;
 }
 
@@ -51,14 +40,14 @@
 
 #hamMenuContainer {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 1rem 0rem 0rem 1rem;
-  width: 45px;
-  height: 45px;
+  margin: 1.5rem 0rem 0rem 1.5rem;
+  width: 45.5px;
+  height: 45.5px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -118,7 +107,6 @@
 /* menu */
 
 .menu {
-  /*margin: 0rem 1rem 0rem 1rem;*/
   padding-bottom: 0rem;
   background-color: white;
   display: none;
@@ -331,15 +319,24 @@
     padding: 1rem;
     margin: 0;
   }
+  #hamMenuContainer {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+  }
 }
 
-@media (min-width: 2000px){
+@media (min-width: 2000px) {
   .droptats {
-    top: 14%;
+    top: 15%;
     left: 25.5%;
   }
   .drop {
-    top: 14%;
+    top: 15%;
     left: 2%;
+  }
+  #hamMenuContainer {
+    width: 50px;
+    height: 50px;
   }
 }

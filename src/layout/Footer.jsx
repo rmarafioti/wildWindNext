@@ -15,7 +15,7 @@ export default function Footer() {
         <Link id={styles.footerItem} href="/">
           <Image
             id={styles.footerLogo}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1717547711/wildWindSite/wwt_line_ozy2ca.png"
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1721478556/wildWindSite/WWT_BLK_elfa3z.png"
             alt="shop logo footer"
             quality={75}
             width={3319}
