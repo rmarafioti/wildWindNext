@@ -42,8 +42,8 @@
 
 @media (min-width: 1700px) {
   .artOneElementOne {
-    height: 11vh; 
-    width: 11vh; 
+    height: 10vh; 
+    width: 10vh; 
     top: 1.5vh;
     left: 50.5vw; 
     box-shadow: -.25vw 0.25vw .5vw 0.1vw rgba(56, 70, 28, 0.5); 
