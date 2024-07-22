@@ -134,9 +134,7 @@ export default function LandingPageArt() {
           </div>
         </div>
         <div className={styles.artTwo}>
-          <div className={styles.artTwoElementOne}>
-            {/*<p className={styles.copy}>WHEREVER THE WIND TAKES YOU</p>*/}
-          </div>
+          <div className={styles.artTwoElementOne}></div>
           <div className={styles.artTwoElementTwo}>
             <Image
               className={styles.wave}
