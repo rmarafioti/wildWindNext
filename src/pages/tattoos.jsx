@@ -19,8 +19,10 @@ export default function Tattoos() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/tattoos" />
       </Head>
-      <h1 className={styles.tattooHeader}>TATTOOS</h1>
-      <HeaderArt />
+      <div className={styles.header}>
+        <h1 className={styles.tattooHeader}>TATTOOS</h1>
+        <HeaderArt />
+      </div>
       <ul className={styles.unorderedList}>
         <li className={styles.missionItem}>Variety</li>
         <li className={styles.missionItem}>Comfort</li>

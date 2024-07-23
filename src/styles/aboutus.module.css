@@ -1,11 +1,16 @@
 .shopAbout {
-  position: relative;
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem 1rem 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
 }
 
 .mainShopHeader {
@@ -154,5 +159,8 @@
   }
   .shopLinks {
     background-color: var(--wildGold);
+  }
+  .header {
+    width: 100%;
   }
 }

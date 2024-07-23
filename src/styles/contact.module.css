@@ -8,6 +8,12 @@
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
+}
+
+.contactHeader {
   margin: 2rem 0rem 3rem 0rem;
   font-weight: normal;
   color: white;
@@ -18,7 +24,7 @@
   z-index: 10;
 }
 
-.contactHeader {
+.contactTagHeader {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,6 +157,9 @@
   .headerTagline,
   .headerTaglineTwo {
     text-align: center;
+  }
+  .header {
+    width: 100%;
   }
 }
 

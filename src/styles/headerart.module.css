@@ -1,10 +1,9 @@
+
 .artOneElementOne {
   position: absolute;
-  margin: 0 1vw; 
-  height: 18vh; 
-  width: 17vh; 
-  top: 2vh; 
-  left: 50vw; 
+  margin: 1rem 0rem 1rem 13.5rem;
+  height: 120px;
+  width: 120px;
   background-color: var(--wildBlue);
   padding: 1rem;
   transform: rotate(10deg); 
@@ -14,10 +13,9 @@
 
 .line {
   position: absolute;
-  top: 10vh; 
-  left: 62vw; 
-  height: 52vh; 
-  width: 0.4vw; 
+  margin: 5rem 0rem 0rem 24rem;
+  height: 400px; 
+  width: 5px; 
   border-radius: 0.8vw; 
   z-index: 7;
   transform: rotate(80deg);
@@ -34,57 +32,21 @@
 }
 
 .dot {
-  width: 0.4vw; 
-  height: 0.4vw;
+  width: 5px; 
+  height: 5px;
   border-radius: 50%;
   background-color: rgba(101, 193, 220, 0.5);
 }
 
-@media (min-width: 1700px) {
-  .artOneElementOne {
-    height: 10vh; 
-    width: 10vh; 
-    top: 1.5vh;
-    left: 50.5vw; 
-    box-shadow: -.25vw 0.25vw .5vw 0.1vw rgba(56, 70, 28, 0.5); 
-    z-index: 8;
-  }
-  .dot {
-    width: 0.25vw; 
-    height: 0.25vw; 
-    border-radius: 50%;
-    background-color: rgba(101, 193, 220, 0.5);
-  }
-  .line {
-    top: 6.5vh;
-    left: 59vw;
-    height: 35vh;
-    width: 0.3vw;
-    box-shadow: 0.15vw 0.05vw 0.1vw 0.1vw var(--wildGreen); 
-}
-}
-
 @media (max-width: 586px) {
   .artOneElementOne {
-    height: 17vh;
-  width: 17vh;
-    top: 3vh;
-    left: 56.3vw;
-    box-shadow: 0.3vw 0.05vw 0.1vw 0.1vw var(--wildGreen);
-    box-shadow: -2vw 2vw 3vw 0.2vw rgba(56, 70, 28, 0.5);
+    margin-right: 4rem;
   }
   .line {
-    width: 1.5vw;
-    top: 14vh;
-    left: 90vw;
-    height: 50vh;
-    box-shadow: 0.6vw 0.1vw 0.1vw 0.1vw var(--wildGreen);
-  }
-  .dot {
-    width: 1vw; 
-    height: 1vw; 
-    border-radius: 50%;
-    background-color: rgba(101, 193, 220, 0.5);
+    margin-top: 5rem;
+    margin-left: 22rem;
+    height: 350px;
   }
 }
+
 

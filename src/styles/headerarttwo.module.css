@@ -43,6 +43,7 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     transform: rotate(4deg);
+    
   }
   
   .dot {
@@ -53,11 +54,3 @@
     box-shadow: -4px 1px 1px 0px var(--wildDarkGreen);
   }
 
-  @media (max-width: 586px) {
-    .header {
-      width: 100%;
-    }
-    .dotRow {
-      margin-left: 1rem;
-    }
-  }

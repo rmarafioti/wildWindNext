@@ -9,6 +9,12 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
+}
+
 .tattooHeader {
   margin: 2rem 0rem 4rem 0rem;
   font-weight: normal;
@@ -91,5 +97,8 @@
   }
   .artistLink {
     background-color: var(--wildGold);
+  }
+  .header {
+    width: 100%;
   }
 }

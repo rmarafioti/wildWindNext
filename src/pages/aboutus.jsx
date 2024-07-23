@@ -54,14 +54,16 @@ export default function Shop() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/aboutus" />
       </Head>
-      <h1 className={styles.mainShopHeader}>ABOUT US</h1>
-      <HeaderArt />
-      {/*{shopPhotos.length > 0 && (
+      <div className={styles.header}>
+        <h1 className={styles.mainShopHeader}>ABOUT US</h1>
+        <HeaderArt />
+        {/*{shopPhotos.length > 0 && (
         <AboutSlide
           imageUrl={shopPhotos[currentIndex].image}
           isFading={isFading}
         />
       )}*/}
+      </div>
       <div className={styles.shopIconContainer}>
         <h1>
           <a

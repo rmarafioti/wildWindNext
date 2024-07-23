@@ -19,8 +19,10 @@ export default function GiftCards() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/giftcards" />
       </Head>
-      <h1 className={styles.giftCardHeader}>GIFT CARDS</h1>
-      <HeaderArt />
+      <div className={styles.header}>
+        <h1 className={styles.giftCardHeader}>GIFT CARDS</h1>
+        <HeaderArt />
+      </div>
       <CheckoutForm />
     </article>
   );

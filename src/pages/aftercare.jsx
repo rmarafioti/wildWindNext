@@ -58,8 +58,10 @@ export default function Care() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/aftercare" />
       </Head>
-      <h1 className={styles.afterHeader}>AFTERCARE</h1>
-      <HeaderArt />
+      <div className={styles.header}>
+        <h1 className={styles.afterHeader}>AFTERCARE</h1>
+        <HeaderArt />
+      </div>
       <p className={styles.afterTagline}>
         Everything you need to know about taking care of your tattoo
       </p>
