@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import HeaderArt from "@/components/HeaderArt";
 
 import styles from "../styles/tattoos.module.css";
 
@@ -18,57 +19,10 @@ export default function Tattoos() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/tattoos" />
       </Head>
-      <h1 className={styles.tattooHeader}>TATTOOS</h1>
-      <section>
-        <div className={styles.artOneElementOne}>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-        </div>
-        <div className={styles.line}></div>
-      </section>
+      <div className={styles.header}>
+        <h1 className={styles.tattooHeader}>TATTOOS</h1>
+        <HeaderArt />
+      </div>
       <ul className={styles.unorderedList}>
         <li className={styles.missionItem}>Variety</li>
         <li className={styles.missionItem}>Comfort</li>

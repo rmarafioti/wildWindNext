@@ -7,11 +7,21 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
+}
+
 .mediaHeader {
-  border-bottom: 1px solid var(--wildGreen);
-  font-size: 30px;
+  margin: 2rem 0rem 3rem 0rem;
   font-weight: normal;
-  margin-bottom: 1rem;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-stroke: 2px var(--wildDarkGreen);
+  letter-spacing: 2px;
+  z-index: 10;
 }
 
 .mediaHeaderTag {
@@ -97,5 +107,8 @@
   }
   .mediaLinks {
     background-color: var(--wildGold);
+  }
+  .header {
+    width: 100%;
   }
 }

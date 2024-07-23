@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import CheckoutForm from "@/components/CheckoutForm";
-
+import HeaderArt from "@/components/HeaderArt";
 import styles from "@/styles/giftcards.module.css";
 
 /**
@@ -19,57 +19,10 @@ export default function GiftCards() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/giftcards" />
       </Head>
-      <h1 className={styles.giftCardHeader}>GIFT CARDS</h1>
-      <section>
-        <div className={styles.artOneElementOne}>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-          <div className={styles.dotRow}>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-            <div className={styles.dot}></div>
-          </div>
-        </div>
-        <div className={styles.line}></div>
-      </section>
+      <div className={styles.header}>
+        <h1 className={styles.giftCardHeader}>GIFT CARDS</h1>
+        <HeaderArt />
+      </div>
       <CheckoutForm />
     </article>
   );

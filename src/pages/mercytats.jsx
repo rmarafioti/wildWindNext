@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import TattooCard from "../components/TattooCard";
+import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 
@@ -30,17 +31,9 @@ export default function MercedesTats() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/mercedestats" />
       </Head>
-      <div className={styles.artistContainer}>
-        <h1 className={styles.artistHeader}>
-          Mercedes Wright
-          <a
-            className={styles.artistIgIcon}
-            href="https://www.instagram.com/tattoomercy/"
-            aria-label="icon which links to Mercedes Wright's Instagram page"
-          >
-            <FaInstagram />
-          </a>
-        </h1>
+      <div className={styles.header}>
+        <h1 className={styles.artistHeader}>MERCY WRIGHT</h1>
+        <HeaderArtTwo />
       </div>
       <p className={styles.artistAbout}>
         Driven by a passion for art, Mercedes&apos; interest in tattooing began
@@ -50,7 +43,17 @@ export default function MercedesTats() {
         challenges. She has honed her craft to ensure her tattoos are
         consistently clean and meticulous, dedicating the time necessary to
         achieve this standard.
+        <div>
+          <a
+            className={styles.artistIgIcon}
+            href="https://www.instagram.com/tattoomercy/"
+            aria-label="icon which links to Mercedes Wright's Instagram page"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </p>
+
       <section className={styles.tattooSection}>
         <div className={styles.tattooSlide}>
           <div className={styles.arrowSection}>

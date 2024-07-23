@@ -1,5 +1,4 @@
 .shopAbout {
-  position: relative;
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
@@ -8,60 +7,21 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
+}
+
 .mainShopHeader {
   margin: 2rem 0rem 3rem 0rem;
-  font-size: 30px;
   font-weight: normal;
   color: white;
   font-size: 50px;
-  font-weight:800;
+  font-weight: 800;
   -webkit-text-stroke: 2px var(--wildDarkGreen);
   letter-spacing: 2px;
   z-index: 10;
-}
-
-.artOneElementOne {
-  position: absolute;
- margin: 0rem 1rem 0rem 1rem;
-  height: 120px;
-  width: 120px;
-  top: 2%;
-  left: 52%;
-  background-color: var(--wildBlue);
-  padding: 1rem;
-  /*margin-bottom: 1.5rem;*/
-  transform: rotate(10deg); /* Rotate the line by 45 degrees */
-  box-shadow: -12px 9px 10px 1px rgba(56, 70, 28, 0.5);
-  z-index: 8;
-}
-
-.line {
-  position: absolute;
-  top: 7%;
-  left: 64%;
-  height: 370px;
-  width: 6px;
-  border-radius: 8px;
-  z-index: 7;
-  transform: rotate(80deg); 
-  transform-origin: top left;
-  background-color: var(--wildGold);
-  box-shadow: 5px 1px 1px 1px var(--wildGreen);
-}
-
-.dotRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50px;
-
-  background-color: rgb(101, 193, 220, 0.5);
 }
 
 .shopImagesContainer {
@@ -75,7 +35,7 @@
 }
 
 .shopImage {
-  max-width: 480px; 
+  max-width: 480px;
   border-radius: 8px;
 }
 
@@ -191,18 +151,6 @@
   font-weight: normal;
 }
 
-@media (min-width: 1700px) {
-  .artOneElementOne {
-    top: 2%;
-    left: 51.3%
-  }
-  .line {
-    top: 6%;
-    left: 59%;
-    height: 440px;
-  }
-}
-
 @media (max-width: 586px) {
   .shopLinksContainer,
   .shopLinks,
@@ -212,12 +160,7 @@
   .shopLinks {
     background-color: var(--wildGold);
   }
-  .artOneElementOne {
-    top: 2%;
-  }
-  .line {
-    top: 6%;
-    left: 100%;
-    height: 340px;
+  .header {
+    width: 100%;
   }
 }

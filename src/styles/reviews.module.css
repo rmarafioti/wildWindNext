@@ -1,4 +1,5 @@
 .reviewPage {
+  position: relative;
   color: var(--wildGreen);
   display: flex;
   flex-direction: column;
@@ -7,9 +8,22 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  width: 480px;
+}
+
 .reviewHeader {
+  margin: 2rem 0rem 3rem 0rem;
   font-size: 30px;
   font-weight: normal;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-stroke: 2px var(--wildDarkGreen);
+  letter-spacing: 2px;
+  z-index: 10;
 }
 
 .reviewTag {
@@ -100,5 +114,8 @@
   }
   .reviewLinks {
     background-color: var(--wildGold);
+  }
+  .header {
+    width: 100%;
   }
 }

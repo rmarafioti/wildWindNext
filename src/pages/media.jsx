@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import HeaderArtTwo from "@/components/HeaderArtTwo";
 import styles from "../styles/media.module.css";
 
 /**
@@ -18,7 +19,10 @@ export default function Media() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/media" />
       </Head>
-      <h1 className={styles.mediaHeader}>Media</h1>
+      <div className={styles.header}>
+        <h1 className={styles.mediaHeader}>MEDIA</h1>
+        <HeaderArtTwo />
+      </div>
       <h2 className={styles.mediaHeaderTag}>
         Harley-Davidson <b className={styles.targetText}>X</b> Wild Wind Tattoo
       </h2>

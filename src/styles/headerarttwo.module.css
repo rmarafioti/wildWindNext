@@ -1,0 +1,56 @@
+.checkContainer {
+    margin: 1rem 12rem 10rem 1rem;
+    position: absolute;
+    transform: rotate(-20deg);
+    background-color: var(--wildBlue);
+    filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(56, 70, 28, 0.9));
+  }
+  
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .checker {
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgb(101, 193, 220);
+  }
+  
+  #white {
+    background-color: transparent;
+  }
+  
+  .circle {
+    margin-top: .8rem;
+   margin-left: 15rem;
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    border-radius: 100px;
+    z-index: 9;
+    background: var(--wildBlue);
+    background: linear-gradient( var(--wildGold), #e591d4);
+  }
+  
+  .dotRow {
+    margin-top: 7rem;
+    margin-right: 1rem;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    transform: rotate(4deg);
+    
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--wildGold);
+    box-shadow: -4px 1px 1px 0px var(--wildDarkGreen);
+  }
+

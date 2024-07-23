@@ -8,24 +8,26 @@
   margin: 1rem 0rem 2rem 0rem;
 }
 
-.artistContainer {
+.header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 480px;
 }
 
 .artistHeader {
-  font-size: 30px;
+  margin: 2rem 0rem 3rem 0rem;
   font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-stroke: 2px var(--wildDarkGreen);
+  letter-spacing: 2px;
+  z-index: 10;
 }
 
 .artistIgIcon {
   padding-top: 0.5rem;
   font-size: 30px;
-  margin-left: 1rem;
 }
 
 .artistIgIcon:visited,
@@ -37,7 +39,6 @@
   line-height: 1.8;
   color: var(--wildBlack);
   max-width: 480px;
-  padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--wildGreen);
 }
@@ -153,5 +154,13 @@
   }
   .tattooLinks {
     background-color: var(--wildGold);
+  }
+  .header {
+    width: 100%;
+  }
+  .artistHeader {
+    line-height: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 3.5rem;
   }
 }

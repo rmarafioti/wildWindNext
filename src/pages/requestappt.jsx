@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Form from "@/components/Form";
-
+import HeaderArtTwo from "@/components/HeaderArtTwo";
 import styles from "@/styles/requestappt.module.css";
 
 /**
@@ -18,7 +18,10 @@ export default function RequestAppt() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/requestappt" />
       </Head>
-      <h1 className={styles.requestHeader}>Request An Appointment</h1>
+      <div className={styles.header}>
+        <h1 className={styles.requestHeader}>REQUEST AN APPOINTMENT</h1>
+        <HeaderArtTwo />
+      </div>
       <Form />
     </article>
   );

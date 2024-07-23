@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--wildBlue);
+  background: var(--wildGreen);
 }
 
 #footerHeaderContainer {
@@ -16,7 +16,7 @@
 #footerLogo {
   max-width: 200px;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -29,7 +29,7 @@
 .footerItem a:visited,
 #footerHeaderConatiner a:link,
 #footerHeaderContainer a:visited {
-  color: var(--wildGreen);
+  color: white;
   font-size: 16px;
   list-style-type: none;
   text-decoration: none;
@@ -45,12 +45,16 @@
 .footerIcon,
 .footerIcon a:link,
 .footerIcon a:visited {
-  color: var(--wildBlack);
+  color: black;
   font-size: 30px;
   padding: 0.5rem 1rem 0rem 1rem;
 }
 
-#footerTag {
+#footerTag, #logoTag {
   color: black;
   margin-bottom: 1rem;
+}
+
+#logoTag {
+  margin-bottom: 0rem;
 }
