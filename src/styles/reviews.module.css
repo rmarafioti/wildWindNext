@@ -115,4 +115,7 @@
   .reviewLinks {
     background-color: var(--wildGold);
   }
+  .header {
+    width: 100%;
+  }
 }

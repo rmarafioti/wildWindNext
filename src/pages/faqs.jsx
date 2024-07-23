@@ -4,6 +4,7 @@ import Head from "next/head";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 import { faqs } from "../data/faqs";
+import HeaderArtTwo from "@/components/HeaderArtTwo";
 import styles from "../styles/faqs.module.css";
 
 /**
@@ -39,7 +40,10 @@ export default function Faq() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/faqs" />
       </Head>
-      <h1 className={styles.headerFaqs}>FAQs</h1>
+      <div className={styles.header}>
+        <h1 className={styles.headerFaqs}>FAQs</h1>
+        <HeaderArtTwo />
+      </div>
       <p className={styles.faqTagline}>
         General questions before you fill out our contact form
       </p>

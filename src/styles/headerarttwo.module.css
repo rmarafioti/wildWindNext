@@ -9,7 +9,6 @@
   .checkbox {
     display: flex;
     flex-direction: row;
-    
   }
   
   .checker {
@@ -30,10 +29,7 @@
     width: 65px;
     border-radius: 100px;
     z-index: 9;
-    /*border: 2px solid rgba(56, 70, 28, 0.9);*/
-    /*box-shadow: -10px 5px 10px .5px var(--wildDarkGreen);*/
     background: var(--wildBlue);
-    filter: none;
     background: linear-gradient( var(--wildGold), #e591d4);
   }
   
@@ -47,7 +43,6 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     transform: rotate(4deg);
-    
   }
   
   .dot {
