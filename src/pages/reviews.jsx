@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaStar } from "react-icons/fa";
 import { reviews } from "../data/reviews";
 import styles from "../styles/reviews.module.css";
@@ -41,7 +42,10 @@ export default function Reviews() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/reviews" />
       </Head>
-      <h1 className={styles.reviewHeader}>Reviews</h1>
+      <div className={styles.header}>
+        <h1 className={styles.reviewHeader}>REVIEWS</h1>
+        <HeaderArtTwo />
+      </div>
       <p className={styles.reviewTag}>
         Take a look at what our clients have to say about us!
       </p>
