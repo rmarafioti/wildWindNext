@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TfiFaceSmile } from "react-icons/tfi";
 
 import styles from "@/styles/landingpageart.module.css";
 
@@ -6,19 +7,20 @@ export default function LandingPageArt() {
   return (
     <>
       <section className={styles.artContainer}>
-        <div className={styles.circle}></div>
+        <TfiFaceSmile className={styles.smile} />
+
+        <div className={styles.boxRow}>
+          <div className={styles.boxLine} id={styles.boxColor}></div>
+          <div className={styles.boxLine}></div>
+          <div className={styles.boxLine} id={styles.boxColor}></div>
+          <div className={styles.boxLine}></div>
+          <div className={styles.boxLine} id={styles.boxColor}></div>
+          <div className={styles.boxLine}></div>
+          <div className={styles.boxLine} id={styles.boxColor}></div>
+        </div>
+
         <div className={styles.line}></div>
         <div className={styles.artOne}>
-          <Image
-            className={styles.pineapple}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1721445808/wildWindSite/pineapple_nv473d.png"
-            alt="photo of a pineapple"
-            priority
-            quality={75}
-            width={1280}
-            height={2851}
-            sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
           <div className={styles.artOneElementOne}>
             <div className={styles.dotRow}>
               <div className={styles.dot}></div>
@@ -134,8 +136,19 @@ export default function LandingPageArt() {
           </div>
         </div>
         <div className={styles.artTwo}>
-          <div className={styles.artTwoElementOne}></div>
-          <div className={styles.square}></div>
+          <div className={styles.artTwoElementOne}>
+            <Image
+              className={styles.pineapple}
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721822973/wildWindSite/pineapple_tsulyz.png"
+              alt="photo of a pineapple"
+              priority
+              quality={75}
+              width={1149}
+              height={2020}
+              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          {/*<div className={styles.square}></div>*/}
           <div className={styles.artTwoElementTwo}>
             <Image
               className={styles.squiggle}
