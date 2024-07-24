@@ -25,17 +25,18 @@
   z-index: 10;
 }
 
-.artistIgIcon {
-  padding-top: 0.5rem;
+.artistIgIconMercy {
   font-size: 30px;
 }
 
-.artistIgIcon:visited,
-.artistIgIcon:link {
+.artistIgIconMercy:visited,
+.artistIgIconMercy:link {
   color: var(--wildGreen);
 }
 
 .artistAbout {
+  display: flex;
+  flex-direction: column;
   line-height: 1.8;
   color: var(--wildBlack);
   max-width: 480px;

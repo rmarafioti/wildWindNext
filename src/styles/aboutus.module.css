@@ -11,6 +11,8 @@
   display: flex;
   justify-content: center;
   width: 480px;
+  border-bottom: 1px solid var(--wildGreen);
+  padding-bottom: 2rem;
 }
 
 .mainShopHeader {
@@ -25,7 +27,7 @@
 }
 
 .shopImagesContainer {
-  margin: 1rem;
+  margin: 2rem 0rem .5rem 0rem;
   transition: opacity 1s ease-in-out;
   opacity: 1;
   position: relative;
@@ -35,8 +37,8 @@
 }
 
 .shopImage {
-  max-width: 480px;
-  border-radius: 8px;
+  width: 400px;
+  height: auto;
 }
 
 .shopImagesContainer.fade-out {
@@ -154,9 +156,10 @@
 @media (max-width: 586px) {
   .shopLinksContainer,
   .shopLinks,
-  .shopImages {
+  .shopImage {
     width: 100%;
   }
+  
   .shopLinks {
     background-color: var(--wildGold);
   }
