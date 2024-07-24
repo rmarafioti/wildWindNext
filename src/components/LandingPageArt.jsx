@@ -134,7 +134,9 @@ export default function LandingPageArt() {
           </div>
         </div>
         <div className={styles.artTwo}>
-          <div className={styles.artTwoElementOne}>
+          <div className={styles.artTwoElementOne}></div>
+          <div className={styles.square}></div>
+          <div className={styles.artTwoElementTwo}>
             <Image
               className={styles.squiggle}
               src="https://res.cloudinary.com/dzpne110u/image/upload/v1721793174/wildWindSite/squiggle_mam01t.png"
@@ -153,19 +155,6 @@ export default function LandingPageArt() {
               quality={75}
               width={1588}
               height={641}
-              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          <div className={styles.square}></div>
-          <div className={styles.artTwoElementTwo}>
-            <Image
-              className={styles.wave}
-              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721480796/wildWindSite/waveLine_t14lfd.png"
-              alt="photo of a pineapple"
-              priority
-              quality={75}
-              width={2550}
-              height={889}
               sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>

@@ -134,17 +134,16 @@
 }
 
 .squiggle, .squiggleTwo {
-  transform: rotate(8deg);
-  margin-top: 7rem;
-  margin-right: 1rem;
-  filter: drop-shadow(.5rem .45rem 0rem var(--wildDarkGreen));
-  width: 350px;
+  transform: rotate(20deg);
+  margin-top: -1rem;
+  filter: drop-shadow(-1rem .33rem .2rem var(--wildDarkGreen));
+  width: 320px;
   height: auto;
   z-index: 10;
 }
 
 .squiggleTwo {
-  margin-left: 1.5rem;
+ 
   margin-top: -6rem;
 }
 
@@ -165,6 +164,7 @@ margin-left: 3.5rem;
   border-right: 20px solid var(--wildGoldTrans);
   background: linear-gradient(var(--wildGreen), rgb(189, 207, 155));
   box-shadow: -8px 8px 3px 1px rgba(56, 70, 28, 0.7);
+  overflow: hidden;
 }
 
 .artThreeElementOne,
