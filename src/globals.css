@@ -23,7 +23,7 @@ body {
   --wildDarkGreenTrans: rgba(56, 70, 28, 0.3);
   --wildBlack: rgba(73, 69, 69, 1);
   --wildGold: rgba(226, 226, 54, 1);
-  --wildGoldTrans: rgba(226, 226, 54, 0.5);
+  --wildGoldTrans: #efef58;
 }
 
 #__next {

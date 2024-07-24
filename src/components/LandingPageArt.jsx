@@ -134,7 +134,29 @@ export default function LandingPageArt() {
           </div>
         </div>
         <div className={styles.artTwo}>
-          <div className={styles.artTwoElementOne}></div>
+          <div className={styles.artTwoElementOne}>
+            <Image
+              className={styles.squiggle}
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721793174/wildWindSite/squiggle_mam01t.png"
+              alt="illustration of a squiggle line"
+              priority
+              quality={75}
+              width={1588}
+              height={641}
+              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            <Image
+              className={styles.squiggleTwo}
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721793174/wildWindSite/squiggle_mam01t.png"
+              alt="illustration of a squiggle line"
+              priority
+              quality={75}
+              width={1588}
+              height={641}
+              sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div className={styles.square}></div>
           <div className={styles.artTwoElementTwo}>
             <Image
               className={styles.wave}
