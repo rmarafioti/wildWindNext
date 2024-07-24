@@ -195,9 +195,6 @@
 
 .drop {
   position: absolute;
-  top: 24%;
-  left: 3%;
-  margin: 0.5rem;
   background-color: white;
   display: none;
   z-index: 1000;
@@ -207,9 +204,6 @@
 
 .droptats {
   position: absolute;
-  top: 24%;
-  left: 26%;
-  margin: 0.5rem;
   background-color: white;
   display: none;
   z-index: 1000;
@@ -223,7 +217,19 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
-  margin: 1rem;
+  margin: 10rem;
+}
+
+.drop.active {
+  position: absolute;
+  margin-top: 0rem;
+  margin-left: 4rem;
+}
+
+.droptats.active {
+  position: absolute;
+  margin-top: 0rem;
+  margin-left: 20rem;
 }
 
 .dropLink {
@@ -291,29 +297,14 @@
   .link {
     opacity: 1;
   }
-  .drop {
+  .drop.active {
     position: absolute;
-    top: 17%;
-    left: 49%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background-color: white;
-    border: 1px solid var(--wildGreen);
-    display: none;
-    z-index: 1000;
+    margin: -19rem 0rem 0rem 4rem;
   }
 
-  .droptats {
+  .droptats.active {
     position: absolute;
-    top: 34%;
-    left: 2%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    width: 150px;
-    background-color: white;
-    border: 1px solid var(--wildGreen);
-    display: none;
-    z-index: 1000;
+    margin: -17rem 0rem 0rem 11rem;
   }
   .dropLink {
     padding: 1rem;
@@ -327,16 +318,13 @@
 }
 
 @media (min-width: 2000px) {
-  .droptats {
-    top: 15%;
-    left: 25.5%;
-  }
-  .drop {
-    top: 15%;
-    left: 2%;
-  }
   #hamMenuContainer {
     width: 50px;
     height: 50px;
+  }
+  .droptats.active {
+    position: absolute;
+    margin-top: 0rem;
+    margin-left: 30rem;
   }
 }
