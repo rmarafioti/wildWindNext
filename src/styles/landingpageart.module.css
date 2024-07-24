@@ -16,25 +16,25 @@
   background: linear-gradient(45deg, var(--wildGold), #e591d4);
   border-radius: 70px;
   transform: rotate(-10deg);
-  box-shadow: -10px 5px 10px 1px rgba(56, 70, 28, .5);
+  box-shadow: -10px 5px 10px 1px rgba(56, 70, 28, 0.5);
 }
 
 .boxRow {
   position: absolute;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 24rem 0rem 0rem 11rem;
   transform: rotate(90deg);
-  filter: drop-shadow(.8rem .5rem .5rem rgba(56, 70, 28, .5));
+  filter: drop-shadow(0.8rem 0.5rem 0.5rem rgba(56, 70, 28, 0.5));
   z-index: 1;
 }
 
 .boxLine {
-margin-left: 2.2rem;
-height:20px;
-width: 160px;
-background: var(--wildBlue);
+  margin-left: 2.2rem;
+  height: 20px;
+  width: 160px;
+  background: var(--wildBlue);
 }
 
 #boxColor {
@@ -132,9 +132,9 @@ background: var(--wildBlue);
   position: absolute;
   width: 270px;
   height: auto;
-  margin: 7rem 0rem 0rem .5rem;
+  margin: 7rem 0rem 0rem 0.5rem;
   transform-origin: top left;
-  filter: drop-shadow(-0.7rem .5rem 1rem rgba(56, 70, 28, 0.5));
+  filter: drop-shadow(-0.7rem 0.5rem 1rem rgba(56, 70, 28, 0.5));
   transform: rotate(-3deg);
   z-index: 10;
 }
@@ -149,11 +149,12 @@ background: var(--wildBlue);
   z-index: 5;
 }
 
-.squiggle, .squiggleTwo {
+.squiggle,
+.squiggleTwo {
   width: 320px;
   height: auto;
   transform: rotate(20deg);
-  filter: drop-shadow(-1rem .33rem .2rem var(--wildDarkGreen));
+  filter: drop-shadow(-1rem 0.33rem 0.2rem var(--wildDarkGreen));
   z-index: 8;
 }
 
@@ -252,7 +253,7 @@ background: var(--wildBlue);
   }
   .pineapple {
     width: 100%;
-   margin: 6rem 0rem 0rem -1.5rem;
+    margin: 6rem 0rem 0rem -1.5rem;
   }
   .artTwoElementOne {
     margin-top: -8rem;

@@ -8,7 +8,6 @@ export default function LandingPageArt() {
     <>
       <section className={styles.artContainer}>
         <TfiFaceSmile className={styles.smile} />
-
         <div className={styles.boxRow}>
           <div className={styles.boxLine} id={styles.boxColor}></div>
           <div className={styles.boxLine}></div>
@@ -18,7 +17,6 @@ export default function LandingPageArt() {
           <div className={styles.boxLine}></div>
           <div className={styles.boxLine} id={styles.boxColor}></div>
         </div>
-
         <div className={styles.line}></div>
         <div className={styles.artOne}>
           <div className={styles.artOneElementOne}>
@@ -148,7 +146,6 @@ export default function LandingPageArt() {
               sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          {/*<div className={styles.square}></div>*/}
           <div className={styles.artTwoElementTwo}>
             <Image
               className={styles.squiggle}

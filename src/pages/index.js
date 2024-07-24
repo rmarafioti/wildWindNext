@@ -37,9 +37,9 @@ export default function Home() {
         Have questions? Contact us at 773.230.0223 or wildwindtattoo@gmail.com.
       </p>
       <LandingPageArt />
-      <h2 className={styles.headerTwo}>
+      <h1 className={styles.headerTwo}>
         Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
-      </h2>
+      </h1>
       <p className={styles.homeParagraph}>
         Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon of
         expert tattooing in Chicago. Located in the heart of Wicker Park, our

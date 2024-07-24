@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
-import TattooCard from "../components/TattooCard";
+import MercyCard from "@/components/MercyCard";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
@@ -43,15 +43,13 @@ export default function MercedesTats() {
         challenges. She has honed her craft to ensure her tattoos are
         consistently clean and meticulous, dedicating the time necessary to
         achieve this standard.
-        <div>
-          <a
-            className={styles.artistIgIcon}
-            href="https://www.instagram.com/tattoomercy/"
-            aria-label="icon which links to Mercedes Wright's Instagram page"
-          >
-            <FaInstagram />
-          </a>
-        </div>
+        <a
+          className={styles.artistIgIconMercy}
+          href="https://www.instagram.com/tattoomercy/"
+          aria-label="icon which links to Mercedes Wright's Instagram page"
+        >
+          <FaInstagram />
+        </a>
       </p>
 
       <section className={styles.tattooSection}>
@@ -75,7 +73,7 @@ export default function MercedesTats() {
         </div>
         <div className={styles.mercedesGallery}>
           {mercyPhotos.map((tattoo, index) => (
-            <TattooCard
+            <MercyCard
               key={index}
               tattoo={tattoo}
               onClick={setCurrentIndex}

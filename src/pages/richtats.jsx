@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
-import TattooCard from "../components/TattooCard";
+import RichCard from "../components/RichCard";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
@@ -71,7 +71,7 @@ export default function RichTats() {
         </div>
         <div className={styles.tattooGallery}>
           {richPhotos.map((tattoo, index) => (
-            <TattooCard
+            <RichCard
               key={index}
               tattoo={tattoo}
               onClick={setCurrentIndex}
