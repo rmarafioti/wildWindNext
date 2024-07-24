@@ -106,31 +106,31 @@ export default function LandingPageArt() {
           </div>
           <div className={styles.checkContainer}>
             <div className={styles.checkbox}>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
             </div>
             <div className={styles.checkbox}>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
             </div>
             <div className={styles.checkbox}>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
             </div>
             <div className={styles.checkbox}>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
-              <div className={styles.checker} id={styles.white}></div>
+              <div className={styles.checker} id={styles.lightCheck}></div>
               <div className={styles.checker}></div>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function LandingPageArt() {
           </div>
         </div>
         <div className={styles.artThree}>
-          <div className={styles.artThreeElementOne}></div>
+          <div className={styles.circle}></div>
           <div className={styles.artThreeElementTwo}>
             <div className={styles.gridContainer}>
               <div className={styles.grid}></div>
