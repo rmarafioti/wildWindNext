@@ -57,13 +57,13 @@ export default function Shop() {
       <div className={styles.header}>
         <h1 className={styles.mainShopHeader}>ABOUT US</h1>
         <HeaderArt />
-        {/*{shopPhotos.length > 0 && (
+      </div>
+      {shopPhotos.length > 0 && (
         <AboutSlide
           imageUrl={shopPhotos[currentIndex].image}
           isFading={isFading}
         />
-      )}*/}
-      </div>
+      )}
       <div className={styles.shopIconContainer}>
         <h1>
           <a

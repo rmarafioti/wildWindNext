@@ -13,9 +13,8 @@ export default function AboutSlide({ imageUrl, isFading }) {
         src={imageUrl}
         alt="Tattoo shop photos"
         priority
-        layout="responsive"
-        width={300}
-        height={600}
+        width={2000}
+        height={2000}
         quality={75}
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
         className={styles.shopImage}
