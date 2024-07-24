@@ -5,9 +5,9 @@ import styles from "@/styles/landingpageart.module.css";
 export default function LandingPageArt() {
   return (
     <>
-      <div className={styles.circle}></div>
-      <div className={styles.line}></div>
       <section className={styles.artContainer}>
+        <div className={styles.circle}></div>
+        <div className={styles.line}></div>
         <div className={styles.artOne}>
           <Image
             className={styles.pineapple}

@@ -1,7 +1,15 @@
+.artContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  margin-bottom: 0rem;
+  width: 800px;
+}
+
 .circle {
   position: absolute;
-  top: 16%;
-  left: 34%;
+ margin-top: 27rem;
+ margin-left: 11rem;
   height: 150px;
   width: 150px;
   border-radius: 100px;
@@ -14,8 +22,8 @@
 
 .line {
   position: absolute;
-  top: 5%;
-  left: 73%;
+  margin-top: 6rem;
+  margin-left: 45rem;
   height: 350px;
   width: 10px;
   border-radius: 8px;
@@ -30,20 +38,12 @@
   position: absolute;
   width: 130px;
   height: auto;
-  top: 1.9%;
-  left: 26%;
+  margin-top: 1.5rem;
+  margin-left: 4rem;
   transform: rotate(-5deg);
   transform-origin: top left;
   filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(56, 70, 28, 0.9));
   z-index: 10;
-}
-
-.artContainer {
-  display: flex;
-  flex-direction: row;
-  margin: 2rem;
-  margin-bottom: 0rem;
-  width: 800px;
 }
 
 .artOne,
@@ -205,26 +205,6 @@
   width: 80px;
   box-shadow: -10px 10px 10px 1px rgba(56, 70, 28, 0.5);
   border-top-right-radius: 100px;
-}
-
-@media (min-width: 1700px) {
-  .circle {
-    top: 39.5vh;
-    left: 40vw;
-    height: 11vh;
-    width: 11vh;
-  }
-  .line {
-    top: 11vh;
-    left: 62vw;
-    height: 30.5vh;
-    width: 0.4vw;
-  }
-  .pineapple {
-    top: 5vh;
-    left: 35.5vw;
-    width: 5.5vw;
-  }
 }
 
 @media (max-width: 768px) {
