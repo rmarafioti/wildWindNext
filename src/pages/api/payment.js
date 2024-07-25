@@ -15,7 +15,7 @@ export default async function handler(
         payment_method_types: ["card"],
         line_items: [
           {
-            price: "price_1PLr3XClew7ziQf56qa9QbQM",
+            price: "price_1PLr75Clew7ziQf5NnzXpF1B",
             quantity: 1,
           },
         ],
