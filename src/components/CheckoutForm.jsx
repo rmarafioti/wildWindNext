@@ -6,7 +6,9 @@ import { useCallback } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useRouter } from "next/router";
 
-const stripePromise = loadStripe("pk_live_aBpSqlTpiqGZCDiAu2PrznKI00XMNgs95v");
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+);
 
 /**
  * @component CheckoutForm handles the Stripe api call for user payment processing via the Stripe embedded form
