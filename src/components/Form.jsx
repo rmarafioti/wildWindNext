@@ -7,9 +7,6 @@ import DateTimeField from "./DateTimeField";
 
 import styles from "../styles/form.module.css";
 
-/**
- * @component Form features a functional form for a user to request an appointment. TattooSizeField and DateTimeField are separate components with independent functionality imported and in Form.jsx
- */
 export default function Form() {
   const inputValidationError = {
     user_name: true,
@@ -40,32 +37,33 @@ export default function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState(inputForm);
 
-  /**
-   *
-   * @function handleInputChange handles user changing field input values
-   */
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
 
-    // functionality to change the value on the field input
+    if (name === "my_file" && files) {
+      const selectedFile = files[0];
+      const maxFileSize = 500 * 1024; // 500KB
+      if (selectedFile.size > maxFileSize) {
+        setFileSizeError(true);
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          [name]: null,
+        }));
+        return;
+      } else {
+        setFileSizeError(false);
+      }
+    }
+
     setFormValues((prevValues) => ({
       ...prevValues,
       [name]: newValue,
     }));
-    // field validated if value or file in the case of choose file field
+
     validateField(name, newValue);
-    // Reset file size error on input change && loading field input change
-    setFileSizeError(false);
-    setIsLoading(false);
   };
 
-  /**
-   * @function validateField checks each input field individually if is valid before sending form
-   * @param {*} field
-   * @param {*} value
-   * @returns an error if field is not valid else return valid
-   */
   const validateField = (field, value) => {
     let isValid = true;
     switch (field) {
@@ -103,10 +101,6 @@ export default function Form() {
     return isValid;
   };
 
-  /**
-   * @function handleInputFocus logic to check next field input in order from field the user is currently on.
-   * @param {*} currentField
-   */
   const handleInputFocus = (currentField) => {
     const fields = Object.keys(inputForm);
     const currentIndex = fields.indexOf(currentField);
@@ -116,33 +110,27 @@ export default function Form() {
     }
   };
 
-  // Check email for '@' and '.'
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  // Don't allow user to input letter and check that the phone number is 10 digits long
   const isValidPhone = (phone) => {
     const phoneDigits = phone.replace(/\D/g, "");
     return phoneDigits.length === 10;
   };
 
-  // Form is valid if all required fields have correct value
   const isFormValid = () => {
     return (
       Object.values(validationError).every((error) => !error) && !fileSizeError
     );
   };
 
-  /**
-   *
-   * @function sendEmail send email with form information if all is valid && clear form && navigate user to RequestSent.jsx. Message failed kept in boilerplate for function in case an error slips by input error checks
-   */
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (!isFormValid()) {
+      console.log("Form validation failed:", validationError, fileSizeError);
       return;
     }
 
@@ -246,7 +234,6 @@ export default function Form() {
         onFocus={() => handleInputFocus("user_phone")}
         required
       />
-      {/* TattooSizeField.jsx component */}
       <TattooSizeField
         name="user_size"
         value={formValues.user_size}
@@ -276,7 +263,6 @@ export default function Form() {
         />
       </div>
       <div className={styles.formSectionContainer}>
-        {/* DateTimeFeild.jsx component */}
         <DateTimeField
           name="user_times"
           value={formValues.user_times}
