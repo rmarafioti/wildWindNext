@@ -10,6 +10,14 @@
   color: var(--wildBlack);
 }
 
+.attachMessage {
+  margin: .5rem 0rem .5rem 0rem;
+  padding: .5rem;
+  font-weight: normal;
+  border: 1px solid var(--wildBlack);
+  border-radius: 5px;
+}
+
 .form,
 .messageForm,
 .formSubmit {

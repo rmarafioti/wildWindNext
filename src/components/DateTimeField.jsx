@@ -83,7 +83,7 @@ export default function DateTimeField({
   return (
     <div>
       <label className={styles.label}>
-        Preffered appointment times:{" "}
+        Prefered appointment times:{" "}
         {validationError && (
           <p className={styles.error}>*Please provide your availability*</p>
         )}

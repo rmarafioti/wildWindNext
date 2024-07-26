@@ -271,7 +271,13 @@ export default function Form() {
         />
       </div>
       <div className={styles.formSectionContainer} id={styles.attachFile}>
-        <label className={styles.label}>Attach tattoo reference:</label>
+        <label className={styles.label}>
+          Attach tattoo reference:{" "}
+          <p className={styles.attachMessage}>
+            PLEASE NOTE: Photos taken with your phone may exceed the 500KB file
+            size limit and cannot be attached.
+          </p>
+        </label>
         <input
           className={styles.form}
           id={styles.file}
