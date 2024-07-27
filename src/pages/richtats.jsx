@@ -41,7 +41,7 @@ export default function RichTats() {
         styles. He earned his degree from the Rhode Island School of
         Design&apos;s illustration department. His fine arts background is
         evident in his tattoos, personal work, and the gallery-style design of
-        the shop.{" "}
+        the shop.
         <a
           className={styles.artistIgIcon}
           href="https://www.instagram.com/wild_coma/"
