@@ -309,7 +309,7 @@
 
   .droptats.active {
     position: absolute;
-    margin: -17rem 0rem 0rem 11rem;
+    margin: -.6rem 0rem 0rem .5rem;
   }
   .dropLink {
     padding: 1rem;
