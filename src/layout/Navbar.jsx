@@ -118,6 +118,27 @@ export default function Navbar() {
             >
               {tattooDropdown.isOpen ? <IoCloseOutline /> : <IoIosArrowDown />}
             </div>
+            {/*drop down menu open*/}
+            <div id={styles.dropDownContainer}>
+              <menu
+                className={`${styles.droptats} ${
+                  tattooDropdown.isOpen ? styles.active : ""
+                }`}
+              >
+                <Link
+                  className={styles.dropLink}
+                  id={styles.dropLinkTop}
+                  href="/richtats"
+                >
+                  <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
+                  <IoIosArrowForward />
+                </Link>
+                <Link className={styles.dropLink} href="/mercytats">
+                  <h4 className={styles.dropLinkName}>Mercedes Wright</h4>
+                  <IoIosArrowForward />
+                </Link>
+              </menu>
+            </div>
           </li>
           <li className={styles.navItem}>
             <Link className={styles.navContainer} href="/contact">
@@ -178,7 +199,7 @@ export default function Navbar() {
           </menu>
         </div>
         {/*drop down menu open*/}
-        <div id={styles.dropDownContainer}>
+        {/*} <div id={styles.dropDownContainer}>
           <menu
             className={`${styles.droptats} ${
               tattooDropdown.isOpen ? styles.active : ""
@@ -197,7 +218,7 @@ export default function Navbar() {
               <IoIosArrowForward />
             </Link>
           </menu>
-        </div>
+        </div>*/}
       </section>
     </>
   );

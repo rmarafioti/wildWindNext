@@ -33,13 +33,13 @@ export const faqs = [
     id: 6,
     question: "How can I make an appointment?",
     answer:
-      'Begin booking by filling out our <Link to="/contact">contact form</Link with basic information about your desired tattoo. We will respond within 1-3 business days. After an artist responds to your request, you can email them with reference photos and a design description. All tattoo appointments require a deposit. Once a date and time are agreed upon, you will be directed to complete our deposit form to secure your appointment.',
+      "Begin booking by filling out our contact form with basic information about your desired tattoo. We will respond within 1-3 business days. All tattoo appointments require a deposit. Once a date and time are agreed upon, you will be instructed on how to drop a deposit to secure your appointment.",
   },
   {
     id: 7,
     question: "Do I have to leave a deposit to make an appointment?",
     answer:
-      "Yes, a $60 deposit is required for each appointment. Once the date and time are arranged, you will be directed to our deposit form. Your appointment is not confirmed until we receive your deposit. This deposit will be deducted from the cost of your tattoo when it is completed, or if your tattoo requires multiple sessions, it will be deducted during the last session.",
+      "Yes, a deposit is required for each appointment. Once the date and time are arranged, you will be directed a deposit form. Your appointment is not confirmed until we receive your deposit. This deposit will be deducted from the cost of your tattoo when it is completed, or if your tattoo requires multiple sessions, it will be deducted during the last session.",
   },
   {
     id: 8,
@@ -51,6 +51,6 @@ export const faqs = [
     id: 9,
     question: "What is your cancellation policy?",
     answer:
-      "If you cancel your appointment with at least 48 hours notice, we will honor your $60 deposit for a future appointment. Cancellations made with less than 48 hours notice will result in the forfeiture of your deposit. To reschedule, you may be required to place another deposit.",
+      "If you cancel your appointment with at least 48 hours notice, we will honor your deposit for a future appointment. Cancellations made with less than 48 hours notice will result in the forfeiture of your deposit. To reschedule, you may be required to place another deposit.",
   },
 ];

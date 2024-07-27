@@ -26,7 +26,6 @@
 }
 
 .artistIgIcon {
-  padding-top: 0.5rem;
   font-size: 30px;
 }
 
@@ -36,6 +35,8 @@
 }
 
 .artistAbout {
+  display: flex;
+  flex-direction: column;
   line-height: 1.8;
   color: var(--wildBlack);
   max-width: 480px;
