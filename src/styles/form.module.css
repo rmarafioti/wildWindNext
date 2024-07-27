@@ -48,6 +48,7 @@
 }
 
 #file {
+  font-size: 16px;
   color: var(--wildBlack);
   border: none;
   padding: 0.25rem 0rem 0rem 0rem;

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import LandingPageArt from "@/components/LandingPageArt";
@@ -23,7 +22,6 @@ export default function Home() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/" />
       </Head>
-      {/*<h1 className={styles.headerHome}>WILD WIND TATTOO</h1>*/}
       <p className={styles.contactParagraph}>
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
         IL 60622.
