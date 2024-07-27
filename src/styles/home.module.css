@@ -6,15 +6,8 @@
   align-items: center;
   text-align: center;
   margin: 1rem 1rem 2rem 1rem;
-  position: relative; /* Make sure this is relative so that absolute positioning works correctly */
+  position: relative; 
 }
-
-/*.headerHome {
-  color: white;
-  font-size: 50px;
-  font-weight:800;
-  -webkit-text-stroke: 3px var(--wildGreen);
-}*/
 
 .shopPhoto {
   max-width: 800px;
@@ -79,6 +72,7 @@
   background-color: var(--wildDarkGreen);
   padding: 0.5rem;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .linkContactHeader {

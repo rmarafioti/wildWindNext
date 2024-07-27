@@ -51,7 +51,6 @@ export default function MercedesTats() {
           <FaInstagram />
         </a>
       </p>
-
       <section className={styles.tattooSection}>
         <div className={styles.tattooSlide}>
           <div className={styles.arrowSection}>
