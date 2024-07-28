@@ -75,6 +75,10 @@
   text-decoration: none;
 }
 
+.contactItem {
+  margin-left: .3rem;
+}
+
 .linkContactHeader {
   color: white;
   font-size: 18px;

@@ -68,7 +68,7 @@ export default function Contact() {
         <div className={styles.contactInfo}>
           PHONE:
           <p className={styles.contactInfoValue} id={styles.phone}>
-            <a href="tel:+7732272027"> 773.227.2027</a>
+            <a href="tel:+17732272027"> 773.227.2027</a>
           </p>
         </div>
         <div className={styles.contactInfo}>

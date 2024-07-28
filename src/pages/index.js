@@ -32,7 +32,22 @@ export default function Home() {
       <p
         className={`${styles.contactParagraph} ${styles.contactParagraphBottom}`}
       >
-        Have questions? Contact us at 773.230.0223 or wildwindtattoo@gmail.com.
+        Have questions? Call us at:
+        <a
+          href="tel:+17732272027"
+          aria-label="Call 773 227 2027"
+          className={styles.contactItem}
+        >
+          773.227.2027
+        </a>{" "}
+        or email:
+        <a
+          href="mailto:wildwindtattoo@gmail.com"
+          aria-label="Send an email to wildwindtattoo@gmail.com"
+          className={styles.contactItem}
+        >
+          wildwindtattoo@gmail.com
+        </a>
       </p>
       <LandingPageArt />
       <h1 className={styles.headerTwo}>
