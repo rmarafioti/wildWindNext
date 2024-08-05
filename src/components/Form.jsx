@@ -271,13 +271,7 @@ export default function Form() {
         />
       </div>
       <div className={styles.formSectionContainer} id={styles.attachFile}>
-        <label className={styles.label}>
-          Attach tattoo reference:{" "}
-          <p className={styles.attachMessage}>
-            PLEASE NOTE: Photos taken with your phone may exceed the 500KB file
-            size limit and cannot be attached.
-          </p>
-        </label>
+        <label className={styles.label}>Attach tattoo reference: </label>
         <input
           className={styles.form}
           id={styles.file}
@@ -287,6 +281,10 @@ export default function Form() {
           onChange={handleInputChange}
           onFocus={() => handleInputFocus("my_file")}
         />
+        <p className={styles.attachMessage}>
+          PLEASE NOTE: Photos taken with your phone may exceed the 500KB file
+          size limit and cannot be attached.
+        </p>
         {fileSizeError && (
           <p className={styles.error}>
             *Attachment file error. The maximum allowed attachments size is
