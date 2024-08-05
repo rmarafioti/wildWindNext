@@ -276,9 +276,9 @@
   }
   #navLogo {
     max-width: 250px;
-    margin: 1rem 0rem 0.5rem 0rem;
+    margin: 1rem 2rem 0.5rem 0rem;
   }
-  #contactButton {
+  #contactContainer {
     display: none;
   }
   .menu {

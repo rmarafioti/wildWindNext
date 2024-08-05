@@ -12,6 +12,7 @@
 }
 
 .attachMessage {
+  color: var(--wildBlack);
   margin: .5rem 0rem .5rem 0rem;
   padding: .5rem;
   font-weight: normal;
