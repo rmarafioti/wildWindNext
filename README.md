@@ -6,9 +6,13 @@
 
 ![Site Wireframe Mobile](src/images/wireframeMobile.png)
 
-![SiteWireframeDesktop](src/images/wireframeDesktop.png)
+![Site Wireframe Desktop](src/images/wireframeDesktop.png)
 
 Color coding to specify HTML container grouping
+
+# Landing Page UI mock-up
+
+![Landing Page Sketch](src/images/landingPageArt.png)
 
 To learn more about Next.js, take a look at the following resources:
 
