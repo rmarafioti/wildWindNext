@@ -21,11 +21,11 @@ export default function RequestSent() {
       <div className={styles.formSentContainer}>
         <TfiFaceSad className={styles.sad} />
         <h1 className={styles.formSentMessage}>
-          We're sorry, there seems to have been an issue submitting your release
-          form.
+          We're sorry, but there seems to have been an issue submitting your
+          release form.
         </h1>
         <h2 className={styles.formMessage}>
-          Please notify your artist and they will assist you.
+          Please notify your artist, and they'll be happy to assist you.
         </h2>
         <h3 className={styles.formMessageTag}>Best,</h3>
         <h3
