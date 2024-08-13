@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: 'https://www.wildwindtattoo.com',
   generateRobotsTxt: false, // Do not generate robots.txt
-  exclude: [], // Empty array to include all pages
+  exclude: ['/formerror','/requestsent','/formsent','/releaseforms'], // Exclude formerror and formsent pages
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,

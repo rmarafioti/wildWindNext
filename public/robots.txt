@@ -1,5 +1,11 @@
 # public/robots.txt
 User-agent: *
+
+Disallow: /formerror
+Disallow: /formsent
+Disallow: /releaseforms
+Disallow: /requestsent
+
 Allow: /
 
 Sitemap: https://www.wildwindtattoo.com/sitemap.xml
