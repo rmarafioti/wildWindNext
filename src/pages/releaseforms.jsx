@@ -22,8 +22,8 @@ export default function Releaseforms() {
         <HeaderArtTwo />
       </div>
       <h2 className={styles.releaseformsTagline}>
-        Please choose your artist to fill out their waiver, release & consent to
-        tattoo:
+        Please select your artist to complete their waiver, release, and consent
+        to tattoo
       </h2>
 
       <a
