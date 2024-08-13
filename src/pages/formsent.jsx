@@ -24,8 +24,8 @@ export default function FormSent() {
           Thank you for filling out your release form electronically!
         </h1>
         <h2 className={styles.formMessage}>
-          We're excited to be part of your tattoo journey and hope you have an
-          amazing experience with us.
+          We&apos;re excited to be part of your tattoo journey and hope you have
+          an amazing experience with us.
         </h2>
         <h3 className={styles.formMessageTag}>Best,</h3>
         <h3
