@@ -35,22 +35,27 @@
   }
 
   .artistList {
-    list-style-type: none;
-  }
-
-  .artistLink {
     margin: 1rem 0rem 1rem 0rem;
     padding: 0.5rem;
     text-align: center;
-    text-decoration: none;
     color: var(--wildBlack);
     border-radius: 5px;
     background-color: var(--wildGoldTrans);
     width: 300px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .artistLink {
+    text-decoration: none;
+  }
+
+  .artistLink:visited {
+    color: var(--wildBlack);
+    background-color: var(--wildGold);
   }
   
-  .artistLink:hover {
+  .artistLink:hover, .artistList:hover {
     background-color: var(--wildGold);
   }
 
@@ -63,10 +68,7 @@
     margin-top: 0rem;
     margin-bottom: 3.5rem;
     }
-    .artistList {
-        width: 100%;
-    }
-    .artistLink {
+    .artistLink, .artistList {
         width: 100%;
         background-color: var(--wildGold);
       }
