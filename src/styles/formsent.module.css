@@ -1,0 +1,92 @@
+.formSent,
+.formSentContainer {
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.smile {
+    position: absolute;
+    color: white;
+    z-index: 100;
+    font-size: 120px;
+    margin: 10rem 0rem 0rem 18rem;
+    background: linear-gradient(45deg, var(--wildGold), #e591d4);
+    border-radius: 70px;
+    transform: rotate(18deg);
+    box-shadow: -7px 5px 10px 1px rgba(56, 70, 28, 0.5);
+  }
+
+.formSentContainer {
+  border-bottom: 1px solid var(--wildGreen);
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.formSentMessage {
+  font-size: 30px;
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wildGreen);
+  margin-bottom: 1rem;
+}
+
+.formMessage {
+  color: var(--wildBlack);
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+
+.formMessageTag {
+  margin: 0rem;
+  font-weight: normal;
+  color: var(--wildBlack);
+}
+
+.formMessageTagBottom {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.returnHome {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildBlack);
+  border-radius: 5px;
+  background-color: var(--wildGoldTrans);
+  width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.returnHome:hover {
+  background-color: var(--wildGold);
+}
+
+.returnHomeHeader {
+  font-weight: normal;
+}
+
+@media (max-width: 586px) {
+  .formSent {
+    text-align: center;
+  }
+  .smile {
+    font-size: 90px;
+    margin-top: 20rem;
+    margin-left: 15rem;
+    z-index: 9;
+  }
+  .returnHome,
+  .returnHomeHeader {
+    width: 100%;
+  }
+  .returnHome {
+    background-color: var(--wildGold);
+  }
+}
