@@ -1,30 +1,31 @@
 import Head from "next/head";
 import Link from "next/link";
-import { TfiFaceSmile } from "react-icons/tfi";
+import { TfiFaceSad } from "react-icons/tfi";
 
 import styles from "@/styles/formsent.module.css";
 
 /**
- * @component FormSent features a message to the user when an artist release form is filled out and is successfully sent
+ * @component FormError features a message to the user when an artist release form is filled out but an error is thrown by DocuSign
  */
-export default function FormSent() {
+export default function RequestSent() {
   return (
     <article className={styles.formSent}>
       <Head>
-        <title>Form Sent Page - wildwindtattoo.com</title>
+        <title>Form Error Page - wildwindtattoo.com</title>
         <meta
           name="description"
-          content="This is the form sent page of wildwindtattoo.com."
+          content="This is the form error page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="https://wildwindtattoo.com/formsent" />
+        <link rel="canonical" href="https://wildwindtattoo.com/formerror" />
       </Head>
       <div className={styles.formSentContainer}>
-        <TfiFaceSmile className={styles.smile} />
+        <TfiFaceSad className={styles.sad} />
         <h1 className={styles.formSentMessage}>
-          Thank you for filling out your release form electronically!
+          We're sorry, there seems to have been an issue submitting your release
+          form.
         </h1>
         <h2 className={styles.formMessage}>
-          We hope you have a great tattoo experience!
+          Please notify your artist and they will assist you.
         </h2>
         <h3 className={styles.formMessageTag}>Best,</h3>
         <h3

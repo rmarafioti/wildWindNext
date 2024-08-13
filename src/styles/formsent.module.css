@@ -8,6 +8,18 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+.sad {
+  position: absolute;
+  color: white;
+  z-index: 100;
+  font-size: 120px;
+  margin: 10rem 0rem 0rem 18rem;
+  background: linear-gradient(45deg, var(--wildGold), #e591d4);
+  border-radius: 70px;
+  transform: rotate(18deg);
+  box-shadow: -7px 5px 10px 1px rgba(56, 70, 28, 0.5);
+}
+
 .smile {
     position: absolute;
     color: white;
@@ -79,6 +91,12 @@
   .smile {
     font-size: 90px;
     margin-top: 20rem;
+    margin-left: 15rem;
+    z-index: 9;
+  }
+  .sad {
+    font-size: 90px;
+    margin-top: 23rem;
     margin-left: 15rem;
     z-index: 9;
   }
