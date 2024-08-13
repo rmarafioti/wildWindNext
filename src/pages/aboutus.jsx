@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import AboutSlide from "@/components/AboutSlide";
 import HeaderArt from "@/components/HeaderArt";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 import { shopPhotos } from "../data/shopPhotos";
 
@@ -15,23 +14,63 @@ import styles from "../styles/aboutus.module.css";
  *
  * @component Shop features static information about the business as well as a slideshow of shop photos by way of shopPhotos.js
  */
-export default function Shop() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function Shop({ initialPhoto }) {
+  const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);
   const [isFading, setIsFading] = useState(false);
 
-  /**
-   *@function interval creates a slideshow of shop photos looping through by the photos index at a set timeout of 3 seconds
-   */
+  const seoData = getSeoData("Wild Wind Tattoo - Chicago's Tattoo Shop", {
+    path: "/aboutus",
+    description: "Learn about Wild Wind Tattoo, Chicago's premier tattoo studio since 2015. Explore our mission, community involvement, and commitment to providing a safe, inclusive space for all clients.",
+    schema: {
+      "@type": "TattooParlor",
+      "name": siteConfig.siteName,
+      "description": "Premier tattoo studio in Chicago since 2015, offering various tattoo styles in a welcoming environment",
+      "foundingDate": "2015",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": siteConfig.address.streetAddress,
+        "addressLocality": siteConfig.address.addressLocality,
+        "addressRegion": siteConfig.address.addressRegion,
+        "postalCode": siteConfig.address.postalCode,
+        "addressCountry": siteConfig.address.addressCountry
+      },
+      "telephone": siteConfig.phone,
+      "url": siteConfig.siteUrl,
+      "sameAs": [
+        "https://www.instagram.com/wildwindtattoo/?hl=en",
+        "https://www.facebook.com/wildwindtattoo/"
+      ],
+      "slogan": "Variety, Comfort, Professionalism",
+      "knowsAbout": ["Tattoo artistry", "Community involvement", "Inclusive spaces"],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tattoo services",
+          "description": "Various tattoo styles, from small walk-ins to larger custom pieces"
+        }
+      },
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Chicago Therapy Collective",
+          "description": "Partnered with Hire Trans Now initiative"
+        }
+      ]
+    }
+  });
 
   useEffect(() => {
-    let isMounted = true; // Track if the component is mounted
+    let isMounted = true;
+    let currentIndex = 0;
 
     const interval = setInterval(() => {
       if (isMounted) {
         setIsFading(true);
         setTimeout(() => {
           if (isMounted) {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % shopPhotos.length);
+            currentIndex = (currentIndex + 1) % shopPhotos.length;
+            setCurrentPhoto(shopPhotos[currentIndex]);
             setIsFading(false);
           }
         }, 1000);
@@ -39,31 +78,22 @@ export default function Shop() {
     }, 3000);
 
     return () => {
-      isMounted = false; // Cleanup function to set the mounted flag to false
+      isMounted = false;
       clearInterval(interval);
     };
   }, []);
 
   return (
     <article className={styles.shopAbout}>
-      <Head>
-        <title>About Us Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the about page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/aboutus" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.mainShopHeader}>ABOUT US</h1>
         <HeaderArt />
       </div>
-      {shopPhotos.length > 0 && (
-        <AboutSlide
-          imageUrl={shopPhotos[currentIndex].image}
-          isFading={isFading}
-        />
-      )}
+      <AboutSlide
+        imageUrl={currentPhoto.image}
+        isFading={isFading}
+      />
       <div className={styles.shopIconContainer}>
         <h1>
           <a
@@ -133,9 +163,17 @@ export default function Shop() {
           <h3 className={styles.linkHeader}>Media</h3>
         </Link>
         <Link href="/faqs" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>Faqs</h3>
+          <h3 className={styles.linkHeader}>FAQs</h3>
         </Link>
       </div>
     </article>
   );
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      initialPhoto: shopPhotos[0], // Ensure this is the first photo in the array
+    },
+  };
 }

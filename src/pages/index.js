@@ -1,9 +1,10 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import LandingPageArt from "@/components/LandingPageArt";
 import { IoCheckmark } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 import styles from "../styles/home.module.css";
 
@@ -12,16 +13,61 @@ import styles from "../styles/home.module.css";
  * @component Home features the main landing page of the web app with video and copy for SEO
  */
 export default function Home() {
+  const seoData = getSeoData("Chicago Tattoos | Wicker Park Tattoo Shop", {
+    path: "/",
+    description: "Wild Wind is a local Chicago tattoo shop that welcomes walk-ins. No hot air - just tattoos. Call today (773) 227-2027",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: siteConfig.siteName,
+      description: "Expert tattooing in Chicago's Vibrant Wicker Park. Founded by Rich Marafioti in 2015, Wild Wind Tattoo offers a bright, welcoming, and relaxing space for clients to get tattooed.",
+      url: siteConfig.siteUrl,
+      telephone: "+17732272027",
+      email: "wildwindtattoo@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1452 N. Western Ave.",
+        addressLocality: "Chicago",
+        addressRegion: "IL",
+        postalCode: "60622",
+        addressCountry: "US"
+      },
+      serviceType: "Tattoo Services",
+      priceRange: "$$",
+      areaServed: {
+        "@type": "City",
+        name: "Chicago"
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Tattoo Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Custom Tattoo Design"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Walk-in Tattoos"
+            }
+          }
+        ]
+      },
+      sameAs: [
+        "https://www.instagram.com/wildwindtattoo/",
+        "https://www.facebook.com/wildwindtattoo/"
+      ]
+    }
+  });
+
   return (
     <article className={styles.home}>
-      <Head>
-        <title>Wild Wind Tattoo - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the home page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/" />
-      </Head>
+      <SEO {...seoData} />
       <p className={styles.contactParagraph}>
         Book your appointment today or visit us at 1452 N. Western Ave. Chicago
         IL 60622.

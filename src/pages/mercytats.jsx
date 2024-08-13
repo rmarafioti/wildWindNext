@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
@@ -7,6 +6,8 @@ import MercyCard from "@/components/MercyCard";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 import { mercyPhotos } from "../data/tattooPhotos";
 
@@ -21,32 +22,49 @@ export default function MercedesTats() {
   const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
     usePhotoGallery(mercyPhotos);
 
+  const seoData = getSeoData("Mercy Wright", {
+    path: "/mercytats",
+    description: "Meet Mercy Wright, talented tattoo artist at Wild Wind Tattoo Chicago. View her diverse portfolio, learn about her passion for clean, meticulous tattoos, and book your session today.",
+    schema: {
+      "@type": "Person",
+      "name": "Mercy Wright",
+      "jobTitle": "Tattoo Artist",
+      "description": "Talented tattoo artist specializing in clean, meticulous designs",
+      "worksFor": {
+        "@type": "TattooParlor",
+        "name": siteConfig.siteName,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": siteConfig.address.streetAddress,
+          "addressLocality": siteConfig.address.addressLocality,
+          "addressRegion": siteConfig.address.addressRegion,
+          "postalCode": siteConfig.address.postalCode,
+          "addressCountry": siteConfig.address.addressCountry
+        }
+      },
+      "url": `${siteConfig.siteUrl}/mercytats`
+    }
+  });
+
   return (
     <article className={styles.tattoos}>
-      <Head>
-        <title>Mercedes Wright Tattoo Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the Mercedes Wright tattoo page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/mercedestats" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.artistHeader}>MERCY WRIGHT</h1>
         <HeaderArtTwo />
       </div>
       <p className={styles.artistAbout}>
-        Driven by a passion for art, Mercedes&apos; interest in tattooing began
+        Driven by a passion for art, Mercy&apos;s interest in tattooing began
         at a young age. She takes immense pride in every piece she creates,
         consistently striving to deliver her best effort in all her work. With a
-        broad range of tattoo styles, Mercedes is always eager to take on new
+        broad range of tattoo styles, Mercy is always eager to take on new
         challenges. She has honed her craft to ensure her tattoos are
         consistently clean and meticulous, dedicating the time necessary to
         achieve this standard.
         <a
-          className={styles.artistIgIconMercy}
+          className={styles.artistIgIcon}
           href="https://www.instagram.com/tattoomercy/"
-          aria-label="icon which links to Mercedes Wright's Instagram page"
+          aria-label="icon which links to Mercy Wright's Instagram page"
         >
           <FaInstagram />
         </a>

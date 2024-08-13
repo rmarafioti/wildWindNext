@@ -3,22 +3,69 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
+import SEO from "@/components/SEO";
 import styles from "../styles/media.module.css";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
-/**
- * @component Media features published media for other companies the business has collaborated with or was featured in
- */
 export default function Media() {
+  const seoData = getSeoData("Media", {
+    path: "/media",
+    description: "Explore Wild Wind Tattoo's media collaborations, including partnerships with Harley-Davidson and At-Bay. See our featured work and creative projects in Chicago's tattoo scene.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Media - Wild Wind Tattoo",
+      description: "Explore Wild Wind Tattoo's media collaborations, including partnerships with Harley-Davidson and At-Bay.",
+      url: `${siteConfig.siteUrl}/media`,
+      isPartOf: {
+        "@type": "WebSite",
+        name: siteConfig.siteName,
+        url: siteConfig.siteUrl
+      },
+      about: {
+        "@type": "LocalBusiness",
+        name: "Wild Wind Tattoo",
+        description: "Professional tattoo parlor in Chicago offering various styles and experienced artists",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.address.streetAddress,
+          addressLocality: siteConfig.address.addressLocality,
+          addressRegion: siteConfig.address.addressRegion,
+          postalCode: siteConfig.address.postalCode,
+          addressCountry: siteConfig.address.addressCountry
+        },
+        telephone: siteConfig.phone,
+        url: siteConfig.siteUrl
+      },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@type": "CreativeWork",
+              name: "Harley-Davidson X Wild Wind Tattoo Collaboration",
+              description: "Video showcasing the collaboration between Harley-Davidson and Wild Wind Tattoo"
+            }
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@type": "CreativeWork",
+              name: "Breakfast for Dinner X Wild Wind Tattoo X At-Bay Campaign",
+              description: "Photo and video featuring the collaboration between Breakfast for Dinner, Wild Wind Tattoo, and At-Bay"
+            }
+          }
+        ]
+      }
+    }
+  });
+
   return (
     <article className={styles.media}>
-      <Head>
-        <title>Media Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the media page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/media" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.mediaHeader}>MEDIA</h1>
         <HeaderArtTwo />
@@ -34,7 +81,6 @@ export default function Media() {
           src="https://www.youtube.com/embed/gWt24-_mfKw?si=tpjIjcs4mNcHqOw4"
           title="YouTube video player"
           frameBorder="0"
-          /*allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
@@ -64,7 +110,6 @@ export default function Media() {
           src="https://res.cloudinary.com/dzpne110u/video/upload/v1719756420/wildWindSite/BFD_AT_BAY_MATCHING_TATTOOS_CARDS_15s_16x9_1080P_H264_ym3g3y.mp4"
           title="YouTube video player"
           frameBorder="0"
-          /*allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>

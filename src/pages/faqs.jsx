@@ -1,17 +1,34 @@
 import React from "react";
 import Link from "next/link";
-import Head from "next/head";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 import { faqs } from "../data/faqs";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import styles from "../styles/faqs.module.css";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
  * @component Faq features a functional pop up for frequently asked tattoo questions
  */
-export default function Faq() {
+export default function Faq({ initialFaqs }) {
   const { popUp, popUpContent, openFaqPopUp, closePopUp } = usePopUp();
+
+  const seoData = getSeoData("FAQs", {
+    path: "/faqs",
+    description: `Find answers to common questions about Wild Wind Tattoo in Chicago. Learn about walk-ins, pricing, appointment booking, deposits, and more before your visit to our Wicker Park studio.`,
+    schema: {
+      "@type": "FAQPage",
+      mainEntity: initialFaqs.map(faq => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer
+        }
+      }))
+    }
+  });
 
   /**
    * @function FaqCard holds frequently asked tattoo questions and answers listed in faqs.js && pop up functionality handled by way of popUp.js
@@ -32,14 +49,7 @@ export default function Faq() {
 
   return (
     <article id={styles.faqs}>
-      <Head>
-        <title>FAQs Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the FAQs page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/faqs" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.headerFaqs}>FAQs</h1>
         <HeaderArtTwo />
@@ -48,7 +58,7 @@ export default function Faq() {
         General questions before you fill out our contact form
       </p>
       <section id={styles.questions}>
-        {faqs.map((faq) => (
+        {initialFaqs.map((faq) => (
           <FaqCard
             key={faq.id}
             id={faq.id}
@@ -67,4 +77,15 @@ export default function Faq() {
       </div>
     </article>
   );
+}
+
+export async function getServerSideProps() {
+  // In a real-world scenario, you might fetch this data from an API
+  const initialFaqs = faqs;
+
+  return {
+    props: {
+      initialFaqs,
+    },
+  };
 }
