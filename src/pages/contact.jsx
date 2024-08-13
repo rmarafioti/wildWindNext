@@ -1,23 +1,37 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import HeaderArt from "@/components/HeaderArt";
 import styles from "../styles/contact.module.css";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
  * @component Contact features general static business info and links to outside sites
  */
 export default function Contact() {
+  const seoData = getSeoData("Contact Us", {
+    path: "/contact",
+    description: "Wild Wind is a local Chicago tattoo shop that welcomes walk-ins. No hot air - just tattoos. Call today (773) 227-2027.",
+    schema: {
+      "@type": "TattooParlor",
+      name: siteConfig.siteName,
+      description: "Local Chicago tattoo shop welcoming walk-ins",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.address.streetAddress,
+        addressLocality: siteConfig.address.addressLocality,
+        addressRegion: siteConfig.address.addressRegion,
+        postalCode: siteConfig.address.postalCode,
+        addressCountry: siteConfig.address.addressCountry
+      },
+      telephone: siteConfig.phone,
+      email: siteConfig.email
+    }
+  });
+
   return (
     <div className={styles.contact}>
-      <Head>
-        <title>Contact Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the contact page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/contact" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.contactHeader}>CONTACT US</h1>
         <HeaderArt />
@@ -82,4 +96,12 @@ export default function Contact() {
       </section>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  // If you need to fetch any dynamic data for the contact page, do it here
+  // For now, we'll just return an empty object
+  return {
+    props: {},
+  };
 }

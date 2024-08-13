@@ -1,15 +1,54 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaStar } from "react-icons/fa";
 import { reviews } from "../data/reviews";
 import styles from "../styles/reviews.module.css";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
  * @component Reviews features reviews by clients about the business by way of review.js
  */
 export default function Reviews() {
+  const seoData = getSeoData("Reviews", {
+    path: "/reviews",
+    description: "Read glowing testimonials from Wild Wind Tattoo's satisfied clients. Discover why our Chicago studio is highly rated for its welcoming atmosphere, skilled artists, and exceptional tattoo work.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: siteConfig.siteName,
+      description: "Professional tattoo parlor in Chicago offering various styles and experienced artists",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.address.streetAddress,
+        addressLocality: siteConfig.address.addressLocality,
+        addressRegion: siteConfig.address.addressRegion,
+        postalCode: siteConfig.address.postalCode,
+        addressCountry: siteConfig.address.addressCountry
+      },
+      telephone: siteConfig.phone,
+      url: siteConfig.siteUrl,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: reviews.length.toString()
+      },
+      review: reviews.map(review => ({
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: review.name
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5"
+        },
+        reviewBody: review.review
+      }))
+    }
+  });
+
   /**
    * @function ReviewCard holds the information for each individual review
    */
@@ -34,14 +73,7 @@ export default function Reviews() {
 
   return (
     <article className={styles.reviewPage}>
-      <Head>
-        <title>Reviews Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the reviews page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/reviews" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.reviewHeader}>REVIEWS</h1>
         <HeaderArtTwo />
