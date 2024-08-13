@@ -14,8 +14,8 @@ export default function Releaseforms() {
         tattoo:
       </h2>
       <ul className={styles.artistList}>
-        <li>Rich Marafioti</li>
-        <li>Mercy Wright</li>
+        <li className={styles.artistLink}>Rich Marafioti</li>
+        <li className={styles.artistLink}>Mercy Wright</li>
       </ul>
       {/*<iframe
         src="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=2db995c9-063e-47bf-8437-6b7fcfcfa9a3&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
