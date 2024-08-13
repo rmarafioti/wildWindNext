@@ -1,9 +1,19 @@
+import HeaderArtTwo from "@/components/HeaderArtTwo";
+
+import styles from "@/styles/releaseforms.module.css";
+
 export default function Releaseforms() {
   return (
-    <>
-      <h1>Release Forms</h1>
-      <h2>Please choose the artist you are getting tattooed by:</h2>
-      <ul>
+    <article className={styles.releaseforms}>
+      <div className={styles.header}>
+        <h1 className={styles.releaseformsHeader}>RELEASE FORMS</h1>
+        <HeaderArtTwo />
+      </div>
+      <h2 className={styles.releaseformsTagline}>
+        Please choose your artist to fill out their waiver, release & consent to
+        tattoo:
+      </h2>
+      <ul className={styles.artistList}>
         <li>Rich Marafioti</li>
         <li>Mercy Wright</li>
       </ul>
@@ -15,6 +25,6 @@ export default function Releaseforms() {
       >
         Your browser does not support iframes.
       </iframe>*/}
-    </>
+    </article>
   );
 }
