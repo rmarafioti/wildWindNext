@@ -1,10 +1,22 @@
 import HeaderArtTwo from "@/components/HeaderArtTwo";
+import Head from "next/head";
 
 import styles from "@/styles/releaseforms.module.css";
 
+/**
+ * @component ReleaseForms serves as the main entry point for clients to access and electronically sign the release form specific to their chosen artist before getting tattooed.
+ */
 export default function Releaseforms() {
   return (
     <article className={styles.releaseforms}>
+      <Head>
+        <title>Rich Marafioti Tattoo Page - wildwindtattoo.com</title>
+        <meta
+          name="description"
+          content="This is the Release Forms tattoo of wildwindtattoo.com."
+        />
+        <link rel="canonical" href="https://wildwindtattoo.com/releaseforms" />
+      </Head>
       <div className={styles.header}>
         <h1 className={styles.releaseformsHeader}>RELEASE FORMS</h1>
         <HeaderArtTwo />
