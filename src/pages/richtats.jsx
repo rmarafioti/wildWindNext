@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
@@ -7,6 +6,8 @@ import RichCard from "../components/RichCard";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 import { richPhotos } from "../data/tattooPhotos";
 
@@ -14,23 +15,40 @@ import styles from "../styles/richtats.module.css";
 
 /**
  *
- * @component RichTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ * @component richTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
 export default function RichTats() {
   //usePhotoGallery hook imported from photoGallery.js
   const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
     usePhotoGallery(richPhotos);
 
+  const seoData = getSeoData("Rich Marafioti", {
+    path: "/richtats",
+    description: "Explore Rich Marafioti's tattoo portfolio at Wild Wind Tattoo Chicago. With 15+ years of experience and a fine arts background, Rich offers diverse styles and expert tattooing in Wicker Park.",
+    schema: {
+      "@type": "Person",
+      "name": "Rich Marafioti",
+      "jobTitle": "Tattoo Artist",
+      "description": "Rich began tattooing in 2005, opening Wild Wind with ten years of experience in the industry.",
+      "worksFor": {
+        "@type": "TattooParlor",
+        "name": siteConfig.siteName,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": siteConfig.address.streetAddress,
+          "addressLocality": siteConfig.address.addressLocality,
+          "addressRegion": siteConfig.address.addressRegion,
+          "postalCode": siteConfig.address.postalCode,
+          "addressCountry": siteConfig.address.addressCountry
+        }
+      },
+      "url": `${siteConfig.siteUrl}/richtats`
+    }
+  });
+
   return (
     <article className={styles.tattoos}>
-      <Head>
-        <title>Rich Marafioti Tattoo Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the Rich Marafioti tattoo page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/richtats" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.artistHeader}>RICH MARAFIOTI</h1>
         <HeaderArtTwo />
@@ -61,8 +79,8 @@ export default function RichTats() {
             alt="tattoo portfolio images"
             priority
             quality={75}
-            width={1350}
-            height={1800}
+            width={1650}
+            height={1627}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px"
           />
           <div className={styles.arrowSection}>

@@ -1,18 +1,38 @@
 import React from "react";
-import Head from "next/head";
 import HeaderArt from "@/components/HeaderArt";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
-
-import { aftercare } from "../data/aftercare";
-
 import styles from "../styles/aftercare.module.css";
+import SEO from "@/components/SEO";
+import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
  * @component Care features a functional pop up for tattoo care instructions
  */
-export default function Care() {
+export default function Care({ initialAftercare }) {
   const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();
+
+  const seoData = getSeoData("Tattoo Aftercare", {
+    path: "/aftercare",
+    description: "Essential tattoo aftercare guide from Wild Wind Tattoo. Learn how to properly care for your new tattoo, including instructions for Drylock and Tegaderm bandages.",
+    schema: {
+      "@type": "Article",
+      headline: "Tattoo Aftercare Guide",
+      description: "Essential tattoo aftercare instructions from Wild Wind Tattoo",
+      author: {
+        "@type": "Organization",
+        name: siteConfig.siteName
+      },
+      publisher: {
+        "@type": "Organization",
+        name: siteConfig.siteName,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteConfig.siteUrl}/wildWindFavicon.png`
+        }
+      }
+    }
+  });
 
   /**
    * @function AftercareCard holds care instructions listed in aftercareInstructions.js && pop up functionality handled by way of popUp.js
@@ -50,14 +70,7 @@ export default function Care() {
 
   return (
     <article className={styles.afterCare}>
-      <Head>
-        <title>Aftercare Page - wildwindtattoo.com</title>
-        <meta
-          name="description"
-          content="This is the aftercare page of wildwindtattoo.com."
-        />
-        <link rel="canonical" href="https://wildwindtattoo.com/aftercare" />
-      </Head>
+      <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.afterHeader}>AFTERCARE</h1>
         <HeaderArt />
@@ -66,7 +79,7 @@ export default function Care() {
         Everything you need to know about taking care of your tattoo
       </p>
       <section>
-        {aftercare.map((aftercareInstructions) => (
+        {initialAftercare.map((aftercareInstructions) => (
           <AftercareCard
             key={aftercareInstructions.id}
             id={aftercareInstructions.id}
@@ -84,4 +97,15 @@ export default function Care() {
       </PopUp>
     </article>
   );
+}
+
+export async function getServerSideProps() {
+  // Import the aftercare data here to ensure it's only loaded server-side
+  const { aftercare } = await import("../data/aftercare");
+  
+  return {
+    props: {
+      initialAftercare: aftercare,
+    },
+  };
 }
