@@ -16,48 +16,54 @@ import styles from "../styles/aboutus.module.css";
  */
 export default function Shop({ initialPhoto }) {
   const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);
-  const [isFading, setIsFading] = useState(false);
 
   const seoData = getSeoData("Wild Wind Tattoo - Chicago's Tattoo Shop", {
     path: "/aboutus",
-    description: "Learn about Wild Wind Tattoo, Chicago's premier tattoo studio since 2015. Explore our mission, community involvement, and commitment to providing a safe, inclusive space for all clients.",
+    description:
+      "Learn about Wild Wind Tattoo, Chicago's premier tattoo studio since 2015. Explore our mission, community involvement, and commitment to providing a safe, inclusive space for all clients.",
     schema: {
       "@type": "TattooParlor",
-      "name": siteConfig.siteName,
-      "description": "Premier tattoo studio in Chicago since 2015, offering various tattoo styles in a welcoming environment",
-      "foundingDate": "2015",
-      "address": {
+      name: siteConfig.siteName,
+      description:
+        "Premier tattoo studio in Chicago since 2015, offering various tattoo styles in a welcoming environment",
+      foundingDate: "2015",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": siteConfig.address.streetAddress,
-        "addressLocality": siteConfig.address.addressLocality,
-        "addressRegion": siteConfig.address.addressRegion,
-        "postalCode": siteConfig.address.postalCode,
-        "addressCountry": siteConfig.address.addressCountry
+        streetAddress: siteConfig.address.streetAddress,
+        addressLocality: siteConfig.address.addressLocality,
+        addressRegion: siteConfig.address.addressRegion,
+        postalCode: siteConfig.address.postalCode,
+        addressCountry: siteConfig.address.addressCountry,
       },
-      "telephone": siteConfig.phone,
-      "url": siteConfig.siteUrl,
-      "sameAs": [
+      telephone: siteConfig.phone,
+      url: siteConfig.siteUrl,
+      sameAs: [
         "https://www.instagram.com/wildwindtattoo/?hl=en",
-        "https://www.facebook.com/wildwindtattoo/"
+        "https://www.facebook.com/wildwindtattoo/",
       ],
-      "slogan": "Variety, Comfort, Professionalism",
-      "knowsAbout": ["Tattoo artistry", "Community involvement", "Inclusive spaces"],
-      "makesOffer": {
+      slogan: "Variety, Comfort, Professionalism",
+      knowsAbout: [
+        "Tattoo artistry",
+        "Community involvement",
+        "Inclusive spaces",
+      ],
+      makesOffer: {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Tattoo services",
-          "description": "Various tattoo styles, from small walk-ins to larger custom pieces"
-        }
+          name: "Tattoo services",
+          description:
+            "Various tattoo styles, from small walk-ins to larger custom pieces",
+        },
       },
-      "memberOf": [
+      memberOf: [
         {
           "@type": "Organization",
-          "name": "Chicago Therapy Collective",
-          "description": "Partnered with Hire Trans Now initiative"
-        }
-      ]
-    }
+          name: "Chicago Therapy Collective",
+          description: "Partnered with Hire Trans Now initiative",
+        },
+      ],
+    },
   });
 
   useEffect(() => {
@@ -66,16 +72,14 @@ export default function Shop({ initialPhoto }) {
 
     const interval = setInterval(() => {
       if (isMounted) {
-        setIsFading(true);
         setTimeout(() => {
           if (isMounted) {
             currentIndex = (currentIndex + 1) % shopPhotos.length;
             setCurrentPhoto(shopPhotos[currentIndex]);
-            setIsFading(false);
           }
-        }, 1000);
+        });
       }
-    }, 3000);
+    }, 2000);
 
     return () => {
       isMounted = false;
@@ -90,10 +94,7 @@ export default function Shop({ initialPhoto }) {
         <h1 className={styles.mainShopHeader}>ABOUT US</h1>
         <HeaderArt />
       </div>
-      <AboutSlide
-        imageUrl={currentPhoto.image}
-        isFading={isFading}
-      />
+      <AboutSlide imageUrl={currentPhoto.image} />
       <div className={styles.shopIconContainer}>
         <h1>
           <a

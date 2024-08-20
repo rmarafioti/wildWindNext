@@ -28,7 +28,6 @@
 
 .shopImagesContainer {
   margin: 2rem 0rem .5rem 0rem;
-  transition: opacity 1s ease-in-out;
   opacity: 1;
   position: relative;
   display: flex;
@@ -39,10 +38,6 @@
 .shopImage {
   width: 400px;
   height: auto;
-}
-
-.shopImagesContainer.fade-out {
-  opacity: 0;
 }
 
 .shopIconContainer {
