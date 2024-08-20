@@ -24,26 +24,28 @@ export default function RichTats() {
 
   const seoData = getSeoData("Rich Marafioti", {
     path: "/richtats",
-    description: "Explore Rich Marafioti's tattoo portfolio at Wild Wind Tattoo Chicago. With 15+ years of experience and a fine arts background, Rich offers diverse styles and expert tattooing in Wicker Park.",
+    description:
+      "Explore Rich Marafioti's tattoo portfolio at Wild Wind Tattoo Chicago. With 15+ years of experience and a fine arts background, Rich offers diverse styles and expert tattooing in Wicker Park.",
     schema: {
       "@type": "Person",
-      "name": "Rich Marafioti",
-      "jobTitle": "Tattoo Artist",
-      "description": "Rich began tattooing in 2005, opening Wild Wind with ten years of experience in the industry.",
-      "worksFor": {
+      name: "Rich Marafioti",
+      jobTitle: "Tattoo Artist",
+      description:
+        "Rich began tattooing in 2005, opening Wild Wind with ten years of experience in the industry.",
+      worksFor: {
         "@type": "TattooParlor",
-        "name": siteConfig.siteName,
-        "address": {
+        name: siteConfig.siteName,
+        address: {
           "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.streetAddress,
-          "addressLocality": siteConfig.address.addressLocality,
-          "addressRegion": siteConfig.address.addressRegion,
-          "postalCode": siteConfig.address.postalCode,
-          "addressCountry": siteConfig.address.addressCountry
-        }
+          streetAddress: siteConfig.address.streetAddress,
+          addressLocality: siteConfig.address.addressLocality,
+          addressRegion: siteConfig.address.addressRegion,
+          postalCode: siteConfig.address.postalCode,
+          addressCountry: siteConfig.address.addressCountry,
+        },
       },
-      "url": `${siteConfig.siteUrl}/richtats`
-    }
+      url: `${siteConfig.siteUrl}/richtats`,
+    },
   });
 
   return (
