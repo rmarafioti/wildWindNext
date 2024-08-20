@@ -25,12 +25,12 @@
   z-index: 10;
 }
 
-.artistIgIconMercy {
+.artistIgIcon {
   font-size: 30px;
 }
 
-.artistIgIconMercy:visited,
-.artistIgIconMercy:link {
+.artistIgIcon:visited,
+.artistIgIcon:link {
   color: var(--wildGreen);
 }
 
