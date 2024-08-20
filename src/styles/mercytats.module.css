@@ -148,7 +148,12 @@
     display: none;
   }
 }
-@media (max-width: 586px) {
+@media (max-width: 800px) {
+  .artistAbout {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 400px) {
   .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
@@ -163,5 +168,8 @@
     line-height: 3rem;
     margin-top: 0rem;
     margin-bottom: 3.5rem;
+  }
+  .artistAbout {
+    margin-top: 0rem;
   }
 }
