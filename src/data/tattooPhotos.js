@@ -203,3 +203,96 @@ export const mercyPhotos = [
       "https://res.cloudinary.com/dzpne110u/image/upload/c_scale,q_auto,w_720/v1720058329/wildWindSite/mercedesTats/mercedesTwenty_gtvwji.jpg",
   },
 ];
+
+export const trevorPhotos = [
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293082/wildWindSite/trevorTattoos/DSC_4982_jivmio.jpg",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293082/wildWindSite/trevorTattoos/DSC_1382_jh4ssk.jpg",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293082/wildWindSite/trevorTattoos/DSC_5023_zzers1.jpg",
+  },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293081/wildWindSite/trevorTattoos/DSC_4938_xfhv4l.jpg",
+  },
+  {
+    id: 5,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293080/wildWindSite/trevorTattoos/DSC_1197_prttbc.jpg",
+  },
+  {
+    id: 6,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293078/wildWindSite/trevorTattoos/DSC_0575_qhxh2q.jpg",
+  },
+  {
+    id: 7,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293056/wildWindSite/trevorTattoos/LOL_3520_j1qlwg.jpg",
+  },
+  {
+    id: 8,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293056/wildWindSite/trevorTattoos/LOL_2737_g7uezi.jpg",
+  },
+  {
+    id: 9,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293055/wildWindSite/trevorTattoos/LOL_3674_hs8ej6.jpg",
+  },
+  {
+    id: 10,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293055/wildWindSite/trevorTattoos/DSC_5860_dkqsbm.jpg",
+  },
+  {
+    id: 11,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293054/wildWindSite/trevorTattoos/LOL_3758_fjdstb.jpg",
+  },
+  {
+    id: 12,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293054/wildWindSite/trevorTattoos/DSC_8077_bab3x8.jpg",
+  },
+  {
+    id: 13,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293052/wildWindSite/trevorTattoos/DSC_8424_rxs2ac.jpg",
+  },
+  {
+    id: 14,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293053/wildWindSite/trevorTattoos/IMG_4974_pbmuxl.jpg",
+  },
+  {
+    id: 15,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293050/wildWindSite/trevorTattoos/DSC_6755_fph6vv.jpg",
+  },
+  {
+    id: 16,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293050/wildWindSite/trevorTattoos/LOL_3652_ebdzfp.jpg",
+  },
+  {
+    id: 17,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293049/wildWindSite/trevorTattoos/IMG_4938_u3t5ax.jpg",
+  },
+  {
+    id: 18,
+    image:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1724293047/wildWindSite/trevorTattoos/DSC_9881_nlere3.jpg",
+  },
+];
