@@ -32,6 +32,18 @@ export default function Releaseforms() {
       >
         Rich Marafioti
       </a>
+      <a
+        className={styles.artistLink}
+        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=f753cd03-1919-430d-b5f8-b10e4c6538ae&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
+      >
+        Mercy Wright
+      </a>
+      <a
+        className={styles.artistLink}
+        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=27a9da47-ac8a-41af-803d-fbb1b64bed5a&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
+      >
+        Trevor Aarsvold
+      </a>
     </article>
   );
 }
