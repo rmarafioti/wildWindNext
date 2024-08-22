@@ -2,36 +2,34 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
-import RichCard from "../components/RichCard";
+import TrevorCard from "@/components/TrevorCard";
 import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
-import { richPhotos } from "../data/tattooPhotos";
+import { trevorPhotos } from "@/data/tattooPhotos";
 
-import styles from "../styles/richtats.module.css";
+import styles from "@/styles/trevortats.module.css";
 
 /**
  *
- * @component richtats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ * @component trevortats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
-export default function RichTats() {
+export default function TrevorTats() {
   //usePhotoGallery hook imported from photoGallery.js
   const { setCurrentIndex, handleNext, handlePrev, imageUrl } =
-    usePhotoGallery(richPhotos);
+    usePhotoGallery(trevorPhotos);
 
-  const seoData = getSeoData("Rich Marafioti", {
-    path: "/richtats",
-    description:
-      "Explore Rich Marafioti's tattoo portfolio at Wild Wind Tattoo Chicago. With 15+ years of experience and a fine arts background, Rich offers diverse styles and expert tattooing in Wicker Park.",
+  const seoData = getSeoData("Trevor Aarsvold", {
+    path: "/trevortats",
+    description: "",
     schema: {
       "@type": "Person",
-      name: "Rich Marafioti",
+      name: "Trevor Aarsvold",
       jobTitle: "Tattoo Artist",
-      description:
-        "Rich began tattooing in 2005, opening Wild Wind with ten years of experience in the industry.",
+      description: "",
       worksFor: {
         "@type": "TattooParlor",
         name: siteConfig.siteName,
@@ -44,7 +42,7 @@ export default function RichTats() {
           addressCountry: siteConfig.address.addressCountry,
         },
       },
-      url: `${siteConfig.siteUrl}/richtats`,
+      url: `${siteConfig.siteUrl}/trevortats`,
     },
   });
 
@@ -52,20 +50,15 @@ export default function RichTats() {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.artistHeader}>RICH MARAFIOTI</h1>
+        <h1 className={styles.artistHeader}>TREVOR AARSVOLD</h1>
         <HeaderArtTwo />
       </div>
       <p className={styles.artistAbout}>
-        Rich began tattooing in 2005, opening Wild Wind with ten years of
-        experience in the industry. He is well versed in a variety of tattoo
-        styles. He earned his degree from the Rhode Island School of
-        Design&apos;s illustration department. His fine arts background is
-        evident in his tattoos, personal work, and the gallery-style design of
-        the shop.
+        No bio at this time
         <a
           className={styles.artistIgIcon}
-          href="https://www.instagram.com/wild_coma/"
-          aria-label="icon which links to Rich Marafioti's Instagram page"
+          href="https://www.instagram.com/trevordillonart/"
+          aria-label="icon which links to Trevor Aarsvold's Instagram page"
         >
           <FaInstagram />
         </a>
@@ -90,12 +83,12 @@ export default function RichTats() {
           </div>
         </div>
         <div className={styles.tattooGallery}>
-          {richPhotos.map((tattoo, index) => (
-            <RichCard
+          {trevorPhotos.map((tattoo, index) => (
+            <TrevorCard
               key={index}
               tattoo={tattoo}
               onClick={setCurrentIndex}
-              photos={richPhotos}
+              photos={trevorPhotos}
             />
           ))}
         </div>
