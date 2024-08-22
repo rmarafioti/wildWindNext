@@ -11,7 +11,7 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 import { trevorPhotos } from "@/data/tattooPhotos";
 
-import styles from "../styles/richtats.module.css";
+import styles from "@/styles/trevortats.module.css";
 
 /**
  *
