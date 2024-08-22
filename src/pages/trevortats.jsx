@@ -57,7 +57,7 @@ export default function TrevorTats() {
         No bio at this time
         <a
           className={styles.artistIgIcon}
-          href="https://www.instagram.com/wild_coma/"
+          href="https://www.instagram.com/trevordillonart/"
           aria-label="icon which links to Trevor Aarsvold's Instagram page"
         >
           <FaInstagram />
