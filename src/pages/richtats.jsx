@@ -15,7 +15,7 @@ import styles from "../styles/richtats.module.css";
 
 /**
  *
- * @component richTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ * @component richtats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
 export default function RichTats() {
   //usePhotoGallery hook imported from photoGallery.js
