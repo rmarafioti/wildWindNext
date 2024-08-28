@@ -1,0 +1,79 @@
+.notFound {
+  /* Add your global styles for the 404 page */
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  /* Styles for the header section */
+  margin-bottom: 2rem;
+}
+
+.notFoundHeader {
+  /* Styles for the main header */
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.notFoundContent {
+  /* Styles for the main content section */
+  margin-bottom: 2rem;
+}
+
+.headerTagline {
+  /* Styles for the main tagline */
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.headerTaglineTwo {
+  /* Styles for the secondary tagline */
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.buttonSection {
+  /* Styles for the button section */
+  margin-bottom: 2rem;
+}
+
+.homeLink {
+  /* Styles for the home link */
+  text-decoration: none;
+}
+
+.homeButton {
+  /* Styles for the home button */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #0051a2;
+}
+
+.contactInfoContainer {
+  /* Styles for the contact info container */
+  margin-top: 2rem;
+}
+
+.contactInfo {
+  /* Styles for the contact info */
+  font-size: 1rem;
+  color: #555;
+}
+
+.contactInfoValue {
+  /* Styles for the contact info values */
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.contactInfoValue:hover {
+  text-decoration: underline;
+}

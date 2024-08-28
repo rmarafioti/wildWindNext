@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  trailingSlash: false,
   images: {
     remotePatterns: [
       {
@@ -8,6 +10,7 @@ const nextConfig = {
         pathname: "/dzpne110u/**",
       },
     ],
+    unoptimized: true,
   },
   env: {
     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
