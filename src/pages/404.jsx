@@ -20,8 +20,12 @@ export default function Custom404() {
     <div className={styles.notFound}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.notFoundHeader}>404 - PAGE NOT FOUND</h1>
-        <HeaderArt />
+        <div className={styles.textContent}>
+          <h1 className={styles.notFoundHeader}>404 - PAGE NOT FOUND</h1>
+        </div>
+        <div className={styles.artContainer}>
+          <HeaderArt />
+        </div>
       </div>
       <section className={styles.notFoundContent}>
         <h2 className={styles.headerTagline}>
@@ -52,8 +56,6 @@ export default function Custom404() {
 }
 
 export async function getStaticProps() {
-  // For a 404 page, we use getStaticProps instead of getServerSideProps
-  // as it's a static page that doesn't need server-side rendering
   return {
     props: {},
   };

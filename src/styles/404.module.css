@@ -1,49 +1,64 @@
 .notFound {
-  /* Add your global styles for the 404 page */
-  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
   text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .header {
-  /* Styles for the header section */
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
 }
 
 .notFoundHeader {
-  /* Styles for the main header */
+  position: relative;
+  z-index: 2;
   font-size: 2.5rem;
   color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .notFoundContent {
-  /* Styles for the main content section */
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 1rem;
 }
 
 .headerTagline {
-  /* Styles for the main tagline */
   font-size: 1.5rem;
   color: #555;
+  margin-bottom: 0.25rem;
 }
 
 .headerTaglineTwo {
-  /* Styles for the secondary tagline */
   font-size: 1.2rem;
   color: #777;
+  margin-bottom: 0.5rem;
 }
 
 .buttonSection {
-  /* Styles for the button section */
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .homeLink {
-  /* Styles for the home link */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #your-brand-color;
+  color: white;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .homeButton {
-  /* Styles for the home button */
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #0070f3;
@@ -58,14 +73,18 @@
 }
 
 .contactInfoContainer {
-  /* Styles for the contact info container */
-  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  margin-top: 0;
 }
 
 .contactInfo {
-  /* Styles for the contact info */
+  position: relative;
+  z-index: 2;
   font-size: 1rem;
   color: #555;
+  margin-bottom: 0.25rem;
 }
 
 .contactInfoValue {
@@ -76,4 +95,101 @@
 
 .contactInfoValue:hover {
   text-decoration: underline;
+}
+
+.additionalContent {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.additionalContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.additionalContent li {
+  margin: 10px 0;
+}
+
+.additionalContent a {
+  color: #your-brand-color;
+  text-decoration: none;
+}
+
+.additionalContent a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .notFound {
+    padding: 1rem;
+  }
+
+  .notFoundHeader {
+    font-size: 2rem;
+  }
+
+  .headerTagline {
+    font-size: 1.2rem;
+  }
+
+  .headerTaglineTwo {
+    font-size: 1rem;
+  }
+
+  .homeButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contactInfo {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notFoundHeader {
+    font-size: 1.8rem;
+  }
+
+  .headerTagline {
+    font-size: 1.1rem;
+  }
+
+  .headerTaglineTwo {
+    font-size: 0.9rem;
+  }
+}
+
+.artContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.textContent {
+  position: relative;
+  z-index: 2;
+  /* Add padding or margin as needed */
+  padding: 10px;
+}
+
+.artContainer > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buttonSection > *,
+.contactInfoContainer > * {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.contactInfoContainer > *:last-child {
+  margin-bottom: 0;
 }
