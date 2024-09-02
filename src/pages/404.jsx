@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import HeaderArt from "@/components/HeaderArt";
+import { TfiFaceSad } from "react-icons/tfi";
 import styles from "../styles/404.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -23,6 +23,12 @@ export default function Custom404() {
       <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.notFoundHeader}>404 - PAGE NOT FOUND</h1>
+        <div className={styles.sadSection}>
+          <TfiFaceSad className={styles.sadOne} />
+          <TfiFaceSad className={styles.sadTwo} />
+          <TfiFaceSad className={styles.sadThree} />
+        </div>
+
         <h2 className={styles.headerTagline}>
           Oops! The page you are looking for does not exist.
         </h2>

@@ -16,13 +16,27 @@
 
 .notFoundHeader {
   font-weight: normal;
-  color: white;
+  color: var(--wildDarkGreen);
   font-size: 50px;
   font-weight: 800;
-  -webkit-text-stroke: 2px var(--wildDarkGreen);
   letter-spacing: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   z-index: 10;
+}
+
+.sadSection {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.sadOne, .sadTwo, .sadThree {
+  color: white;
+  font-size: 120px;
+  margin: 0rem 1rem 0rem 1rem;
+  background: linear-gradient(45deg, var(--wildGold), #e591d4);
+  border-radius: 70px;
+  box-shadow: -7px 5px 10px 1px rgba(56, 70, 28, 0.5);
 }
 
 .headerTagline, .headerTaglineTwo {
@@ -38,7 +52,7 @@
 
 .homeButton {
   padding: 0.75rem 1.5rem;
-  background-color: var(--wildDarkGreen);
+  background-color: #0070f3;;
   color: white;
   border-radius: 5px;
   font-size: 1rem;
@@ -76,6 +90,10 @@
 @media (max-width: 480px) {
   .notFoundHeader {
     font-size: 2.5rem;
+  }
+
+  .sadOne, .sadThree {
+    display: none;
   }
 
   .headerTagline, .headerTaglineTwo {
