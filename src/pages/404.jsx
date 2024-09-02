@@ -8,33 +8,28 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
 export default function Custom404() {
   const seoData = getSeoData("Page Not Found", {
     path: "/404",
-    description: "The page you're looking for doesn't exist. Return to Wild Wind Tattoo's homepage.",
+    description:
+      "The page you're looking for doesn't exist. Return to Wild Wind Tattoo's homepage.",
     schema: {
       "@type": "WebPage",
       name: "404 - Page Not Found | " + siteConfig.siteName,
-      description: "The page you're looking for doesn't exist. Return to Wild Wind Tattoo's homepage.",
-    }
+      description:
+        "The page you're looking for doesn't exist. Return to Wild Wind Tattoo's homepage.",
+    },
   });
 
   return (
     <div className={styles.notFound}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <div className={styles.textContent}>
-          <h1 className={styles.notFoundHeader}>404 - PAGE NOT FOUND</h1>
-        </div>
-        <div className={styles.artContainer}>
-          <HeaderArt />
-        </div>
-      </div>
-      <section className={styles.notFoundContent}>
+        <h1 className={styles.notFoundHeader}>404 - PAGE NOT FOUND</h1>
         <h2 className={styles.headerTagline}>
           Oops! The page you are looking for does not exist.
         </h2>
-        <p className={styles.headerTaglineTwo}>
+        <h3 className={styles.headerTaglineTwo}>
           It might have been moved or deleted.
-        </p>
-      </section>
+        </h3>
+      </div>
       <section className={styles.buttonSection}>
         <Link className={styles.homeLink} href="/">
           <h3 className={styles.homeButton}>Return to Homepage</h3>
@@ -47,7 +42,9 @@ export default function Custom404() {
             <a href="tel:+17732272027">773.227.2027</a>
           </p>
           <p className={styles.contactInfoValue}>
-            <a href="mailto:wildwindtattoo@gmail.com">wildwindtattoo@gmail.com</a>
+            <a href="mailto:wildwindtattoo@gmail.com">
+              wildwindtattoo@gmail.com
+            </a>
           </p>
         </div>
       </section>

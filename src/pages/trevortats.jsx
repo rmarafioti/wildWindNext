@@ -57,12 +57,12 @@ export default function TrevorTats() {
         Trevor has been immersed in art from a young age; his passion for
         tattoos ignited in his mid-teens, leading him to a two-year
         apprenticeship at Brass Knuckle Tattoo Studio in Minneapolis under the
-        guidance of Derek “Frog” Ellis. During his time there, Trevor refined
-        his technical skills and developed a deep appreciation for the craft.
-        His journey has taken him around the world, where he’s continuously
-        honed his ability to create unique, custom designs. Now tattooing at
-        Wild Wind Tattoo in Chicago, Trevor is ready to bring your ideas to
-        life.
+        guidance of Derek &ldquo;Frog&rdquo; Ellis. During his time there,
+        Trevor refined his technical skills and developed a deep appreciation
+        for the craft. His journey has taken him around the world, where
+        he&apos;s continuously honed his ability to create unique, custom
+        designs. Now tattooing at Wild Wind Tattoo in Chicago, Trevor is ready
+        to bring your ideas to life.
         <a
           className={styles.artistIgIcon}
           href="https://www.instagram.com/trevordillonart/"
