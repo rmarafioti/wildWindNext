@@ -32,6 +32,7 @@
 }
 
 .homeLink {
+  margin: 1rem;
   text-decoration: none;
 }
 
@@ -66,67 +67,18 @@
   text-decoration: underline;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  .notFound {
-    padding: 1rem;
-  }
-
-  .notFoundHeader {
-    font-size: 2rem;
-  }
-
-  .headerTagline {
-    font-size: 1.2rem;
-  }
-
-  .headerTaglineTwo {
-    font-size: 1rem;
-  }
-
-  .homeButton {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .contactInfo {
-    font-size: 0.9rem;
+  .notFoundHeader, .headerTagline, .headerTaglineTwo {
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .notFoundHeader {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
-  .headerTagline {
+  .headerTagline, .headerTaglineTwo {
     font-size: 1.1rem;
   }
-
-  .headerTaglineTwo {
-    font-size: 0.9rem;
-  }
-}
-
-.textContent {
-  position: relative;
-  z-index: 2;
-  /* Add padding or margin as needed */
-  padding: 10px;
-}
-
-.artContainer > * {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.buttonSection > *,
-.contactInfoContainer > * {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
-
-.contactInfoContainer > *:last-child {
-  margin-bottom: 0;
 }
