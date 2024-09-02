@@ -28,7 +28,6 @@ export default function Navbar() {
   const tattooDropdownRef = useRef(tattooDropdown);
 
   //reset menu and dropdown to closed on state change
-  // Reset menu and dropdown to closed on state change
   useEffect(() => {
     setMenuOpen(false);
     aboutDropdownRef.current.closeDropdown();
@@ -139,6 +138,10 @@ export default function Navbar() {
                 </Link>
                 <Link className={styles.dropLink} href="/trevortats">
                   <h4 className={styles.dropLinkName}>Trevor Aarsvold</h4>
+                  <IoIosArrowForward />
+                </Link>
+                <Link className={styles.dropLink} href="/allietats">
+                  <h4 className={styles.dropLinkName}>Allie Sider</h4>
                   <IoIosArrowForward />
                 </Link>
               </menu>
