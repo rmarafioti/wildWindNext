@@ -1,195 +1,102 @@
 .notFound {
-  position: relative;
-  overflow: hidden;
-  padding: 1rem;
-  text-align: center;
-  max-width: 100%;
-  overflow-x: hidden;
+  color: var(--wildGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 .header {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .notFoundHeader {
-  position: relative;
-  z-index: 2;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-weight: normal;
+  color: var(--wildDarkGreen);
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: .5rem;
+  z-index: 10;
 }
 
-.notFoundContent {
-  position: relative;
-  z-index: 2;
-  padding: 10px;
-  margin-top: 10px;
+.sadSection {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 1rem;
 }
 
-.headerTagline {
+.sadOne, .sadTwo, .sadThree {
+  color: white;
+  font-size: 120px;
+  margin: 0rem 1rem 0rem 1rem;
+  background: linear-gradient(45deg, var(--wildGold), #e591d4);
+  border-radius: 70px;
+  box-shadow: -7px 5px 10px 1px rgba(56, 70, 28, 0.5);
+}
+
+.headerTagline, .headerTaglineTwo {
   font-size: 1.5rem;
   color: #555;
   margin-bottom: 0.25rem;
 }
 
-.headerTaglineTwo {
-  font-size: 1.2rem;
-  color: #777;
-  margin-bottom: 0.5rem;
-}
-
-.buttonSection {
-  position: relative;
-  z-index: 2;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .homeLink {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #your-brand-color;
-  color: white;
+  margin: 1rem;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 .homeButton {
-  display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #0070f3;
+  background-color: #0070f3;;
   color: white;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
-}
-
-.homeButton:hover {
-  background-color: #0051a2;
+  cursor: pointer;
 }
 
 .contactInfoContainer {
-  position: relative;
-  z-index: 2;
+ text-align: center;
   padding: 10px;
-  margin-top: 0;
 }
 
 .contactInfo {
-  position: relative;
-  z-index: 2;
   font-size: 1rem;
   color: #555;
   margin-bottom: 0.25rem;
 }
 
-.contactInfoValue {
-  /* Styles for the contact info values */
+.contactInfoValue a{
   color: #0070f3;
   text-decoration: none;
 }
 
 .contactInfoValue:hover {
+  color: #0070f3;
   text-decoration: underline;
 }
 
-.additionalContent {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.additionalContent ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.additionalContent li {
-  margin: 10px 0;
-}
-
-.additionalContent a {
-  color: #your-brand-color;
-  text-decoration: none;
-}
-
-.additionalContent a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
-  .notFound {
-    padding: 1rem;
-  }
-
-  .notFoundHeader {
-    font-size: 2rem;
-  }
-
-  .headerTagline {
-    font-size: 1.2rem;
-  }
-
-  .headerTaglineTwo {
-    font-size: 1rem;
-  }
-
-  .homeButton {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .contactInfo {
-    font-size: 0.9rem;
+  .notFoundHeader, .headerTagline, .headerTaglineTwo {
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .notFoundHeader {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
-  .headerTagline {
+  .sadOne, .sadThree {
+    display: none;
+  }
+
+  .headerTagline, .headerTaglineTwo {
     font-size: 1.1rem;
   }
-
-  .headerTaglineTwo {
-    font-size: 0.9rem;
-  }
-}
-
-.artContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.textContent {
-  position: relative;
-  z-index: 2;
-  /* Add padding or margin as needed */
-  padding: 10px;
-}
-
-.artContainer > * {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.buttonSection > *,
-.contactInfoContainer > * {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
-
-.contactInfoContainer > *:last-child {
-  margin-bottom: 0;
 }
