@@ -72,10 +72,10 @@ export default function AllieTats() {
             className={styles.allieTattoo}
             src={imageUrl}
             alt="tattoo portfolio images"
-            priority
             quality={75}
             width={1056}
             height={1078}
+            priority
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px"
           />
           <div className={styles.arrowSection}>

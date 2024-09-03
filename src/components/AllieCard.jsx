@@ -16,6 +16,7 @@ export default function allieCard({ tattoo, onClick, photos }) {
       quality={75}
       width={1056}
       height={1078}
+      priority
       sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 100%"
       onClick={() => onClick(photos.indexOf(tattoo))}
     />
