@@ -104,6 +104,7 @@ export async function getServerSideProps() {
     { name: "Rich Marafioti", slug: "richtats" },
     { name: "Mercy Wright", slug: "mercytats" },
     { name: "Trevor Aarsvold", slug: "trevortats" },
+    { name: "Allie Sider", slug: "allietats" },
   ];
 
   return {

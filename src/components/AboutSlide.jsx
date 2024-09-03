@@ -4,11 +4,7 @@ import styles from "@/styles/aboutus.module.css";
 
 export default function AboutSlide({ imageUrl, isFading }) {
   return (
-    <div
-      className={`${styles.shopImagesContainer} ${
-        isFading ? styles["fade-out"] : ""
-      }`}
-    >
+    <div className={styles.shopImagesContainer}>
       <Image
         src={imageUrl}
         alt="Tattoo shop photos"
