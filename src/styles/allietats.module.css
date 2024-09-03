@@ -54,13 +54,11 @@
 .tattooSlide {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .arrowSection {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .arrow {
@@ -69,9 +67,11 @@
   margin: 0rem 1rem 0rem 1rem;
   font-size: 40px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .allieTattoo {
+  position: relative;
   border-radius: 5px;
   max-height: 400px;
   width: auto;
@@ -154,6 +154,8 @@
   }
 }
 @media (max-width: 400px) {
+
+
   .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
@@ -173,4 +175,5 @@
   .artistAbout {
     margin-top: 0rem;
   }
+ 
 }

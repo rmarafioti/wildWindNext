@@ -15,7 +15,7 @@ import styles from "../styles/allietats.module.css";
 
 /**
  *
- * @component MercedesTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ * @component AllieTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
 export default function AllieTats() {
   //usePhotoGallery hook imported from photoGallery.js
