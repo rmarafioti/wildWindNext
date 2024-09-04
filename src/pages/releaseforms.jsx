@@ -44,6 +44,12 @@ export default function Releaseforms() {
       >
         Trevor Aarsvold
       </a>
+      <a
+        className={styles.artistLink}
+        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dfbd614e-d1ca-4921-876a-7519a5becc6d&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
+      >
+        Allie Sider
+      </a>
     </article>
   );
 }
