@@ -1,4 +1,5 @@
 import React from "react";
+
 import Link from "next/link";
 import LandingPageArt from "@/components/LandingPageArt";
 import { IoCheckmark } from "react-icons/io5";
@@ -13,7 +14,8 @@ import styles from "../styles/home.module.css";
  * @component Home features the main landing page of the web app with video and copy for SEO
  */
 export default function Home() {
-  const seoData = getSeoData("Chicago Tattoos | Wicker Park Tattoo Shop", {
+  const seoData = getSeoData("Home", {
+    title: "Best Tattoo Shop Chicago | Wild Wind Tattoo | Professional Artists",
     path: "/",
     description:
       "Wild Wind is a local Chicago tattoo shop that welcomes walk-ins. No hot air - just tattoos. Call today (773) 227-2027",

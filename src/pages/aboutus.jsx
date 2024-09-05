@@ -17,7 +17,8 @@ import styles from "../styles/aboutus.module.css";
 export default function Shop({ initialPhoto }) {
   const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);
 
-  const seoData = getSeoData("Wild Wind Tattoo - Chicago's Tattoo Shop", {
+  const seoData = getSeoData("About Us", {
+    title: "About Wild Wind Tattoo | Award-Winning Artists & Studio",
     path: "/aboutus",
     description:
       "Learn about Wild Wind Tattoo, Chicago's premier tattoo studio since 2015. Explore our mission, community involvement, and commitment to providing a safe, inclusive space for all clients.",
