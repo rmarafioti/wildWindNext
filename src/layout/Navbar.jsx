@@ -33,6 +33,15 @@ export default function Navbar() {
   return (
     <>
       <nav id={styles.nav}>
+        <Link
+          id={styles.contactContainer}
+          href="/contact"
+          aria-label="icon which links to the website's contact page"
+        >
+          <div id={styles.navLeft}>
+            <button id={styles.contactButton}>Contact Us</button>
+          </div>
+        </Link>
         <Link href="/">
           <Image
             id={styles.navLogo}
@@ -77,10 +86,10 @@ export default function Navbar() {
           </Link>
           <ul className={styles.subCategory}>
             <Link className={styles.subLink} href="/reviews">
-              <li className={styles.subItem}>Reviews</li>
+              <li className={styles.subItemAbout}>Reviews</li>
             </Link>
             <Link className={styles.subLink} href="/media">
-              <li className={styles.subItem}>Media</li>
+              <li className={styles.subItemAbout}>Media</li>
             </Link>
           </ul>
         </li>
@@ -156,20 +165,22 @@ export default function Navbar() {
                 TATTOOS
               </h4>
             </Link>
-            <ul className={styles.subCategory}>
-              <Link className={styles.subLink} href="/richtats">
-                <li className={styles.subItem}>Rich Marafioti</li>
-              </Link>
-              <Link className={styles.subLink} href="/mercytats">
-                <li className={styles.subItem}>Mercy Wright</li>
-              </Link>
-              <Link className={styles.subLink} href="/trevortats">
-                <li className={styles.subItem}>Trevor Aarsvold</li>
-              </Link>
-              <Link className={styles.subLink} href="/allietats">
-                <li className={styles.subItem}>Allie Sider</li>
-              </Link>
-            </ul>
+            <div className={styles.subSection}>
+              <ul className={styles.subCategory}>
+                <Link className={styles.subLink} href="/richtats">
+                  <li className={styles.subItem}>Rich Marafioti</li>
+                </Link>
+                <Link className={styles.subLink} href="/mercytats">
+                  <li className={styles.subItem}>Mercy Wright</li>
+                </Link>
+                <Link className={styles.subLink} href="/trevortats">
+                  <li className={styles.subItem}>Trevor Aarsvold</li>
+                </Link>
+                <Link className={styles.subLink} href="/allietats">
+                  <li className={styles.subItem}>Allie Sider</li>
+                </Link>
+              </ul>
+            </div>
           </section>
         </li>
         <li id={styles.aboutItem}>
@@ -183,14 +194,16 @@ export default function Navbar() {
                 ABOUT US
               </h4>
             </Link>
-            <ul className={styles.subCategory}>
-              <Link className={styles.subLink} href="/reviews">
-                <li className={styles.subItem}>Reviews</li>
-              </Link>
-              <Link className={styles.subLink} href="/media">
-                <li className={styles.subItem}>Media</li>
-              </Link>
-            </ul>
+            <div className={styles.subSection}>
+              <ul className={styles.subCategory}>
+                <Link className={styles.subLink} href="/reviews">
+                  <li className={styles.subItem}>Reviews</li>
+                </Link>
+                <Link className={styles.subLink} href="/media">
+                  <li className={styles.subItem}>Media</li>
+                </Link>
+              </ul>
+            </div>
           </section>
         </li>
         <li className={styles.navItem}>
