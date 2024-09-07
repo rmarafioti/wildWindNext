@@ -35,74 +35,6 @@
   cursor: pointer;
 }
 
-/* hamburger */
-
-#hamMenuContainer {
-  background-color: white;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 1.5rem 0rem 0rem 1.5rem;
-  width: 45.5px;
-  height: 45.5px;
-  transition: all 0.5s ease-in-out;
-}
-
-.menuButtonBurger {
-  position: relative;
-  width: 25px;
-  height: 3px;
-  background: var(--wildBlack);
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-  display: block;
-  cursor: pointer;
-}
-
-.menuButtonBurger::before,
-.menuButtonBurger::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background: var(--wildBlack);
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-  transform-origin: center;
-  top: 10px;
-  left: 0px;
-}
-
-.menuButtonBurger::after {
-  top: -10px;
-}
-
-.menuButtonBurger::before {
-  transform: translateY(-16px);
-}
-
-.menuButtonBurger::after {
-  transform: translateY(16px);
-}
-
-/* animation */
-
-.menuButtonBurger.open {
-  background: transparent;
-}
-
-.menuButtonBurger.open::before {
-  transform: rotate(-45deg) translate(0, 0);
-  top: 0;
-}
-
-.menuButtonBurger.open::after {
-  transform: rotate(45deg) translate(0, 0);
-  top: 0;
-}
-
 /* menu */
 
 .menu {
@@ -282,6 +214,73 @@
   #contactContainer {
     display: none;
   }
+  /* hamburger */
+
+#hamMenuContainer {
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1.5rem 0rem 0rem 1.5rem;
+  width: 45.5px;
+  height: 45.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuButtonBurger {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background: var(--wildBlack);
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  cursor: pointer;
+}
+
+.menuButtonBurger::before,
+.menuButtonBurger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: var(--wildBlack);
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+  top: 10px;
+  left: 0px;
+}
+
+.menuButtonBurger::after {
+  top: -10px;
+}
+
+.menuButtonBurger::before {
+  transform: translateY(-16px);
+}
+
+.menuButtonBurger::after {
+  transform: translateY(16px);
+}
+
+/* animation */
+
+.menuButtonBurger.open {
+  background: transparent;
+}
+
+.menuButtonBurger.open::before {
+  transform: rotate(-45deg) translate(0, 0);
+  top: 0;
+}
+
+.menuButtonBurger.open::after {
+  transform: rotate(45deg) translate(0, 0);
+  top: 0;
+}
   .menu {
     margin: 0rem 1rem 0rem 1rem;
     padding: 0rem;
