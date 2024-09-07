@@ -46,13 +46,6 @@ export default function Navbar() {
   return (
     <>
       <nav id={styles.nav}>
-        <div id={styles.hamMenuContainer} onClick={toggleMenu}>
-          <div
-            className={`${styles.menuButtonBurger} ${
-              menuOpen ? styles.open : ""
-            }`}
-          ></div>
-        </div>
         <Link href="/">
           <Image
             id={styles.navLogo}
@@ -65,6 +58,25 @@ export default function Navbar() {
             sizes="(max-width: 300px) 100vw, 300px"
           />
         </Link>
+        <div id={styles.hamMenuContainer} onClick={toggleMenu}>
+          <div
+            className={`${styles.menuButtonBurger} ${
+              menuOpen ? styles.open : ""
+            }`}
+          ></div>
+        </div>
+        {/*<Link href="/">
+          <Image
+            id={styles.navLogo}
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1721478504/wildWindSite/WWT_WHT_hpvy19.png"
+            alt="shop logo in nav bar"
+            priority
+            quality={75}
+            width={7601}
+            height={2165}
+            sizes="(max-width: 300px) 100vw, 300px"
+          />
+        </Link>*/}
         <Link
           id={styles.contactContainer}
           href="/contact"
