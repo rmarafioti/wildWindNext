@@ -1,5 +1,6 @@
 #nav {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   z-index: 999;
@@ -9,12 +10,15 @@
 #navLogo {
   max-width: 350px;
   height: auto;
-  margin: 1rem 0rem 1rem 31rem;
+  margin: 1rem 0rem 1rem 34rem;
   filter: drop-shadow(4px 1px 1px var(--wildDarkGreen));
 }
 
 #navRight {
-  margin-top: 1rem;
+  margin-left: auto; /* Pushes the contact button to the right */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
   align-items: center;
 }
 
@@ -29,7 +33,7 @@
   background-color: white;
   padding: 1rem 1rem;
   margin-top: 1rem;
-  margin-right: 2rem;
+  margin-left: 2rem;
   border-radius: 0px;
   transform: rotate(3deg);
   cursor: pointer;
@@ -82,7 +86,6 @@
   list-style-type: none;
 }
 
-/* Show the subcategory when hovering over the parent `li` */
 #tattooItem:hover .subCategory, #aboutItem:hover .subCategory {
   display: block;
 }
@@ -302,7 +305,11 @@
   .menuDesktop {
     display: none;
   }
-  #aboutItem {
+  #aboutItem, #tattooItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-left: 0rem;
   }
   .navItem a,
@@ -313,6 +320,22 @@
   .link {
     opacity: 1;
   }
+  .expandContainer {
+    display: flex;
+    margin-top: 1rem;
+    padding: .5rem .2rem .5rem .5rem;
+    background-color: rgb(237, 231, 231);
+  }
+  .open {
+    font-weight: normal;
+  }
+  .expand {
+    font-size: 25px;
+  }
+  .subCategory {
+    display: block;
+  }
+ 
   .drop.active {
     position: absolute;
     margin: -19rem 0rem 0rem 4rem;
