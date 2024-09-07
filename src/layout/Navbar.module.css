@@ -37,18 +37,18 @@
 
 /* menu */
 
-.menu {
+.menuDesktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 0rem;
   background-color: white;
-  display: none;
   z-index: 1000;
   border-bottom: solid 1px var(--wildGreen);
 }
 
-.menu.active {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.menu {
+  display: none;
 }
 
 .navContainer {
@@ -290,6 +290,10 @@
     flex-direction: column;
     align-items: flex-start;
     border-bottom: none;
+  }
+
+  .menuDesktop {
+    display: none;
   }
   #aboutItem {
     margin-left: 0rem;

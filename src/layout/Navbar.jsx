@@ -75,8 +75,137 @@ export default function Navbar() {
           </div>
         </Link>
       </nav>
-      {/*hamburger menu open*/}
+      {/*desktop menu*/}
       <section id={styles.menuContainer}>
+        <menu className={styles.menuDesktop}>
+          <li id={styles.aboutItem}>
+            <Link className={styles.navContainer} href="/aboutus">
+              <GoBook className={styles.linkIcon} />
+              <h4
+                className={styles.link}
+                id={styles.aboutUs}
+                role="navbar element About Us"
+              >
+                ABOUT US
+              </h4>
+            </Link>
+            {/*drop down menu togglebutton*/}
+            <div
+              className={styles.aboutLink}
+              id={styles.dropIcon}
+              onClick={aboutDropdown.toggleDropdown}
+            >
+              {aboutDropdown.isOpen ? <IoCloseOutline /> : <IoIosArrowDown />}
+            </div>
+          </li>
+          <li id={styles.tattooItem}>
+            <Link className={styles.navContainer} href="/tattoos">
+              <IoSkullOutline className={styles.linkIcon} />
+              <h4
+                className={styles.link}
+                id={styles.tats}
+                role="navbar element Tattoos"
+              >
+                TATTOOS
+              </h4>
+            </Link>
+            {/*drop down menu togglebutton*/}
+            <div
+              className={styles.aboutLink}
+              id={styles.dropIcon}
+              onClick={tattooDropdown.toggleDropdown}
+            >
+              {tattooDropdown.isOpen ? <IoCloseOutline /> : <IoIosArrowDown />}
+            </div>
+            {/*drop down menu open*/}
+            <div id={styles.dropDownContainer}>
+              <menu
+                className={`${styles.droptats} ${
+                  tattooDropdown.isOpen ? styles.active : ""
+                }`}
+              >
+                <Link
+                  className={styles.dropLink}
+                  id={styles.dropLinkTop}
+                  href="/richtats"
+                >
+                  <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
+                  <IoIosArrowForward />
+                </Link>
+                <Link className={styles.dropLink} href="/mercytats">
+                  <h4 className={styles.dropLinkName}>Mercy Wright</h4>
+                  <IoIosArrowForward />
+                </Link>
+                <Link className={styles.dropLink} href="/trevortats">
+                  <h4 className={styles.dropLinkName}>Trevor Aarsvold</h4>
+                  <IoIosArrowForward />
+                </Link>
+                <Link className={styles.dropLink} href="/allietats">
+                  <h4 className={styles.dropLinkName}>Allie Sider</h4>
+                  <IoIosArrowForward />
+                </Link>
+              </menu>
+            </div>
+          </li>
+          <li className={styles.navItem}>
+            <Link className={styles.navContainer} href="/contact">
+              <HiOutlineEnvelope className={styles.linkIcon} />
+              <h4 className={styles.link} role="navbar element Contact">
+                CONTACT
+              </h4>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link className={styles.navContainer} href="/aftercare">
+              <IoHeartOutline className={styles.linkIcon} />
+              <h4 className={styles.link} role="navbar element Aftercare">
+                AFTERCARE
+              </h4>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link className={styles.navContainer} href="/giftcards">
+              <IoGiftOutline className={styles.linkIcon} />
+              <h4
+                className={styles.link}
+                id={styles.giftCards}
+                role="navbar element Giftcars"
+              >
+                GIFTCARDS
+              </h4>
+            </Link>
+          </li>
+        </menu>
+        {/*drop down menu open*/}
+        <div id={styles.dropDownContainer}>
+          <menu
+            className={`${styles.drop} ${
+              aboutDropdown.isOpen ? styles.active : ""
+            }`}
+          >
+            <Link
+              className={styles.dropLink}
+              id={styles.dropLinkTop}
+              href="/reviews"
+            >
+              <h4 className={styles.dropLinkName}>Reviews</h4>
+              <IoIosArrowForward />
+            </Link>
+            <Link
+              className={styles.dropLink}
+              id={styles.dropLinkMiddle}
+              href="/media"
+            >
+              <h4 className={styles.dropLinkName}>Media</h4>
+              <IoIosArrowForward />
+            </Link>
+            <Link className={styles.dropLink} href="/faqs">
+              <h4 className={styles.dropLinkName}>FAQs</h4>
+              <IoIosArrowForward />
+            </Link>
+          </menu>
+        </div>
+        {/* mobile menu */}
         <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
           <li id={styles.aboutItem}>
             <Link className={styles.navContainer} href="/aboutus">
@@ -205,27 +334,6 @@ export default function Navbar() {
             </Link>
           </menu>
         </div>
-        {/*drop down menu open*/}
-        {/*} <div id={styles.dropDownContainer}>
-          <menu
-            className={`${styles.droptats} ${
-              tattooDropdown.isOpen ? styles.active : ""
-            }`}
-          >
-            <Link
-              className={styles.dropLink}
-              id={styles.dropLinkTop}
-              href="/richtats"
-            >
-              <h4 className={styles.dropLinkName}>Rich Marafioti</h4>
-              <IoIosArrowForward />
-            </Link>
-            <Link className={styles.dropLink} href="/mercytats">
-              <h4 className={styles.dropLinkName}>Mercedes Wright</h4>
-              <IoIosArrowForward />
-            </Link>
-          </menu>
-        </div>*/}
       </section>
     </>
   );
