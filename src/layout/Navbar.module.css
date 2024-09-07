@@ -40,7 +40,6 @@
 .menuDesktop {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-bottom: 0rem;
   background-color: white;
   z-index: 1000;
@@ -61,6 +60,19 @@
   margin-left: 1rem;
 }
 
+.subCategory {
+  display: none;
+}
+
+.subLink {
+  text-decoration: none;
+}
+
+.subItem {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
 #giftCards {
   margin-right: 1rem;
 }
@@ -70,11 +82,9 @@
   list-style-type: none;
 }
 
-.navItem a,
-#aboutItem a,
-#tattooItem a {
-  align-items: center;
-  font-size: 16px;
+/* Show the subcategory when hovering over the parent `li` */
+#tattooItem:hover .subCategory, #aboutItem:hover .subCategory {
+  display: block;
 }
 
 .navItem a:link,
@@ -84,10 +94,6 @@
 #tattooItem a:link,
 #tattooItem a:visited {
   color: var(--wildGreen);
-}
-
-#tattooItem {
-  position: relative;
 }
 
 .linkIcon {
@@ -106,7 +112,7 @@
   padding: 0.5rem;
   transition: background-color 0.5s ease;
   font-weight: 400;
-  margin: 1rem 0rem 1rem 0.5rem;
+  margin: .5rem 0rem .5rem 0.5rem;
 }
 
 #aboutUs,
@@ -118,7 +124,8 @@
 #aboutItem,
 #tattooItem {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
 }
 
 #dropIcon {
