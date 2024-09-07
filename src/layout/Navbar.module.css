@@ -1,5 +1,6 @@
 #nav {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   z-index: 999;
@@ -9,17 +10,33 @@
 #navLogo {
   max-width: 350px;
   height: auto;
-  margin: 1rem 0rem 1rem 8rem;
+  margin: 1rem 0rem 1rem 0rem;
   filter: drop-shadow(4px 1px 1px var(--wildDarkGreen));
 }
 
 #navRight {
-  margin-top: 1rem;
+  margin-left: auto; /* Pushes the contact button to the right */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: block;
   align-items: center;
+}
+
+#navLeft {
+  margin-left: auto; /* Pushes the contact button to the right */
+  margin-right: 0rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  display: none;
 }
 
 #contactContainer {
   text-decoration: none;
+}
+
+.menuButtonBurger, #hamMenuContainer, .open {
+  display: none;
 }
 
 #contactButton {
@@ -29,13 +46,127 @@
   background-color: white;
   padding: 1rem 1rem;
   margin-top: 1rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
   border-radius: 0px;
   transform: rotate(3deg);
   cursor: pointer;
 }
 
-/* hamburger */
+/* menu */
+
+.menuDesktop {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0rem;
+  background-color: white;
+  z-index: 1000;
+  border-bottom: solid 1px var(--wildGreen);
+}
+
+.menu {
+  display: none;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: left;
+  text-decoration: none;
+}
+
+#aboutItem {
+  margin-left: 1rem;
+}
+
+.subCategory {
+ margin-left: 1rem;
+  display: none;
+}
+
+.subLink {
+  text-decoration: none;
+}
+
+.subItemAbout:hover, .subItem:hover {
+  color: var(--wildDarkGreen);
+  background-color: var(--wildGoldTrans);
+}
+
+.subItem, .subItemAbout {
+  color: var(--wildDarkGreen);
+  padding: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+}
+
+.subItemAbout {
+  margin-left: .5rem;
+}
+
+#giftCards {
+  margin-right: 1rem;
+}
+.navItem {
+  list-style-type: none;
+}
+
+#tattooItem:hover .subCategory, #aboutItem:hover .subCategory {
+  display: block;
+}
+
+.navItem a:link,
+.navItem a:visited,
+#aboutItem a:link,
+#aboutItem a:visited,
+#tattooItem a:link,
+#tattooItem a:visited {
+  color: var(--wildGreen);
+}
+
+.linkIcon {
+  font-size: 25px;
+  margin-right: 0rem;
+}
+
+.link {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.5s ease;
+  font-weight: 400;
+  margin: .5rem 0rem .5rem 0.5rem;
+}
+
+#aboutItem,
+#tattooItem {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.link:hover {
+  color: black;
+  font-weight: normal;
+  background-color: var(--wildGold);
+}
+
+@media (max-width: 800px) {
+  #nav {
+    padding-bottom: 0rem;
+    justify-content: space-evenly;
+  }
+  #navLogo {
+    max-width: 200px;
+    padding-right: .5rem;
+    margin: 1rem 1rem 0.5rem 5rem;
+  }
+  #contactContainer {
+    display: none;
+  }
+  /* hamburger */
 
 #hamMenuContainer {
   background-color: white;
@@ -44,7 +175,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 1.5rem 0rem 0rem 1.5rem;
+  margin: 1.5rem 1rem 1.5rem 0rem;
   width: 45.5px;
   height: 45.5px;
   transition: all 0.5s ease-in-out;
@@ -102,186 +233,6 @@
   transform: rotate(45deg) translate(0, 0);
   top: 0;
 }
-
-/* menu */
-
-.menu {
-  padding-bottom: 0rem;
-  background-color: white;
-  display: none;
-  z-index: 1000;
-  border-bottom: solid 1px var(--wildGreen);
-}
-
-.menu.active {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navContainer {
-  display: flex;
-  justify-content: left;
-  text-decoration: none;
-}
-
-#aboutItem {
-  margin-left: 1rem;
-}
-
-#giftCards {
-  margin-right: 1rem;
-}
-.navItem,
-#aboutItem,
-#tattooItem {
-  list-style-type: none;
-}
-
-.navItem a,
-#aboutItem a,
-#tattooItem a {
-  align-items: center;
-  font-size: 16px;
-}
-
-.navItem a:link,
-.navItem a:visited,
-#aboutItem a:link,
-#aboutItem a:visited,
-#tattooItem a:link,
-#tattooItem a:visited {
-  color: var(--wildGreen);
-}
-
-#tattooItem {
-  position: relative;
-}
-
-.linkIcon {
-  font-size: 25px;
-  margin-right: 0rem;
-}
-
-.link {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 0.5rem;
-  transition: background-color 0.5s ease;
-  font-weight: 400;
-  margin: 1rem 0rem 1rem 0.5rem;
-}
-
-#aboutUs,
-#tats {
-  position: relative;
-  margin-right: 0.5rem;
-}
-
-#aboutItem,
-#tattooItem {
-  display: flex;
-  align-items: center;
-}
-
-#dropIcon {
-  display: flex;
-  font-size: 20px;
-  border: 1px solid var(--wildGreen);
-  border-radius: 4px;
-}
-
-.drop {
-  position: absolute;
-  background-color: white;
-  display: none;
-  z-index: 1000;
-  border: 1px solid var(--wildGreen);
-  border-radius: 5px;
-}
-
-.droptats {
-  position: absolute;
-  display: none;
-  z-index: 1000;
-  border: 1px solid var(--wildGreen);
-  border-radius: 5px;
-  background-color: white;
-}
-
-.drop.active,
-.droptats.active {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
-  margin: 10rem;
-}
-
-.drop.active {
-  position: absolute;
-  margin-top: 0rem;
-  margin-left: 4rem;
-}
-
-.droptats.active {
-  position: absolute;
-  margin-top: 2.3rem;
-  margin-left: -8rem;
-}
-
-.dropLink {
-  color: inherit;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  transition: background-color 0.5s ease;
-}
-
-.link:hover {
-  color: black;
-  font-weight: normal;
-  background-color: var(--wildGold);
-}
-
-.dropLink:hover {
-  background-color: var(--wildGoldTrans);
-}
-
-#dropLinkTop,
-#dropLinkMiddle {
-  margin-bottom: 0;
-}
-
-.dropLinkName {
-  color: var(--wildBlack);
-  font-weight: normal;
-  margin-right: 0.5rem;
-}
-
-@media (max-width: 800px) {
-  #nav {
-    padding-bottom: 0rem;
-    justify-content: space-evenly;
-  }
-  #navLogo {
-    max-width: 250px;
-    padding-right: .5rem;
-    margin: 1rem 1rem 0.5rem 2rem;
-  }
-  #contactContainer {
-    display: none;
-  }
   .menu {
     margin: 0rem 1rem 0rem 1rem;
     padding: 0rem;
@@ -292,7 +243,15 @@
     align-items: flex-start;
     border-bottom: none;
   }
-  #aboutItem {
+
+  .menuDesktop {
+    display: none;
+  }
+  #aboutItem, #tattooItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-left: 0rem;
   }
   .navItem a,
@@ -303,6 +262,25 @@
   .link {
     opacity: 1;
   }
+  .subSection {
+    margin-left: 2rem;
+  }
+  .expandContainer {
+    display: flex;
+    margin-top: 1rem;
+    padding: .5rem .2rem .5rem .5rem;
+    background-color: rgb(237, 231, 231);
+  }
+  .open {
+    font-weight: normal;
+  }
+  .expand {
+    font-size: 25px;
+  }
+  .subCategory {
+    display: block;
+  }
+ 
   .drop.active {
     position: absolute;
     margin: -19rem 0rem 0rem 4rem;
