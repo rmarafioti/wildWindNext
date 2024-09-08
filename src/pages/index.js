@@ -150,7 +150,7 @@ export default function Home() {
       </ul>
 
       <Link href="/tattoos" className={styles.homeLink}>
-        <h3 className={styles.linkHeader}>View tattoos</h3>
+        <h3 className={styles.linkHeader}>View our artists</h3>
       </Link>
 
       <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>

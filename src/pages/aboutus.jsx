@@ -96,26 +96,6 @@ export default function Shop({ initialPhoto }) {
         <HeaderArt />
       </div>
       <AboutSlide imageUrl={currentPhoto.image} />
-      <div className={styles.shopIconContainer}>
-        <h1>
-          <a
-            href="https://www.instagram.com/wildwindtattoo/?hl=en"
-            className={styles.shopIcon}
-            aria-label="icon which links to Wild Wind Tattoo's Instagram page"
-          >
-            <FaInstagram />
-          </a>
-        </h1>
-        <h1>
-          <a
-            href="https://www.facebook.com/wildwindtattoo/"
-            className={styles.shopIcon}
-            aria-label="icon which links to Wild Wind Tattoo's Facebook page"
-          >
-            <FaFacebookSquare />
-          </a>
-        </h1>
-      </div>
       <p className={styles.firstParagraph}>
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert
         tattooing in Chicago since 2015. Located in vibrant Wicker Park, Wild
@@ -163,9 +143,6 @@ export default function Shop({ initialPhoto }) {
         </Link>
         <Link href="/media" className={styles.shopLinks}>
           <h3 className={styles.linkHeader}>Media</h3>
-        </Link>
-        <Link href="/faqs" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>FAQs</h3>
         </Link>
       </div>
     </article>

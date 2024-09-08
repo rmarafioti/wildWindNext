@@ -31,39 +31,6 @@
   font-weight: normal;
 }
 
-.unorderedList {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  padding: 0;
-  list-style-type: none;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
-.missionItem {
-  color: var(--wildBlack);
-  font-size: 18px;
-  font-style: italic;
-  padding: 0rem 1rem 0.5rem 1rem;
-}
-
-.shopMiddleParagraphs {
-  max-width: 480px;
-  color: var(--wildBlack);
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-.bottomParagraph {
-  margin-bottom: 0;
-}
-
-.artistHeader {
-  margin: 1rem 0rem 1rem 0rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
 .artistLinksContainer {
   display: flex;
   flex-direction: column;
