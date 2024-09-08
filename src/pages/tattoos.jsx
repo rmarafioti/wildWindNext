@@ -60,29 +60,9 @@ export default function Tattoos({ initialArtists }) {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.tattooHeader}>TATTOOS</h1>
+        <h1 className={styles.tattooHeader}>OUR ARTISTS</h1>
         <HeaderArt />
       </div>
-      <ul className={styles.unorderedList}>
-        <li className={styles.missionItem}>Variety</li>
-        <li className={styles.missionItem}>Comfort</li>
-        <li className={styles.missionItem}>Professionalism</li>
-      </ul>
-      <p className={styles.shopMiddleParagraphs}>
-        You can expect to be treated with respect and care at WWT. We will
-        communicate all aspects of your tattoo experience, from consultation to
-        caring for your new tattoo.
-      </p>
-      <p className={styles.shopMiddleParagraphs}>
-        We offer various tattoo styles, from small walk-ins to larger custom
-        pieces. Have something in mind? Just ask!
-      </p>
-      <p className={`${styles.shopMiddleParagraphs} ${styles.bottomParagraph}`}>
-        Our community is important to us. We are here to give you the tattoo you
-        want in an inclusive, safe space. While you get tattooed, enjoy a clean,
-        creative, and artistic environment.
-      </p>
-      <h2 className={styles.artistHeader}>Our Artists</h2>
       <div className={styles.artistLinksContainer}>
         {artists.map((artist) => (
           <Link

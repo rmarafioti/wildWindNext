@@ -27,7 +27,7 @@
 }
 
 .shopImagesContainer {
-  margin: 2rem 0rem .5rem 0rem;
+  margin: 2rem 0rem 2cap 0rem;
   opacity: 1;
   position: relative;
   display: flex;
@@ -36,24 +36,8 @@
 }
 
 .shopImage {
-  width: 400px;
+  width: 500px;
   height: auto;
-}
-
-.shopIconContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.shopIcon {
-  font-size: 40px;
-  padding: 0rem 0.5rem 0rem 0.5rem;
-}
-
-.shopIcon:visited,
-.shopIcon:link {
-  color: var(--wildGreen);
 }
 
 .firstParagraph {

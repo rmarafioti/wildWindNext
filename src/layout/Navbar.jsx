@@ -2,12 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import {
-  IoIosArrowDown,
-  IoCloseOutline,
-  IoIosArrowForward,
-} from "react-icons/io";
-import useDropdown from "../components/dropDown";
 
 import styles from "./Navbar.module.css";
 
@@ -100,7 +94,7 @@ export default function Navbar() {
               id={styles.tats}
               role="navbar element Tattoos"
             >
-              TATTOOS
+              OUR ARTISTS
             </h4>
           </Link>
           <ul className={styles.subCategory}>
@@ -162,7 +156,7 @@ export default function Navbar() {
                 id={styles.tats}
                 role="navbar element Tattoos"
               >
-                TATTOOS
+                OUR ARTISTS
               </h4>
             </Link>
             <div className={styles.subSection}>

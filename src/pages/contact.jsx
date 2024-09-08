@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import HeaderArt from "@/components/HeaderArt";
+import Form from "@/components/Form";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import styles from "../styles/contact.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -11,7 +13,8 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
 export default function Contact() {
   const seoData = getSeoData("Contact Us", {
     path: "/contact",
-    description: "Wild Wind is a local Chicago tattoo shop that welcomes walk-ins. No hot air - just tattoos. Call today (773) 227-2027.",
+    description:
+      "Wild Wind is a local Chicago tattoo shop that welcomes walk-ins. No hot air - just tattoos. Call today (773) 227-2027.",
     schema: {
       "@type": "TattooParlor",
       name: siteConfig.siteName,
@@ -22,11 +25,36 @@ export default function Contact() {
         addressLocality: siteConfig.address.addressLocality,
         addressRegion: siteConfig.address.addressRegion,
         postalCode: siteConfig.address.postalCode,
-        addressCountry: siteConfig.address.addressCountry
+        addressCountry: siteConfig.address.addressCountry,
       },
       telephone: siteConfig.phone,
-      email: siteConfig.email
+      email: siteConfig.email,
+    },
+    /*const seoData = getSeoData("Request Appointment", {
+    path: "/requestappt",
+    description: "Book your tattoo session at Wild Wind Tattoo in Chicago's Wicker Park. Easy online appointment requests for custom designs or consultations with our expert artists.",
+    schema: {
+      "@type": "Service",
+      name: "Tattoo Appointment Booking",
+      provider: {
+        "@type": "TattooParlor",
+        name: siteConfig.siteName,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.address.streetAddress,
+          addressLocality: siteConfig.address.addressLocality,
+          addressRegion: siteConfig.address.addressRegion,
+          postalCode: siteConfig.address.postalCode,
+          addressCountry: siteConfig.address.addressCountry
+        }
+      },
+      serviceType: "Tattoo Appointment",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock"
+      }
     }
+  });*/
   });
 
   return (
@@ -35,6 +63,26 @@ export default function Contact() {
       <div className={styles.header}>
         <h1 className={styles.contactHeader}>CONTACT US</h1>
         <HeaderArt />
+      </div>
+      <div className={styles.shopIconContainer}>
+        <h1>
+          <a
+            href="https://www.instagram.com/wildwindtattoo/?hl=en"
+            className={styles.shopIcon}
+            aria-label="icon which links to Wild Wind Tattoo's Instagram page"
+          >
+            <FaInstagram />
+          </a>
+        </h1>
+        <h1>
+          <a
+            href="https://www.facebook.com/wildwindtattoo/"
+            className={styles.shopIcon}
+            aria-label="icon which links to Wild Wind Tattoo's Facebook page"
+          >
+            <FaFacebookSquare />
+          </a>
+        </h1>
       </div>
       <section className={styles.contactTagHeader}>
         <h2 className={styles.headerTagline}>
@@ -49,11 +97,7 @@ export default function Contact() {
           first
         </p>
       </section>
-      <section className={styles.contactButtonSection}>
-        <Link className={styles.contactLink} href="/requestappt">
-          <h3 className={styles.contactButtons}>Request an appointment</h3>
-        </Link>
-      </section>
+      <Form />
       <section className={styles.contactInfoContainer}>
         <div className={styles.contactInfo}>
           <p>ADDRESS:</p>

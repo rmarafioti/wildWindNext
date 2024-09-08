@@ -52,24 +52,20 @@
   padding: 0.2rem;
 }
 
-.contactButtonSection {
-  margin: 1rem;
+.shopIconContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.contactLink {
-  text-decoration: none;
+.shopIcon {
+  font-size: 40px;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
-.contactButtons {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  font-weight: normal;
-  background-color: var(--wildDarkGreen);
-  padding: .5rem;
-  width: 400px;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+.shopIcon:visited,
+.shopIcon:link {
+  color: var(--wildGreen);
 }
 
 .contactInfoContainer {
