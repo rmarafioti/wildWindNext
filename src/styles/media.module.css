@@ -14,14 +14,13 @@
 }
 
 .mediaHeader {
-  margin: 2rem 0rem 3rem 0rem;
+  margin: 2rem 0rem 1rem 0rem;
   font-weight: normal;
   color: white;
   font-size: 50px;
   font-weight: 800;
   -webkit-text-stroke: 2px var(--wildDarkGreen);
   letter-spacing: 2px;
-  z-index: 10;
 }
 
 .mediaHeaderTag {

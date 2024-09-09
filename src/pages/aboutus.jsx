@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import AboutSlide from "@/components/AboutSlide";
 import HeaderArt from "@/components/HeaderArt";
 import { BsDot } from "react-icons/bs";
-/*import { FaFacebookSquare, FaInstagram } from "react-icons/fa";*/
 import Reviews from "@/components/Reviews";
+import Media from "@/components/Media";
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -97,9 +97,14 @@ export default function Shop({ initialPhoto }) {
         <h1 className={styles.mainShopHeader}>ABOUT US</h1>
         <HeaderArt />
       </div>
+      <div className={styles.quickLinkSection}>
+        <p className={styles.quickLink}>Our Mission</p>
+        <p className={styles.quickLink}>Media</p>
+        <p className={styles.quickLink}>Shop Reviews</p>
+      </div>
       <AboutSlide imageUrl={currentPhoto.image} />
       <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
-        Our Mission
+        OUR MISSION
       </h2>
       <p className={styles.firstParagraph}>
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert
@@ -145,11 +150,7 @@ export default function Shop({ initialPhoto }) {
         Fund. We are currently partnered with Chicago Therapy Collective&apos;s
         Hire Trans Now initiative.
       </p>
-      <div className={styles.shopLinksContainer}>
-        <Link href="/media" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>Media</h3>
-        </Link>
-      </div>
+      <Media />
       <Reviews />
     </article>
   );

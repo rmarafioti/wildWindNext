@@ -72,7 +72,6 @@ export default function Media() {
       <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.mediaHeader}>MEDIA</h1>
-        <HeaderArtTwo />
       </div>
       <h2 className={styles.mediaHeaderTag}>
         Harley-Davidson <b className={styles.targetText}>X</b> Wild Wind Tattoo
@@ -117,11 +116,6 @@ export default function Media() {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-      </div>
-      <div className={styles.mediaLinksContainer}>
-        <Link className={styles.mediaLinks} href="/aboutus">
-          <h3 className={styles.linkHeader}>About Us</h3>
-        </Link>
       </div>
     </article>
   );
