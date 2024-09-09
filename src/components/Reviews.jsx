@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaStar } from "react-icons/fa";
 import { reviews } from "../data/reviews";
 import styles from "../styles/reviews.module.css";
@@ -12,41 +10,43 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
  */
 export default function Reviews() {
   const seoData = getSeoData("Reviews", {
-    path: "/reviews",
-    description: "Read glowing testimonials from Wild Wind Tattoo's satisfied clients. Discover why our Chicago studio is highly rated for its welcoming atmosphere, skilled artists, and exceptional tattoo work.",
+    path: "/aboutus#reviews",
+    description:
+      "Read glowing testimonials from Wild Wind Tattoo's satisfied clients. Discover why our Chicago studio is highly rated for its welcoming atmosphere, skilled artists, and exceptional tattoo work.",
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: siteConfig.siteName,
-      description: "Professional tattoo parlor in Chicago offering various styles and experienced artists",
+      description:
+        "Professional tattoo parlor in Chicago offering various styles and experienced artists",
       address: {
         "@type": "PostalAddress",
         streetAddress: siteConfig.address.streetAddress,
         addressLocality: siteConfig.address.addressLocality,
         addressRegion: siteConfig.address.addressRegion,
         postalCode: siteConfig.address.postalCode,
-        addressCountry: siteConfig.address.addressCountry
+        addressCountry: siteConfig.address.addressCountry,
       },
       telephone: siteConfig.phone,
       url: siteConfig.siteUrl,
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "5",
-        reviewCount: reviews.length.toString()
+        reviewCount: reviews.length.toString(),
       },
-      review: reviews.map(review => ({
+      review: reviews.map((review) => ({
         "@type": "Review",
         author: {
           "@type": "Person",
-          name: review.name
+          name: review.name,
         },
         reviewRating: {
           "@type": "Rating",
-          ratingValue: "5"
+          ratingValue: "5",
         },
-        reviewBody: review.review
-      }))
-    }
+        reviewBody: review.review,
+      })),
+    },
   });
 
   /**
@@ -75,8 +75,9 @@ export default function Reviews() {
     <article className={styles.reviewPage}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.reviewHeader}>REVIEWS</h1>
-        <HeaderArtTwo />
+        <h1 className={styles.reviewHeader} id="reviews">
+          REVIEWS
+        </h1>
       </div>
       <p className={styles.reviewTag}>
         Take a look at what our clients have to say about us!
@@ -91,9 +92,6 @@ export default function Reviews() {
         ))}
       </ul>
       <div className={styles.reviewLinksContainer}>
-        <Link className={styles.reviewLinks} href="/aboutus">
-          <h3 className={styles.linkHeader}>About Us</h3>
-        </Link>
         <a
           className={styles.reviewLinks}
           href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082771,-87.6899845,16z/data=!4m8!3m7!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!9m1!1b1!16s%2Fg%2F11bw5xqdp7?entry=ttu"

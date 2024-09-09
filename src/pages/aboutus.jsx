@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import AboutSlide from "@/components/AboutSlide";
 import HeaderArt from "@/components/HeaderArt";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
-import Link from "next/link";
+import OurMission from "@/components/OurMission";
+import Reviews from "@/components/Reviews";
+import Media from "@/components/Media";
+import ScrollTop from "@/components/ScrollTop";
+import { Link } from "react-scroll";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -92,59 +95,48 @@ export default function Shop({ initialPhoto }) {
     <article className={styles.shopAbout}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.mainShopHeader}>ABOUT US</h1>
+        <h1 className={styles.mainShopHeader} id="top">
+          ABOUT US
+        </h1>
         <HeaderArt />
       </div>
-      <AboutSlide imageUrl={currentPhoto.image} />
-      <p className={styles.firstParagraph}>
-        Rich Marafioti founded Wild Wind Tattoo, which has provided expert
-        tattooing in Chicago since 2015. Located in vibrant Wicker Park, Wild
-        Wind Tattoo offers a bright, welcoming, and relaxing space for clients
-        to get tattooed. Beautiful tattoos are just part of what we do. We pride
-        ourselves on creating a forward-thinking, art-centered environment where
-        you will enjoy a positive experience, staying with you as long as your
-        tattoo.
-      </p>
-      <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
-        Our Mission
-      </h2>
-      <ul className={styles.unorderedList}>
-        <li className={styles.missionItem}>Variety</li>
-        <li className={styles.missionItem}>Comfort</li>
-        <li className={styles.missionItem}>Professionalism</li>
-      </ul>
-      <section className={styles.shopMiddleParagraphs}>
-        <p className={styles.middleParagraph}>
-          You can expect to be treated with respect and care at WWT. We will
-          communicate all aspects of your tattoo experience, from consultation
-          to caring for your new tattoo.
-        </p>
-        <p className={`${styles.middleParagraph} ${styles.midParagraph}`}>
-          We offer various tattoo styles, from small walk-ins to larger custom
-          pieces. Have something in mind? Just ask!
-        </p>
-        <p className={`${styles.middleParagraph} ${styles.bottomParagraph}`}>
-          Our community is important to us. We are here to give you the tattoo
-          you want in an inclusive, safe space. While you get tattooed, enjoy a
-          clean, creative, and artistic environment.
-        </p>
-      </section>
-      <h2 className={styles.shopHeader}>Community</h2>
-      <p className={styles.shopParagraphs}>
-        Wild Wind Tattoo is proud to serve and work with our strong community.
-        Over the years, we have held fundraisers supporting families of Pulse
-        Nightclub shooting victims, Project Fierce, and the Chicago Abortion
-        Fund. We are currently partnered with Chicago Therapy Collective&apos;s
-        Hire Trans Now initiative.
-      </p>
-      <div className={styles.shopLinksContainer}>
-        <Link href="/reviews" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>Reviews</h3>
+      <div className={styles.quickLinkSection}>
+        <Link
+          to="ourMission"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Our Mission</p>
         </Link>
-        <Link href="/media" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>Media</h3>
+        <Link
+          to="media"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Media</p>
+        </Link>
+        <Link
+          to="reviews"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Shop Reviews</p>
         </Link>
       </div>
+      <AboutSlide imageUrl={currentPhoto.image} />
+      <ScrollTop />
+      <OurMission />
+      <Media />
+      <Reviews />
     </article>
   );
 }

@@ -11,7 +11,6 @@
   display: flex;
   justify-content: center;
   width: 480px;
-  border-bottom: 1px solid var(--wildGreen);
   padding-bottom: 2rem;
 }
 
@@ -24,6 +23,26 @@
   -webkit-text-stroke: 2px var(--wildDarkGreen);
   letter-spacing: 2px;
   z-index: 10;
+}
+
+.quickLinkSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.quickLink {
+  color: var(--wildGreen);
+  font-size: 24px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid lightgray;
+}
+
+.quickLink:hover {
+  cursor: pointer;
+  color: var(--wildDarkGreen);
 }
 
 .shopImagesContainer {
@@ -41,42 +60,40 @@
 }
 
 .firstParagraph {
-  border-top: 1px solid var(--wildGreen);
   color: var(--wildBlack);
   padding-top: 1rem;
   max-width: 480px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .shopHeader {
-  color: var(--wildGreen);
-  font-size: 30px;
-  font-weight: normal;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
   margin: 2rem 0rem 1rem 0rem;
-}
-
-.ourMission {
-  border-bottom: none;
-  margin-bottom: 0rem;
+  font-weight: normal;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-stroke: 2px var(--wildDarkGreen);
+  letter-spacing: 2px;
 }
 
 .unorderedList {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 0rem;
   padding: 0;
-  list-style-type: none;
+  width: 480px;
+  border-bottom: 1px solid var(--wildGreen);
 }
 
 .missionItem {
-  color: var(--wildBlack);
-  font-size: 18px;
+  color: var(--wildGreen);
+  font-size: 24px;
   font-style: italic;
   padding: 0rem 1rem 1rem 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
+  margin-top: 1rem;
 }
 
 .shopMiddleParagraphs {
@@ -95,6 +112,8 @@
   color: var(--wildBlack);
   text-align: center;
   max-width: 480px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--wildGreen);
 }
 
 .bottomParagraph,
@@ -103,46 +122,38 @@
 }
 
 .bottomParagraph {
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 
-.shopLinksContainer {
+.communitySection {
   display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
+  align-items: center;
 }
 
-.shopLinks {
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--wildBlack);
-  border-radius: 5px;
-  background-color: var(--wildGoldTrans);
-  width: 300px;
-  transition: background-color 0.3s ease;
-}
-
-.shopLinks:hover {
-  background-color: var(--wildGold);
-}
-
-.linkHeader {
-  font-weight: normal;
+.dot {
+  font-size: 32px;
 }
 
 @media (max-width: 586px) {
+  .quickLinkSection {
+    flex-direction: column;
+  }
+  .shopHeader, .quickLinkSection {
+    text-align: center;
+  }
+  .unorderedList {
+    justify-content: center;
+  }
+  .missionItem {
+    font-size: 20px;
+  }
+  .dot {
+    display: none;
+  }
   .shopLinksContainer,
   .shopLinks,
-  .shopImage {
-    width: 100%;
-  }
-  
-  .shopLinks {
-    background-color: var(--wildGold);
-  }
-  .header {
+  .shopImage,
+  .unorderedList, .header, .quickLink, .quickLinkSection {
     width: 100%;
   }
 }
