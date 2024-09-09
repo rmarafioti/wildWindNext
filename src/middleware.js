@@ -40,6 +40,7 @@ export function middleware(request) {
     '/merch/wild-wind-tattoo-gift-card': '/giftcards',
     '/installations': '/media',
     '/artist/rich-marafioti': '/richtats',
+    '/reviews': '/aboutus'
   }
 
   if (path in redirects) {

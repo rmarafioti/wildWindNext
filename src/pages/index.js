@@ -215,7 +215,7 @@ export default function Home() {
         </p>
       </section>
 
-      <Link href="/reviews" className={styles.homeLink}>
+      <Link href="/aboutus#reviews" className={styles.homeLink}>
         <h3 className={styles.linkHeader}>Read more reviews</h3>
       </Link>
     </article>

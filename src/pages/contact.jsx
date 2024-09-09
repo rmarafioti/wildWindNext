@@ -30,31 +30,6 @@ export default function Contact() {
       telephone: siteConfig.phone,
       email: siteConfig.email,
     },
-    /*const seoData = getSeoData("Request Appointment", {
-    path: "/requestappt",
-    description: "Book your tattoo session at Wild Wind Tattoo in Chicago's Wicker Park. Easy online appointment requests for custom designs or consultations with our expert artists.",
-    schema: {
-      "@type": "Service",
-      name: "Tattoo Appointment Booking",
-      provider: {
-        "@type": "TattooParlor",
-        name: siteConfig.siteName,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: siteConfig.address.streetAddress,
-          addressLocality: siteConfig.address.addressLocality,
-          addressRegion: siteConfig.address.addressRegion,
-          postalCode: siteConfig.address.postalCode,
-          addressCountry: siteConfig.address.addressCountry
-        }
-      },
-      serviceType: "Tattoo Appointment",
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock"
-      }
-    }
-  });*/
   });
 
   return (
