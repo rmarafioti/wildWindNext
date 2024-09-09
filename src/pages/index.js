@@ -1,9 +1,9 @@
 import React from "react";
-
 import Link from "next/link";
 import LandingPageArt from "@/components/LandingPageArt";
 import { IoCheckmark } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
+import ScrollTop from "@/components/ScrollTop";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -70,7 +70,7 @@ export default function Home() {
   });
 
   return (
-    <article className={styles.home}>
+    <article className={styles.home} id="top">
       <SEO {...seoData} />
       <p className={styles.welcome}>Walk-ins Welcome!</p>
       <p className={styles.contactParagraph}>
@@ -101,6 +101,7 @@ export default function Home() {
         </a>
       </p>
       <LandingPageArt />
+      <ScrollTop />
       <h1 className={styles.headerTwo}>
         Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
       </h1>

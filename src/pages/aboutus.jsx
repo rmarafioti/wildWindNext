@@ -4,6 +4,7 @@ import HeaderArt from "@/components/HeaderArt";
 import OurMission from "@/components/OurMission";
 import Reviews from "@/components/Reviews";
 import Media from "@/components/Media";
+import ScrollTop from "@/components/ScrollTop";
 import { Link } from "react-scroll";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -94,7 +95,9 @@ export default function Shop({ initialPhoto }) {
     <article className={styles.shopAbout}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.mainShopHeader}>ABOUT US</h1>
+        <h1 className={styles.mainShopHeader} id="top">
+          ABOUT US
+        </h1>
         <HeaderArt />
       </div>
       <div className={styles.quickLinkSection}>
@@ -130,6 +133,7 @@ export default function Shop({ initialPhoto }) {
         </Link>
       </div>
       <AboutSlide imageUrl={currentPhoto.image} />
+      <ScrollTop />
       <OurMission />
       <Media />
       <Reviews />
