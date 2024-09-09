@@ -71,7 +71,9 @@ export default function Media() {
     <article className={styles.media}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.mediaHeader}>MEDIA</h1>
+        <h1 className={styles.mediaHeader} id="media">
+          MEDIA
+        </h1>
       </div>
       <h2 className={styles.mediaHeaderTag}>
         Harley-Davidson <b className={styles.targetText}>X</b> Wild Wind Tattoo

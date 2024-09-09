@@ -79,11 +79,14 @@ export default function Navbar() {
             </h4>
           </Link>
           <ul className={styles.subCategory}>
-            <Link className={styles.subLink} href="/reviews">
-              <li className={styles.subItemAbout}>Reviews</li>
+            <Link className={styles.subLink} href="/aboutus#ourMission">
+              <li className={styles.subItemAbout}>Our Mission</li>
             </Link>
-            <Link className={styles.subLink} href="/media">
+            <Link className={styles.subLink} href="/aboutus#media">
               <li className={styles.subItemAbout}>Media</li>
+            </Link>
+            <Link className={styles.subLink} href="/aboutus#reviews">
+              <li className={styles.subItemAbout}>Shop Reviews</li>
             </Link>
           </ul>
         </li>
@@ -141,13 +144,13 @@ export default function Navbar() {
 
       {/* mobile menu */}
       <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
-        <li className={styles.navItem}>
+        {/*<li className={styles.navItem}>
           <Link className={styles.navContainer} href="/contact">
             <h4 className={styles.link} role="navbar element Contact">
               CONTACT US
             </h4>
           </Link>
-        </li>
+        </li>*/}
         <li id={styles.tattooItem}>
           <section>
             <Link className={styles.navContainer} href="/tattoos">
@@ -177,6 +180,13 @@ export default function Navbar() {
             </div>
           </section>
         </li>
+        <li className={styles.navItem}>
+          <Link className={styles.navContainer} href="/contact">
+            <h4 className={styles.link} role="navbar element Contact">
+              CONTACT US
+            </h4>
+          </Link>
+        </li>
         <li id={styles.aboutItem}>
           <section>
             <Link className={styles.navContainer} href="/aboutus">
@@ -190,11 +200,14 @@ export default function Navbar() {
             </Link>
             <div className={styles.subSection}>
               <ul className={styles.subCategory}>
-                <Link className={styles.subLink} href="/reviews">
-                  <li className={styles.subItem}>Reviews</li>
+                <Link className={styles.subLink} href="/aboutus#ourMission">
+                  <li className={styles.subItemAbout}>Our Mission</li>
                 </Link>
-                <Link className={styles.subLink} href="/media">
-                  <li className={styles.subItem}>Media</li>
+                <Link className={styles.subLink} href="/aboutus#media">
+                  <li className={styles.subItemAbout}>Media</li>
+                </Link>
+                <Link className={styles.subLink} href="/aboutus#reviews">
+                  <li className={styles.subItemAbout}>Shop Reviews</li>
                 </Link>
               </ul>
             </div>

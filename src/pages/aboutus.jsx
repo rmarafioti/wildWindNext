@@ -4,7 +4,7 @@ import HeaderArt from "@/components/HeaderArt";
 import { BsDot } from "react-icons/bs";
 import Reviews from "@/components/Reviews";
 import Media from "@/components/Media";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -98,12 +98,39 @@ export default function Shop({ initialPhoto }) {
         <HeaderArt />
       </div>
       <div className={styles.quickLinkSection}>
-        <p className={styles.quickLink}>Our Mission</p>
-        <p className={styles.quickLink}>Media</p>
-        <p className={styles.quickLink}>Shop Reviews</p>
+        <Link
+          to="ourMission"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Our Mission</p>
+        </Link>
+        <Link
+          to="media"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Media</p>
+        </Link>
+        <Link
+          to="reviews"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          id="headers"
+        >
+          <p className={styles.quickLink}>Shop Reviews</p>
+        </Link>
       </div>
       <AboutSlide imageUrl={currentPhoto.image} />
-      <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
+      <h2 className={styles.shopHeader} id="ourMission">
         OUR MISSION
       </h2>
       <p className={styles.firstParagraph}>
