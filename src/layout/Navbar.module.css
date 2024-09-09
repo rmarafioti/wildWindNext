@@ -1,8 +1,4 @@
 #nav {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
   z-index: 999;
   background: linear-gradient(var(--wildGreen), rgb(180, 209, 121));
 }
@@ -31,6 +27,17 @@
   display: none;
 }
 
+.navelements {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactHomeButton {
+  display: none;
+}
+
 #contactContainer {
   text-decoration: none;
 }
@@ -39,7 +46,7 @@
   display: none;
 }
 
-#contactButton {
+.contactButton {
   font-size: 20px;
   font-weight: bold;
   color: var(--wildBlack);
@@ -51,6 +58,10 @@
   cursor: pointer;
 }
 
+.contactButton:hover {
+  background-color: white;
+}
+
 /* menu */
 
 .menuDesktop {
@@ -59,6 +70,7 @@
   padding-bottom: 0rem;
   background-color: white;
   z-index: 1000;
+  background-color: rgb(248, 244, 244);
   border-bottom: solid 1px var(--wildGreen);
 }
 
@@ -154,8 +166,12 @@
 
 @media (max-width: 800px) {
   #nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding-bottom: 0rem;
-    justify-content: space-evenly;
+    
   }
   #navLogo {
     max-width: 200px;
@@ -165,6 +181,20 @@
   #contactContainer {
     display: none;
   }
+  .contactHomeButton {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--wildBlack);
+    background-color: white;
+    padding: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    margin: 1rem;
+    width: 90%;
+    display: block;
+    text-decoration: none;
+  }
+
   /* hamburger */
 
 #hamMenuContainer {
@@ -233,8 +263,9 @@
   top: 0;
 }
   .menu {
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem;
     padding: 0rem;
+    background-color: rgb(248, 244, 244);
   }
   .menu.active {
     display: block;

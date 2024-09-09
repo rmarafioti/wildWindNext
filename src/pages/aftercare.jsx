@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderArt from "@/components/HeaderArt";
+import Link from "next/link";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 import styles from "../styles/aftercare.module.css";
@@ -14,24 +15,26 @@ export default function Care({ initialAftercare }) {
 
   const seoData = getSeoData("Tattoo Aftercare", {
     path: "/aftercare",
-    description: "Essential tattoo aftercare guide from Wild Wind Tattoo. Learn how to properly care for your new tattoo, including instructions for Drylock and Tegaderm bandages.",
+    description:
+      "Essential tattoo aftercare guide from Wild Wind Tattoo. Learn how to properly care for your new tattoo, including instructions for Drylock and Tegaderm bandages.",
     schema: {
       "@type": "Article",
       headline: "Tattoo Aftercare Guide",
-      description: "Essential tattoo aftercare instructions from Wild Wind Tattoo",
+      description:
+        "Essential tattoo aftercare instructions from Wild Wind Tattoo",
       author: {
         "@type": "Organization",
-        name: siteConfig.siteName
+        name: siteConfig.siteName,
       },
       publisher: {
         "@type": "Organization",
         name: siteConfig.siteName,
         logo: {
           "@type": "ImageObject",
-          url: `${siteConfig.siteUrl}/wildWindFavicon.png`
-        }
-      }
-    }
+          url: `${siteConfig.siteUrl}/wildWindFavicon.png`,
+        },
+      },
+    },
   });
 
   /**
@@ -47,21 +50,21 @@ export default function Care({ initialAftercare }) {
     instructionsTag,
   }) {
     return (
-      <div className={styles.careContainer}>
+      <div
+        className={styles.careContainer}
+        onClick={() =>
+          openAftercarePopUp(
+            id,
+            headerOne,
+            instructionsOne,
+            headerTwo,
+            instructionsTwo,
+            instructionsTag
+          )
+        }
+      >
         <h2 className={styles.instructions}>{title}</h2>
-        <div
-          className={styles.iconButton}
-          onClick={() =>
-            openAftercarePopUp(
-              id,
-              headerOne,
-              instructionsOne,
-              headerTwo,
-              instructionsTwo,
-              instructionsTag
-            )
-          }
-        >
+        <div className={styles.iconButton}>
           <FaPlus />
         </div>
       </div>
@@ -92,6 +95,11 @@ export default function Care({ initialAftercare }) {
           />
         ))}
       </section>
+      <div className={styles.aftercareLinksContainer}>
+        <Link className={styles.aftercareLinks} href="/">
+          <h3 className={styles.linkHeader}>Home</h3>
+        </Link>
+      </div>
       <PopUp isOpen={popUp} closePopUp={closePopUp}>
         {popUpContent}
       </PopUp>
@@ -102,7 +110,7 @@ export default function Care({ initialAftercare }) {
 export async function getServerSideProps() {
   // Import the aftercare data here to ensure it's only loaded server-side
   const { aftercare } = await import("../data/aftercare");
-  
+
   return {
     props: {
       initialAftercare: aftercare,

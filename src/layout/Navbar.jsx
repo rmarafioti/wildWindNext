@@ -27,42 +27,48 @@ export default function Navbar() {
   return (
     <>
       <nav id={styles.nav}>
-        <Link
-          id={styles.contactContainer}
-          href="/contact"
-          aria-label="icon which links to the website's contact page"
-        >
-          <div id={styles.navLeft}>
-            <button id={styles.contactButton}>Contact Us</button>
+        <section className={styles.navelements}>
+          <Link
+            id={styles.contactContainer}
+            href="/contact"
+            aria-label="icon which links to the website's contact page"
+          >
+            <div id={styles.navLeft}>
+              <button id={styles.contactButton}>Contact Us</button>
+            </div>
+          </Link>
+          <Link href="/">
+            <Image
+              id={styles.navLogo}
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1721478504/wildWindSite/WWT_WHT_hpvy19.png"
+              alt="shop logo in nav bar"
+              priority
+              quality={75}
+              width={7601}
+              height={2165}
+              sizes="(max-width: 300px) 100vw, 300px"
+            />
+          </Link>
+
+          <div id={styles.hamMenuContainer} onClick={toggleMenu}>
+            <div
+              className={`${styles.menuButtonBurger} ${
+                menuOpen ? styles.open : ""
+              }`}
+            ></div>
           </div>
-        </Link>
-        <Link href="/">
-          <Image
-            id={styles.navLogo}
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1721478504/wildWindSite/WWT_WHT_hpvy19.png"
-            alt="shop logo in nav bar"
-            priority
-            quality={75}
-            width={7601}
-            height={2165}
-            sizes="(max-width: 300px) 100vw, 300px"
-          />
-        </Link>
-        <div id={styles.hamMenuContainer} onClick={toggleMenu}>
-          <div
-            className={`${styles.menuButtonBurger} ${
-              menuOpen ? styles.open : ""
-            }`}
-          ></div>
-        </div>
-        <Link
-          id={styles.contactContainer}
-          href="/contact"
-          aria-label="icon which links to the website's contact page"
-        >
-          <div id={styles.navRight}>
-            <button id={styles.contactButton}>Contact Us</button>
-          </div>
+          <Link
+            id={styles.contactContainer}
+            href="/contact"
+            aria-label="icon which links to the website's contact page"
+          >
+            <div id={styles.navRight}>
+              <button className={styles.contactButton}>Contact Us</button>
+            </div>
+          </Link>
+        </section>
+        <Link className={styles.contactHomeButton} href="/contact">
+          <p className={styles.linkContactHeader}>Contact Us</p>
         </Link>
       </nav>
 
@@ -144,6 +150,32 @@ export default function Navbar() {
 
       {/* mobile menu */}
       <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
+        <li id={styles.aboutItem}>
+          <section>
+            <Link className={styles.navContainer} href="/aboutus">
+              <h4
+                className={styles.link}
+                id={styles.aboutUs}
+                role="navbar element About Us"
+              >
+                ABOUT US
+              </h4>
+            </Link>
+            <div className={styles.subSection}>
+              <ul className={styles.subCategory}>
+                <Link className={styles.subLink} href="/aboutus#ourMission">
+                  <li className={styles.subItemAbout}>Our Mission</li>
+                </Link>
+                <Link className={styles.subLink} href="/aboutus#media">
+                  <li className={styles.subItemAbout}>Media</li>
+                </Link>
+                <Link className={styles.subLink} href="/aboutus#reviews">
+                  <li className={styles.subItemAbout}>Shop Reviews</li>
+                </Link>
+              </ul>
+            </div>
+          </section>
+        </li>
         <li id={styles.tattooItem}>
           <section>
             <Link className={styles.navContainer} href="/tattoos">
@@ -168,39 +200,6 @@ export default function Navbar() {
                 </Link>
                 <Link className={styles.subLink} href="/allietats">
                   <li className={styles.subItem}>Allie Sider</li>
-                </Link>
-              </ul>
-            </div>
-          </section>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.navContainer} href="/contact">
-            <h4 className={styles.link} role="navbar element Contact">
-              CONTACT US
-            </h4>
-          </Link>
-        </li>
-        <li id={styles.aboutItem}>
-          <section>
-            <Link className={styles.navContainer} href="/aboutus">
-              <h4
-                className={styles.link}
-                id={styles.aboutUs}
-                role="navbar element About Us"
-              >
-                ABOUT US
-              </h4>
-            </Link>
-            <div className={styles.subSection}>
-              <ul className={styles.subCategory}>
-                <Link className={styles.subLink} href="/aboutus#ourMission">
-                  <li className={styles.subItemAbout}>Our Mission</li>
-                </Link>
-                <Link className={styles.subLink} href="/aboutus#media">
-                  <li className={styles.subItemAbout}>Media</li>
-                </Link>
-                <Link className={styles.subLink} href="/aboutus#reviews">
-                  <li className={styles.subItemAbout}>Shop Reviews</li>
                 </Link>
               </ul>
             </div>

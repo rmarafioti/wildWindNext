@@ -24,26 +24,28 @@ export default function MercedesTats() {
 
   const seoData = getSeoData("Mercy Wright", {
     path: "/mercytats",
-    description: "Meet Mercy Wright, talented tattoo artist at Wild Wind Tattoo Chicago. View her diverse portfolio, learn about her passion for clean, meticulous tattoos, and book your session today.",
+    description:
+      "Meet Mercy Wright, talented tattoo artist at Wild Wind Tattoo Chicago. View her diverse portfolio, learn about her passion for clean, meticulous tattoos, and book your session today.",
     schema: {
       "@type": "Person",
-      "name": "Mercy Wright",
-      "jobTitle": "Tattoo Artist",
-      "description": "Talented tattoo artist specializing in clean, meticulous designs",
-      "worksFor": {
+      name: "Mercy Wright",
+      jobTitle: "Tattoo Artist",
+      description:
+        "Talented tattoo artist specializing in clean, meticulous designs",
+      worksFor: {
         "@type": "TattooParlor",
-        "name": siteConfig.siteName,
-        "address": {
+        name: siteConfig.siteName,
+        address: {
           "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.streetAddress,
-          "addressLocality": siteConfig.address.addressLocality,
-          "addressRegion": siteConfig.address.addressRegion,
-          "postalCode": siteConfig.address.postalCode,
-          "addressCountry": siteConfig.address.addressCountry
-        }
+          streetAddress: siteConfig.address.streetAddress,
+          addressLocality: siteConfig.address.addressLocality,
+          addressRegion: siteConfig.address.addressRegion,
+          postalCode: siteConfig.address.postalCode,
+          addressCountry: siteConfig.address.addressCountry,
+        },
       },
-      "url": `${siteConfig.siteUrl}/mercytats`
-    }
+      url: `${siteConfig.siteUrl}/mercytats`,
+    },
   });
 
   return (
@@ -54,8 +56,8 @@ export default function MercedesTats() {
         <HeaderArtTwo />
       </div>
       <p className={styles.artistAbout}>
-        Driven by a passion for art, Mercy&apos;s interest in tattooing began
-        at a young age. She takes immense pride in every piece she creates,
+        Driven by a passion for art, Mercy&apos;s interest in tattooing began at
+        a young age. She takes immense pride in every piece she creates,
         consistently striving to deliver her best effort in all her work. With a
         broad range of tattoo styles, Mercy is always eager to take on new
         challenges. She has honed her craft to ensure her tattoos are
@@ -101,7 +103,7 @@ export default function MercedesTats() {
       </section>
       <div className={styles.tattooLinksContainer}>
         <Link className={styles.tattooLinks} href="/tattoos">
-          <p className={styles.linkHeader}>Tattoos</p>
+          <p className={styles.linkHeader}>Back to Our Artists</p>
         </Link>
       </div>
     </article>
