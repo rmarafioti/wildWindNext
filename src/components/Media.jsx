@@ -1,14 +1,12 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import SEO from "@/components/SEO";
 import styles from "../styles/media.module.css";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 export default function Media() {
   const seoData = getSeoData("Media", {
-    path: "/media",
+    path: "/aboutus#media",
     description:
       "Explore Wild Wind Tattoo's media collaborations, including partnerships with Harley-Davidson and At-Bay. See our featured work and creative projects in Chicago's tattoo scene.",
     schema: {

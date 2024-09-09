@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaStar } from "react-icons/fa";
 import { reviews } from "../data/reviews";
 import styles from "../styles/reviews.module.css";
@@ -12,7 +10,7 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
  */
 export default function Reviews() {
   const seoData = getSeoData("Reviews", {
-    path: "/reviews",
+    path: "/aboutus#reviews",
     description:
       "Read glowing testimonials from Wild Wind Tattoo's satisfied clients. Discover why our Chicago studio is highly rated for its welcoming atmosphere, skilled artists, and exceptional tattoo work.",
     schema: {

@@ -144,13 +144,6 @@ export default function Navbar() {
 
       {/* mobile menu */}
       <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
-        {/*<li className={styles.navItem}>
-          <Link className={styles.navContainer} href="/contact">
-            <h4 className={styles.link} role="navbar element Contact">
-              CONTACT US
-            </h4>
-          </Link>
-        </li>*/}
         <li id={styles.tattooItem}>
           <section>
             <Link className={styles.navContainer} href="/tattoos">
