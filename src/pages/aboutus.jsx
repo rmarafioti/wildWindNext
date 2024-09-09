@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AboutSlide from "@/components/AboutSlide";
 import HeaderArt from "@/components/HeaderArt";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { BsDot } from "react-icons/bs";
+/*import { FaFacebookSquare, FaInstagram } from "react-icons/fa";*/
+import Reviews from "@/components/Reviews";
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -96,6 +98,9 @@ export default function Shop({ initialPhoto }) {
         <HeaderArt />
       </div>
       <AboutSlide imageUrl={currentPhoto.image} />
+      <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
+        Our Mission
+      </h2>
       <p className={styles.firstParagraph}>
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert
         tattooing in Chicago since 2015. Located in vibrant Wicker Park, Wild
@@ -105,14 +110,13 @@ export default function Shop({ initialPhoto }) {
         you will enjoy a positive experience, staying with you as long as your
         tattoo.
       </p>
-      <h2 className={`${styles.shopHeader} ${styles.ourMission}`}>
-        Our Mission
-      </h2>
-      <ul className={styles.unorderedList}>
-        <li className={styles.missionItem}>Variety</li>
-        <li className={styles.missionItem}>Comfort</li>
-        <li className={styles.missionItem}>Professionalism</li>
-      </ul>
+      <div className={styles.unorderedList}>
+        <p className={styles.missionItem}>Variety</p>
+        <BsDot className={styles.dot} />
+        <p className={styles.missionItem}>Comfort</p>
+        <BsDot className={styles.dot} />
+        <p className={styles.missionItem}>Professionalism</p>
+      </div>
       <section className={styles.shopMiddleParagraphs}>
         <p className={styles.middleParagraph}>
           You can expect to be treated with respect and care at WWT. We will
@@ -129,7 +133,11 @@ export default function Shop({ initialPhoto }) {
           clean, creative, and artistic environment.
         </p>
       </section>
-      <h2 className={styles.shopHeader}>Community</h2>
+      <div className={styles.communitySection}>
+        <BsDot className={styles.dot} />
+        <p className={styles.missionItem}>Community</p>
+        <BsDot className={styles.dot} />
+      </div>
       <p className={styles.shopParagraphs}>
         Wild Wind Tattoo is proud to serve and work with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
@@ -138,13 +146,11 @@ export default function Shop({ initialPhoto }) {
         Hire Trans Now initiative.
       </p>
       <div className={styles.shopLinksContainer}>
-        <Link href="/reviews" className={styles.shopLinks}>
-          <h3 className={styles.linkHeader}>Reviews</h3>
-        </Link>
         <Link href="/media" className={styles.shopLinks}>
           <h3 className={styles.linkHeader}>Media</h3>
         </Link>
       </div>
+      <Reviews />
     </article>
   );
 }

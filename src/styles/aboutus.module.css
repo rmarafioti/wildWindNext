@@ -41,11 +41,11 @@
 }
 
 .firstParagraph {
-  border-top: 1px solid var(--wildGreen);
   color: var(--wildBlack);
   padding-top: 1rem;
   max-width: 480px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .shopHeader {
@@ -65,18 +65,20 @@
 .unorderedList {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 0rem;
   padding: 0;
-  list-style-type: none;
+  width: 480px;
+  border-bottom: 1px solid var(--wildGreen);
 }
 
 .missionItem {
-  color: var(--wildBlack);
-  font-size: 18px;
+  color: var(--wildGreen);
+  font-size: 24px;
   font-style: italic;
   padding: 0rem 1rem 1rem 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
+  margin-top: 1rem;
 }
 
 .shopMiddleParagraphs {
@@ -95,6 +97,8 @@
   color: var(--wildBlack);
   text-align: center;
   max-width: 480px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--wildGreen);
 }
 
 .bottomParagraph,
@@ -103,7 +107,16 @@
 }
 
 .bottomParagraph {
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
+}
+
+.communitySection {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  font-size: 32px;
 }
 
 .shopLinksContainer {
