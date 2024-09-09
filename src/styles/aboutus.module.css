@@ -33,16 +33,16 @@
 }
 
 .quickLink {
-  color: var(--wildGreen);
+  color: var(--wildDarkGreen);
   font-size: 24px;
   padding: 0.5rem;
   margin-top: 1rem;
-  border: 2px solid lightgray;
+  border: 2px solid var(--wildBlue);
 }
 
 .quickLink:hover {
   cursor: pointer;
-  color: var(--wildDarkGreen);
+  border: 2px solid var(--wildDarkGreen);
 }
 
 .shopImagesContainer {

@@ -19,15 +19,15 @@ export default function Faq({ initialFaqs }) {
     description: `Find answers to common questions about Wild Wind Tattoo in Chicago. Learn about walk-ins, pricing, appointment booking, deposits, and more before your visit to our Wicker Park studio.`,
     schema: {
       "@type": "FAQPage",
-      mainEntity: initialFaqs.map(faq => ({
+      mainEntity: initialFaqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
           "@type": "Answer",
-          text: faq.answer
-        }
-      }))
-    }
+          text: faq.answer,
+        },
+      })),
+    },
   });
 
   /**
@@ -71,8 +71,8 @@ export default function Faq({ initialFaqs }) {
         {popUpContent}
       </PopUp>
       <div className={styles.faqLinksContainer}>
-        <Link className={styles.faqLinks} href="/aboutus">
-          <h3 className={styles.linkHeader}>About Us</h3>
+        <Link className={styles.faqLinks} href="/">
+          <h3 className={styles.linkHeader}>Home</h3>
         </Link>
       </div>
     </article>

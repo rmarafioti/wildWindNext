@@ -95,7 +95,7 @@ export default function AllieTats() {
       </section>
       <div className={styles.tattooLinksContainer}>
         <Link className={styles.tattooLinks} href="/tattoos">
-          <p className={styles.linkHeader}>Tattoos</p>
+          <p className={styles.linkHeader}>Back to Our Artists</p>
         </Link>
       </div>
     </article>

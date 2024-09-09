@@ -73,33 +73,6 @@ export default function Home() {
     <article className={styles.home} id="top">
       <SEO {...seoData} />
       <p className={styles.welcome}>Walk-ins Welcome!</p>
-      <p className={styles.contactParagraph}>
-        Book your appointment today or visit us at 1452 N. Western Ave. Chicago
-        IL 60622.
-      </p>
-      <Link className={styles.contactHomeButton} href="/contact">
-        <p className={styles.linkContactHeader}>Contact Us</p>
-      </Link>
-      <p
-        className={`${styles.contactParagraph} ${styles.contactParagraphBottom}`}
-      >
-        Have questions? Call us at:
-        <a
-          href="tel:+17732272027"
-          aria-label="Call 773 227 2027"
-          className={styles.contactItem}
-        >
-          773.227.2027
-        </a>{" "}
-        or email:
-        <a
-          href="mailto:wildwindtattoo@gmail.com"
-          aria-label="Send an email to wildwindtattoo@gmail.com"
-          className={styles.contactItem}
-        >
-          wildwindtattoo@gmail.com
-        </a>
-      </p>
       <LandingPageArt />
       <ScrollTop />
       <h1 className={styles.headerTwo}>

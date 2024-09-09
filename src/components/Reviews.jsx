@@ -4,6 +4,7 @@ import { reviews } from "../data/reviews";
 import styles from "../styles/reviews.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
+import { Link } from "react-scroll";
 
 /**
  * @component Reviews features reviews by clients about the business by way of review.js

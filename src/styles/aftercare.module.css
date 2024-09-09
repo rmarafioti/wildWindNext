@@ -39,14 +39,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
   margin-bottom: 1rem;
-  border-bottom: solid 1px var(--wildGreen);
 }
 
 .careContainer {
   margin-top: 2rem;
   flex-direction: row;
+  border: 2px solid var(--wildBlue)
+}
+
+.careContainer:hover {
+  cursor: pointer;
+  border: 2px solid var(--wildDarkGreen)
 }
 
 .careContainerBottom {
@@ -57,7 +62,7 @@
   display: flex;
   align-items: center;
   font-weight: normal;
-  color: var(--wildBlack);
+  color: var(--wildDarkGreen);
   margin-right: 0.5rem;
 }
 
@@ -81,6 +86,31 @@
   background-color: var(--wildGold);
 }
 
+.aftercareLinksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.aftercareLinks {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildBlack);
+  border-radius: 5px;
+  background-color: var(--wildGoldTrans);
+  width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.aftercareLinks:hover {
+  background-color: var(--wildGold);
+}
+
+.linkHeader {
+  font-weight: normal;
+}
+
 @media (max-width: 586px) {
   .afterTagline {
     text-align: center;
@@ -90,12 +120,18 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid 1px var(--wildGreen);
   }
   .instructions {
-    font-size: 20px;
+    font-size: 22px;
     text-wrap: wrap;
     padding-bottom: 1rem 0rem 1rem 0rem;
+  }
+  .aftercareLinksContainer,
+  .aftercareLinks {
+    width: 100%;
+  }
+  .aftercareLinks {
+    background-color: var(--wildGold);
   }
   .header {
     width: 100%;
