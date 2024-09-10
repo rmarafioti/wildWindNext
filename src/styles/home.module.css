@@ -10,7 +10,7 @@
 }
 
 .welcome {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: normal;
   margin-top: 1rem;
   padding: .5rem;
@@ -21,11 +21,28 @@
   transform: rotate(3deg);
 }
 
-.headerTwo {
-  font-size: 30px;
+.mainHeader {
+  color: var(--wildGreen);
+  font-size: 40px;
   font-weight: normal;
-  border-bottom: 1px solid var(--wildGreen);
   margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--wildBlue);
+}
+
+.headerTwo {
+  color: var(--wildGreen);
+  font-size: 40px;
+  font-weight: normal;
+  margin: 2rem 0rem 0rem 0rem;
+  padding: 1rem;
+  width: 480px;
+}
+
+#headerTwo {
+  font-size: 32px;
+  border-bottom: none;
+  margin-bottom: 0rem;
 }
 
 .listItem {
@@ -38,8 +55,7 @@
 .homeReview {
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
-  border: 1px solid lightgray;
+  border: 3px solid var(--wildBlue);
   padding: 1rem;
   margin: 0.5rem;
 }
@@ -116,7 +132,6 @@
   text-decoration: none;
   color: var(--wildBlack);
   background-color: var(--wildGoldTrans);
-  border-radius: 5px;
   width: 300px;
   transition: background-color 0.3s ease;
 }
@@ -148,7 +163,9 @@
     border-bottom: 1px solid var(--wildGreen);
   }
   .headerTwo {
-    padding-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 0rem;
+    padding-bottom: .5rem;
   }
   .homeLink {
     width: 100%;

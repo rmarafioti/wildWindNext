@@ -34,7 +34,7 @@ export default function Navbar() {
             aria-label="icon which links to the website's contact page"
           >
             <div id={styles.navLeft}>
-              <button id={styles.contactButton}>Contact Us</button>
+              <button className={styles.contactButton}>Contact Us</button>
             </div>
           </Link>
           <Link href="/">
@@ -150,35 +150,45 @@ export default function Navbar() {
 
       {/* mobile menu */}
       <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
-        <li id={styles.aboutItem}>
+        <article id={styles.aboutItem}>
+          <Link
+            className={styles.navContainer}
+            id={styles.about}
+            href="/aboutus"
+          >
+            <h4
+              className={styles.link}
+              id={styles.aboutUs}
+              role="navbar element About Us"
+            >
+              ABOUT US
+            </h4>
+          </Link>
           <section>
-            <Link className={styles.navContainer} href="/aboutus">
-              <h4
-                className={styles.link}
-                id={styles.aboutUs}
-                role="navbar element About Us"
-              >
-                ABOUT US
-              </h4>
-            </Link>
             <div className={styles.subSection}>
-              <ul className={styles.subCategory}>
+              <div className={styles.subCategory}>
                 <Link className={styles.subLink} href="/aboutus#ourMission">
-                  <li className={styles.subItemAbout}>Our Mission</li>
+                  <p className={styles.subItemAbout}>Our Mission</p>
                 </Link>
                 <Link className={styles.subLink} href="/aboutus#media">
-                  <li className={styles.subItemAbout}>Media</li>
+                  <p className={styles.subItemAbout}>Media</p>
                 </Link>
                 <Link className={styles.subLink} href="/aboutus#reviews">
-                  <li className={styles.subItemAbout}>Shop Reviews</li>
+                  <p className={styles.subItemAbout} id={styles.subItemBottom}>
+                    Shop Reviews
+                  </p>
                 </Link>
-              </ul>
+              </div>
             </div>
           </section>
-        </li>
-        <li id={styles.tattooItem}>
+        </article>
+        <article id={styles.tattooItem}>
           <section>
-            <Link className={styles.navContainer} href="/tattoos">
+            <Link
+              className={styles.navContainer}
+              id={styles.tattoos}
+              href="/tattoos"
+            >
               <h4
                 className={styles.link}
                 id={styles.tats}
@@ -188,23 +198,25 @@ export default function Navbar() {
               </h4>
             </Link>
             <div className={styles.subSection}>
-              <ul className={styles.subCategory}>
+              <div className={styles.subCategory}>
                 <Link className={styles.subLink} href="/richtats">
-                  <li className={styles.subItem}>Rich Marafioti</li>
+                  <p className={styles.subItem}>Rich Marafioti</p>
                 </Link>
                 <Link className={styles.subLink} href="/mercytats">
-                  <li className={styles.subItem}>Mercy Wright</li>
+                  <p className={styles.subItem}>Mercy Wright</p>
                 </Link>
                 <Link className={styles.subLink} href="/trevortats">
-                  <li className={styles.subItem}>Trevor Aarsvold</li>
+                  <p className={styles.subItem}>Trevor Aarsvold</p>
                 </Link>
                 <Link className={styles.subLink} href="/allietats">
-                  <li className={styles.subItem}>Allie Sider</li>
+                  <p className={styles.subItem} id={styles.subItemBottom}>
+                    Allie Sider
+                  </p>
                 </Link>
-              </ul>
+              </div>
             </div>
           </section>
-        </li>
+        </article>
         <li className={styles.navItem}>
           <Link className={styles.navContainer} href="/aftercare">
             <h4 className={styles.link} role="navbar element Aftercare">

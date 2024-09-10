@@ -75,7 +75,7 @@ export default function Home() {
       <p className={styles.welcome}>Walk-ins Welcome!</p>
       <LandingPageArt />
       <ScrollTop />
-      <h1 className={styles.headerTwo}>
+      <h1 className={styles.mainHeader}>
         Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
       </h1>
       <p className={styles.homeParagraph}>
@@ -88,7 +88,9 @@ export default function Home() {
         you as long as your tattoo.
       </p>
 
-      <h2 className={styles.headerTwo}>Community Engagement</h2>
+      <h2 className={styles.headerTwo} id={styles.headerTwo}>
+        Community Engagement
+      </h2>
 
       <p className={styles.homeParagraph}>
         Wild Wind Tattoo proudly serves and works with our strong community.

@@ -58,7 +58,6 @@
   }
   
   .tattoo {
-    border-radius: 5px;
     height: 500px;
     width: auto;
   }
@@ -71,7 +70,6 @@
   
   .arrow {
     background-color: white;
-    border-radius: 5px;
     margin: 0rem 1rem 0rem 1rem;
     font-size: 40px;
     cursor: pointer;
@@ -93,7 +91,6 @@
   }
   
   .indicator {
-    border-radius: 5px;
     padding: 0.3rem;
     cursor: pointer;
   }
@@ -113,7 +110,6 @@
     text-align: center;
     text-decoration: none;
     color: var(--wildBlack);
-    border-radius: 5px;
     background-color: var(--wildGoldTrans);
     width: 300px;
     transition: background-color 0.3s ease;

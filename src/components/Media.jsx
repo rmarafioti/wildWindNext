@@ -70,7 +70,7 @@ export default function Media() {
       <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.mediaHeader} id="media">
-          MEDIA
+          Media
         </h1>
       </div>
       <h2 className={styles.mediaHeaderTag}>

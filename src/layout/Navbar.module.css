@@ -24,7 +24,7 @@
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  display: none;
+  visibility: hidden;
 }
 
 .navelements {
@@ -42,7 +42,9 @@
   text-decoration: none;
 }
 
-.menuButtonBurger, #hamMenuContainer, .open {
+.menuButtonBurger,
+#hamMenuContainer,
+.open {
   display: none;
 }
 
@@ -89,7 +91,7 @@
 }
 
 .subCategory {
- margin-left: 1rem;
+  margin-left: 1rem;
   display: none;
 }
 
@@ -97,20 +99,19 @@
   text-decoration: none;
 }
 
-.subItemAbout:hover, .subItem:hover {
-  color: var(--wildDarkGreen);
-  background-color: var(--wildGoldTrans);
-}
-
-.subItem, .subItemAbout {
-  color: var(--wildDarkGreen);
-  padding: .5rem;
-  margin-left: .5rem;
-  margin-bottom: 1rem;
-}
-
+.subItem,
 .subItemAbout {
-  margin-left: .5rem;
+  color: var(--wildDarkGreen);
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: rgb(248, 244, 244);
+  list-style-type: none;
+}
+
+.subItemAbout:hover,
+.subItem:hover {
+  border: 1px solid var(--wildDarkGreen);
 }
 
 #giftCards {
@@ -120,7 +121,8 @@
   list-style-type: none;
 }
 
-#tattooItem:hover .subCategory, #aboutItem:hover .subCategory {
+#tattooItem:hover .subCategory,
+#aboutItem:hover .subCategory {
   display: block;
 }
 
@@ -148,7 +150,7 @@
   padding: 0.5rem;
   transition: background-color 0.5s ease;
   font-weight: 400;
-  margin: .5rem 0rem .5rem 0.5rem;
+  margin: 0.5rem 0rem 0.5rem 0.5rem;
 }
 
 #aboutItem,
@@ -171,11 +173,10 @@
     align-items: center;
     text-align: center;
     padding-bottom: 0rem;
-    
   }
   #navLogo {
     max-width: 200px;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     margin: 1rem 1rem 0.5rem 5rem;
   }
   #contactContainer {
@@ -186,7 +187,7 @@
     font-weight: bold;
     color: var(--wildBlack);
     background-color: white;
-    padding: .5rem;
+    padding: 0.5rem;
     margin-top: 1rem;
     cursor: pointer;
     margin: 1rem;
@@ -197,76 +198,78 @@
 
   /* hamburger */
 
-#hamMenuContainer {
-  background-color: white;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 1.5rem 1rem 1.5rem 0rem;
-  width: 45.5px;
-  height: 45.5px;
-  transition: all 0.5s ease-in-out;
-}
+  #hamMenuContainer {
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 1.5rem 1rem 1.5rem 0rem;
+    width: 45.5px;
+    height: 45.5px;
+    transition: all 0.5s ease-in-out;
+  }
 
-.menuButtonBurger {
-  position: relative;
-  width: 25px;
-  height: 3px;
-  background: var(--wildBlack);
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-  display: block;
-  cursor: pointer;
-}
+  .menuButtonBurger {
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: var(--wildBlack);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    cursor: pointer;
+  }
 
-.menuButtonBurger::before,
-.menuButtonBurger::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background: var(--wildBlack);
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-  transform-origin: center;
-  top: 10px;
-  left: 0px;
-}
+  .menuButtonBurger::before,
+  .menuButtonBurger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--wildBlack);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform-origin: center;
+    top: 10px;
+    left: 0px;
+  }
 
-.menuButtonBurger::after {
-  top: -10px;
-}
+  .menuButtonBurger::after {
+    top: -10px;
+  }
 
-.menuButtonBurger::before {
-  transform: translateY(-16px);
-}
+  .menuButtonBurger::before {
+    transform: translateY(-16px);
+  }
 
-.menuButtonBurger::after {
-  transform: translateY(16px);
-}
+  .menuButtonBurger::after {
+    transform: translateY(16px);
+  }
 
-/* animation */
+  /* animation */
 
-.menuButtonBurger.open {
-  background: transparent;
-}
+  .menuButtonBurger.open {
+    background: transparent;
+  }
 
-.menuButtonBurger.open::before {
-  transform: rotate(-45deg) translate(0, 0);
-  top: 0;
-}
+  .menuButtonBurger.open::before {
+    transform: rotate(-45deg) translate(0, 0);
+    top: 0;
+  }
 
-.menuButtonBurger.open::after {
-  transform: rotate(45deg) translate(0, 0);
-  top: 0;
-}
+  .menuButtonBurger.open::after {
+    transform: rotate(45deg) translate(0, 0);
+    top: 0;
+  }
+
   .menu {
     margin: 0rem;
     padding: 0rem;
     background-color: rgb(248, 244, 244);
   }
+
   .menu.active {
     display: block;
     flex-direction: column;
@@ -277,53 +280,44 @@
   .menuDesktop {
     display: none;
   }
-  #aboutItem, #tattooItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 0rem;
-  }
-  .navItem a,
-  #aboutItem,
-  #tattooItem {
+
+  .navContainer {
     border-bottom: 1px solid var(--wildGreen);
   }
-  .link {
-    opacity: 1;
+
+  #about, #tattoos {
+    border-bottom: none;
   }
-  .subSection {
-    margin-left: 2rem;
-  }
-  .expandContainer {
+
+  #aboutItem,
+  #tattooItem {
     display: flex;
-    margin-top: 1rem;
-    padding: .5rem .2rem .5rem .5rem;
-    background-color: rgb(237, 231, 231);
+    flex-direction: column;
+    margin-left: 0rem;
+    border-bottom: 1px solid var(--wildGreen);
   }
-  .open {
-    font-weight: normal;
+
+  .subItemAbout,
+  .subItem {
+    border-top: 1px solid lightgrey;
   }
-  .expand {
-    font-size: 25px;
-  }
+
   .subCategory {
     display: block;
   }
- 
-  .drop.active {
-    position: absolute;
-    margin: -19rem 0rem 0rem 4rem;
+
+  .subItem,
+  .subItemAbout {
+    color: var(--wildDarkGreen);
+    padding: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
   }
 
-  .droptats.active {
-    position: absolute;
-    margin: -.6rem 0rem 0rem .5rem;
+  #subItemBottom {
+    margin-bottom: 0.5rem;
   }
-  .dropLink {
-    padding: 1rem;
-    margin: 0;
-  }
+
   #hamMenuContainer {
     width: 40px;
     height: 40px;
@@ -337,4 +331,3 @@
     height: 50px;
   }
 }
-

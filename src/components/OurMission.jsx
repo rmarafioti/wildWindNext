@@ -6,7 +6,7 @@ export default function OurMission() {
   return (
     <>
       <h2 className={styles.shopHeader} id="ourMission">
-        OUR MISSION
+        Our Mission
       </h2>
       <p className={styles.firstParagraph}>
         Rich Marafioti founded Wild Wind Tattoo, which has provided expert

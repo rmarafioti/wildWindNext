@@ -17,7 +17,6 @@
   padding: .5rem;
   font-weight: normal;
   border: 1px solid var(--wildBlack);
-  border-radius: 5px;
 }
 
 .form,
@@ -25,7 +24,6 @@
 .formSubmit {
   font-size: 16px;
   border: 1px solid var(--wildBlack);
-  border-radius: 4px;
   padding: 0.5rem;
   margin-bottom: 1rem;
   width: 480px;
@@ -68,7 +66,6 @@
   background-color: var(--wildDarkGreen);
   padding: 0.5rem;
   width: 480px;
-  border-radius: 5px;
   margin-top: 1rem;
   cursor: pointer;
 }
@@ -76,7 +73,6 @@
 .error {
   display: inline-block;
   background-color: var(--wildGold);
-  border-radius: 5px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   font-weight: normal;
   margin-bottom: 0.5rem;
