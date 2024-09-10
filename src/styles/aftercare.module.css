@@ -46,7 +46,9 @@
 .careContainer {
   margin-top: 2rem;
   flex-direction: row;
-  border: 2px solid var(--wildBlue)
+  justify-content: space-between;
+  border: 2px solid var(--wildBlue);
+  width: 480px;
 }
 
 .careContainer:hover {

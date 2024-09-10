@@ -77,7 +77,7 @@ export default function Reviews() {
       <SEO {...seoData} />
       <div className={styles.header}>
         <h1 className={styles.reviewHeader} id="reviews">
-          Reviews
+          Shop Reviews
         </h1>
       </div>
       <p className={styles.reviewTag}>

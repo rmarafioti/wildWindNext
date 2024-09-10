@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import HeaderArt from "@/components/HeaderArt";
+import Image from "next/image";
 import Form from "@/components/Form";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import ScrollTop from "@/components/ScrollTop";
 import styles from "../styles/contact.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
@@ -35,29 +35,9 @@ export default function Contact() {
   return (
     <div className={styles.contact}>
       <SEO {...seoData} />
+      <ScrollTop />
       <div className={styles.header}>
-        <h1 className={styles.contactHeader}>CONTACT US</h1>
-        <HeaderArt />
-      </div>
-      <div className={styles.shopIconContainer}>
-        <h1>
-          <a
-            href="https://www.instagram.com/wildwindtattoo/?hl=en"
-            className={styles.shopIcon}
-            aria-label="icon which links to Wild Wind Tattoo's Instagram page"
-          >
-            <FaInstagram />
-          </a>
-        </h1>
-        <h1>
-          <a
-            href="https://www.facebook.com/wildwindtattoo/"
-            className={styles.shopIcon}
-            aria-label="icon which links to Wild Wind Tattoo's Facebook page"
-          >
-            <FaFacebookSquare />
-          </a>
-        </h1>
+        <h1 className={styles.contactHeader}>Get tattooed today!</h1>
       </div>
       <section className={styles.contactTagHeader}>
         <h2 className={styles.headerTagline}>
@@ -69,10 +49,21 @@ export default function Contact() {
           <Link className={styles.reviewLink} href="/faqs">
             FAQs
           </Link>{" "}
-          first
         </p>
       </section>
       <Form />
+      <div className={styles.shopLogoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={1134}
+          height={1100}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.shopLogo}
+        />
+      </div>
       <section className={styles.contactInfoContainer}>
         <div className={styles.contactInfo}>
           <p>ADDRESS:</p>

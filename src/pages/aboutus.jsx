@@ -95,9 +95,7 @@ export default function Shop({ initialPhoto }) {
     <article className={styles.shopAbout}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.mainShopHeader} id="top">
-          ABOUT US
-        </h1>
+        <h1 className={styles.mainShopHeader}>ABOUT US</h1>
         <HeaderArt />
       </div>
       <div className={styles.quickLinkSection}>

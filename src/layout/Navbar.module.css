@@ -1,4 +1,4 @@
-#nav {
+.nav {
   z-index: 999;
   background: linear-gradient(var(--wildGreen), rgb(180, 209, 121));
 }
@@ -56,7 +56,6 @@
   padding: 1rem 1rem;
   margin-top: 1rem;
   border-radius: 0px;
-  transform: rotate(3deg);
   cursor: pointer;
 }
 
@@ -167,7 +166,7 @@
 }
 
 @media (max-width: 800px) {
-  #nav {
+  .nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,11 +280,17 @@
     display: none;
   }
 
+  .subItemAbout:hover,
+  .subItem:hover {
+    border: none;
+  }
+
   .navContainer {
     border-bottom: 1px solid var(--wildGreen);
   }
 
-  #about, #tattoos {
+  #about,
+  #tattoos {
     border-bottom: none;
   }
 
