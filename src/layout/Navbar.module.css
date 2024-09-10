@@ -99,18 +99,19 @@
   text-decoration: none;
 }
 
-.subItemAbout:hover,
-.subItem:hover {
-  color: var(--wildDarkGreen);
-  background-color: var(--wildGoldTrans);
-}
-
 .subItem,
 .subItemAbout {
   color: var(--wildDarkGreen);
   padding: 0.5rem;
   margin-left: 0.5rem;
   margin-bottom: 1rem;
+  background-color: rgb(248, 244, 244);
+  list-style-type: none;
+}
+
+.subItemAbout:hover,
+.subItem:hover {
+  border: 1px solid var(--wildDarkGreen);
 }
 
 #giftCards {
