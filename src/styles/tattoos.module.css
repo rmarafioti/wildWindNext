@@ -26,6 +26,11 @@
   z-index: 10;
 }
 
+.tatPhoto {
+  height: auto;
+  width: 480px;
+}
+
 .artistHeader {
   font-size: 30px;
   font-weight: normal;
@@ -34,37 +39,34 @@
 .artistLinksContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .artistLink {
   margin: 1rem 0rem 1rem 0rem;
-  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--wildBlack);
-  background-color: var(--wildGoldTrans);
-  width: 300px;
+  margin-bottom: 3rem;
+  width: 480px;
   transition: background-color 0.3s ease;
 }
 
-.artistLink:hover {
+.linkHeader:hover {
   background-color: var(--wildGold);
 }
 
 .linkHeader {
+  font-size: 18px;
   font-weight: normal;
+  padding: 0.5rem;
+  background-color: var(--wildGoldTrans);
 }
 
 @media (max-width: 586px) {
   .artistLinksContainer,
-  .artistLink {
-    width: 100%;
-  }
-  .artistLink {
-    background-color: var(--wildGold);
-  }
-  .header {
+  .artistLink, .header, .tatPhoto {
     width: 100%;
   }
 }

@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav id={styles.nav}>
+      <nav className={styles.nav} id="top">
         <section className={styles.navelements}>
           <Link
             id={styles.contactContainer}

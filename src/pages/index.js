@@ -70,7 +70,7 @@ export default function Home() {
   });
 
   return (
-    <article className={styles.home} id="top">
+    <article className={styles.home}>
       <SEO {...seoData} />
       <p className={styles.welcome}>Walk-ins Welcome!</p>
       <LandingPageArt />
@@ -104,7 +104,7 @@ export default function Home() {
       <Link href="/aboutus" className={styles.homeLink}>
         <h3 className={styles.linkHeader}>About us</h3>
       </Link>
-      <h2 className={styles.headerTwo}>Expert Tattoo Services</h2>
+      <h2 className={styles.headerTwo}>Tattoo Services</h2>
       <ul className={styles.tattooServices}>
         <li className={styles.listItem}>
           <h3 className={styles.headerThree}>Variety and Customization:</h3>

@@ -14,14 +14,21 @@
 }
 
 .contactHeader {
-  margin: 2rem 0rem 3rem 0rem;
+  /*margin: 2rem 0rem 1rem 0rem;
   font-weight: normal;
   color: white;
   font-size: 49px;
   font-weight:800;
   -webkit-text-stroke: 2px var(--wildDarkGreen);
   letter-spacing: 2px;
-  z-index: 10;
+  z-index: 10;*/
+
+  color: var(--wildGreen);
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding: 0rem;
+  text-align: center;
 }
 
 .contactTagHeader {
@@ -29,7 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0rem 1rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
   border-bottom: 1px solid var(--wildGreen);
 }
 
@@ -37,7 +44,7 @@
 .headerTaglineTwo {
   color: var(--wildBlack);
   font-weight: normal;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .headerTagline {
@@ -52,24 +59,9 @@
   padding: 0.2rem;
 }
 
-.shopIconContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.shopIcon {
-  font-size: 40px;
-  padding: 0rem 0.5rem 0rem 0.5rem;
-}
-
-.shopIcon:visited,
-.shopIcon:link {
-  color: var(--wildGreen);
-}
-
-.contactInfoContainer {
-  border-top: 1px solid var(--wildGreen);
+.shopLogo {
+  height: auto;
+  width: 400px;
 }
 
 .contactInfo {
@@ -137,7 +129,7 @@
     margin: 1rem;
     text-align: center;
   }
-  .contactButtonSection {
+  .contactButtonSection, .shopLogo {
     width: 100%;
   }
   .contactButtons {

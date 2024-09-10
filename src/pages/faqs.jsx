@@ -35,7 +35,10 @@ export default function Faq({ initialFaqs }) {
    */
   function FaqCard({ id, question, answer }) {
     return (
-      <div className={styles.faqContainer}>
+      <div
+        className={styles.faqContainer}
+        onClick={() => openFaqPopUp(id, question, answer)}
+      >
         <h2 className={styles.faq}>{question}</h2>
         <div
           id={styles.iconButton}
