@@ -30,7 +30,6 @@
 #popUpButton {
   color: var(--wildBlack);
   display: flex;
-  border-radius: 5px;
   padding: 8px;
   font-size: 15px;
   background-color: var(--wildGoldTrans);

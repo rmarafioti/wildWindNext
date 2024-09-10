@@ -34,7 +34,7 @@ export default function Navbar() {
             aria-label="icon which links to the website's contact page"
           >
             <div id={styles.navLeft}>
-              <button id={styles.contactButton}>Contact Us</button>
+              <button className={styles.contactButton}>Contact Us</button>
             </div>
           </Link>
           <Link href="/">
@@ -151,7 +151,11 @@ export default function Navbar() {
       {/* mobile menu */}
       <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
         <article id={styles.aboutItem}>
-          <Link className={styles.navContainer} href="/aboutus">
+          <Link
+            className={styles.navContainer}
+            id={styles.about}
+            href="/aboutus"
+          >
             <h4
               className={styles.link}
               id={styles.aboutUs}
@@ -180,7 +184,11 @@ export default function Navbar() {
         </article>
         <article id={styles.tattooItem}>
           <section>
-            <Link className={styles.navContainer} href="/tattoos">
+            <Link
+              className={styles.navContainer}
+              id={styles.tattoos}
+              href="/tattoos"
+            >
               <h4
                 className={styles.link}
                 id={styles.tats}
