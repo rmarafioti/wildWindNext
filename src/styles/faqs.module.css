@@ -31,7 +31,6 @@
   font-weight: normal;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: solid 1px var(--wildGreen);
 }
 
 .faqContainer {
@@ -107,7 +106,6 @@
     text-align: left;
     width: 100%;
     justify-content: space-between;
-    border: solid 2px lightgray;
   }
   .faq {
     font-size: 20px;
