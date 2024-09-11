@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BsDot } from "react-icons/bs";
 
 import styles from "../styles/aboutus.module.css";
@@ -52,6 +53,18 @@ export default function OurMission() {
         Fund. We are currently partnered with Chicago Therapy Collective&apos;s
         Hire Trans Now initiative.
       </p>
+      <div className={styles.shopLogoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726066721/wildWindSite/artSoul_qhthop.png"
+          alt="Tattoo shop logo"
+          priority
+          width={1762}
+          height={1}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.shopLogo}
+        />
+      </div>
     </>
   );
 }

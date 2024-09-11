@@ -7,6 +7,11 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+#ourMission {
+  scroll-margin-top: 100px; /* Adjust this based on your header height */
+}
+
+
 .header {
   display: flex;
   justify-content: center;
@@ -75,6 +80,12 @@
   padding: 0rem;
   width: 480px;
   text-align: center;
+}
+
+.shopLogo {
+  margin-top: 2rem;
+  height: auto;
+  width: 400px;
 }
 
 .unorderedList {
@@ -152,6 +163,7 @@
   }
   .shopHeader,
   .shopLinksContainer,
+  .shopLogo,
   .shopLinks,
   .shopImage,
   .unorderedList, .header, .quickLink, .quickLinkSection {
