@@ -42,7 +42,7 @@ export default function Shop({ initialPhoto }) {
             }, 300); // Add a 300ms delay
           } else {
             // For larger screens, no delay needed
-            const yOffset = -100; // Adjust this based on your header height
+            const yOffset = -50; // Adjust this based on your header height
             const y =
               element.getBoundingClientRect().top +
               window.pageYOffset +

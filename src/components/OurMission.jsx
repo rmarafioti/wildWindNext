@@ -41,18 +41,6 @@ export default function OurMission() {
           clean, creative, and artistic environment.
         </p>
       </section>
-      <div className={styles.communitySection}>
-        <BsDot className={styles.dot} />
-        <p className={styles.missionItem}>Community</p>
-        <BsDot className={styles.dot} />
-      </div>
-      <p className={styles.shopParagraphs}>
-        Wild Wind Tattoo is proud to serve and work with our strong community.
-        Over the years, we have held fundraisers supporting families of Pulse
-        Nightclub shooting victims, Project Fierce, and the Chicago Abortion
-        Fund. We are currently partnered with Chicago Therapy Collective&apos;s
-        Hire Trans Now initiative.
-      </p>
       <div className={styles.shopLogoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1726066721/wildWindSite/artSoul_qhthop.png"
@@ -65,6 +53,18 @@ export default function OurMission() {
           className={styles.shopLogo}
         />
       </div>
+      <div className={styles.communitySection}>
+        <BsDot className={styles.dot} />
+        <p className={styles.missionItem}>Community</p>
+        <BsDot className={styles.dot} />
+      </div>
+      <p className={styles.shopParagraphs}>
+        Wild Wind Tattoo is proud to serve and work with our strong community.
+        Over the years, we have held fundraisers supporting families of Pulse
+        Nightclub shooting victims, Project Fierce, and the Chicago Abortion
+        Fund. We are currently partnered with Chicago Therapy Collective&apos;s
+        Hire Trans Now initiative.
+      </p>
     </>
   );
 }
