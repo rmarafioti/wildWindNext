@@ -27,17 +27,29 @@ export default function Shop({ initialPhoto }) {
     const handleRouteChange = (url) => {
       if (url.includes("#")) {
         const hash = url.split("#")[1];
-        window.addEventListener("load", () => {
-          const element = document.getElementById(hash);
-          if (element) {
-            const yOffset = -100; // Adjust this based on your header height
+        const element = document.getElementById(hash);
+        if (element) {
+          // Check if the screen width is mobile size (e.g., 768px or less)
+          if (window.innerWidth <= 768) {
+            // Apply a delay only for mobile screens
+            setTimeout(() => {
+              const yOffset = -150; // Adjust this based on your header height
+              const y =
+                element.getBoundingClientRect().top +
+                window.pageYOffset +
+                yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }, 300); // Add a 300ms delay
+          } else {
+            // For larger screens, no delay needed
+            const yOffset = -150; // Adjust this based on your header height
             const y =
               element.getBoundingClientRect().top +
               window.pageYOffset +
               yOffset;
             window.scrollTo({ top: y, behavior: "smooth" });
           }
-        });
+        }
       }
     };
 
