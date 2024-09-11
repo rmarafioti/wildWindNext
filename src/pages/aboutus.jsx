@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import AboutSlide from "@/components/AboutSlide";
 import HeaderArt from "@/components/HeaderArt";
 import OurMission from "@/components/OurMission";
@@ -19,6 +20,30 @@ import styles from "../styles/aboutus.module.css";
  */
 export default function Shop({ initialPhoto }) {
   const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      if (url.includes("#")) {
+        const hash = url.split("#")[1];
+        const element = document.getElementById(hash);
+        if (element) {
+          const yOffset = -100; // Adjust this offset based on your header height
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   const seoData = getSeoData("About Us", {
     title: "About Wild Wind Tattoo | Award-Winning Artists & Studio",
