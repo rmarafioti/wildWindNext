@@ -7,11 +7,6 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
-#ourMission {
-  scroll-margin-top: 0px; /* Adjust this based on your header height */
-}
-
-
 .header {
   display: flex;
   justify-content: center;
@@ -146,6 +141,9 @@
 }
 
 @media (max-width: 586px) {
+  #ourMission {
+    scroll-margin-top: -100px; /* Adjust this based on your header height */
+  }
   .quickLinkSection {
     flex-direction: column;
   }
