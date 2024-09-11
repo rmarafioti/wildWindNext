@@ -27,19 +27,22 @@ export default function Shop({ initialPhoto }) {
     const handleRouteChange = (url) => {
       if (url.includes("#")) {
         const hash = url.split("#")[1];
-        const element = document.getElementById(hash);
-        if (element) {
-          const yOffset = -100; // Adjust this offset based on your header height
-          const y =
-            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
+        window.addEventListener("load", () => {
+          const element = document.getElementById(hash);
+          if (element) {
+            const yOffset = -100; // Adjust this based on your header height
+            const y =
+              element.getBoundingClientRect().top +
+              window.pageYOffset +
+              yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        });
       }
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
