@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import AboutSlide from "@/components/AboutSlide";
+import Image from "next/image";
 import HeaderArt from "@/components/HeaderArt";
 import OurMission from "@/components/OurMission";
 import Reviews from "@/components/Reviews";
@@ -170,10 +170,45 @@ export default function Shop({ initialPhoto }) {
           <p className={styles.quickLink}>Shop Reviews</p>
         </Link>
       </div>
-      <AboutSlide imageUrl={currentPhoto.image} />
+      <div className={styles.aboutPhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/shopDoor_qyrrit.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.aboutPhoto}
+        />
+      </div>
       <ScrollTop />
       <OurMission />
+      <div className={styles.aboutPhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsTwo_fzhopq.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.aboutPhoto}
+        />
+      </div>
       <Media />
+      <div className={styles.aboutPhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsThree_euyp6w.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.aboutPhoto}
+        />
+      </div>
       <Reviews />
     </article>
   );
