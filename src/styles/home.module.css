@@ -9,16 +9,24 @@
   position: relative; 
 }
 
+.walkinsLink {
+  text-decoration: none;
+}
+
 .welcome {
   font-size: 48px;
   font-weight: normal;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: .5rem;
   color: var(--wildGreen);
   font-weight: 700;
   letter-spacing: 1px;
   border: 2px solid var(--wildBlue);
-  transform: rotate(3deg);
+}
+
+.shopLogo {
+  height: auto;
+  width: 800px;
 }
 
 .mainHeader {
@@ -30,11 +38,23 @@
   border-bottom: 2px solid var(--wildBlue);
 }
 
+.homePhotoContainer {
+  margin-top: 2rem;
+}
+.homePhoto {
+  height: auto;
+  width: 800px;
+}
+
+#introParagraph {
+  margin-top: 2rem;
+}
+
 .headerTwo {
   color: var(--wildGreen);
   font-size: 40px;
   font-weight: normal;
-  margin: 2rem 0rem 0rem 0rem;
+  margin: 1rem 0rem 0rem 0rem;
   padding: 1rem;
   width: 480px;
 }
@@ -43,6 +63,7 @@
   font-size: 32px;
   border-bottom: none;
   margin-bottom: 0rem;
+  margin-top: 0rem;
 }
 
 .listItem {
@@ -150,20 +171,29 @@
   margin: .5rem 0rem 1rem 0rem;
   padding: .3rem;
  }
+ .shopLogo {
+  width: 100%
+ }
+ .mainHeader {
+  margin-top: 0rem;
+ }
   .contactContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
- 
-
   .contactParagraphBottom {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--wildGreen);
   }
+  .homePhoto {
+    height: auto;
+    width: 100%;
+  }
   .headerTwo {
     width: 100%;
+    margin-top: 0rem;
     margin-bottom: 0rem;
     padding-bottom: .5rem;
   }

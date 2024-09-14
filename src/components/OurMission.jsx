@@ -47,7 +47,7 @@ export default function OurMission() {
           alt="Tattoo shop logo"
           priority
           width={1762}
-          height={1}
+          height={1763}
           quality={75}
           sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
           className={styles.shopLogo}
@@ -58,7 +58,7 @@ export default function OurMission() {
         <p className={styles.missionItem}>Community</p>
         <BsDot className={styles.dot} />
       </div>
-      <p className={styles.shopParagraphs}>
+      <p className={styles.shopParagraphs} id={styles.communityParagraph}>
         Wild Wind Tattoo is proud to serve and work with our strong community.
         Over the years, we have held fundraisers supporting families of Pulse
         Nightclub shooting victims, Project Fierce, and the Chicago Abortion

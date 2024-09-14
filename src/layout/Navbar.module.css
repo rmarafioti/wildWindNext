@@ -4,8 +4,9 @@
 }
 
 #navLogo {
-  max-width: 350px;
+  max-width: 380px;
   height: auto;
+  padding-right: 1rem;
   margin: 1rem 0rem 1rem 0rem;
   filter: drop-shadow(4px 1px 1px var(--wildDarkGreen));
 }

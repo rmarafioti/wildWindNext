@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import LandingPageArt from "@/components/LandingPageArt";
 import { IoCheckmark } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
@@ -72,13 +73,40 @@ export default function Home() {
   return (
     <article className={styles.home}>
       <SEO {...seoData} />
-      <p className={styles.welcome}>Walk-ins Welcome!</p>
-      <LandingPageArt />
+      <Link href="/contact" className={styles.walkinsLink}>
+        <p className={styles.welcome}>Walk-ins Welcome!</p>
+      </Link>
+      <div className={styles.shopLogoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={1134}
+          height={1100}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.shopLogo}
+        />
+      </div>
+      {/*<LandingPageArt />*/}
       <ScrollTop />
+
       <h1 className={styles.mainHeader}>
         Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
       </h1>
-      <p className={styles.homeParagraph}>
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/storeFront_cgkbji.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
+      <p className={styles.homeParagraph} id={styles.introParagraph}>
         Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon of
         expert tattooing in Chicago. Located in the heart of Wicker Park, our
         studio offers a bright, welcoming, and relaxing space for clients to get
@@ -104,6 +132,18 @@ export default function Home() {
       <Link href="/aboutus" className={styles.homeLink}>
         <h3 className={styles.linkHeader}>About us</h3>
       </Link>
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
       <h2 className={styles.headerTwo}>Tattoo Services</h2>
       <ul className={styles.tattooServices}>
         <li className={styles.listItem}>
@@ -128,7 +168,18 @@ export default function Home() {
       <Link href="/tattoos" className={styles.homeLink}>
         <h3 className={styles.linkHeader}>View our artists</h3>
       </Link>
-
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
       <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
 
       <section className={styles.whyChoose}>
@@ -162,7 +213,18 @@ export default function Home() {
           </p>
         </div>
       </section>
-
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
       <h2 className={styles.headerTwo}>Client Testimonials</h2>
       <section className={styles.homeReview}>
         <h2 className={styles.reviewerName}> Margaux S.</h2>
