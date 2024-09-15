@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import HeaderArt from "@/components/HeaderArt";
 import OurMission from "@/components/OurMission";
 import Reviews from "@/components/Reviews";
 import Media from "@/components/Media";
@@ -135,8 +134,16 @@ export default function Shop({ initialPhoto }) {
     <article className={styles.shopAbout}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.mainShopHeader}>ABOUT US</h1>
-        <HeaderArt />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436123/wildWindSite/about_us_jzalhm.png"
+          alt="About Us page header"
+          priority
+          width={608}
+          height={122}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.aboutUs}
+        />
       </div>
       <div className={styles.quickLinkSection}>
         <Link

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import HeaderArt from "@/components/HeaderArt";
+import Image from "next/image";
 import ScrollTop from "@/components/ScrollTop";
 import SEO from "@/components/SEO";
 import styles from "../styles/tattoos.module.css";
@@ -61,8 +61,16 @@ export default function Tattoos({ initialArtists }) {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.tattooHeader}>OUR ARTISTS</h1>
-        <HeaderArt />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436198/wildWindSite/our_artists_yibhfb.png"
+          alt="Our Artists page header"
+          priority
+          width={770}
+          height={130}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.ourArtists}
+        />
         <ScrollTop />
       </div>
       <div className={styles.artistLinksContainer}>

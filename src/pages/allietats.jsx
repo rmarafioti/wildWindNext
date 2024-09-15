@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import AllieCard from "@/components/AllieCard";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 import SEO from "@/components/SEO";
@@ -50,8 +49,16 @@ export default function AllieTats() {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.artistHeader}>ALLIE SIDER</h1>
-        <HeaderArtTwo />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436144/wildWindSite/allie_sider_ontmyq.png"
+          alt="Allie Sider page header"
+          priority
+          width={727}
+          height={126}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.artistHeader}
+        />
       </div>
       <p className={styles.artistAbout}>
         No bio at this time

@@ -10,19 +10,13 @@
 .header {
   display: flex;
   justify-content: center;
-  width: 480px;
+  margin-top: 1rem;
   padding-bottom: 2rem;
 }
 
-.mainShopHeader {
-  margin: 2rem 0rem 3rem 0rem;
-  font-weight: normal;
-  color: white;
-  font-size: 50px;
-  font-weight: 800;
-  -webkit-text-stroke: 2px var(--wildDarkGreen);
-  letter-spacing: 2px;
-  z-index: 10;
+.aboutUs {
+  width: 400px;
+  height: auto;
 }
 
 .quickLinkSection {
@@ -176,7 +170,7 @@
   .dot {
     display: none;
   }
-  .shopHeader, .aboutPhoto,
+  .shopHeader, .aboutPhoto, .aboutUs,
   .shopLinksContainer,
   .shopLogo,
   .shopLinks,

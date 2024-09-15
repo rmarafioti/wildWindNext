@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import TrevorCard from "@/components/TrevorCard";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 import SEO from "@/components/SEO";
@@ -50,8 +49,16 @@ export default function TrevorTats() {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.artistHeader}>TREVOR AARSVOLD</h1>
-        <HeaderArtTwo />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436217/wildWindSite/trevor_aarsvold_yxn4y2.png"
+          alt="Trevor Aarsvold page header"
+          priority
+          width={1180}
+          height={132}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.artistHeader}
+        />
       </div>
       <p className={styles.artistAbout}>
         Trevor has been immersed in art from a young age; his passion for
