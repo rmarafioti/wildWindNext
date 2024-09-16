@@ -73,27 +73,10 @@ export default function Home() {
   return (
     <article className={styles.home}>
       <SEO {...seoData} />
+      <ScrollTop />
       <Link href="/contact" className={styles.walkinsLink}>
         <p className={styles.welcome}>Walk-ins Welcome!</p>
       </Link>
-      <div className={styles.shopLogoContainer}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
-          alt="Tattoo shop logo"
-          priority
-          width={1134}
-          height={1100}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.shopLogo}
-        />
-      </div>
-      {/*<LandingPageArt />*/}
-      <ScrollTop />
-
-      <h1 className={styles.mainHeader}>
-        Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
-      </h1>
       <div className={styles.homePhotoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/storeFront_cgkbji.jpg"
@@ -106,6 +89,19 @@ export default function Home() {
           className={styles.homePhoto}
         />
       </div>
+      <h1 className={styles.mainHeader}>
+        Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
+      </h1>
+      <Image
+        src="https://res.cloudinary.com/dzpne110u/image/upload/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
+        alt="Tattoo shop logo"
+        priority
+        width={1134}
+        height={1100}
+        quality={75}
+        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+        className={styles.shopLogo}
+      />
       <p className={styles.homeParagraph} id={styles.introParagraph}>
         Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon of
         expert tattooing in Chicago. Located in the heart of Wicker Park, our

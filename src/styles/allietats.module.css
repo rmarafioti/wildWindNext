@@ -11,18 +11,13 @@
 .header {
   display: flex;
   justify-content: center;
-  width: 480px;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .artistHeader {
-  margin: 2rem 0rem 3rem 0rem;
-  font-weight: normal;
-  color: white;
-  font-size: 50px;
-  font-weight: 800;
-  -webkit-text-stroke: 2px var(--wildDarkGreen);
-  letter-spacing: 2px;
-  z-index: 10;
+  width: 430px;
+  height: auto;
 }
 
 .artistIgIcon {
@@ -151,26 +146,18 @@
   }
 }
 @media (max-width: 400px) {
-
-
+  .header,
   .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
   }
+  .artistHeader {
+    width: 90%;
+  }
   .tattooLinks {
     background-color: var(--wildGold);
-  }
-  .header {
-    width: 100%;
-  }
-  .artistHeader {
-    font-size: 60px;
-    line-height: 3.5rem;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
   }
   .artistAbout {
     margin-top: 0rem;
   }
- 
 }

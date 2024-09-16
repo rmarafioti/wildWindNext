@@ -1,11 +1,12 @@
 import React from "react";
-import HeaderArt from "@/components/HeaderArt";
 import Link from "next/link";
+import Image from "next/image";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
-import styles from "../styles/aftercare.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
+
+import styles from "../styles/aftercare.module.css";
 
 /**
  * @component Care features a functional pop up for tattoo care instructions
@@ -75,8 +76,16 @@ export default function Care({ initialAftercare }) {
     <article className={styles.afterCare}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.afterHeader}>AFTERCARE</h1>
-        <HeaderArt />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436132/wildWindSite/after_care_okukid.png"
+          alt="Aftercare page header"
+          priority
+          width={770}
+          height={130}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.afterHeader}
+        />
       </div>
       <p className={styles.afterTagline}>
         Everything you need to know about taking care of your tattoo

@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import MercyCard from "@/components/MercyCard";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import { FaInstagram } from "react-icons/fa";
 import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
 import SEO from "@/components/SEO";
@@ -52,8 +51,16 @@ export default function MercedesTats() {
     <article className={styles.tattoos}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.artistHeader}>MERCY WRIGHT</h1>
-        <HeaderArtTwo />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436207/wildWindSite/mercy_wright_xhicpe.png"
+          alt="Mercy Wright page header"
+          priority
+          width={1000}
+          height={155}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.artistHeader}
+        />
       </div>
       <p className={styles.artistAbout}>
         Driven by a passion for art, Mercy&apos;s interest in tattooing began at

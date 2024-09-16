@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 import { faqs } from "../data/faqs";
-import HeaderArtTwo from "@/components/HeaderArtTwo";
-import styles from "../styles/faqs.module.css";
 import SEO from "@/components/SEO";
-import { getSeoData, siteConfig } from "@/config/siteConfig";
+import { getSeoData } from "@/config/siteConfig";
+
+import styles from "../styles/faqs.module.css";
 
 /**
  * @component Faq features a functional pop up for frequently asked tattoo questions
@@ -54,8 +55,16 @@ export default function Faq({ initialFaqs }) {
     <article id={styles.faqs}>
       <SEO {...seoData} />
       <div className={styles.header}>
-        <h1 className={styles.headerFaqs}>FAQs</h1>
-        <HeaderArtTwo />
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436173/wildWindSite/faqs_zjijwp.png"
+          alt="FAQs page header"
+          priority
+          width={352}
+          height={154}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.headerFaqs}
+        />
       </div>
       <p className={styles.faqTagline}>
         General questions before you fill out our contact form

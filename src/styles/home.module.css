@@ -33,13 +33,11 @@
   color: var(--wildGreen);
   font-size: 40px;
   font-weight: normal;
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 1rem;
-  border-bottom: 2px solid var(--wildBlue);
+  margin: .5rem 0rem 0rem 0rem;
 }
 
 .homePhotoContainer {
-  margin-top: 2rem;
+  margin: 2rem 0rem 2rem 0rem;
 }
 .homePhoto {
   height: auto;
@@ -47,7 +45,7 @@
 }
 
 #introParagraph {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .headerTwo {
@@ -175,6 +173,7 @@
   width: 100%
  }
  .mainHeader {
+  font-size: 30px;
   margin-top: 0rem;
  }
   .contactContainer {
