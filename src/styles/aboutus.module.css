@@ -19,6 +19,10 @@
   height: auto;
 }
 
+.headerTag {
+  display: none;
+}
+
 .quickLinkSection {
   display: flex;
   flex-direction: row;
@@ -99,7 +103,7 @@
 }
 
 .missionItem {
-  color: var(--wildGreen);
+  color: var(--wildDarkGreen);
   font-size: 24px;
   font-style: italic;
   padding: 0rem 1rem 1rem 1rem;
@@ -145,6 +149,7 @@
 }
 
 .dot {
+  color: var(--wildDarkGreen);
   font-size: 32px;
 }
 

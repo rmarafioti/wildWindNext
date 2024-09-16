@@ -144,6 +144,7 @@ export default function Shop({ initialPhoto }) {
           sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
           className={styles.aboutUs}
         />
+        <h1 className={styles.headerTag}>ABOUT US</h1>
       </div>
       <div className={styles.quickLinkSection}>
         <Link
