@@ -62,13 +62,16 @@ export default function RichTats() {
           className={styles.artistHeader}
         />
       </div>
+      <h1 className={styles.artistAboutHeader}>
+        {" "}
+        Rich Marafioti began tattooing in 2005, opening Wild Wind with ten years
+        of experience in the industry.
+      </h1>
       <p className={styles.artistAbout}>
-        Rich began tattooing in 2005, opening Wild Wind with ten years of
-        experience in the industry. He is well versed in a variety of tattoo
-        styles. He earned his degree from the Rhode Island School of
-        Design&apos;s illustration department. His fine arts background is
-        evident in his tattoos, personal work, and the gallery-style design of
-        the shop.
+        He is well versed in a variety of tattoo styles. He earned his degree
+        from the Rhode Island School of Design&apos;s illustration department.
+        His fine arts background is evident in his tattoos, personal work, and
+        the gallery-style design of the shop.
         <a
           className={styles.artistIgIcon}
           href="https://www.instagram.com/wild_coma/"

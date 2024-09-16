@@ -66,9 +66,10 @@ export default function Faq({ initialFaqs }) {
           className={styles.headerFaqs}
         />
       </div>
-      <p className={styles.faqTagline}>
-        General questions before you fill out our contact form
-      </p>
+      <h1 className={styles.faqTagline}>
+        Please view some of our frequently asked questions before you fill out
+        our contact form
+      </h1>
       <section id={styles.questions}>
         {initialFaqs.map((faq) => (
           <FaqCard

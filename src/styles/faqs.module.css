@@ -16,7 +16,7 @@
 }
 
 .headerFaqs {
-  width: 300px;
+  width: 280px;
   height: auto;
 }
 
@@ -112,6 +112,9 @@
 .header, .faqLinksContainer,
   .faqLinks {
     width: 100%;
+  }
+  .headerFaqs {
+    width: 60%;
   }
   .faqLinks {
     background-color: var(--wildGold);

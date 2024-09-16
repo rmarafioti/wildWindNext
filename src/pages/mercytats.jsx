@@ -62,14 +62,17 @@ export default function MercedesTats() {
           className={styles.artistHeader}
         />
       </div>
+      <h1 className={styles.artistAboutHeader}>
+        {" "}
+        Driven by a passion for art, Mercy Wright&apos;s interest in tattooing
+        began at a young age.
+      </h1>
       <p className={styles.artistAbout}>
-        Driven by a passion for art, Mercy&apos;s interest in tattooing began at
-        a young age. She takes immense pride in every piece she creates,
-        consistently striving to deliver her best effort in all her work. With a
-        broad range of tattoo styles, Mercy is always eager to take on new
-        challenges. She has honed her craft to ensure her tattoos are
-        consistently clean and meticulous, dedicating the time necessary to
-        achieve this standard.
+        She takes immense pride in every piece she creates, consistently
+        striving to deliver her best effort in all her work. With a broad range
+        of tattoo styles, Mercy is always eager to take on new challenges. She
+        has honed her craft to ensure her tattoos are consistently clean and
+        meticulous, dedicating the time necessary to achieve this standard.
         <a
           className={styles.artistIgIcon}
           href="https://www.instagram.com/tattoomercy/"

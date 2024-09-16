@@ -54,6 +54,9 @@ export default function GiftCards() {
           className={styles.giftCardHeader}
         />
       </div>
+      <h1 className={styles.faqTagline}>
+        Treat a friend or family member to a Wild Wind Tattoo gift card
+      </h1>
       <CheckoutForm />
     </article>
   );

@@ -19,8 +19,14 @@
   height: auto;
 }
 
-.headerTag {
-  display: none;
+.aboutTagline {
+  color: var(--wildBlack);
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  width: 80% 
 }
 
 .quickLinkSection {
@@ -175,12 +181,15 @@
   .dot {
     display: none;
   }
-  .shopHeader, .aboutPhoto, .aboutUs,
+  .shopHeader, .aboutPhoto,.aboutTagline,
   .shopLinksContainer,
   .shopLogo,
   .shopLinks,
   .shopImage,
   .unorderedList, .header, .quickLink, .quickLinkSection {
     width: 100%;
+  }
+  .aboutUs {
+    width: 80%;
   }
 }

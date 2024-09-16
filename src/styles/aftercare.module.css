@@ -123,14 +123,14 @@
     text-wrap: wrap;
     padding-bottom: 1rem 0rem 1rem 0rem;
   }
-  .afterHeader, .afterTagline, .aftercareLinksContainer,
+  .afterTagline, .aftercareLinksContainer,
   .aftercareLinks {
     width: 100%;
+  }
+  .afterHeader {
+    width: 95%;
   }
   .aftercareLinks {
     background-color: var(--wildGold);
-  }
-  .header {
-    width: 100%;
   }
 }

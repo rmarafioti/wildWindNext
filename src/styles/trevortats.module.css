@@ -19,16 +19,16 @@
     width: 600px;
     height: auto;
   }
-  
-  .artistIgIcon {
-    font-size: 30px;
+
+  .artistAboutHeader {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    color: var(--wildBlack);
+    margin-bottom: .5rem;
+    width: 70%;
   }
-  
-  .artistIgIcon:visited,
-  .artistIgIcon:link {
-    color: var(--wildGreen);
-  }
-  
+
   .artistAbout {
     display: flex;
     flex-direction: column;
@@ -37,6 +37,15 @@
     max-width: 480px;
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--wildGreen);
+  }
+  
+  .artistIgIcon {
+    font-size: 30px;
+  }
+  
+  .artistIgIcon:visited,
+  .artistIgIcon:link {
+    color: var(--wildGreen);
   }
   
   .tattooSection {
@@ -149,7 +158,7 @@
     }
   }
   @media (max-width: 400px) {
-    .header, .artistHeader, .tattooLinksContainer,
+    .header, .artistHeader, .artistAboutHeader, .tattooLinksContainer,
     .tattooLinks {
       width: 100%;
     }
