@@ -6,7 +6,7 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 export default function Media() {
   const seoData = getSeoData("Media", {
-    path: "/aboutus#media",
+    path: "/aboutus",
     description:
       "Explore Wild Wind Tattoo's media collaborations, including partnerships with Harley-Davidson and At-Bay. See our featured work and creative projects in Chicago's tattoo scene.",
     schema: {

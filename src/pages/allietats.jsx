@@ -60,8 +60,8 @@ export default function AllieTats() {
           className={styles.artistHeader}
         />
       </div>
+      <h1 className={styles.artistAboutHeader}>No bio at this time</h1>
       <p className={styles.artistAbout}>
-        No bio at this time
         <a
           className={styles.artistIgIcon}
           href="https://www.instagram.com/sider.tattoo/"

@@ -87,9 +87,10 @@ export default function Care({ initialAftercare }) {
           className={styles.afterHeader}
         />
       </div>
-      <p className={styles.afterTagline}>
-        Everything you need to know about taking care of your tattoo
-      </p>
+      <h1 className={styles.afterTagline}>
+        Our aftercare will provide everything you need to know about taking care
+        of your tattoo
+      </h1>
       <section>
         {initialAftercare.map((aftercareInstructions) => (
           <AftercareCard

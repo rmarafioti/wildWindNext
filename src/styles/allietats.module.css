@@ -20,13 +20,12 @@
   height: auto;
 }
 
-.artistIgIcon {
-  font-size: 30px;
-}
-
-.artistIgIcon:visited,
-.artistIgIcon:link {
-  color: var(--wildGreen);
+.artistAboutHeader {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  color: var(--wildBlack);
+  margin-bottom: .5rem;
 }
 
 .artistAbout {
@@ -37,6 +36,15 @@
   max-width: 480px;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--wildGreen);
+}
+
+.artistIgIcon {
+  font-size: 30px;
+}
+
+.artistIgIcon:visited,
+.artistIgIcon:link {
+  color: var(--wildGreen);
 }
 
 .tattooSection {

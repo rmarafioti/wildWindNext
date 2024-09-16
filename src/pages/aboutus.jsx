@@ -144,8 +144,12 @@ export default function Shop({ initialPhoto }) {
           sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
           className={styles.aboutUs}
         />
-        <h1 className={styles.headerTag}>ABOUT US</h1>
       </div>
+      <h1 className={styles.aboutTagline}>
+        Since 2015, Wild Wind Tattoo has been providing the Wicker Park
+        community and Chicago with expert tattoo services; read more about what
+        we do and why we do it
+      </h1>
       <div className={styles.quickLinkSection}>
         <Link
           to="ourMission"

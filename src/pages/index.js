@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LandingPageArt from "@/components/LandingPageArt";
 import { IoCheckmark } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import ScrollTop from "@/components/ScrollTop";

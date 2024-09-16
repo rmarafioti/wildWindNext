@@ -10,7 +10,7 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
  */
 export default function Reviews() {
   const seoData = getSeoData("Reviews", {
-    path: "/aboutus#reviews",
+    path: "/aboutus",
     description:
       "Read glowing testimonials from Wild Wind Tattoo's satisfied clients. Discover why our Chicago studio is highly rated for its welcoming atmosphere, skilled artists, and exceptional tattoo work.",
     schema: {

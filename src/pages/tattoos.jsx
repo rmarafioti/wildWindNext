@@ -73,6 +73,9 @@ export default function Tattoos({ initialArtists }) {
         />
         <ScrollTop />
       </div>
+      <h1 className={styles.headerTag}>
+        Choose one of our talented artists to best fit your tattoo needs
+      </h1>
       <div className={styles.artistLinksContainer}>
         {artists.map((artist) => (
           <Link
