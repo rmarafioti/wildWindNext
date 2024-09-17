@@ -10,7 +10,7 @@ export default function Releaseforms() {
   return (
     <article className={styles.releaseforms}>
       <Head>
-        <title>Rich Marafioti Tattoo Page - wildwindtattoo.com</title>
+        <title>Release Form Page - wildwindtattoo.com</title>
         <meta
           name="description"
           content="This is the Release Forms tattoo of wildwindtattoo.com."
@@ -46,7 +46,7 @@ export default function Releaseforms() {
       </a>
       <a
         className={styles.artistLink}
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=dfbd614e-d1ca-4921-876a-7519a5becc6d&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
+        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8d01d743-1be5-4069-9f2e-d620beea3b91&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
       >
         Allie Sider
       </a>
