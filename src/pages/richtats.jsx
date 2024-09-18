@@ -4,7 +4,7 @@ import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import RichCard from "../components/RichCard";
 import { FaInstagram } from "react-icons/fa";
-import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -48,43 +48,42 @@ export default function RichTats() {
   });
 
   return (
-    <article className={styles.tattoos}>
-      <SEO {...seoData} />
-      <div className={styles.header}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436228/wildWindSite/rich_marafioti_qlv3vx.png"
-          alt="Rich Marafioti page header"
-          priority
-          width={991}
-          height={129}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.artistHeader}
-        />
-      </div>
-      <h1 className={styles.artistAboutHeader}>
-        {" "}
-        Rich Marafioti began tattooing in 2005, opening Wild Wind with ten years
-        of experience in the industry.
-      </h1>
-      <p className={styles.artistAbout}>
-        He is well versed in a variety of tattoo styles. He earned his degree
-        from the Rhode Island School of Design&apos;s illustration department.
-        His fine arts background is evident in his tattoos, personal work, and
-        the gallery-style design of the shop.
-        <a
-          className={styles.artistIgIcon}
-          href="https://www.instagram.com/wild_coma/"
-          aria-label="icon which links to Rich Marafioti's Instagram page"
-        >
-          <FaInstagram />
-        </a>
-      </p>
+    <>
+      <article className={styles.tattoos}>
+        <SEO {...seoData} />
+        <div className={styles.header}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436228/wildWindSite/rich_marafioti_qlv3vx.png"
+            alt="Rich Marafioti page header"
+            priority
+            width={991}
+            height={129}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.artistHeader}
+          />
+        </div>
+        <h1 className={styles.artistAboutHeader}>
+          {" "}
+          Rich Marafioti began tattooing in 2005, opening Wild Wind with ten
+          years of experience in the industry.
+        </h1>
+        <p className={styles.artistAbout}>
+          He is well versed in a variety of tattoo styles. He earned his degree
+          from the Rhode Island School of Design&apos;s illustration department.
+          His fine arts background is evident in his tattoos, personal work, and
+          the gallery-style design of the shop.
+          <a
+            className={styles.artistIgIcon}
+            href="https://www.instagram.com/wild_coma/"
+            aria-label="icon which links to Rich Marafioti's Instagram page"
+          >
+            <FaInstagram />
+          </a>
+        </p>
+      </article>
       <section className={styles.tattooSection}>
-        <div className={styles.tattooSlide}>
-          <div className={styles.arrowSection}>
-            <PiArrowSquareLeft className={styles.arrow} onClick={handlePrev} />
-          </div>
+        <div>
           <Image
             className={styles.tattoo}
             src={imageUrl}
@@ -95,8 +94,10 @@ export default function RichTats() {
             height={1627}
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px"
           />
-          <div className={styles.arrowSection}>
-            <PiArrowSquareRight className={styles.arrow} onClick={handleNext} />
+          <div className={styles.tattooSlide}>
+            <FaCircleArrowLeft className={styles.arrow} onClick={handlePrev} />
+
+            <FaCircleArrowRight className={styles.arrow} onClick={handleNext} />
           </div>
         </div>
         <div className={styles.tattooGallery}>
@@ -110,11 +111,13 @@ export default function RichTats() {
           ))}
         </div>
       </section>
-      <div className={styles.tattooLinksContainer}>
-        <Link className={styles.tattooLinks} href="/tattoos">
-          <p className={styles.linkHeader}>Back to Our Artists</p>
-        </Link>
-      </div>
-    </article>
+      <article className={styles.tattoos}>
+        <div className={styles.tattooLinksContainer}>
+          <Link className={styles.tattooLinks} href="/tattoos">
+            <p className={styles.linkHeader}>Back to Our Artists</p>
+          </Link>
+        </div>
+      </article>
+    </>
   );
 }
