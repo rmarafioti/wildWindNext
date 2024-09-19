@@ -96,7 +96,6 @@ export default function RichTats() {
           />
           <div className={styles.tattooSlide}>
             <FaCircleArrowLeft className={styles.arrow} onClick={handlePrev} />
-
             <FaCircleArrowRight className={styles.arrow} onClick={handleNext} />
           </div>
         </div>

@@ -25,7 +25,6 @@
   display: flex;
   flex-direction: column;
   color: var(--wildBlack);
-  
 }
 
 .artistAbout {
@@ -34,7 +33,6 @@
   line-height: 1.8;
   color: var(--wildBlack);
   max-width: 480px;
-  
 }
 
 .artistIgIcon {
@@ -67,9 +65,9 @@
 .arrow {
   color: var(--wildGreen);
   background-color: white;
-    border-radius: 50px;
+  border-radius: 50px;
   font-size: 40px;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -133,8 +131,8 @@
   .arrow {
     color: white;
     background-color: var(--wildDarkGreen);
-      border-radius: 50px;
-    margin: -4rem .5rem 0rem .5rem;
+    border-radius: 50px;
+    margin: -4rem 0.5rem 0rem 0.5rem;
     z-index: 10;
   }
   .tattooGallery {
@@ -147,7 +145,10 @@
   }
 }
 @media (max-width: 400px) {
-  .header, .artistHeader, .tattoo, .tattooLinksContainer,
+  .header,
+  .artistHeader,
+  .tattoo,
+  .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
   }
@@ -158,4 +159,3 @@
     margin-top: 0rem;
   }
 }
-
