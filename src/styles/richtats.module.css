@@ -25,7 +25,6 @@
   display: flex;
   flex-direction: column;
   color: var(--wildBlack);
-  margin-bottom: .5rem;
 }
 
 .artistAbout {
@@ -34,8 +33,6 @@
   line-height: 1.8;
   color: var(--wildBlack);
   max-width: 480px;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--wildGreen);
 }
 
 .artistIgIcon {
@@ -48,7 +45,7 @@
 }
 
 .tattooSection {
-  margin: 2rem 10rem 2rem 10rem;
+  margin: 1rem 10rem 2rem 10rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -57,7 +54,7 @@
 .tattooSlide {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .tattoo {
@@ -65,17 +62,12 @@
   width: auto;
 }
 
-.arrowSection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .arrow {
+  color: var(--wildGreen);
   background-color: white;
-  border-radius: 5px;
-  margin: 0rem 1rem 0rem 1rem;
+  border-radius: 50px;
   font-size: 40px;
+  margin-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -137,9 +129,11 @@
     height: auto;
   }
   .arrow {
-    position: absolute;
-    margin-left: -1.3rem;
-    text-align: center;
+    color: white;
+    background-color: var(--wildDarkGreen);
+    border-radius: 50px;
+    margin: -4rem 0.5rem 0rem 0.5rem;
+    z-index: 10;
   }
   .tattooGallery {
     display: none;
@@ -151,7 +145,10 @@
   }
 }
 @media (max-width: 400px) {
-  .header, .artistHeader, .tattooLinksContainer,
+  .header,
+  .artistHeader,
+  .tattoo,
+  .tattooLinksContainer,
   .tattooLinks {
     width: 100%;
   }
@@ -162,4 +159,3 @@
     margin-top: 0rem;
   }
 }
-

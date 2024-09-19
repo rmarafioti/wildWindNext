@@ -4,7 +4,7 @@ import Image from "next/image";
 import usePhotoGallery from "../components/photoGallery";
 import AllieCard from "@/components/AllieCard";
 import { FaInstagram } from "react-icons/fa";
-import { PiArrowSquareRight, PiArrowSquareLeft } from "react-icons/pi";
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -46,35 +46,34 @@ export default function AllieTats() {
   });
 
   return (
-    <article className={styles.tattoos}>
-      <SEO {...seoData} />
-      <div className={styles.header}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436144/wildWindSite/allie_sider_ontmyq.png"
-          alt="Allie Sider page header"
-          priority
-          width={727}
-          height={126}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.artistHeader}
-        />
-      </div>
-      <h1 className={styles.artistAboutHeader}>No bio at this time</h1>
-      <p className={styles.artistAbout}>
-        <a
-          className={styles.artistIgIcon}
-          href="https://www.instagram.com/sider.tattoo/"
-          aria-label="icon which links to Allie Sider's Instagram page"
-        >
-          <FaInstagram />
-        </a>
-      </p>
+    <>
+      <article className={styles.tattoos}>
+        <SEO {...seoData} />
+        <div className={styles.header}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436144/wildWindSite/allie_sider_ontmyq.png"
+            alt="Allie Sider page header"
+            priority
+            width={727}
+            height={126}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.artistHeader}
+          />
+        </div>
+        <h1 className={styles.artistAboutHeader}>No bio at this time</h1>
+        <p className={styles.artistAbout}>
+          <a
+            className={styles.artistIgIcon}
+            href="https://www.instagram.com/sider.tattoo/"
+            aria-label="icon which links to Allie Sider's Instagram page"
+          >
+            <FaInstagram />
+          </a>
+        </p>
+      </article>
       <section className={styles.tattooSection}>
-        <div className={styles.tattooSlide}>
-          <div className={styles.arrowSection}>
-            <PiArrowSquareLeft className={styles.arrow} onClick={handlePrev} />
-          </div>
+        <div>
           <Image
             className={styles.allieTattoo}
             src={imageUrl}
@@ -85,8 +84,9 @@ export default function AllieTats() {
             priority
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 500px"
           />
-          <div className={styles.arrowSection}>
-            <PiArrowSquareRight className={styles.arrow} onClick={handleNext} />
+          <div className={styles.tattooSlide}>
+            <FaCircleArrowLeft className={styles.arrow} onClick={handlePrev} />
+            <FaCircleArrowRight className={styles.arrow} onClick={handleNext} />
           </div>
         </div>
         <div className={styles.allieGallery}>
@@ -100,11 +100,13 @@ export default function AllieTats() {
           ))}
         </div>
       </section>
-      <div className={styles.tattooLinksContainer}>
-        <Link className={styles.tattooLinks} href="/tattoos">
-          <p className={styles.linkHeader}>Back to Our Artists</p>
-        </Link>
-      </div>
-    </article>
+      <article className={styles.tattoos}>
+        <div className={styles.tattooLinksContainer}>
+          <Link className={styles.tattooLinks} href="/tattoos">
+            <p className={styles.linkHeader}>Back to Our Artists</p>
+          </Link>
+        </div>
+      </article>
+    </>
   );
 }

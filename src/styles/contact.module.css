@@ -126,9 +126,8 @@
 }
 
 @media (max-width: 586px) {
-  #contactHeader {
-    margin: 1rem;
-    text-align: center;
+  .contactHeader {
+    font-size: 38px;
   }
   .contactButtonSection, .shopLogo {
     width: 100%;
