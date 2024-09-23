@@ -56,66 +56,6 @@
   width: 400px;
 }
 
-.contactInfo {
-  color: var(--wildBlack);
-  display: flex;
-  align-items: flex-start;
-  margin: 1rem;
-}
-
-.contactInfo a:link,
-.contactInfo a:visited {
-  color: var(--wildBlack);
-  margin: 1rem;
-  text-decoration: none;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
-.contactInfoValue {
-  margin-left: 1rem;
-}
-
-#address {
-  margin: 0rem;
-  text-align: center;
-}
-
-.hoursContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-#hour {
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-.hours {
-  display: flex;
-  flex-direction: column;
-}
-
-.times {
-  color: var(--wildBlack);
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-#timesTop {
-  margin-bottom: 0.5rem;
-}
-
-.bold {
-  font-weight: bold;
-  border-bottom: 1px solid var(--wildGreen);
-}
-
-#phone {
-  margin-left: 1rem;
-}
-
-#email {
-  margin-left: 1.5rem;
-}
-
 @media (max-width: 586px) {
   .contactHeader {
     font-size: 38px;

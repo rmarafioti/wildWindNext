@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { useRouter } from "next/router";
 
 import styles from "./Navbar.module.css";
@@ -25,8 +26,8 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <nav className={styles.nav} id="top">
+    <article>
+      <nav className={styles.nav} id="top" aria-label="Main Navigation">
         <section className={styles.navelements}>
           <Link
             id={styles.contactContainer}
@@ -73,7 +74,7 @@ export default function Navbar() {
       </nav>
 
       {/*desktop menu*/}
-      <menu className={styles.menuDesktop}>
+      <nav className={styles.menuDesktop} aria-label="Desktop Navigation">
         <li id={styles.aboutItem}>
           <Link className={styles.navContainer} href="/aboutus">
             <h4
@@ -83,6 +84,7 @@ export default function Navbar() {
             >
               ABOUT US
             </h4>
+            <IoMdArrowDropdown className={styles.dropIcon} />
           </Link>
           <ul className={styles.subCategory}>
             <Link className={styles.subLink} href="/aboutus#ourMission">
@@ -105,6 +107,7 @@ export default function Navbar() {
             >
               OUR ARTISTS
             </h4>
+            <IoMdArrowDropdown className={styles.dropIcon} />
           </Link>
           <ul className={styles.subCategory}>
             <Link className={styles.subLink} href="/richtats">
@@ -146,21 +149,20 @@ export default function Navbar() {
             </h4>
           </Link>
         </li>
-      </menu>
+      </nav>
 
       {/* mobile menu */}
-      <menu className={`${styles.menu} ${menuOpen ? styles.active : ""}`}>
+      <nav
+        className={`${styles.menu} ${menuOpen ? styles.active : ""}`}
+        aria-label="Mobile Navigation"
+      >
         <article id={styles.aboutItem}>
           <Link
             className={styles.navContainer}
             id={styles.about}
             href="/aboutus"
           >
-            <h4
-              className={styles.link}
-              id={styles.aboutUs}
-              role="navbar element About Us"
-            >
+            <h4 className={styles.link} id={styles.aboutUs} role="heading">
               ABOUT US
             </h4>
           </Link>
@@ -189,11 +191,7 @@ export default function Navbar() {
               id={styles.tattoos}
               href="/tattoos"
             >
-              <h4
-                className={styles.link}
-                id={styles.tats}
-                role="navbar element Tattoos"
-              >
+              <h4 className={styles.link} id={styles.tats} role="heading">
                 OUR ARTISTS
               </h4>
             </Link>
@@ -217,32 +215,28 @@ export default function Navbar() {
             </div>
           </section>
         </article>
-        <li className={styles.navItem}>
+        <div className={styles.navItem}>
           <Link className={styles.navContainer} href="/aftercare">
-            <h4 className={styles.link} role="navbar element Aftercare">
+            <h4 className={styles.link} role="heading">
               AFTERCARE
             </h4>
           </Link>
-        </li>
-        <li className={styles.navItem}>
+        </div>
+        <div className={styles.navItem}>
           <Link className={styles.navContainer} href="/faqs">
-            <h4 className={styles.link} role="navbar element Contact">
+            <h4 className={styles.link} role="heading">
               FAQs
             </h4>
           </Link>
-        </li>
-        <li className={styles.navItem}>
+        </div>
+        <div className={styles.navItem}>
           <Link className={styles.navContainer} href="/giftcards">
-            <h4
-              className={styles.link}
-              id={styles.giftCards}
-              role="navbar element Giftcards"
-            >
+            <h4 className={styles.link} id={styles.giftCards} role="heading">
               GIFTCARDS
             </h4>
           </Link>
-        </li>
-      </menu>
-    </>
+        </div>
+      </nav>
+    </article>
   );
 }

@@ -11,6 +11,8 @@
 
 .walkinsLink {
   text-decoration: none;
+  margin-bottom: 2rem;
+  width: 480px;
 }
 
 .welcome {
@@ -33,7 +35,7 @@
   color: var(--wildGreen);
   font-size: 40px;
   font-weight: normal;
-  margin: .5rem 0rem 0rem 0rem;
+  margin: 1rem 0rem 0rem 0rem;
 }
 
 .homePhotoContainer {
@@ -169,7 +171,10 @@
   margin: .5rem 0rem 1rem 0rem;
   padding: .3rem;
  }
- .shopLogo {
+ .walkinsLink {
+  margin-bottom: 1rem;
+}
+ .shopLogo, .walkinsLink {
   width: 100%
  }
  .mainHeader {

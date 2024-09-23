@@ -1,4 +1,3 @@
-import HeaderArtTwo from "@/components/HeaderArtTwo";
 import Head from "next/head";
 
 import styles from "@/styles/releaseforms.module.css";
@@ -18,8 +17,7 @@ export default function Releaseforms() {
         <link rel="canonical" href="https://wildwindtattoo.com/releaseforms" />
       </Head>
       <div className={styles.header}>
-        <h1 className={styles.releaseformsHeader}>RELEASE FORMS</h1>
-        <HeaderArtTwo />
+        <h1 className={styles.releaseformsHeader}>Release Forms</h1>
       </div>
       <h2 className={styles.releaseformsTagline}>
         Please select your artist to complete their waiver, release, and consent

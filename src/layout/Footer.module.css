@@ -24,6 +24,65 @@
   display: flex;
 }
 
+.contactInfo {
+  color: black;
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+.contactInfo a:link,
+.contactInfo a:visited {
+  color: black;
+  margin: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.contactInfoValue {
+  margin-left: 1rem;
+}
+
+#address {
+  margin: 0rem;
+  text-align: center;
+}
+
+.hoursContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#hour {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  color: black;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+#timesTop {
+  margin-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#phone {
+  margin-left: 1rem;
+}
+
+#email {
+  margin-left: 1.5rem;
+}
+
 .footerItem,
 .footerItem a:link,
 .footerItem a:visited,
