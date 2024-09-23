@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { useRouter } from "next/router";
 
 import styles from "./Navbar.module.css";
@@ -83,6 +84,7 @@ export default function Navbar() {
             >
               ABOUT US
             </h4>
+            <IoMdArrowDropdown className={styles.dropIcon} />
           </Link>
           <ul className={styles.subCategory}>
             <Link className={styles.subLink} href="/aboutus#ourMission">
@@ -105,6 +107,7 @@ export default function Navbar() {
             >
               OUR ARTISTS
             </h4>
+            <IoMdArrowDropdown className={styles.dropIcon} />
           </Link>
           <ul className={styles.subCategory}>
             <Link className={styles.subLink} href="/richtats">
