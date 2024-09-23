@@ -78,7 +78,7 @@ export default function Home() {
       </Link>
       <div className={styles.homePhotoContainer}>
         <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/storeFront_cgkbji.jpg"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/storeFront_cgkbji.jpg"
           alt="Tattoo shop logo"
           priority
           width={2000}
@@ -92,7 +92,7 @@ export default function Home() {
         Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
       </h1>
       <Image
-        src="https://res.cloudinary.com/dzpne110u/image/upload/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
+        src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
         alt="Tattoo shop logo"
         priority
         width={1134}
@@ -129,7 +129,7 @@ export default function Home() {
       </Link>
       <div className={styles.homePhotoContainer}>
         <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
           alt="Tattoo shop logo"
           priority
           width={2000}
@@ -165,7 +165,7 @@ export default function Home() {
       </Link>
       <div className={styles.homePhotoContainer}>
         <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
           alt="Tattoo shop logo"
           priority
           width={2000}
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
       <div className={styles.homePhotoContainer}>
         <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
           alt="Tattoo shop logo"
           priority
           width={2000}
