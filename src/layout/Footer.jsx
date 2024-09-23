@@ -23,7 +23,48 @@ export default function Footer() {
             sizes="(max-width: 300px) 100vw, 300px"
           />
         </Link>
-        <p id={styles.logoTag}>1452 n. western ave chicago il 60622</p>
+        <section className={styles.contactInfoContainer}>
+          <div className={styles.contactInfo}>
+            <p>ADDRESS:</p>
+            <p className={styles.contactInfoValue}>
+              <a
+                id={styles.address}
+                href="https://www.google.com/maps/place/Wild+Wind+Tattoo/@41.9082731,-87.6874096,15z/data=!4m6!3m5!1s0x880fd2bad280228b:0x926cef0a3fd6c3cf!8m2!3d41.9082731!4d-87.6874096!16s%2Fg%2F11bw5xqdp7?entry=ttu"
+              >
+                1452 N. Western Ave. Chicago, IL 60622
+              </a>
+            </p>
+          </div>
+          <section className={styles.hoursContainer}>
+            <p className={styles.contactInfo} id={styles.hour}>
+              HOURS:{" "}
+            </p>
+            <div className={styles.hours}>
+              <p className={styles.times} id={styles.timesTop}>
+                <b className={styles.bold}>Open 7 days a week</b>
+              </p>
+              <p className={styles.times}>
+                <b className={styles.bold}>
+                  *hours vary daily please call ahead*
+                </b>{" "}
+              </p>
+            </div>
+          </section>
+          <div className={styles.contactInfo}>
+            PHONE:
+            <p className={styles.contactInfoValue} id={styles.phone}>
+              <a href="tel:+17732272027"> 773.227.2027</a>
+            </p>
+          </div>
+          <div className={styles.contactInfo}>
+            EMAIL:
+            <p className={styles.contactInfoValue} id={styles.email}>
+              <a href="mailto:wildwindtattoo@gmail.com">
+                wildwindtattoo@gmail.com
+              </a>
+            </p>
+          </div>
+        </section>
       </div>
       <div id={styles.footerIcons}>
         <a
