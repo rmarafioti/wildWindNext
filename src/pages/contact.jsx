@@ -43,7 +43,7 @@ export default function Contact() {
       </div>
       <section className={styles.contactTagHeader}>
         <h2 className={styles.headerTagline}>
-          Reach out to request an appointment with on of our talented artists
+          Reach out to request an appointment with one of our talented artists
         </h2>
         <p className={styles.headerTaglineTwo}>
           For general questions please review our{" "}
