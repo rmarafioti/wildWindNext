@@ -12,18 +12,45 @@
 .walkinsLink {
   text-decoration: none;
   margin-bottom: 2rem;
-  width: 480px;
+  width: 700px;
+  padding: .5rem;
 }
 
 .welcome {
   font-size: 48px;
   font-weight: normal;
-  margin-top: 2rem;
-  padding: .5rem;
   color: var(--wildGreen);
   font-weight: 700;
   letter-spacing: 1px;
-  border: 2px solid var(--wildBlue);
+}
+
+.welcomeTag {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--wildBlack);
+  margin-bottom: 2rem;
+}
+
+.welcomeLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem 1rem 0rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wildBlack);
+}
+
+.welcomeHeader {
+  font-size: 18px;
+  padding: .8rem;
+  width: 300px;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--wildBlack)
+}
+
+.welcomeHeader:hover {
+  background-color: var(--wildGold);
 }
 
 .shopLogo {
@@ -39,7 +66,7 @@
 }
 
 .homePhotoContainer {
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 2rem 0rem .5rem 0rem;
 }
 .homePhoto {
   height: auto;
