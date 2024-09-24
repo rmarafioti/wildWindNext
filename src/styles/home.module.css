@@ -9,6 +9,11 @@
   position: relative; 
 }
 
+.homePhotoContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .walkinsLink {
   text-decoration: none;
   margin-bottom: 2rem;
@@ -17,10 +22,9 @@
 }
 
 .welcome {
-  font-size: 48px;
-  font-weight: normal;
+  font-size: 46px;
   color: var(--wildGreen);
-  font-weight: 700;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
