@@ -90,7 +90,11 @@ export default function Home() {
         <p className={styles.welcome}>Walk-ins Welcome!</p>
         <p className={styles.welcomeTag}>
           To inquire about day of availability fill out the form below or call
-          us: <a href="tel:+17732272027"> 773.227.2027</a>
+          us:{" "}
+          <a className={styles.phone} href="tel:+17732272027">
+            {" "}
+            773.227.2027
+          </a>
         </p>
         <Link href="/contact" className={styles.welcomeLink}>
           <p className={styles.welcomeHeader}>

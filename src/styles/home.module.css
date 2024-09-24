@@ -25,10 +25,14 @@
 }
 
 .welcomeTag {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--wildBlack);
   margin-bottom: 2rem;
+}
+
+.phone {
+  color: var(--wildBlack)
 }
 
 .welcomeLink {
@@ -42,15 +46,12 @@
 }
 
 .welcomeHeader {
+  color: white;
   font-size: 18px;
   padding: .8rem;
   width: 300px;
+  background-color: var(--wildDarkGreen);
   transition: background-color 0.3s ease;
-  border: 2px solid var(--wildBlack)
-}
-
-.welcomeHeader:hover {
-  background-color: var(--wildGold);
 }
 
 .shopLogo {
