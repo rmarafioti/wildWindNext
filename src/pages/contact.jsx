@@ -37,12 +37,13 @@ export default function Contact() {
       <SEO {...seoData} />
       <ScrollTop />
       <div className={styles.header}>
-        <h1 className={styles.contactHeader}>Get tattooed today!</h1>
+        <h1 className={styles.contactHeader}>
+          Request an appointment with us!
+        </h1>
       </div>
       <section className={styles.contactTagHeader}>
         <h2 className={styles.headerTagline}>
-          Reach out to request an appointment or inquire about day of
-          availability
+          Reach out to request an appointment with on of our talented artists
         </h2>
         <p className={styles.headerTaglineTwo}>
           For general questions please review our{" "}

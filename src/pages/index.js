@@ -71,12 +71,9 @@ export default function Home() {
   });
 
   return (
-    <article className={styles.home}>
+    <>
       <SEO {...seoData} />
       <ScrollTop />
-      <h1 className={styles.mainHeader}>
-        Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
-      </h1>
       <div className={styles.homePhotoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/storeFront_cgkbji.jpg"
@@ -89,169 +86,190 @@ export default function Home() {
           className={styles.homePhoto}
         />
       </div>
-      <Link href="/contact" className={styles.walkinsLink}>
-        <p className={styles.welcome}>Walk-ins welcome!</p>
-      </Link>
-      <LandingPageForm />
-      <Image
-        src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
-        alt="Tattoo shop logo"
-        priority
-        width={1134}
-        height={1100}
-        quality={75}
-        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-        className={styles.shopLogo}
-      />
-      <p className={styles.homeParagraph} id={styles.introParagraph}>
-        Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon of
-        expert tattooing in Chicago. Located in the heart of Wicker Park, our
-        studio offers a bright, welcoming, and relaxing space for clients to get
-        tattooed. At Wild Wind Tattoo, beautiful tattoos are just part of what
-        we do. We pride ourselves on creating a forward-thinking, art-centered
-        environment where you will enjoy a positive experience that stays with
-        you as long as your tattoo.
-      </p>
-
-      <h2 className={styles.headerTwo} id={styles.headerTwo}>
-        Community Engagement
-      </h2>
-
-      <p className={styles.homeParagraph}>
-        Wild Wind Tattoo proudly serves and works with our strong community.
-        Over the years, we have held fundraisers supporting families of Pulse
-        Nightclub shooting victims, Project Fierce, and the Chicago Abortion
-        Fund. Currently, we are partnered with the Chicago Therapy
-        Collective&apos;s Hire Trans Now initiative. Our commitment to community
-        and inclusivity is at the core of our mission.
-      </p>
-
-      <Link href="/aboutus" className={styles.homeLink}>
-        <h3 className={styles.linkHeader}>About us</h3>
-      </Link>
-      <div className={styles.homePhotoContainer}>
+      <article className={styles.home}>
+        <div className={styles.walkinsLink}>
+          <p className={styles.welcome}>Walk-ins Welcome!</p>
+          <p className={styles.welcomeTag}>
+            To inquire about day of availability fill out the form below or call
+            us:{" "}
+            <a className={styles.phone} href="tel:+17732272027">
+              {" "}
+              773.227.2027
+            </a>
+          </p>
+          <Link href="/contact" className={styles.welcomeLink}>
+            <p className={styles.welcomeHeader}>
+              Click here for all other appointment requests
+            </p>
+          </Link>
+        </div>
+        <LandingPageForm />
         <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
           alt="Tattoo shop logo"
           priority
-          width={2000}
-          height={2000}
+          width={1134}
+          height={1100}
           quality={75}
           sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.homePhoto}
+          className={styles.shopLogo}
         />
-      </div>
-      <h2 className={styles.headerTwo}>Tattoo Services</h2>
-      <ul className={styles.tattooServices}>
-        <li className={styles.listItem}>
-          <h3 className={styles.headerThree}>Variety and Customization:</h3>
-          <p className={styles.homeParagraph}>
-            We offer various tattoo styles, from small walk-ins to larger custom
-            pieces. Whether you have a design in mind or need inspiration, our
-            talented artists are here to bring your vision to life. Just ask!
-          </p>
-        </li>
-        <li className={styles.listItem}>
-          <h3 className={styles.headerThree}>Comfort and Professionalism:</h3>
-          <p className={styles.homeParagraph}>
-            At Wild Wind Tattoo, you can expect to be treated with respect and
-            care. We communicate all aspects of your tattoo experience, from
-            consultation to aftercare. Enjoy a clean, creative, and artistic
-            environment while you get tattooed in our inclusive, safe space.
-          </p>
-        </li>
-      </ul>
-
-      <Link href="/tattoos" className={styles.homeLink}>
-        <h3 className={styles.linkHeader}>View our artists</h3>
-      </Link>
-      <div className={styles.homePhotoContainer}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
-          alt="Tattoo shop logo"
-          priority
-          width={2000}
-          height={2000}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.homePhoto}
-        />
-      </div>
-      <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
-
-      <section className={styles.whyChoose}>
-        <div className={styles.listItem}>
-          <h3 className={styles.headerThree}>
-            <IoCheckmark className={styles.checkmark} />
-            Experienced Artists:
-          </h3>
-          <p className={styles.homeParagraph}>
-            Our team brings years of expertise and passion to every tattoo.
-          </p>
-        </div>
-        <div className={styles.listItem}>
-          <h3 className={styles.headerThree}>
-            <IoCheckmark className={styles.checkmark} />
-            Community Focus:
-          </h3>
-          <p className={styles.homeParagraph}>
-            We actively engage with and support our local community through
-            various initiatives and partnerships.
-          </p>
-        </div>
-        <div className={styles.listItem}>
-          <h3 className={styles.headerThree}>
-            <IoCheckmark className={styles.checkmark} />
-            Inclusive Space:
-          </h3>
-          <p className={styles.homeParagraph}>
-            We are committed to providing a welcoming environment for all
-            clients, ensuring everyone feels comfortable and respected.
-          </p>
-        </div>
-      </section>
-      <div className={styles.homePhotoContainer}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
-          alt="Tattoo shop logo"
-          priority
-          width={2000}
-          height={2000}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.homePhoto}
-        />
-      </div>
-      <h2 className={styles.headerTwo}>Client Testimonials</h2>
-      <section className={styles.homeReview}>
-        <h2 className={styles.reviewerName}> Margaux S.</h2>
-        <div className={styles.ratingSection}>
-          <h3 className={styles.rating}>Rating: </h3>
-          <p className={styles.stars}>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </p>
-        </div>
-        <p className={`${styles.homeParagraph} ${styles.homeParagraphReview}`}>
-          {" "}
-          &quot;This place is fantastic! I loved my experience working with
-          Rich. He had such passion and he&apos;s very helpful guiding the
-          experience. I relied on his expertise when I was getting two tattoos
-          covered up with a bigger tattoo. He was great to talk with, I loved
-          the relaxing jazz music in the shop and the vibrant art was so
-          cheerful, so inviting. Rich and I kept in touch and he checked my
-          tattoo out a month later to see how it healed. I&apos;ve told my
-          friends to go see Rich and I can&apos;t recommend enough! Thank
-          you!&quot;
+        <h1 className={styles.mainHeader}>
+          Expert Tattooing in Chicago&apos;s Vibrant Wicker Park
+        </h1>
+        <p className={styles.homeParagraph} id={styles.introParagraph}>
+          Founded by Rich Marafioti in 2015, Wild Wind Tattoo has been a beacon
+          of expert tattooing in Chicago. Located in the heart of Wicker Park,
+          our studio offers a bright, welcoming, and relaxing space for clients
+          to get tattooed. At Wild Wind Tattoo, beautiful tattoos are just part
+          of what we do. We pride ourselves on creating a forward-thinking,
+          art-centered environment where you will enjoy a positive experience
+          that stays with you as long as your tattoo.
         </p>
-      </section>
 
-      <Link href="/aboutus#reviews" className={styles.homeLink}>
-        <h3 className={styles.linkHeader}>Read more reviews</h3>
-      </Link>
-    </article>
+        <h2 className={styles.headerTwo} id={styles.headerTwo}>
+          Community Engagement
+        </h2>
+
+        <p className={styles.homeParagraph}>
+          Wild Wind Tattoo proudly serves and works with our strong community.
+          Over the years, we have held fundraisers supporting families of Pulse
+          Nightclub shooting victims, Project Fierce, and the Chicago Abortion
+          Fund. Currently, we are partnered with the Chicago Therapy
+          Collective&apos;s Hire Trans Now initiative. Our commitment to
+          community and inclusivity is at the core of our mission.
+        </p>
+
+        <Link href="/aboutus" className={styles.homeLink}>
+          <h3 className={styles.linkHeader}>About us</h3>
+        </Link>
+        <div className={styles.homePhotoContainer}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
+            alt="Tattoo shop logo"
+            priority
+            width={2000}
+            height={2000}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.homePhoto}
+          />
+        </div>
+        <h2 className={styles.headerTwo}>Tattoo Services</h2>
+        <ul className={styles.tattooServices}>
+          <li className={styles.listItem}>
+            <h3 className={styles.headerThree}>Variety and Customization:</h3>
+            <p className={styles.homeParagraph}>
+              We offer various tattoo styles, from small walk-ins to larger
+              custom pieces. Whether you have a design in mind or need
+              inspiration, our talented artists are here to bring your vision to
+              life. Just ask!
+            </p>
+          </li>
+          <li className={styles.listItem}>
+            <h3 className={styles.headerThree}>Comfort and Professionalism:</h3>
+            <p className={styles.homeParagraph}>
+              At Wild Wind Tattoo, you can expect to be treated with respect and
+              care. We communicate all aspects of your tattoo experience, from
+              consultation to aftercare. Enjoy a clean, creative, and artistic
+              environment while you get tattooed in our inclusive, safe space.
+            </p>
+          </li>
+        </ul>
+
+        <Link href="/tattoos" className={styles.homeLink}>
+          <h3 className={styles.linkHeader}>View our artists</h3>
+        </Link>
+        <div className={styles.homePhotoContainer}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
+            alt="Tattoo shop logo"
+            priority
+            width={2000}
+            height={2000}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.homePhoto}
+          />
+        </div>
+        <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
+
+        <section className={styles.whyChoose}>
+          <div className={styles.listItem}>
+            <h3 className={styles.headerThree}>
+              <IoCheckmark className={styles.checkmark} />
+              Experienced Artists:
+            </h3>
+            <p className={styles.homeParagraph}>
+              Our team brings years of expertise and passion to every tattoo.
+            </p>
+          </div>
+          <div className={styles.listItem}>
+            <h3 className={styles.headerThree}>
+              <IoCheckmark className={styles.checkmark} />
+              Community Focus:
+            </h3>
+            <p className={styles.homeParagraph}>
+              We actively engage with and support our local community through
+              various initiatives and partnerships.
+            </p>
+          </div>
+          <div className={styles.listItem}>
+            <h3 className={styles.headerThree}>
+              <IoCheckmark className={styles.checkmark} />
+              Inclusive Space:
+            </h3>
+            <p className={styles.homeParagraph}>
+              We are committed to providing a welcoming environment for all
+              clients, ensuring everyone feels comfortable and respected.
+            </p>
+          </div>
+        </section>
+        <div className={styles.homePhotoContainer}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
+            alt="Tattoo shop logo"
+            priority
+            width={2000}
+            height={2000}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.homePhoto}
+          />
+        </div>
+        <h2 className={styles.headerTwo}>Client Testimonials</h2>
+        <section className={styles.homeReview}>
+          <h2 className={styles.reviewerName}> Margaux S.</h2>
+          <div className={styles.ratingSection}>
+            <h3 className={styles.rating}>Rating: </h3>
+            <p className={styles.stars}>
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </p>
+          </div>
+          <p
+            className={`${styles.homeParagraph} ${styles.homeParagraphReview}`}
+          >
+            {" "}
+            &quot;This place is fantastic! I loved my experience working with
+            Rich. He had such passion and he&apos;s very helpful guiding the
+            experience. I relied on his expertise when I was getting two tattoos
+            covered up with a bigger tattoo. He was great to talk with, I loved
+            the relaxing jazz music in the shop and the vibrant art was so
+            cheerful, so inviting. Rich and I kept in touch and he checked my
+            tattoo out a month later to see how it healed. I&apos;ve told my
+            friends to go see Rich and I can&apos;t recommend enough! Thank
+            you!&quot;
+          </p>
+        </section>
+
+        <Link href="/aboutus#reviews" className={styles.homeLink}>
+          <h3 className={styles.linkHeader}>Read more reviews</h3>
+        </Link>
+      </article>
+    </>
   );
 }
