@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ScrollTop from "@/components/ScrollTop";
 import { FaPlus } from "react-icons/fa6";
 import { PopUp, usePopUp } from "../components/popUp";
 import { faqs } from "../data/faqs";
@@ -54,6 +55,7 @@ export default function Faq({ initialFaqs }) {
   return (
     <article id={styles.faqs}>
       <SEO {...seoData} />
+      <ScrollTop />
       <div className={styles.header}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436173/wildWindSite/faqs_zjijwp.png"

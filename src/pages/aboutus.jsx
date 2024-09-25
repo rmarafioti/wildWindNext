@@ -131,57 +131,60 @@ export default function Shop({ initialPhoto }) {
   }, []);
 
   return (
-    <article className={styles.shopAbout}>
-      <SEO {...seoData} />
-      <div className={styles.header}>
-        <Image
-          src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436123/wildWindSite/about_us_jzalhm.png"
-          alt="About Us page header"
-          priority
-          width={608}
-          height={122}
-          quality={75}
-          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-          className={styles.aboutUs}
-        />
-      </div>
-      <h1 className={styles.aboutTagline}>
-        Since 2015, Wild Wind Tattoo has been providing the Wicker Park
-        community and Chicago with expert tattoo services; read more about what
-        we do and why we do it
-      </h1>
-      <div className={styles.quickLinkSection}>
-        <Link
-          to="ourMission"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-          id="headers"
-        >
-          <p className={styles.quickLink}>Our Mission</p>
-        </Link>
-        <Link
-          to="media"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-          id="headers"
-        >
-          <p className={styles.quickLink}>Media</p>
-        </Link>
-        <Link
-          to="reviews"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-          id="headers"
-        >
-          <p className={styles.quickLink}>Shop Reviews</p>
-        </Link>
-      </div>
+    <>
+      <article className={styles.shopAbout}>
+        <SEO {...seoData} />
+        <ScrollTop />
+        <div className={styles.header}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1726436123/wildWindSite/about_us_jzalhm.png"
+            alt="About Us page header"
+            priority
+            width={608}
+            height={122}
+            quality={75}
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+            className={styles.aboutUs}
+          />
+        </div>
+        <h1 className={styles.aboutTagline}>
+          Since 2015, Wild Wind Tattoo has been providing the Wicker Park
+          community and Chicago with expert tattoo services; read more about
+          what we do and why we do it
+        </h1>
+        <div className={styles.quickLinkSection}>
+          <Link
+            to="ourMission"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+            id="headers"
+          >
+            <p className={styles.quickLink}>Our Mission</p>
+          </Link>
+          <Link
+            to="media"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+            id="headers"
+          >
+            <p className={styles.quickLink}>Media</p>
+          </Link>
+          <Link
+            to="reviews"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+            id="headers"
+          >
+            <p className={styles.quickLink}>Shop Reviews</p>
+          </Link>
+        </div>
+      </article>
       <div className={styles.aboutPhotoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/shopDoor_qyrrit.jpg"
@@ -194,8 +197,9 @@ export default function Shop({ initialPhoto }) {
           className={styles.aboutPhoto}
         />
       </div>
-      <ScrollTop />
-      <OurMission />
+      <article className={styles.shopAbout}>
+        <OurMission />
+      </article>
       <div className={styles.aboutPhotoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsTwo_fzhopq.jpg"
@@ -208,7 +212,9 @@ export default function Shop({ initialPhoto }) {
           className={styles.aboutPhoto}
         />
       </div>
-      <Media />
+      <article className={styles.shopAbout}>
+        <Media />
+      </article>
       <div className={styles.aboutPhotoContainer}>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1721755795/wildWindSite/shopPhotos/detailsThree_euyp6w.jpg"
@@ -221,8 +227,10 @@ export default function Shop({ initialPhoto }) {
           className={styles.aboutPhoto}
         />
       </div>
-      <Reviews />
-    </article>
+      <article className={styles.shopAbout}>
+        <Reviews />
+      </article>
+    </>
   );
 }
 

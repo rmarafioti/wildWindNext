@@ -143,18 +143,20 @@ export default function Home() {
         <Link href="/aboutus" className={styles.homeLink}>
           <h3 className={styles.linkHeader}>About us</h3>
         </Link>
-        <div className={styles.homePhotoContainer}>
-          <Image
-            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
-            alt="Tattoo shop logo"
-            priority
-            width={2000}
-            height={2000}
-            quality={75}
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-            className={styles.homePhoto}
-          />
-        </div>
+      </article>
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/respectSign_n4gh5c.png"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
+      <article className={styles.home}>
         <h2 className={styles.headerTwo}>Tattoo Services</h2>
         <ul className={styles.tattooServices}>
           <li className={styles.listItem}>
@@ -180,18 +182,20 @@ export default function Home() {
         <Link href="/tattoos" className={styles.homeLink}>
           <h3 className={styles.linkHeader}>View our artists</h3>
         </Link>
-        <div className={styles.homePhotoContainer}>
-          <Image
-            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
-            alt="Tattoo shop logo"
-            priority
-            width={2000}
-            height={2000}
-            quality={75}
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-            className={styles.homePhoto}
-          />
-        </div>
+      </article>
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/waitingArea_lo94hm.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
+      <article className={styles.home}>
         <h2 className={styles.headerTwo}>Why Choose Wild Wind Tattoo?</h2>
 
         <section className={styles.whyChoose}>
@@ -225,18 +229,20 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <div className={styles.homePhotoContainer}>
-          <Image
-            src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
-            alt="Tattoo shop logo"
-            priority
-            width={2000}
-            height={2000}
-            quality={75}
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-            className={styles.homePhoto}
-          />
-        </div>
+      </article>
+      <div className={styles.homePhotoContainer}>
+        <Image
+          src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1721755795/wildWindSite/shopPhotos/detailsOne_hqnujh.jpg"
+          alt="Tattoo shop logo"
+          priority
+          width={2000}
+          height={2000}
+          quality={75}
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+          className={styles.homePhoto}
+        />
+      </div>
+      <article className={styles.home}>
         <h2 className={styles.headerTwo}>Client Testimonials</h2>
         <section className={styles.homeReview}>
           <h2 className={styles.reviewerName}> Margaux S.</h2>
