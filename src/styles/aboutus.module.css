@@ -51,21 +51,9 @@
   border: 2px solid var(--wildDarkGreen);
 }
 
-/*.shopImagesContainer {
-  margin: 2rem 0rem 2cap 0rem;
-  opacity: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.shopImage {
-  width: 500px;
-  height: auto;
-}*/
-
 .aboutPhotoContainer {
+  display: flex;
+  justify-content: center;
   margin-top: 2rem;
 }
 .aboutPhoto {
