@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { TfiFaceSad } from "react-icons/tfi";
 
 import styles from "@/styles/formsent.module.css";
 
@@ -19,7 +18,6 @@ export default function RequestSent() {
         <link rel="canonical" href="https://wildwindtattoo.com/formerror" />
       </Head>
       <div className={styles.formSentContainer}>
-        <TfiFaceSad className={styles.sad} />
         <h1 className={styles.formSentMessage}>
           We&apos;re sorry, but there seems to have been an issue submitting
           your release form.

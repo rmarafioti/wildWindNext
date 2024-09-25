@@ -15,32 +15,16 @@
 }
 
 .notFoundHeader {
-  font-weight: normal;
-  color: var(--wildDarkGreen);
-  font-size: 50px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: .5rem;
-  z-index: 10;
-}
-
-.sadSection {
-  display: flex;
-  flex-direction: row;
+  color: var(--wildGreen);
+  font-size: 48px;
+  font-weight: bold;
   margin-bottom: 1rem;
-}
-
-.sadOne, .sadTwo, .sadThree {
-  color: white;
-  font-size: 120px;
-  margin: 0rem 1rem 0rem 1rem;
-  background: linear-gradient(45deg, var(--wildGold), #e591d4);
-  border-radius: 70px;
-  box-shadow: -7px 5px 10px 1px rgba(56, 70, 28, 0.5);
+  text-align: center;
 }
 
 .headerTagline, .headerTaglineTwo {
   font-size: 1.5rem;
+  font-weight: normal;
   color: #555;
   margin-bottom: 0.25rem;
 }
@@ -52,10 +36,10 @@
 
 .homeButton {
   padding: 0.75rem 1.5rem;
-  background-color: #0070f3;;
+  background-color: var(--wildDarkGreen);
   color: white;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 18px;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
@@ -66,7 +50,7 @@
 }
 
 .contactInfo {
-  font-size: 1rem;
+  font-size: 24px;
   color: #555;
   margin-bottom: 0.25rem;
 }
@@ -92,9 +76,10 @@
     font-size: 2.5rem;
   }
 
-  .sadOne, .sadThree {
-    display: none;
-  }
+.homeLink {
+  width: 100%;
+  text-align: center;
+}
 
   .headerTagline, .headerTaglineTwo {
     font-size: 1.1rem;

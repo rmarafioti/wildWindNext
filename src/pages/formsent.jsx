@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { TfiFaceSmile } from "react-icons/tfi";
 
 import styles from "@/styles/formsent.module.css";
 
@@ -19,7 +18,6 @@ export default function FormSent() {
         <link rel="canonical" href="https://wildwindtattoo.com/formsent" />
       </Head>
       <div className={styles.formSentContainer}>
-        <TfiFaceSmile className={styles.smile} />
         <h1 className={styles.formSentMessage}>
           Thank you for filling out your release form electronically!
         </h1>
