@@ -12,9 +12,13 @@ Color coding to specify HTML container grouping
 
 # Testing
 
-![axeDevTools Rating](src/images/axeDevToolsRating.jpeg)
+![axeDevTools Rating](src/images/axeDevToolsRating.jpg)
 
-![Lighthouse Rating](src/images/landingPageArt.png)
+![Lighthouse Rating](src/images/lightHouseRating.png)
+
+![Global Lighthouse Rating](src/images/lightHouseGlobalRating.png)
+
+![Global Lighthouse Rating](src/images/lightHouseGlobalRating2.png)
 
 To learn more about Next.js, take a look at the following resources:
 
