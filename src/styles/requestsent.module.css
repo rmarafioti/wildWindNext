@@ -9,17 +9,17 @@
 }
 
 .requestSentContainer {
-  border-bottom: 1px solid var(--wildGreen);
   margin-top: 0rem;
   margin-bottom: 1rem;
 }
 
 .requestSentMessage {
-  font-size: 30px;
+  color: var(--wildGreen);
+  font-size: 48px;
   font-weight: normal;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--wildGreen);
   margin-bottom: 1rem;
+  padding: 0rem;
+  text-align: center;
 }
 
 .requestMessage {
@@ -60,6 +60,9 @@
 }
 
 @media (max-width: 586px) {
+  .requestSentMessage {
+    font-size: 36px;
+  }
   .requestSent {
     text-align: center;
   }
