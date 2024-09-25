@@ -10,9 +10,11 @@
 
 Color coding to specify HTML container grouping
 
-# Landing Page UI mock-up
+# Testing
 
-![Landing Page Sketch](src/images/landingPageArt.png)
+![axeDevTools Rating](src/images/axeDevToolsRating.jpeg)
+
+![Lighthouse Rating](src/images/landingPageArt.png)
 
 To learn more about Next.js, take a look at the following resources:
 
