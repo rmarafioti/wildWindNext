@@ -186,6 +186,23 @@
   width: 250px;
 }
 
+.formSubmit {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: var(--wildDarkGreen);
+  padding: 0.5rem;
+  width: 480px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.errorBottom {
+  color: var(--wildBlack);
+  font-weight: bold;
+}
+
 @media (max-width: 586px) {
   .header, #releaseContentBreak, .form {
     width: 100%;
