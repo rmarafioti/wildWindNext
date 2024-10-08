@@ -277,7 +277,7 @@ export default function Releaseforms() {
           ))}
         </select>
       </div>{" "}
-      <p className={styles.releaseContent}>
+      <p className={styles.releaseContent} id={styles.releaseContentBreak}>
         and Marf Inc. doing business as Wild Wind Tattoo at 1452 N. Western Ave.
         Chicago IL 60622 (together with it’s artists, apprentices and agents,
         the “Tattoo Studio”), I agree to and affirm that:
@@ -336,7 +336,10 @@ export default function Releaseforms() {
           <LuPlus className={styles.addSymbol} />
         </div>
       </div>
-      <div className={styles.selectedRisksContainer}>
+      <div
+        className={styles.selectedRisksContainer}
+        id={styles.releaseContentBreak}
+      >
         {selectedRisks.map((risk, index) => (
           <div key={index} className={styles.riskEntry}>
             {risk}{" "}
@@ -376,12 +379,12 @@ export default function Releaseforms() {
         Swelling & burning. Tattooed areas may swell or burn during Magnetic
         Resonance Imaging (MRI) exams.{" "}
       </p>
-      <p className={styles.releaseContent}>
+      <p className={styles.releaseContent} id={styles.releaseContentBreak}>
         Having been informed of the potential risks associated with getting a
         tattoo, I still wish to proceed with the tattooing and I freely accept
         and expressly assume the risks that may arise from tattooing.
       </p>
-      <p className={styles.releaseContent}>
+      <p className={styles.releaseContent} id={styles.releaseContentBreak}>
         The Artist and the Tattoo Studio are not responsible for the meaning or
         spelling of the symbol or text that I have provided them or chosen from.
         Variations in color and design may exist between the tattoo art I have
@@ -393,7 +396,7 @@ export default function Releaseforms() {
         costly and which are unlikely to restore my skin to its pre-tattoo
         condition even after it’s removed.{" "}
       </p>
-      <p className={styles.releaseContent}>
+      <p className={styles.releaseContent} id={styles.releaseContentBreak}>
         Both the ARTIST and the TATTOO STUDIO have given me the full opportunity
         to read and understand this document and to ask questions about the
         tattoo procedure and the staff has answered satisfactorily. I have
@@ -419,7 +422,10 @@ export default function Releaseforms() {
         I consent to letting my artist take a photo of my tattoo for use on
         social media or for Wild Wind Tattoo’s marketing purposes:
       </p>
-      <div className={styles.tattooSizeContainer}>
+      <div
+        className={styles.tattooSizeContainer}
+        id={styles.releaseContentBreak}
+      >
         <label className={styles.label}>
           {validationError && <p className={styles.error}>*Select an answer</p>}
         </label>
@@ -440,7 +446,10 @@ export default function Releaseforms() {
           ))}
         </select>
       </div>
-      <div className={styles.tattooSizeContainer}>
+      <div
+        className={styles.tattooSizeContainer}
+        id={styles.releaseContentBreak}
+      >
         <label className={styles.label}>
           Pronouns:
           {validationError && (
@@ -465,16 +474,30 @@ export default function Releaseforms() {
         </select>
       </div>
       <p className={styles.releaseContent}>
-        I, <input type="name" name="user_name" value={formValues.user_name} />
+        I,{" "}
+        <input
+          type="name"
+          name="user_name"
+          value={formValues.user_name}
+          className={styles.userName}
+        />
         HAVE READ THIS LEGAL CONTRACT, I UNDERSTAND IT. I AGREE TO BE BOUND BY
         IT.
       </p>
-      <div>
-        <label>Today's Date:</label>
-        <input type="date" name="current_date" value={currentDate} readOnly />
+      <div className={styles.todaysDateContainer}>
+        <label className={styles.todaysDate} id={styles.date}>
+          Today's Date:
+        </label>
+        <input
+          type="date"
+          name="current_date"
+          value={currentDate}
+          className={styles.todaysDate}
+          readOnly
+        />
       </div>
-      <div className={styles.formSectionContainer} id={styles.attachFile}>
-        <label className={styles.label}>
+      <div className={styles.todaysDateContainer} id={styles.attachFile}>
+        <label className={styles.label} id={styles.attachMessage}>
           Attach a photo of your ID, DL or Passport:{" "}
         </label>
         <input
@@ -493,30 +516,6 @@ export default function Releaseforms() {
           </p>
         )}
       </div>
-      <a
-        className={styles.artistLink}
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=2db995c9-063e-47bf-8437-6b7fcfcfa9a3&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
-      >
-        Rich Marafioti
-      </a>
-      <a
-        className={styles.artistLink}
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=f753cd03-1919-430d-b5f8-b10e4c6538ae&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
-      >
-        Mercy Wright
-      </a>
-      <a
-        className={styles.artistLink}
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=27a9da47-ac8a-41af-803d-fbb1b64bed5a&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
-      >
-        Trevor Aarsvold
-      </a>
-      <a
-        className={styles.artistLink}
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8d01d743-1be5-4069-9f2e-d620beea3b91&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
-      >
-        Allie Sider
-      </a>
     </form>
   );
 }
