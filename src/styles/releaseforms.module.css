@@ -11,7 +11,7 @@
 .header {
   display: flex;
   justify-content: center;
-  width: 480px;
+  width: 580px;
 }
 
 .releaseformsHeader {
@@ -27,9 +27,48 @@
   color: var(--wildBlack);
   font-size: 20px;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   border-bottom: solid 1px var(--wildGreen);
+}
+
+.releaseContent {
+  color: var(--wildBlack);
+  line-height: 2rem;
+  width: 780px;
+  margin-bottom: 1rem;
+}
+
+.tattooSizeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+}
+
+.label {
+  font-size: 16px;;
+  font-weight: bold;
+  color: var(--wildBlack);
+}
+
+.error {
+  display: inline-block;
+  background-color: var(--wildGold);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.form {
+  font-size: 16px;
+  border: 1px solid var(--wildBlack);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#clientName {
+  margin: 0rem 1rem 0rem 1rem;
 }
 
 .artistLink {
@@ -62,9 +101,15 @@
     width: 100%;
   }
   .releaseformsHeader {
-    line-height: 3rem;
+    line-height: 3.5rem;
     margin-top: 0rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  .releaseContent {
+    width: 100%;
+  }
+  .tattooSizeContainer {
+    width: 100%;
   }
   .artistLink,
   .artistList {
