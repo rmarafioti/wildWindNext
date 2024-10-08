@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { LuPlus } from "react-icons/lu";
 import Head from "next/head";
 
 import styles from "@/styles/releaseforms.module.css";
@@ -6,7 +8,7 @@ import styles from "@/styles/releaseforms.module.css";
 /**
  * @component ReleaseForms serves as the main entry point for clients to access and electronically sign the release form specific to their chosen artist before getting tattooed.
  */
-export default function Releaseforms({ name, value, onChange, onFocus }) {
+export default function Releaseforms() {
   const inputValidationError = {
     artist_name: true,
     user_email: false,
@@ -26,10 +28,56 @@ export default function Releaseforms({ name, value, onChange, onFocus }) {
     "Allie Sider",
   ];
 
+  const riskIndicators = [
+    "Recipient of an organ transplant",
+    "Hemophilia",
+    "Taking blood thinning medication",
+    "Epilepsy",
+    "History of skin disease, skin sensitivities",
+    "Diabetes",
+    "Allergies to soap or adhesives",
+    "History of allergies to pigments, dyes or Latex",
+    "Pregnant of nursing",
+    "None",
+  ];
+
+  const consent = ["Yes", "No"];
+
+  const pronouns = ["She / Her", "They / Them", "He / Him "];
+
   const [validationError, setValidationError] = useState(inputValidationError);
   const [formValues, setFormValues] = useState(inputForm);
   const [fileSizeError, setFileSizeError] = useState(false);
-  inputValidationError;
+  const [selectedRisk, setSelectedRisk] = useState("");
+  const [selectedRisks, setSelectedRisks] = useState([]);
+
+  /**
+   * @function handleAddRisk if a selected risk is chosen it to an array of strings called selected risks
+   */
+  const handleAddRisk = () => {
+    if (selectedRisk) {
+      const newRisk = `${selectedRisk}`;
+      setSelectedRisks((prevRisks) => [...prevRisks, newRisk]);
+      setFormValues((prevValues) => ({
+        ...prevValues,
+        risk: [...selectedRisks, newRisk].join(", "),
+      }));
+      setSelectedRisk("");
+    }
+  };
+
+  /**
+   * @function handleRemoveRisk functionality to remove a selected risk from the selected risks array
+   * @param index of the selected time in the array
+   */
+  const handleRemoveRisk = (index) => {
+    const newSelectedRisks = selectedRisks.filter((_, i) => i !== index);
+    setSelectedRisks(newSelectedRisks);
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      risk: newSelectedRisks.join(", "),
+    }));
+  };
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -123,11 +171,11 @@ export default function Releaseforms({ name, value, onChange, onFocus }) {
         </label>
         <select
           className={styles.form}
-          name={name}
-          value={value}
+          name="artist_name"
+          value={formValues.artist_name}
           aria-label="users_selected_artist_name"
-          onChange={onChange}
-          onFocus={onFocus}
+          onChange={handleInputChange}
+          onFocus={() => handleInputFocus("artist_name")}
           required
         >
           <option value="">Select an artist</option>
@@ -168,6 +216,48 @@ export default function Releaseforms({ name, value, onChange, onFocus }) {
         have read the following list of some risk indicators and checked those
         that apply to me:
       </p>
+      <div>
+        <label className={styles.label}>
+          {validationError && (
+            <p className={styles.error}>*Select any risks that apply*</p>
+          )}
+        </label>
+        <div className={styles.tattooSizeContainer}>
+          <select
+            className={styles.form}
+            value={selectedRisk}
+            aria-label="users_selected_risk"
+            onChange={(e) => setSelectedRisk(e.target.value)}
+          >
+            <option value="">Select a Risk</option>
+            {riskIndicators.map((risk, index) => (
+              <option key={index} value={risk}>
+                {risk}
+              </option>
+            ))}
+          </select>
+          <p className={styles.addTime}>
+            {selectedRisks.length > 0 ? "Add More" : "Add Risk"}
+          </p>
+          <div className={styles.addMoreButton} onClick={handleAddRisk}>
+            <LuPlus className={styles.addSymbol} />
+          </div>
+        </div>
+
+        <div className={styles.selectedTimesContainer}>
+          {selectedRisks.map((risk, index) => (
+            <div key={index} className={styles.timeEntry}>
+              {risk}{" "}
+              <div
+                className={styles.removeButton}
+                onClick={() => handleRemoveRisk(index)}
+              >
+                <IoClose />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <a
         className={styles.artistLink}
         href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=2db995c9-063e-47bf-8437-6b7fcfcfa9a3&env=na4&acct=b4ee9f55-3f08-40c4-88c9-4b9a5aa9e820&v=2"
