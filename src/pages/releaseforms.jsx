@@ -4,6 +4,8 @@ import { LuPlus } from "react-icons/lu";
 import Head from "next/head";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
+import Compressor from "compressorjs";
+
 import styles from "@/styles/releaseforms.module.css";
 
 /**
@@ -77,17 +79,17 @@ export default function Releaseforms() {
       const updatedRisks = [...selectedRisks, selectedRisk];
       setSelectedRisks(updatedRisks);
 
-      // Update form values to reflect the selected risks
+      // Update the hidden form input to include the selected risks
       setFormValues((prevValues) => ({
         ...prevValues,
         user_risks: updatedRisks.join(", "), // Convert to comma-separated string
       }));
 
-      // Validate the risk field and consent field after adding a risk
+      // Trigger validation for both user_risks and user_consent after adding a risk
       validateField("user_risks", updatedRisks.join(", "));
-      validateField("user_consent", formValues.user_consent); // Trigger consent validation
+      validateField("user_consent", formValues.user_consent);
 
-      // Clear the selected risk after adding
+      // Clear the selected risk
       setSelectedRisk("");
     }
   };
@@ -97,7 +99,7 @@ export default function Releaseforms() {
     const updatedRisks = selectedRisks.filter((_, i) => i !== index);
     setSelectedRisks(updatedRisks);
 
-    // Update form values to reflect the updated risks
+    // Update the hidden form input to reflect the updated risks
     setFormValues((prevValues) => ({
       ...prevValues,
       user_risks: updatedRisks.join(", "), // Convert to comma-separated string
@@ -107,23 +109,48 @@ export default function Releaseforms() {
     validateField("user_risks", updatedRisks.join(", "));
   };
 
+  const handleImageChange = (file) => {
+    if (!file) {
+      console.error("No file selected");
+      return;
+    }
+
+    // Compress the image
+    new Compressor(file, {
+      quality: 0.6, // Compression quality, 0 to 1 (lower means more compression)
+      maxWidth: 1000, // Set a max width or height if needed
+      maxHeight: 1000,
+      success(compressedResult) {
+        console.log("Compressed image size: ", compressedResult.size);
+
+        // Check the size after compression
+        if (compressedResult.size > 500 * 1024) {
+          // 500KB limit
+          setFileSizeError(true);
+          setFormValues((prevValues) => ({ ...prevValues, my_file: null }));
+        } else {
+          setFileSizeError(false);
+          setCompressedImage(compressedResult); // Store the compressed image
+          setFormValues((prevValues) => ({
+            ...prevValues,
+            my_file: compressedResult,
+          }));
+        }
+      },
+      error(err) {
+        console.error("Image compression error:", err.message);
+      },
+    });
+  };
+
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
 
     if (name === "my_file" && files) {
       const selectedFile = files[0];
-      const maxFileSize = 500 * 1024; // 500KB
-      if (selectedFile.size > maxFileSize) {
-        setFileSizeError(true);
-        setFormValues((prevValues) => ({
-          ...prevValues,
-          [name]: null,
-        }));
-        return;
-      } else {
-        setFileSizeError(false);
-      }
+      handleImageChange(selectedFile); // Call the image compression function
+      return;
     }
 
     setFormValues((prevValues) => ({
@@ -132,81 +159,12 @@ export default function Releaseforms() {
     }));
 
     validateField(name, newValue);
+
+    // If user_pronouns is filled, trigger validation for my_file
+    if (name === "user_pronouns") {
+      validateField("my_file", formValues.my_file); // Check if my_file is valid after pronouns
+    }
   };
-
-  //compress my_file image
-  /*const handleImageChange = (file) => {
-    if (!file) {
-      console.error("No file selected");
-      return;
-    }
-
-    console.log("Original image size: ", file.size); // Log original image size
-
-    const reader = new FileReader();
-
-    if (file instanceof Blob) {
-      reader.readAsDataURL(file);
-    } else {
-      console.error("The file is not of type Blob");
-      return;
-    }
-
-    reader.onload = (event) => {
-      const img = new Image();
-      img.src = event.target.result;
-
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-
-        const MAX_WIDTH = 100;
-        const MAX_HEIGHT = 100;
-
-        let width = img.width;
-        let height = img.height;
-
-        // Calculate new dimensions while maintaining aspect ratio
-        if (width > height) {
-          if (width > MAX_WIDTH) {
-            height = Math.round((height *= MAX_WIDTH / width));
-            width = MAX_WIDTH;
-          }
-        } else {
-          if (height > MAX_HEIGHT) {
-            width = Math.round((width *= MAX_HEIGHT / height));
-            height = MAX_HEIGHT;
-          }
-        }
-
-        canvas.width = width;
-        canvas.height = height;
-
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, width, height);
-
-        canvas.toBlob(
-          (blob) => {
-            console.log("Compressed image size: ", blob.size); // Log compressed image size
-
-            if (blob.size > 500 * 1024) {
-              setFileSizeError(true);
-              setFormValues((prevValues) => ({ ...prevValues, my_file: null }));
-            } else {
-              setFileSizeError(false);
-              setCompressedImage(blob);
-              setFormValues((prevValues) => ({ ...prevValues, my_file: blob }));
-            }
-          },
-          "image/jpeg",
-          0.01 // Set compression quality
-        );
-      };
-    };
-
-    reader.onerror = () => {
-      console.error("Error reading the file");
-    };
-  };*/
 
   // Validate form fields
   const validateField = (field, value) => {
@@ -223,7 +181,6 @@ export default function Releaseforms() {
         isValid = value.trim() !== "";
         break;
       case "user_consent":
-        console.log("Validating user_consent:", value); // Check if it logs when user_consent is being validated
         isValid = value.trim() !== "";
         break;
       case "user_pronouns":
@@ -284,67 +241,59 @@ export default function Releaseforms() {
     if (isFormValid) {
       if (compressedImage) {
         const formData = new FormData(form.current);
-        formData.set("my_file", compressedImage, "compressed-image.jpg");
+        formData.set("my_file", compressedImage, "compressed-image.jpg"); // Attach the compressed image
 
-        // Log to ensure the correct file is attached
-        console.log(
-          "Compressed image attached for submission:",
-          compressedImage
-        );
-
-        // Proceed with sending the email
-        sendEmail(e);
-      } else {
-        console.log("No valid image selected for submission.");
+        // Use FormData to override the form file input
+        const fileInput = form.current.querySelector('input[name="my_file"]');
+        if (fileInput) {
+          const dataTransfer = new DataTransfer(); // Create a new DataTransfer object
+          const file = new File([compressedImage], "compressed-image.jpg", {
+            type: compressedImage.type,
+          });
+          dataTransfer.items.add(file); // Add compressed file
+          fileInput.files = dataTransfer.files; // Assign the new file to the input
+        }
       }
+
+      // Proceed with sending the email
+      sendEmail();
     } else {
       console.log("Form validation failed.");
     }
   };
 
   // Submit form via EmailJS
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    if (!isFormValid()) {
-      console.log("Form validation failed:", validationError, fileSizeError);
-      return;
-    }
-
+  const sendEmail = () => {
     setIsLoading(true);
-
-    const formData = new FormData(form.current); // Create FormData object from form
-    if (compressedImage) {
-      formData.set("my_file", compressedImage, "compressed-image.jpg");
-    }
-
-    // Log the total size of the form data
-    let totalSize = 0;
-    for (let [key, value] of formData.entries()) {
-      if (value instanceof Blob) {
-        totalSize += value.size;
-      } else {
-        totalSize += new Blob([value]).size;
-      }
-    }
-
-    console.log(`Total form data size: ${totalSize} bytes`);
 
     emailjs
       .sendForm(
-        "service_5she545",
-        "template_6a8lzj9",
-        form.current, // The form reference
-        "N8iJs0OwqbPvxYuRo"
+        "service_5she545", // Your service ID
+        "template_6a8lzj9", // Your template ID
+        form.current, // The HTML form reference
+        "N8iJs0OwqbPvxYuRo" // Your user ID
       )
-      .then(() => {
-        console.log("MESSAGE SENT!");
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log("MESSAGE FAILED", error);
-        setIsLoading(false);
-      });
+      .then(
+        () => {
+          console.log("MESSAGE SENT!");
+          setMessageStatus("success");
+          setIsLoading(false);
+          setValidationError(inputValidationError);
+          form.current.reset();
+          setFormValues(inputForm);
+
+          // Redirect to /formsent page
+          router.push("/formsent");
+        },
+        (error) => {
+          console.log("MESSAGE FAILED", error.text);
+          if (error.text.includes("Attachments size limit")) {
+            setFileSizeError(true);
+          } else {
+            setMessageStatus("error");
+          }
+        }
+      );
   };
 
   return (
@@ -365,7 +314,12 @@ export default function Releaseforms() {
       <h2 className={styles.releaseformsTagline}>
         Please fill out this form before getting tattooed
       </h2>
-      <form ref={form} onSubmit={handleSubmit} className={styles.releaseforms}>
+      <form
+        ref={form}
+        onSubmit={handleSubmit}
+        className={styles.releaseforms}
+        id={styles.formContainer}
+      >
         <p className={styles.releaseContent}>
           I wish to have my skin tattooed. In consideration for such services
           from:
@@ -397,8 +351,8 @@ export default function Releaseforms() {
         </div>{" "}
         <p className={styles.releaseContent} id={styles.releaseContentBreak}>
           and Marf Inc. doing business as Wild Wind Tattoo at 1452 N. Western
-          Ave. Chicago IL 60622 (together with it’s artists, apprentices and
-          agents, the “Tattoo Studio”), I agree to and affirm that:
+          Ave. Chicago IL 60622 (together with it&apos;s artists, apprentices
+          and agents, the “Tattoo Studio”), I agree to and affirm that:
         </p>
         <p className={styles.releaseContent}>
           I,
@@ -472,7 +426,7 @@ export default function Releaseforms() {
           ))}
         </div>
         <p className={styles.releaseContent}>
-          Tattooing involves breaking the skin, one of your body’s main
+          Tattooing involves breaking the skin, one of your body&apos;s main
           protective barriers. This means you may be more susceptible to skin
           and blood infections. Specific risks include:
         </p>
@@ -513,13 +467,13 @@ export default function Releaseforms() {
           of pigment under the skin. The tattoo will permanently change my
           appearance and can only be removed by laser or surgical means, which
           can be disfiguring and/or costly and which are unlikely to restore my
-          skin to its pre-tattoo condition even after it’s removed.{" "}
+          skin to its pre-tattoo condition even after it&apos;s removed.{" "}
         </p>
         <p className={styles.releaseContent} id={styles.releaseContentBreak}>
           Both the ARTIST and the TATTOO STUDIO have given me the full
           opportunity to read and understand this document and to ask questions
           about the tattoo procedure and the staff has answered satisfactorily.
-          I have received instructions on the care of my tattoo while it’s
+          I have received instructions on the care of my tattoo while it&apos;s
           healing. I understand them and will follow them. If I fail to follow
           them, then I am responsible for consequent defects in the art and
           infections in my skin. I am not drunk or drugged, I do not have a
@@ -539,7 +493,7 @@ export default function Releaseforms() {
         </p>
         <p className={styles.releaseContent}>
           I consent to letting my artist take a photo of my tattoo for use on
-          social media or for Wild Wind Tattoo’s marketing purposes:
+          social media or for Wild Wind Tattoo&apos;s marketing purposes:
         </p>
         <div
           className={styles.tattooSizeContainer}
@@ -618,26 +572,34 @@ export default function Releaseforms() {
             readOnly={true}
           />
         </div>
-        <div className={styles.todaysDateContainer} id={styles.attachFile}>
+        <div id={styles.attachFile}>
           <label className={styles.label} id={styles.attachMessage}>
-            Attach a photo of your ID, DL or Passport:{" "}
+            Attach a photo of your ID, DL or Passport:
+            {validationError.my_file && (
+              <span className={styles.error}>
+                *Attach a photo of your identification
+              </span>
+            )}
           </label>
+        </div>
+        <div className={styles.chooseFile}>
           <input
             className={styles.form}
             id={styles.file}
             type="file"
             name="my_file"
             accept="image/*"
-            onChange={(e) => handleImageChange(e.target.files[0])} // Wrap in arrow function
+            onChange={(e) => handleImageChange(e.target.files[0])}
             aria-label="users_attached_id_photo"
           />
-          {fileSizeError && (
+          {/*{fileSizeError && (
             <span className={styles.error}>
               *Attachment file error. The maximum allowed attachments size is
               500Kb*
             </span>
-          )}
+          )}*/}
         </div>
+        <input type="hidden" name="user_risks" value={formValues.user_risks} />
         <input
           className={styles.formSubmit}
           type="submit"
@@ -659,7 +621,7 @@ export default function Releaseforms() {
         )}
         {validationError.user_risks && (
           <span className={styles.errorBottom}>
-            *Please any risks you may have*
+            *Please select any risks you may have*
           </span>
         )}
         {validationError.user_consent && (
@@ -675,8 +637,7 @@ export default function Releaseforms() {
         )}
         {fileSizeError && (
           <span className={styles.errorBottom}>
-            *Attachment file error. The maximum allowed attachments size is
-            500Kb*
+            *Attach a photo of your identification
           </span>
         )}
         {messageStatus === "error" && (

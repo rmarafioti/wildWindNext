@@ -8,6 +8,10 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+#formContainer {
+  width: 100%;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -29,6 +33,7 @@
   font-weight: normal;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+
   border-bottom: solid 1px var(--wildGreen);
 }
 
@@ -155,7 +160,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
+  width: 780px;
+  border-bottom: 1px solid var(--wildGreen);
 }
 
 .todaysDate {
@@ -169,7 +177,7 @@
 
 #attachFile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -184,6 +192,10 @@
   border: none;
   margin-bottom: 0rem;
   width: 250px;
+}
+
+.chooseFile {
+  margin-bottom: 2rem;
 }
 
 .formSubmit {
@@ -204,7 +216,7 @@
 }
 
 @media (max-width: 586px) {
-  .header, #releaseContentBreak, .form {
+  .header, #releaseContentBreak, .form, .formSubmit, .todaysDateContainer {
     width: 100%;
   }
   .selectedRiskContainer {
