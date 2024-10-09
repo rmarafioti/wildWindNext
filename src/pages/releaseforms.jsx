@@ -71,125 +71,71 @@ export default function Releaseforms() {
   const consent = ["Yes", "No"];
   const pronouns = ["She / Her", "They / Them", "He / Him"];
 
+  // Add a selected risk to the array
   const handleAddRisk = () => {
-    if (selectedRisk) {
-      const newRisk = `${selectedRisk}`;
-      const updatedRisks = [...selectedRisks, newRisk]; // Create updated risks array
+    if (selectedRisk && !selectedRisks.includes(selectedRisk)) {
+      const updatedRisks = [...selectedRisks, selectedRisk];
       setSelectedRisks(updatedRisks);
 
-      // Update form values
+      // Update form values to reflect the selected risks
       setFormValues((prevValues) => ({
         ...prevValues,
-        user_risks: updatedRisks.join(", "), // Use updatedRisks directly
+        user_risks: updatedRisks.join(", "), // Convert to comma-separated string
       }));
 
-      // Trigger validation with the updated risks array
-      validateField("user_risks", updatedRisks);
+      // Validate the risk field and consent field after adding a risk
+      validateField("user_risks", updatedRisks.join(", "));
+      validateField("user_consent", formValues.user_consent); // Trigger consent validation
 
-      // Reset selected risk
+      // Clear the selected risk after adding
       setSelectedRisk("");
     }
   };
 
-  /**
-   * @function handleRemoveRisk removes a selected risk from the selectedRisks array
-   * @param index of the risk to remove
-   */
+  // Remove a risk from the array
   const handleRemoveRisk = (index) => {
-    const newSelectedRisks = selectedRisks.filter((_, i) => i !== index);
-    setSelectedRisks(newSelectedRisks);
+    const updatedRisks = selectedRisks.filter((_, i) => i !== index);
+    setSelectedRisks(updatedRisks);
 
-    // Update form values with the modified risk array
+    // Update form values to reflect the updated risks
     setFormValues((prevValues) => ({
       ...prevValues,
-      user_risks: newSelectedRisks.join(", "),
+      user_risks: updatedRisks.join(", "), // Convert to comma-separated string
     }));
 
-    // Revalidate risks after removal
-    validateField("user_risks", newSelectedRisks);
+    // Trigger validation after removing a risk
+    validateField("user_risks", updatedRisks.join(", "));
   };
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
 
-    // Log the field name and its new value
-    console.log(`Field changed: ${name}, Value:`, newValue);
-
-    // Check if the field is for file attachment
     if (name === "my_file" && files) {
       const selectedFile = files[0];
-
-      // Log file details
-      console.log("File selected:", selectedFile);
-      console.log(`File size: ${selectedFile.size} bytes`);
-
       const maxFileSize = 500 * 1024; // 500KB
-
-      // Check if the file exceeds the size limit
       if (selectedFile.size > maxFileSize) {
         setFileSizeError(true);
-        console.log("File size exceeds the limit of 500KB");
-        setFormValues((prevValues) => ({ ...prevValues, [name]: null }));
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          [name]: null,
+        }));
         return;
       } else {
         setFileSizeError(false);
-        console.log("File size is within the allowed limit.");
-
-        // Proceed to compress the image
-        handleImageCompression(selectedFile); // Compress image here
-
-        // Check if compression was successful (set in compressedImage)
-        console.log("Attempting to compress the file...");
       }
     }
 
-    // Set form values for the changed input field
-    setFormValues((prevValues) => ({ ...prevValues, [name]: newValue }));
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: newValue,
+    }));
 
-    // Log the updated form values
-    console.log("Updated Form Values:", { ...formValues, [name]: newValue });
-
-    // Validate the field after setting its value
     validateField(name, newValue);
   };
 
-  // Compress image if it's too large
+  //compress my_file image
   /*const handleImageChange = (file) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = (event) => {
-      const img = new Image();
-      img.src = event.target.result;
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        const MAX_WIDTH = 150; // Reduce size further
-        const scaleSize = MAX_WIDTH / img.width;
-        canvas.width = MAX_WIDTH;
-        canvas.height = img.height * scaleSize;
-
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-        // Convert canvas image to Blob with lower quality (0.5 instead of 0.7)
-        canvas.toBlob(
-          (blob) => {
-            if (blob.size > 50 * 1024) {
-              setFileSizeError(true); // File size still too large
-            } else {
-              setFileSizeError(false);
-              setCompressedImage(blob); // Save compressed image for submission
-            }
-          },
-          "image/jpeg",
-          0.05 // Lower the quality further
-        );
-      };
-    };
-  };*/
-
-  const handleImageChange = (file) => {
     if (!file) {
       console.error("No file selected");
       return;
@@ -260,7 +206,7 @@ export default function Releaseforms() {
     reader.onerror = () => {
       console.error("Error reading the file");
     };
-  };
+  };*/
 
   // Validate form fields
   const validateField = (field, value) => {
@@ -268,59 +214,74 @@ export default function Releaseforms() {
 
     switch (field) {
       case "artist_name":
-        isValid = value.trim() !== ""; // Artist name must not be empty
+        isValid = value.trim() !== "";
         break;
       case "user_name":
-        isValid = value.trim() !== ""; // User name must not be empty
+        isValid = value.trim() !== "";
         break;
       case "user_risks":
-        // Now validating the length of the risks array directly (passed as the `value`)
-        isValid = value.length > 0; // Ensure at least one risk is selected
+        isValid = value.trim() !== "";
         break;
       case "user_consent":
-        isValid = value.trim() !== ""; // User consent must not be empty
+        console.log("Validating user_consent:", value); // Check if it logs when user_consent is being validated
+        isValid = value.trim() !== "";
         break;
       case "user_pronouns":
-        isValid = value.trim() !== ""; // User pronouns must not be empty
+        isValid = value.trim() !== "";
         break;
       case "my_file":
-        isValid = value && value.size <= 500000; // File size must be <= 500KB
+        isValid = value && value.size <= 500000; // 500KB limit
         setFileSizeError(!isValid);
         break;
       default:
         break;
     }
 
-    // Update validation error state
     setValidationError((prevErrors) => ({
       ...prevErrors,
-      [field]: !isValid, // Set the error state to true if validation fails
+      [field]: !isValid,
     }));
 
     return isValid;
   };
 
+  // Validate all fields individually during form submission
+  const validateAllFields = () => {
+    let allValid = true;
+
+    Object.keys(inputForm).forEach((field) => {
+      const isFieldValid = validateField(field, formValues[field]);
+      if (!isFieldValid) {
+        allValid = false;
+      }
+    });
+
+    return allValid;
+  };
+
+  // Handle input focus to validate the next field in the form
   const handleInputFocus = (currentField) => {
     const fields = Object.keys(inputForm);
     const currentIndex = fields.indexOf(currentField);
+
+    // Validate the current field itself
+    validateField(currentField, formValues[currentField]);
+
+    // Validate the next field, if any
     if (currentIndex < fields.length - 1) {
       const nextField = fields[currentIndex + 1];
       validateField(nextField, formValues[nextField]);
     }
   };
 
-  // Check if form is valid
-  const isFormValid = () => {
-    return (
-      Object.values(validationError).every((error) => !error) && !fileSizeError
-    );
-  };
-
   // Submit the form with the compressed image and trigger EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isFormValid()) {
+    // Validate the form before submission
+    const isFormValid = validateAllFields(); // Run validation for all fields
+
+    if (isFormValid) {
       if (compressedImage) {
         const formData = new FormData(form.current);
         formData.set("my_file", compressedImage, "compressed-image.jpg");
@@ -413,11 +374,12 @@ export default function Releaseforms() {
           <label className={styles.label}>
             Artist Name:{" "}
             {validationError.artist_name && (
-              <p className={styles.error}>*Select your tattoo artist.</p>
+              <span className={styles.error}>*Select your tattoo artist.</span>
             )}
           </label>
           <select
             className={styles.form}
+            type="text"
             name="artist_name"
             value={formValues.artist_name}
             aria-label="users_selected_artist_name"
@@ -442,7 +404,7 @@ export default function Releaseforms() {
           I,
           <label className={styles.label}>
             {validationError.user_name && (
-              <p className={styles.error}>*Please enter your name*</p>
+              <span className={styles.error}>*Please enter your name*</span>
             )}
           </label>
           <input
@@ -465,21 +427,19 @@ export default function Releaseforms() {
         </p>
         <label className={styles.label}>
           {validationError.user_risks && (
-            <p className={styles.error}>
+            <span className={styles.error}>
               *Select any AND ADD risks that apply or select 'None'*
-            </p>
+            </span>
           )}
         </label>
         <div className={styles.selectedRiskContainer}>
           <select
             className={styles.form}
             id={styles.riskForm}
-            type="text"
             name="user_risks"
             value={selectedRisk}
             aria-label="users_selected_risk"
             onChange={(e) => setSelectedRisk(e.target.value)}
-            onFocus={() => handleInputFocus("user_risks")}
           >
             <option value="">Select a Risk</option>
             {riskIndicators.map((risk, index) => (
@@ -501,7 +461,7 @@ export default function Releaseforms() {
         >
           {selectedRisks.map((risk, index) => (
             <div key={index} className={styles.riskEntry}>
-              {risk}{" "}
+              {risk}
               <div
                 className={styles.removeButton}
                 onClick={() => handleRemoveRisk(index)}
@@ -587,7 +547,7 @@ export default function Releaseforms() {
         >
           <label className={styles.label}>
             {validationError.user_consent && (
-              <p className={styles.error}>*Select an answer</p>
+              <span className={styles.error}>*Select an answer</span>
             )}
           </label>
           <select
@@ -614,7 +574,7 @@ export default function Releaseforms() {
           <label className={styles.label}>
             Pronouns:
             {validationError.user_pronouns && (
-              <p className={styles.error}>*Select your pronouns</p>
+              <span className={styles.error}>*Select your pronouns</span>
             )}
           </label>
           <select
@@ -637,10 +597,11 @@ export default function Releaseforms() {
         <p className={styles.releaseContent}>
           I,{" "}
           <input
-            type="name"
+            type="text"
             name="user_name"
             value={formValues.user_name}
             className={styles.userName}
+            onChange={handleInputChange} // Add onChange handler
           />
           HAVE READ THIS LEGAL CONTRACT, I UNDERSTAND IT. I AGREE TO BE BOUND BY
           IT.
@@ -654,7 +615,7 @@ export default function Releaseforms() {
             name="current_date"
             value={currentDate}
             className={styles.todaysDate}
-            readOnly
+            readOnly={true}
           />
         </div>
         <div className={styles.todaysDateContainer} id={styles.attachFile}>
@@ -671,10 +632,10 @@ export default function Releaseforms() {
             aria-label="users_attached_id_photo"
           />
           {fileSizeError && (
-            <p className={styles.error}>
+            <span className={styles.error}>
               *Attachment file error. The maximum allowed attachments size is
               500Kb*
-            </p>
+            </span>
           )}
         </div>
         <input
@@ -682,38 +643,46 @@ export default function Releaseforms() {
           type="submit"
           aria-label="form_submit_button"
           value={isLoading ? "Sending..." : "Send"}
-          disabled={isLoading || !isFormValid()}
+          disabled={
+            isLoading ||
+            Object.values(validationError).some((error) => error) ||
+            fileSizeError
+          }
         />
         {validationError.artist_name && (
-          <p className={styles.errorBottom}>*Please enter your artists name*</p>
+          <span className={styles.errorBottom}>
+            *Please enter your artists name*
+          </span>
         )}
         {validationError.user_name && (
-          <p className={styles.errorBottom}>*Please enter your name*</p>
+          <span className={styles.errorBottom}>*Please enter your name*</span>
         )}
         {validationError.user_risks && (
-          <p className={styles.errorBottom}>*Please any risks you may have*</p>
+          <span className={styles.errorBottom}>
+            *Please any risks you may have*
+          </span>
         )}
         {validationError.user_consent && (
-          <p className={styles.errorBottom}>
+          <span className={styles.errorBottom}>
             *Please tell us if you consent to letting your artist take a photo
             of your tattoo*
-          </p>
+          </span>
         )}
         {validationError.user_pronouns && (
-          <p className={styles.errorBottom}>
+          <span className={styles.errorBottom}>
             *Please tell us your preferred pronouns*
-          </p>
+          </span>
         )}
         {fileSizeError && (
-          <p className={styles.errorBottom}>
+          <span className={styles.errorBottom}>
             *Attachment file error. The maximum allowed attachments size is
             500Kb*
-          </p>
+          </span>
         )}
         {messageStatus === "error" && (
-          <p className={styles.errorMessage}>
+          <span className={styles.errorMessage}>
             **Message failed to send. Please try again**
-          </p>
+          </span>
         )}
       </form>
     </article>
