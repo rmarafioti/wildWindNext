@@ -4,6 +4,7 @@ import { LuPlus } from "react-icons/lu";
 import Head from "next/head";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
+import ScrollField from "@/components/ScrollField";
 import Compressor from "compressorjs";
 
 import styles from "@/styles/releaseforms.module.css";
@@ -306,6 +307,7 @@ export default function Releaseforms() {
         />
         <link rel="canonical" href="https://wildwindtattoo.com/releaseforms" />
       </Head>
+      <ScrollField />
       <div className={styles.header}>
         <h1 className={styles.releaseformsHeader}>
           Waiver, Release & Consent To Tattoo
@@ -499,7 +501,7 @@ export default function Releaseforms() {
           className={styles.tattooSizeContainer}
           id={styles.releaseContentBreak}
         >
-          <label className={styles.label}>
+          <label className={styles.label} id="nextField">
             {validationError.user_consent && (
               <span className={styles.error}>*Select an answer</span>
             )}
