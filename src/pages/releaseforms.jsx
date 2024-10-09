@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { IoClose } from "react-icons/io5";
-import { LuPlus } from "react-icons/lu";
 import Head from "next/head";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/router";
@@ -40,8 +38,6 @@ export default function Releaseforms() {
   const [validationError, setValidationError] = useState(inputValidationError);
   const [fileSizeError, setFileSizeError] = useState(false);
   const [formValues, setFormValues] = useState(inputForm);
-  const [selectedRisk, setSelectedRisk] = useState("");
-  const [selectedRisks, setSelectedRisks] = useState([]);
   const [compressedImage, setCompressedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
@@ -73,42 +69,6 @@ export default function Releaseforms() {
   ];
   const consent = ["Yes", "No"];
   const pronouns = ["She / Her", "They / Them", "He / Him"];
-
-  // Add a selected risk to the array
-  const handleAddRisk = () => {
-    if (selectedRisk && !selectedRisks.includes(selectedRisk)) {
-      const updatedRisks = [...selectedRisks, selectedRisk];
-      setSelectedRisks(updatedRisks);
-
-      // Update the hidden form input to include the selected risks
-      setFormValues((prevValues) => ({
-        ...prevValues,
-        user_risks: updatedRisks.join(", "), // Convert to comma-separated string
-      }));
-
-      // Trigger validation for both user_risks and user_consent after adding a risk
-      validateField("user_risks", updatedRisks.join(", "));
-      validateField("user_consent", formValues.user_consent);
-
-      // Clear the selected risk
-      setSelectedRisk("");
-    }
-  };
-
-  // Remove a risk from the array
-  const handleRemoveRisk = (index) => {
-    const updatedRisks = selectedRisks.filter((_, i) => i !== index);
-    setSelectedRisks(updatedRisks);
-
-    // Update the hidden form input to reflect the updated risks
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      user_risks: updatedRisks.join(", "), // Convert to comma-separated string
-    }));
-
-    // Trigger validation after removing a risk
-    validateField("user_risks", updatedRisks.join(", "));
-  };
 
   const handleImageChange = (file) => {
     if (!file) {
@@ -156,6 +116,48 @@ export default function Releaseforms() {
     });
   };
 
+  const handleRiskChange = (e) => {
+    const { value, checked } = e.target;
+    let updatedRisks = [...formValues.user_risks];
+
+    if (checked) {
+      updatedRisks.push(value);
+    } else {
+      updatedRisks = updatedRisks.filter((risk) => risk !== value);
+    }
+
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      user_risks: updatedRisks,
+    }));
+
+    // Validate risks field
+    validateField("user_risks", updatedRisks);
+
+    // Trigger validation for user_consent field after risk is updated
+    validateField("user_consent", formValues.user_consent);
+  };
+
+  const handlePronounChange = (e) => {
+    const { value, checked } = e.target;
+    let updatedPronouns = [...formValues.user_pronouns];
+
+    if (checked) {
+      // Add the selected pronoun if checked
+      updatedPronouns.push(value);
+    } else {
+      // Remove the pronoun if unchecked
+      updatedPronouns = updatedPronouns.filter((pronoun) => pronoun !== value);
+    }
+
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      user_pronouns: updatedPronouns, // Update form values with selected pronouns
+    }));
+
+    validateField("user_pronouns", updatedPronouns); // Validate the field
+  };
+
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
@@ -191,13 +193,13 @@ export default function Releaseforms() {
         isValid = value.trim() !== "";
         break;
       case "user_risks":
-        isValid = value.trim() !== "";
+        isValid = Array.isArray(value) && value.length > 0;
         break;
       case "user_consent":
         isValid = value.trim() !== "";
         break;
       case "user_pronouns":
-        isValid = value.trim() !== "";
+        isValid = Array.isArray(value) && value.length > 0;
         break;
       case "my_file":
         isValid = value && value.size <= 500000; // 500KB limit
@@ -254,6 +256,7 @@ export default function Releaseforms() {
     if (isFormValid) {
       if (compressedImage) {
         const formData = new FormData(form.current);
+
         formData.set("my_file", compressedImage, "compressed-image.jpg"); // Attach compressed image
 
         const fileInput = form.current.querySelector('input[name="my_file"]');
@@ -363,7 +366,9 @@ export default function Releaseforms() {
           I,
           <label className={styles.label}>
             {validationError.user_name && (
-              <span className={styles.error}>*Please enter your name*</span>
+              <span className={styles.error}>
+                *Please enter your first and last name*
+              </span>
             )}
           </label>
           <input
@@ -372,7 +377,7 @@ export default function Releaseforms() {
             type="text"
             name="user_name"
             aria-label="user_name"
-            placeholder="Enter your name"
+            placeholder="Enter your first and last name"
             value={formValues.user_name}
             onChange={handleInputChange}
             onFocus={() => handleInputFocus("user_name")}
@@ -386,49 +391,24 @@ export default function Releaseforms() {
         </p>
         <label className={styles.label}>
           {validationError.user_risks && (
-            <span className={styles.error}>
-              *Select any AND ADD risks that apply or select &apos;None&apos;*
-            </span>
+            <span className={styles.error}>*Select any applicable risks*</span>
           )}
         </label>
         <div className={styles.selectedRiskContainer}>
-          <select
-            className={styles.form}
-            id={styles.riskForm}
-            name="user_risks"
-            value={selectedRisk}
-            aria-label="users_selected_risk"
-            onChange={(e) => setSelectedRisk(e.target.value)}
-          >
-            <option value="">Select a Risk</option>
+          <div className={styles.checkboxGroup}>
             {riskIndicators.map((risk, index) => (
-              <option key={index} value={risk}>
-                {risk}
-              </option>
-            ))}
-          </select>
-          <p className={styles.addRisk}>
-            {selectedRisks.length > 0 ? "Add More" : "Add Risk"}
-          </p>
-          <div className={styles.addMoreButton} onClick={handleAddRisk}>
-            <LuPlus className={styles.addSymbol} />
-          </div>
-        </div>
-        <div
-          className={styles.selectedRisksContainer}
-          id={styles.releaseContentBreak}
-        >
-          {selectedRisks.map((risk, index) => (
-            <div key={index} className={styles.riskEntry}>
-              {risk}
-              <div
-                className={styles.removeButton}
-                onClick={() => handleRemoveRisk(index)}
-              >
-                <IoClose />
+              <div key={index} className={styles.checkboxLabel}>
+                <input
+                  type="checkbox"
+                  name="user_risks"
+                  value={risk}
+                  checked={formValues.user_risks.includes(risk)}
+                  onChange={handleRiskChange}
+                />
+                <label>{risk}</label>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <p className={styles.releaseContent}>
           Tattooing involves breaking the skin, one of your body&apos;s main
@@ -496,7 +476,7 @@ export default function Releaseforms() {
           invalid, that reportion shall be severed from this contract so that
           the remaining contract is valid and enforceable.
         </p>
-        <p className={styles.releaseContent}>
+        <p className={styles.releaseContent} id={styles.consentParagraph}>
           I consent to letting my artist take a photo of my tattoo for use on
           social media or for Wild Wind Tattoo&apos;s marketing purposes:
         </p>
@@ -536,22 +516,22 @@ export default function Releaseforms() {
               <span className={styles.error}>*Select your pronouns</span>
             )}
           </label>
-          <select
-            className={styles.form}
-            name="user_pronouns"
-            value={formValues.user_pronouns}
-            aria-label="users_selected_pronouns_answer"
-            onChange={handleInputChange}
-            onFocus={() => handleInputFocus("user_pronouns")}
-            required
-          >
-            <option value="">Pronouns answer</option>
+
+          <div className={styles.checkboxGroup}>
             {pronouns.map((option, index) => (
-              <option key={index} value={option}>
+              <label key={index} className={styles.checkboxLabel}>
+                <input
+                  type="checkbox"
+                  name="user_pronouns"
+                  value={option}
+                  checked={formValues.user_pronouns.includes(option)}
+                  onChange={handlePronounChange}
+                  aria-label={`pronoun_${option}`}
+                />
                 {option}
-              </option>
+              </label>
             ))}
-          </select>
+          </div>
         </div>
         <p className={styles.releaseContent}>
           I,{" "}
