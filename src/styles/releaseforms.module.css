@@ -8,10 +8,14 @@
   margin: 1rem 1rem 2rem 1rem;
 }
 
+#formContainer {
+  width: 100%;
+}
+
 .header {
   display: flex;
   justify-content: center;
-  width: 480px;
+  width: 580px;
 }
 
 .releaseformsHeader {
@@ -27,48 +31,232 @@
   color: var(--wildBlack);
   font-size: 20px;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+
   border-bottom: solid 1px var(--wildGreen);
 }
 
-.artistLink {
-  margin: 1rem 0rem 1rem 0rem;
+.releaseContent {
+  color: var(--wildBlack);
+  line-height: 2rem;
+  width: 780px;
+  margin-bottom: 1rem;
+}
+
+#releaseContentBreak {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--wildGreen);
+  width: 780px;
+}
+
+.tattooSizeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480px;
+}
+
+.label {
+  font-size: 16px;;
+  font-weight: bold;
+  color: var(--wildBlack);
+}
+
+.error {
+  display: inline-block;
+  background-color: var(--wildGold);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.form {
+  font-size: 16px;
+  border: 1px solid var(--wildBlack);
   padding: 0.5rem;
-  text-align: center;
+  margin-bottom: 1rem;
+  width: 480px
+ 
+}
+
+#clientName {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.selectedRiskContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin-bottom: 1rem;
+}
+
+#riskForm {
+  width: 100%;
+  margin-bottom: 0rem;
+}
+
+.addRisk {
+  color: var(--wildBlack);
+  margin-left: 0.5rem;
+}
+
+.addMoreButton,
+.removeButton {
+  display: flex;
+  align-items: center;
   color: var(--wildBlack);
   background-color: var(--wildGoldTrans);
-  width: 300px;
+  padding: 0.4rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.removeButton {
+  padding: 5px;
+  margin-left: 0.5rem;
+}
+
+.addMoreButton:hover,
+.removeButton:hover {
+  background-color: var(--wildGold);
+}
+
+.addSymbol {
+  font-size: 20px;
+}
+
+.selectedRisksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.riskEntry {
+  font-size: 16px;
+  color: var(--wildBlack);
+  display: flex;
+  margin: 0.5rem 0.5rem 1rem 0rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border: 1px solid lightgrey;
+}
+
+.userName {
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid var(--wildBlack);
+  margin: 0rem .5rem 0rem .5rem;
+}
+
+.todaysDateContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  width: 780px;
+  border-bottom: 1px solid var(--wildGreen);
+}
+
+.todaysDate {
+  color: var(--wildBlack);
+  font-size: 18px;
+}
+
+#date {
+  margin-right: .5rem;
+}
+
+#attachFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#attachMessage {
+  margin-right: 1rem;
+}
+
+#attachError {
+  color: var(--wildBlack);
+  margin-top: 1rem;
+}
+
+#file {
+  font-size: 16px;
+  color: var(--wildBlack);
+  border: none;
+  margin-bottom: 0rem;
+  width: 250px;
+}
+
+.chooseFile {
+  margin-bottom: 2rem;
+}
+
+.formSubmit {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: var(--wildDarkGreen);
+  padding: 0.5rem;
+  width: 480px;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
-.artistLink {
-  text-decoration: none;
-}
-
-.artistLink:visited {
+.errorBottom {
   color: var(--wildBlack);
-  background-color: var(--wildGold);
-}
-
-.artistLink:hover,
-.artistList:hover {
-  background-color: var(--wildGold);
+  font-weight: bold;
 }
 
 @media (max-width: 586px) {
-  .header {
+  .header, #releaseContentBreak, .form, .formSubmit, .todaysDateContainer {
     width: 100%;
+  }
+  .selectedRiskContainer {
+    width: 100%;
+    flex-wrap: wrap;
   }
   .releaseformsHeader {
-    line-height: 3rem;
+    line-height: 3.5rem;
     margin-top: 0rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
   }
-  .artistLink,
-  .artistList {
+  .releaseContent {
     width: 100%;
-    background-color: var(--wildGold);
+  }
+  #releaseContentBreak {
+    margin-bottom: 1rem;
+  }
+  .tattooSizeContainer {
+    width: 100%;
+  }
+  #riskForm {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #attachFile {
+    flex-direction: column;
+    width: 100%;
+  }
+  #attachMessage {
+    margin-right: 0rem;
+  }
+  #clientName {
+    margin: 0rem;
+  }
+  .todaysDate {
+    width: 50%;
   }
 }
