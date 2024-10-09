@@ -186,6 +186,11 @@
   margin-right: 1rem;
 }
 
+#attachError {
+  color: var(--wildBlack);
+  margin-top: 1rem;
+}
+
 #file {
   font-size: 16px;
   color: var(--wildBlack);

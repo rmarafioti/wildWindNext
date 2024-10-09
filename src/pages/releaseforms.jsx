@@ -118,13 +118,12 @@ export default function Releaseforms() {
 
     // Compress the image
     new Compressor(file, {
-      quality: 0.6, // Compression quality, 0 to 1 (lower means more compression)
-      maxWidth: 1000, // Set a max width or height if needed
+      quality: 0.6, // Adjust quality as needed
+      maxWidth: 1000,
       maxHeight: 1000,
       success(compressedResult) {
         console.log("Compressed image size: ", compressedResult.size);
 
-        // Check the size after compression
         if (compressedResult.size > 500 * 1024) {
           // 500KB limit
           setFileSizeError(true);
@@ -136,6 +135,19 @@ export default function Releaseforms() {
             ...prevValues,
             my_file: compressedResult,
           }));
+
+          // Use DataTransfer to override the form input with the compressed image
+          const fileInput = form.current.querySelector('input[name="my_file"]');
+          if (fileInput) {
+            const dataTransfer = new DataTransfer();
+            const file = new File([compressedResult], "compressed-image.jpg", {
+              type: compressedResult.type,
+            });
+            dataTransfer.items.add(file);
+            fileInput.files = dataTransfer.files; // Assign compressed file to the input
+          }
+
+          console.log("Compressed image added to the form:", compressedResult);
         }
       },
       error(err) {
@@ -237,22 +249,16 @@ export default function Releaseforms() {
     e.preventDefault();
 
     // Validate the form before submission
-    const isFormValid = validateAllFields(); // Run validation for all fields
+    const isFormValid = validateAllFields();
 
     if (isFormValid) {
       if (compressedImage) {
         const formData = new FormData(form.current);
-        formData.set("my_file", compressedImage, "compressed-image.jpg"); // Attach the compressed image
+        formData.set("my_file", compressedImage, "compressed-image.jpg"); // Attach compressed image
 
-        // Use FormData to override the form file input
         const fileInput = form.current.querySelector('input[name="my_file"]');
         if (fileInput) {
-          const dataTransfer = new DataTransfer(); // Create a new DataTransfer object
-          const file = new File([compressedImage], "compressed-image.jpg", {
-            type: compressedImage.type,
-          });
-          dataTransfer.items.add(file); // Add compressed file
-          fileInput.files = dataTransfer.files; // Assign the new file to the input
+          console.log("File input before sending:", fileInput.files[0]); // Log the file being sent
         }
       }
 
@@ -279,11 +285,8 @@ export default function Releaseforms() {
           console.log("MESSAGE SENT!");
           setMessageStatus("success");
           setIsLoading(false);
-          setValidationError(inputValidationError);
           form.current.reset();
           setFormValues(inputForm);
-
-          // Redirect to /formsent page
           router.push("/formsent");
         },
         (error) => {
@@ -552,13 +555,10 @@ export default function Releaseforms() {
         </div>
         <p className={styles.releaseContent}>
           I,{" "}
-          <input
-            type="text"
-            name="user_name"
-            value={formValues.user_name}
-            className={styles.userName}
-            onChange={handleInputChange} // Add onChange handler
-          />
+          <span>
+            {formValues.user_name ? formValues.user_name : "________"}
+          </span>{" "}
+          {/* Display the user's name */}
           HAVE READ THIS LEGAL CONTRACT, I UNDERSTAND IT. I AGREE TO BE BOUND BY
           IT.
         </p>
@@ -577,11 +577,6 @@ export default function Releaseforms() {
         <div id={styles.attachFile}>
           <label className={styles.label} id={styles.attachMessage}>
             Attach a photo of your ID, DL or Passport:
-            {validationError.my_file && (
-              <span className={styles.error}>
-                *Attach a photo of your identification
-              </span>
-            )}
           </label>
         </div>
         <div className={styles.chooseFile}>
@@ -594,12 +589,6 @@ export default function Releaseforms() {
             onChange={(e) => handleImageChange(e.target.files[0])}
             aria-label="users_attached_id_photo"
           />
-          {/*{fileSizeError && (
-            <span className={styles.error}>
-              *Attachment file error. The maximum allowed attachments size is
-              500Kb*
-            </span>
-          )}*/}
         </div>
         <input type="hidden" name="user_risks" value={formValues.user_risks} />
         <input
@@ -609,7 +598,7 @@ export default function Releaseforms() {
           value={isLoading ? "Sending..." : "Send"}
           disabled={
             isLoading ||
-            Object.values(validationError).some((error) => error) ||
+            /*Object.values(validationError).some((error) => error) ||*/
             fileSizeError
           }
         />
@@ -638,12 +627,12 @@ export default function Releaseforms() {
           </span>
         )}
         {fileSizeError && (
-          <span className={styles.errorBottom}>
+          <span className={styles.error} id={styles.attachError}>
             *Attach a photo of your identification
           </span>
         )}
         {messageStatus === "error" && (
-          <span className={styles.errorMessage}>
+          <span className={styles.error}>
             **Message failed to send. Please try again**
           </span>
         )}
