@@ -63,7 +63,7 @@ export default function Releaseforms() {
     "History of skin disease, skin sensitivities",
     "Diabetes",
     "Allergies to soap or adhesives",
-    "History of allergies to pigments, dyes or Latex",
+    "Allergies to pigments, dyes or latex",
     "Pregnant or nursing",
     "None",
   ];
