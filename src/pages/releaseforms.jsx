@@ -387,7 +387,7 @@ export default function Releaseforms() {
         <label className={styles.label}>
           {validationError.user_risks && (
             <span className={styles.error}>
-              *Select any AND ADD risks that apply or select 'None'*
+              *Select any AND ADD risks that apply or select &apos;None&apos;*
             </span>
           )}
         </label>
@@ -564,7 +564,7 @@ export default function Releaseforms() {
         </p>
         <div className={styles.todaysDateContainer}>
           <label className={styles.todaysDate} id={styles.date}>
-            Today's Date:
+            Today&apos;s Date:
           </label>
           <input
             type="date"
