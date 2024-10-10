@@ -96,6 +96,9 @@ export default function Releaseforms() {
             my_file: compressedResult,
           }));
 
+          // Validate after setting
+          validateField("my_file", compressedResult);
+
           // Use DataTransfer to override the form input with the compressed image
           const fileInput = form.current.querySelector('input[name="my_file"]');
           if (fileInput) {
@@ -156,6 +159,8 @@ export default function Releaseforms() {
     }));
 
     validateField("user_pronouns", updatedPronouns); // Validate the field
+
+    validateField("my_file", formValues.my_file);
   };
 
   const handleInputChange = (e) => {
@@ -394,21 +399,20 @@ export default function Releaseforms() {
             <span className={styles.error}>*Select any applicable risks*</span>
           )}
         </label>
-        <div className={styles.selectedRiskContainer}>
-          <div className={styles.checkboxGroup}>
-            {riskIndicators.map((risk, index) => (
-              <div key={index} className={styles.checkboxLabel}>
-                <input
-                  type="checkbox"
-                  name="user_risks"
-                  value={risk}
-                  checked={formValues.user_risks.includes(risk)}
-                  onChange={handleRiskChange}
-                />
-                <label>{risk}</label>
-              </div>
-            ))}
-          </div>
+        <div className={styles.checkboxGroup}>
+          {riskIndicators.map((risk, index) => (
+            <label key={index} className={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                name="user_risks"
+                value={risk}
+                checked={formValues.user_risks.includes(risk)}
+                onChange={handleRiskChange}
+                aria-label={`risk_${risk}`}
+              />
+              {risk}
+            </label>
+          ))}
         </div>
         <p className={styles.releaseContent}>
           Tattooing involves breaking the skin, one of your body&apos;s main
@@ -557,6 +561,11 @@ export default function Releaseforms() {
         <div id={styles.attachFile}>
           <label className={styles.label} id={styles.attachMessage}>
             Attach a photo of your ID, DL or Passport:
+            {validationError.my_file && (
+              <span className={styles.error}>
+                *Attach a photo of your identification
+              </span>
+            )}
           </label>
         </div>
         <div className={styles.chooseFile}>
@@ -568,19 +577,15 @@ export default function Releaseforms() {
             accept="image/*"
             onChange={(e) => handleImageChange(e.target.files[0])}
             aria-label="users_attached_id_photo"
+            required
           />
         </div>
-        <input type="hidden" name="user_risks" value={formValues.user_risks} />
         <input
           className={styles.formSubmit}
           type="submit"
           aria-label="form_submit_button"
           value={isLoading ? "Sending..." : "Send"}
-          disabled={
-            isLoading ||
-            /*Object.values(validationError).some((error) => error) ||*/
-            fileSizeError
-          }
+          disabled={isLoading || fileSizeError}
         />
         {validationError.artist_name && (
           <span className={styles.errorBottom}>
@@ -606,8 +611,8 @@ export default function Releaseforms() {
             *Please tell us your preferred pronouns*
           </span>
         )}
-        {fileSizeError && (
-          <span className={styles.error} id={styles.attachError}>
+        {validationError.my_file && (
+          <span className={styles.errorBottom} id={styles.attachError}>
             *Attach a photo of your identification
           </span>
         )}
