@@ -20,7 +20,6 @@ export default function Releaseforms() {
     user_name: false,
     user_risks: false,
     user_consent: false,
-    user_pronouns: false,
     my_file: false,
   };
 
@@ -29,9 +28,9 @@ export default function Releaseforms() {
     user_name: "",
     user_risks: "",
     user_consent: "",
-    user_pronouns: "",
     current_date: "",
     my_file: null,
+    user_email: "",
   };
 
   const [currentDate, setCurrentDate] = useState("");
@@ -68,7 +67,6 @@ export default function Releaseforms() {
     "None",
   ];
   const consent = ["Yes", "No"];
-  const pronouns = ["She / Her", "They / Them", "He / Him"];
 
   const handleImageChange = (file) => {
     if (!file) {
@@ -141,28 +139,6 @@ export default function Releaseforms() {
     validateField("user_consent", formValues.user_consent);
   };
 
-  const handlePronounChange = (e) => {
-    const { value, checked } = e.target;
-    let updatedPronouns = [...formValues.user_pronouns];
-
-    if (checked) {
-      // Add the selected pronoun if checked
-      updatedPronouns.push(value);
-    } else {
-      // Remove the pronoun if unchecked
-      updatedPronouns = updatedPronouns.filter((pronoun) => pronoun !== value);
-    }
-
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      user_pronouns: updatedPronouns, // Update form values with selected pronouns
-    }));
-
-    validateField("user_pronouns", updatedPronouns); // Validate the field
-
-    validateField("my_file", formValues.my_file);
-  };
-
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
@@ -173,6 +149,11 @@ export default function Releaseforms() {
       return;
     }
 
+    const isValidEmail = (email) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    };
+
     setFormValues((prevValues) => ({
       ...prevValues,
       [name]: newValue,
@@ -180,8 +161,8 @@ export default function Releaseforms() {
 
     validateField(name, newValue);
 
-    // If user_pronouns is filled, trigger validation for my_file
-    if (name === "user_pronouns") {
+    // If user_consent is filled, trigger validation for my_file
+    if (name === "user_consent") {
       validateField("my_file", formValues.my_file); // Check if my_file is valid after pronouns
     }
   };
@@ -202,9 +183,6 @@ export default function Releaseforms() {
         break;
       case "user_consent":
         isValid = value.trim() !== "";
-        break;
-      case "user_pronouns":
-        isValid = Array.isArray(value) && value.length > 0;
         break;
       case "my_file":
         isValid = value && value.size <= 500000; // 500KB limit
@@ -510,33 +488,6 @@ export default function Releaseforms() {
             ))}
           </select>
         </div>
-        <div
-          className={styles.tattooSizeContainer}
-          id={styles.releaseContentBreak}
-        >
-          <label className={styles.label}>
-            Pronouns:
-            {validationError.user_pronouns && (
-              <span className={styles.error}>*Select your pronouns</span>
-            )}
-          </label>
-
-          <div className={styles.checkboxGroup}>
-            {pronouns.map((option, index) => (
-              <label key={index} className={styles.checkboxLabel}>
-                <input
-                  type="checkbox"
-                  name="user_pronouns"
-                  value={option}
-                  checked={formValues.user_pronouns.includes(option)}
-                  onChange={handlePronounChange}
-                  aria-label={`pronoun_${option}`}
-                />
-                {option}
-              </label>
-            ))}
-          </div>
-        </div>
         <p className={styles.releaseContent}>
           I,{" "}
           <span>
@@ -580,6 +531,21 @@ export default function Releaseforms() {
             required
           />
         </div>
+        <label className={styles.releaseContent} id={styles.emailParagraph}>
+          If you would like to recieve a copy of your release form please enter
+          you email address:{" "}
+        </label>
+        <input
+          className={styles.form}
+          type="email"
+          name="user_email"
+          aria-label="user_email"
+          value={formValues.user_email}
+          placeholder="Enter your email address"
+          onChange={handleInputChange}
+          onFocus={() => handleInputFocus("user_email")}
+          required
+        />
         <input
           className={styles.formSubmit}
           type="submit"
