@@ -532,8 +532,8 @@ export default function Releaseforms() {
           />
         </div>
         <label className={styles.releaseContent} id={styles.emailParagraph}>
-          If you would like to recieve a copy of your release form please enter
-          you email address:{" "}
+          If you would like to receive a copy of your release form please enter
+          your email address:{" "}
         </label>
         <input
           className={styles.form}
