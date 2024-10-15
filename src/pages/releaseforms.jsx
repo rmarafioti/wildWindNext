@@ -544,7 +544,6 @@ export default function Releaseforms() {
           placeholder="Enter your email address"
           onChange={handleInputChange}
           onFocus={() => handleInputFocus("user_email")}
-          required
         />
         <input
           className={styles.formSubmit}
