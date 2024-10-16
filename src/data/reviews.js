@@ -1,3 +1,4 @@
+//data for the reviews section of the aboutus.jsx pages
 export const reviews = [
   {
     id: 1,

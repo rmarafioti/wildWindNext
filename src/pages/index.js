@@ -12,7 +12,7 @@ import styles from "../styles/home.module.css";
 
 /**
  *
- * @component Home features the main landing page of the web app with video and copy for SEO
+ * @component Home features the main landing page of the web app, a paired down contact form passed in from the LandingPageForm.jsx component and copy for SEO
  */
 export default function Home() {
   const seoData = getSeoData("Home", {

@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
- * @component Contact features general static business info and links to outside sites
+ * @component Contact features general static business info and the passed in Form.jsx component along with links to outside sites
  */
 export default function Contact() {
   const seoData = getSeoData("Contact Us", {

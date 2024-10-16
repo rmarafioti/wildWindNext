@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   margin: 1rem 1rem 2rem 1rem;
-  position: relative; 
+  position: relative;
 }
 
 .homePhotoContainer {
@@ -18,7 +18,7 @@
   text-decoration: none;
   margin-bottom: 2rem;
   width: 700px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .welcome {
@@ -36,7 +36,7 @@
 }
 
 .phone {
-  color: var(--wildBlack)
+  color: var(--wildBlack);
 }
 
 .welcomeLink {
@@ -52,7 +52,7 @@
 .welcomeHeader {
   color: white;
   font-size: 18px;
-  padding: .8rem;
+  padding: 0.8rem;
   width: 300px;
   background-color: var(--wildDarkGreen);
   transition: background-color 0.3s ease;
@@ -71,7 +71,7 @@
 }
 
 .homePhotoContainer {
-  margin: 2rem 0rem .5rem 0rem;
+  margin: 2rem 0rem 0.5rem 0rem;
 }
 .homePhoto {
   height: auto;
@@ -198,21 +198,22 @@
 }
 
 @media (max-width: 586px) {
- .welcome {
-  font-size: 34px;
-  margin: .5rem 0rem 1rem 0rem;
-  padding: .3rem;
- }
- .walkinsLink {
-  margin-bottom: 1rem;
-}
- .shopLogo, .walkinsLink {
-  width: 100%
- }
- .mainHeader {
-  font-size: 30px;
-  margin-top: 0rem;
- }
+  .welcome {
+    font-size: 34px;
+    margin: 0.5rem 0rem 1rem 0rem;
+    padding: 0.3rem;
+  }
+  .walkinsLink {
+    margin-bottom: 1rem;
+  }
+  .shopLogo,
+  .walkinsLink {
+    width: 100%;
+  }
+  .mainHeader {
+    font-size: 30px;
+    margin-top: 0rem;
+  }
   .contactContainer {
     display: flex;
     flex-direction: column;
@@ -231,7 +232,7 @@
     width: 100%;
     margin-top: 0rem;
     margin-bottom: 0rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .homeLink {
     width: 100%;

@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "@/styles/requestsent.module.css";
 
 /**
- * @component RequestSent features a message to the user when the form on RequestAppt.jsx is successfully sent
+ * @component RequestSent features a message to the user when the contact form on Contact.jsx is successfully sent
  */
 export default function RequestSent() {
   return (
@@ -15,7 +15,10 @@ export default function RequestSent() {
           name="description"
           content="This is the request sent page of wildwindtattoo.com."
         />
-        <link rel="canonical" href="https://www.wildwindtattoo.com/requestsent" />
+        <link
+          rel="canonical"
+          href="https://www.wildwindtattoo.com/requestsent"
+        />
       </Head>
       <div className={styles.requestSentContainer}>
         <h1 className={styles.requestSentMessage}>

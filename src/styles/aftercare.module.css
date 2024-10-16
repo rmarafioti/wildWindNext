@@ -26,8 +26,8 @@
   font-weight: normal;
   text-align: center;
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem; 
-  width: 450px; 
+  padding-bottom: 0.5rem;
+  width: 450px;
 }
 
 .careContainer,
@@ -49,7 +49,7 @@
 
 .careContainer:hover {
   cursor: pointer;
-  border: 2px solid var(--wildDarkGreen)
+  border: 2px solid var(--wildDarkGreen);
 }
 
 .careContainerBottom {
@@ -72,7 +72,6 @@
 .iconButton {
   color: var(--wildBlack);
   display: flex;
-  border-radius: 5px;
   padding: 8px;
   font-size: 15px;
   background-color: var(--wildGoldTrans);
@@ -123,7 +122,8 @@
     text-wrap: wrap;
     padding-bottom: 1rem 0rem 1rem 0rem;
   }
-  .afterTagline, .aftercareLinksContainer,
+  .afterTagline,
+  .aftercareLinksContainer,
   .aftercareLinks {
     width: 100%;
   }

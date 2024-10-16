@@ -3,6 +3,10 @@ import { BsDot } from "react-icons/bs";
 
 import styles from "../styles/aboutus.module.css";
 
+/**
+ *
+ * @component OurMission is a section passed into aboutus.jsx
+ */
 export default function OurMission() {
   return (
     <>

@@ -4,6 +4,10 @@ import styles from "../styles/404.module.css";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
+/**
+ *
+ * @component Custom404 error page if the user is trying to access a route that is not available
+ */
 export default function Custom404() {
   const seoData = getSeoData("Page Not Found", {
     path: "/404",

@@ -4,10 +4,14 @@ import { IoArrowUp } from "react-icons/io5";
 
 import styles from "@/styles/scrolltop.module.css";
 
+/**
+ *
+ * @component ScrollTop allows the user to scroll back to the top of pages that have a lot of content on them
+ */
 export default function ScrollTop() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show the button when the user scrolls down 1000px
+  // Show the arrow when the user scrolls down 1000px
   const toggleVisibility = () => {
     if (window.pageYOffset > 1000) {
       setIsVisible(true);

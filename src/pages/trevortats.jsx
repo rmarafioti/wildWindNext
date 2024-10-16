@@ -14,7 +14,7 @@ import styles from "@/styles/trevortats.module.css";
 
 /**
  *
- * @component trevortats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
+ * @component TrevorTats features a series of photos by way of tattooPhotos.js for the user to browse through. Thumbnail photo gallery showing each image is visible on desktop while only the main photo the user is currently viewing is visible in mobile
  */
 export default function TrevorTats() {
   //usePhotoGallery hook imported from photoGallery.js

@@ -64,7 +64,7 @@
 
 .atBayPhoto {
   border-radius: 8px;
-  width:100%;
+  width: 100%;
   max-width: 560px;
   height: auto;
   margin-bottom: 1rem;
@@ -101,7 +101,8 @@
   .video,
   .atBayPhoto,
   .mediaLinksContainer,
-  .mediaLinks, .media {
+  .mediaLinks,
+  .media {
     width: 100%;
   }
   .mediaLinks {

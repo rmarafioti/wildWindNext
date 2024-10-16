@@ -1,3 +1,4 @@
+//images of tattoo work for each artist profile page
 export const richPhotos = [
   {
     id: 1,

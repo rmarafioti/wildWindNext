@@ -5,6 +5,10 @@ import { useRouter } from "next/router";
 
 import styles from "../styles/form.module.css";
 
+/**
+ *
+ * @component LandingPageForm is the paired down contact form which is passed into index.js aka the landing page
+ */
 export default function LandingPageForm() {
   const inputValidationError = {
     user_name: true,
@@ -26,7 +30,7 @@ export default function LandingPageForm() {
   const [fileSizeError, setFileSizeError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState(inputForm);
-
+  //validate each field in order
   const validateField = (field, value) => {
     let isValid = true;
     switch (field) {
@@ -42,15 +46,15 @@ export default function LandingPageForm() {
       default:
         break;
     }
-
+    // Set error to true if invalid
     setValidationError((prevErrors) => ({
       ...prevErrors,
-      [field]: !isValid, // Set error to true if invalid
+      [field]: !isValid,
     }));
 
     return isValid;
   };
-
+  //validation check of the next field after the field the user is currently on
   const handleInputFocus = (currentField) => {
     const fields = Object.keys(inputForm);
     const currentIndex = fields.indexOf(currentField);
@@ -59,32 +63,34 @@ export default function LandingPageForm() {
       validateField(nextField, formValues[nextField]);
     }
   };
-
+  // allow the user to change the vaklue of a form field
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
       ...formValues,
       [name]: value,
     });
-    validateField(name, value); // Validate field after change
+    // Validate field after change
+    validateField(name, value);
   };
-
+  //valid email check looks for an '@' and a '.'
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
+  //valid phone check looks for 10 integers
   const isValidPhone = (phone) => {
     const phoneDigits = phone.replace(/\D/g, "");
     return phoneDigits.length === 10;
   };
-
+  //check the form is valid if every validation error has been passed
   const isFormValid = () => {
     return (
       Object.values(validationError).every((error) => !error) && !fileSizeError
     );
   };
-
+  //if form is not valid when the users sends return the validation error that has not been passed
+  //else send form to emailjs and router the user to the request sent page
   const sendEmail = (e) => {
     e.preventDefault();
 

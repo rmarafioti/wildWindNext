@@ -30,7 +30,8 @@
 }
 
 @media (max-width: 586px) {
-  .header, .giftCardHeader {
+  .header,
+  .giftCardHeader {
     width: 100%;
   }
 }

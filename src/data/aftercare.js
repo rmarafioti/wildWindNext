@@ -1,3 +1,4 @@
+//data for aftercare instructions
 export const aftercare = [
   {
     id: 1,

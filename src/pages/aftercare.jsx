@@ -9,9 +9,9 @@ import { getSeoData, siteConfig } from "@/config/siteConfig";
 import styles from "../styles/aftercare.module.css";
 
 /**
- * @component Care features a functional pop up for tattoo care instructions
+ * @component Aftercare features a functional pop up for tattoo care instructions
  */
-export default function Care({ initialAftercare }) {
+export default function Aftercare({ initialAftercare }) {
   const { popUp, popUpContent, openAftercarePopUp, closePopUp } = usePopUp();
 
   const seoData = getSeoData("Tattoo Aftercare", {

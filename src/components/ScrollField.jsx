@@ -4,10 +4,14 @@ import { IoArrowDown } from "react-icons/io5";
 
 import styles from "@/styles/scrolltop.module.css";
 
-export default function ScrollTop() {
+/**
+ *
+ * @component ScrollField is passed into releaseforms.jsx nd will allow the user to scroll to the next field they need to fill out passed paragraphs of text if they would not like to read them
+ */
+export default function ScrollField() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show the button when the user scrolls down 1000px
+  // Show the scroll arrow when the user scrolls down 400px
   const toggleVisibility = () => {
     if (window.pageYOffset > 400) {
       setIsVisible(true);

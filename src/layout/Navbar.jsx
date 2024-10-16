@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import styles from "./Navbar.module.css";
 
 /**
- * @component navigation bar featuring a functional hamburger menu and drop down menu to route to each component in the application
+ * @component Navbar featuring a functional hamburger menu and drop down menu to route to each component in the application
  */
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   /**
-   * @toggleMenu open and close hamburger menu && close dropdown menus
+   * @toggleMenu open and close hamburger menu
    */
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

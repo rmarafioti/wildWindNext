@@ -3,7 +3,7 @@ import tattoocardstyles from "../styles/mercytats.module.css";
 
 /**
  *
- * @TattooCard holds each individual tattoo to be mapped through for the thumbnail gallery and is imported into tattoo artist gallery components. There are currenty two differnt cards to account for differt image sizing of each gallery.
+ * @allieCard holds each individual tattoo to be mapped through for the thumbnail gallery and is imported into tattoo artist gallery components. There are currenty two differnt cards to account for differt image sizing of each gallery.
  */
 export default function allieCard({ tattoo, onClick, photos }) {
   const imageUrl = tattoo.image;
