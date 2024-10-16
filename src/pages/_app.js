@@ -1,4 +1,3 @@
-// src/pages/_app.js
 import Layout from "@/layout/layout";
 import ".././globals.css";
 

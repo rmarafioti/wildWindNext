@@ -15,13 +15,13 @@ import styles from "../styles/aboutus.module.css";
 
 /**
  *
- * @component Shop features static information about the business as well as a slideshow of shop photos by way of shopPhotos.js
+ * @component AboutUs features static information and photos about the business
  */
-export default function Shop({ initialPhoto }) {
-  const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);
+export default function AboutUs({ initialPhoto }) {
+  /*const [currentPhoto, setCurrentPhoto] = useState(initialPhoto);*/
 
   const router = useRouter();
-
+  // hash routing when accessing a subcategory of the aboutus page
   useEffect(() => {
     const handleRouteChange = (url) => {
       if (url.includes("#")) {
@@ -38,10 +38,11 @@ export default function Shop({ initialPhoto }) {
                 window.pageYOffset +
                 yOffset;
               window.scrollTo({ top: y, behavior: "smooth" });
-            }, 300); // Add a 300ms delay
+              // Add a 300ms delay
+            }, 300);
           } else {
             // For larger screens, no delay needed
-            const yOffset = -50; // Adjust this based on your header height
+            const yOffset = -50;
             const y =
               element.getBoundingClientRect().top +
               window.pageYOffset +
@@ -108,8 +109,8 @@ export default function Shop({ initialPhoto }) {
       ],
     },
   });
-
-  useEffect(() => {
+  //save this function for when slideshow photos are implemented
+  /*useEffect(() => {
     let isMounted = true;
     let currentIndex = 0;
 
@@ -128,7 +129,7 @@ export default function Shop({ initialPhoto }) {
       isMounted = false;
       clearInterval(interval);
     };
-  }, []);
+  }, []);*/
 
   return (
     <>

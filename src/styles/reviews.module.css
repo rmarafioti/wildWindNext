@@ -104,13 +104,13 @@
 
 @media (max-width: 586px) {
   .reviewLinksContainer,
-  .reviewLinks, .reviews, .reviewPage {
+  .reviewLinks,
+  .reviews,
+  .reviewPage,
+  .header {
     width: 100%;
   }
   .reviewLinks {
     background-color: var(--wildGold);
-  }
-  .header {
-    width: 100%;
   }
 }

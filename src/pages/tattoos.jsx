@@ -3,9 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollTop from "@/components/ScrollTop";
 import SEO from "@/components/SEO";
-import styles from "../styles/tattoos.module.css";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
+import styles from "../styles/tattoos.module.css";
+
+/**
+ *
+ * @component Tattoos the 'Our Artists' page of the site where a user can choose an artist and then view their individual portfolio page
+ */
 export default function Tattoos({ initialArtists }) {
   const [artists, setArtists] = useState(initialArtists);
 

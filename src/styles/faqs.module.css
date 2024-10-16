@@ -37,7 +37,7 @@
   margin-top: 1rem;
   border: solid 2px var(--wildBlue);
   cursor: pointer;
-  width: 480px
+  width: 480px;
 }
 
 .faq {
@@ -109,7 +109,8 @@
   .popUpContent {
     border-radius: 0px;
   }
-.header, .faqLinksContainer,
+  .header,
+  .faqLinksContainer,
   .faqLinks {
     width: 100%;
   }

@@ -24,7 +24,6 @@
   padding-bottom: 0.5rem;
 }
 
-
 .ourArtists {
   width: 480px;
   height: auto;
@@ -69,8 +68,11 @@
 }
 
 @media (max-width: 586px) {
-  .artistLinksContainer, .ourArtists,
-  .artistLink, .header, .tatPhoto {
+  .artistLinksContainer,
+  .ourArtists,
+  .artistLink,
+  .header,
+  .tatPhoto {
     width: 100%;
   }
 }
