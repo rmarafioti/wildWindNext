@@ -4,6 +4,10 @@ import SEO from "@/components/SEO";
 import styles from "../styles/media.module.css";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
+/**
+ *
+ * @component Media is a section passed into aboutus.jsx
+ */
 export default function Media() {
   const seoData = getSeoData("Media", {
     path: "/aboutus",

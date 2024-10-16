@@ -3,9 +3,9 @@ import tattoocardstyles from "../styles/richtats.module.css";
 
 /**
  *
- * @TattooCard holds each individual tattoo to be mapped through for the thumbnail gallery and is imported into tattoo artist gallery components. There are currenty two differnt cards to account for differt image sizing of each gallery.
+ * @RichCard holds each individual tattoo to be mapped through for the thumbnail gallery and is imported into tattoo artist gallery components. There are currenty two differnt cards to account for differt image sizing of each gallery.
  */
-export default function richCard({ tattoo, onClick, photos }) {
+export default function RichCard({ tattoo, onClick, photos }) {
   const imageUrl = tattoo.image;
 
   return (

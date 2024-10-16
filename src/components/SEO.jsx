@@ -1,5 +1,4 @@
-// src/components/SEO.jsx
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function SEO({ title, description, canonical, schema }) {
   return (

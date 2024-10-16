@@ -7,6 +7,10 @@ import DateTimeField from "./DateTimeField";
 
 import styles from "../styles/form.module.css";
 
+/**
+ *
+ * @component Form is the contact form which is passed into the contact.jsx page
+ */
 export default function Form() {
   const inputValidationError = {
     user_name: true,
@@ -37,10 +41,14 @@ export default function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [formValues, setFormValues] = useState(inputForm);
 
+  /**
+   *
+   * @handleInputChange functionality for file size validation and allowing the user to change values of unput fields
+   */
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
-
+    //check for a file size error for the users attached file if fikle is too larger don't attach file
     if (name === "my_file" && files) {
       const selectedFile = files[0];
       const maxFileSize = 500 * 1024; // 500KB
@@ -55,15 +63,15 @@ export default function Form() {
         setFileSizeError(false);
       }
     }
-
+    //allow user to change form values
     setFormValues((prevValues) => ({
       ...prevValues,
       [name]: newValue,
     }));
-
+    //then validate field
     validateField(name, newValue);
   };
-
+  //validation check for each form field
   const validateField = (field, value) => {
     let isValid = true;
     switch (field) {
@@ -92,7 +100,7 @@ export default function Form() {
       default:
         break;
     }
-
+    //set validation error message if the form field is not filled out and the users in on to another form field
     setValidationError((prevErrors) => ({
       ...prevErrors,
       [field]: !isValid,
@@ -100,7 +108,7 @@ export default function Form() {
 
     return isValid;
   };
-
+  //validation check of the next field which shows an error message when the user is filling out the field before it
   const handleInputFocus = (currentField) => {
     const fields = Object.keys(inputForm);
     const currentIndex = fields.indexOf(currentField);
@@ -109,23 +117,24 @@ export default function Form() {
       validateField(nextField, formValues[nextField]);
     }
   };
-
+  //valid email check looks for an '@' and a '.'
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
+  //valid phone check looks for 10 integers
   const isValidPhone = (phone) => {
     const phoneDigits = phone.replace(/\D/g, "");
     return phoneDigits.length === 10;
   };
-
+  //check the form is valid if every validation error has been passed
   const isFormValid = () => {
     return (
       Object.values(validationError).every((error) => !error) && !fileSizeError
     );
   };
-
+  //if form is not valid when the users sends return the validation error that has not been passed
+  //else send form to emailjs and router the user to the request sent page
   const sendEmail = (e) => {
     e.preventDefault();
 

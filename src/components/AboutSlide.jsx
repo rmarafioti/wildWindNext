@@ -1,6 +1,7 @@
-import React from "react";
+/*import React from "react";
 import Image from "next/image";
 import styles from "@/styles/aboutus.module.css";
+
 
 export default function AboutSlide({ imageUrl, isFading }) {
   return (
@@ -17,4 +18,4 @@ export default function AboutSlide({ imageUrl, isFading }) {
       />
     </div>
   );
-}
+}*/

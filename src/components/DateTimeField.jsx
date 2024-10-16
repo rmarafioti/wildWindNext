@@ -48,7 +48,7 @@ export default function DateTimeField({
   ];
 
   /**
-   * @function handleAddTime if a selected day && selected are chosen add them to an array of strings called selected times
+   * @function handleAddTime if a selected day && selected time are chosen add them to an array of strings called selected times
    */
   const handleAddTime = () => {
     if (selectedDay && selectedTime) {
@@ -66,7 +66,7 @@ export default function DateTimeField({
   };
 
   /**
-   * @function handleRemoveTime functionality to remove a selected time from the selected times array
+   * @function handleRemoveTime functionality to remove a selected day & time from the selected times array
    * @param index of the selected time in the array
    */
   const handleRemoveTime = (index) => {

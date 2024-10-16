@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
 /**
- * @component Reviews features reviews by clients about the business by way of review.js
+ * @component Reviews is a section of reviews by clients about the business by way of review.js which is passed into aboutus.jsx
  */
 export default function Reviews() {
   const seoData = getSeoData("Reviews", {
