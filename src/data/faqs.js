@@ -1,3 +1,4 @@
+// data for FAQs page
 export const faqs = [
   {
     id: 1,

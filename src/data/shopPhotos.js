@@ -1,3 +1,4 @@
+//images of the business for the landing page and about us page
 export const shopPhotos = [
   {
     id: 1,
