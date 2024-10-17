@@ -13,7 +13,7 @@ export default function ScrollField() {
 
   // Show the scroll arrow when the user scrolls down 400px
   const toggleVisibility = () => {
-    if (window.pageYOffset > 400) {
+    if (window.pageYOffset > 400 && window.pageYOffset < 2000) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
