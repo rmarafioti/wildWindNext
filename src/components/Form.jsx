@@ -48,7 +48,7 @@ export default function Form() {
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
-    //check for a file size error for the users attached file if fikle is too larger don't attach file
+    //check for a file size error for the users attached file if file is too larger don't attach file
     if (name === "my_file" && files) {
       const selectedFile = files[0];
       const maxFileSize = 500 * 1024; // 500KB

@@ -61,8 +61,13 @@ export default function AllieTats() {
             className={styles.artistHeader}
           />
         </div>
-        <h1 className={styles.artistAboutHeader}>No bio at this time</h1>
+        <h1 className={styles.artistAboutHeader}>
+          Allie Sider has 20-plus years of experience in tattooing.
+        </h1>
         <p className={styles.artistAbout}>
+          They focus on black and grey designs in varying styles. Allie strives
+          to provide a welcoming and collaborative experience where clients can
+          feel comfortable expressing their ideas and visions.
           <a
             className={styles.artistIgIcon}
             href="https://www.instagram.com/sider.tattoo/"

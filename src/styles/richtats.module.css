@@ -25,6 +25,7 @@
   display: flex;
   flex-direction: column;
   color: var(--wildBlack);
+  margin-bottom: 0.5rem;
 }
 
 .artistAbout {
@@ -77,6 +78,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
+  width: 680px;
 }
 
 .tattooGallery img {

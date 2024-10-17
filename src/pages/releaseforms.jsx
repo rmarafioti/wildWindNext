@@ -67,23 +67,21 @@ export default function Releaseforms() {
     "None",
   ];
   const consent = ["Yes", "No"];
-
+  // check to see if a file has been attached, if not indicate with an error statement
   const handleImageChange = (file) => {
     if (!file) {
       console.error("No file selected");
       return;
     }
 
-    // Compress the image
+    // Compress the image to below 500kb
     new Compressor(file, {
-      quality: 0.6, // Adjust quality as needed
+      quality: 0.6,
       maxWidth: 1000,
       maxHeight: 1000,
       success(compressedResult) {
-        console.log("Compressed image size: ", compressedResult.size);
-
+        // 500KB limit
         if (compressedResult.size > 500 * 1024) {
-          // 500KB limit
           setFileSizeError(true);
           setFormValues((prevValues) => ({ ...prevValues, my_file: null }));
         } else {
@@ -93,7 +91,6 @@ export default function Releaseforms() {
             ...prevValues,
             my_file: compressedResult,
           }));
-
           // Validate after setting
           validateField("my_file", compressedResult);
 
@@ -107,8 +104,6 @@ export default function Releaseforms() {
             dataTransfer.items.add(file);
             fileInput.files = dataTransfer.files; // Assign compressed file to the input
           }
-
-          console.log("Compressed image added to the form:", compressedResult);
         }
       },
       error(err) {
@@ -117,6 +112,7 @@ export default function Releaseforms() {
     });
   };
 
+  //if risk indicator is checked push the value to the updated risks array and change risk indicators
   const handleRiskChange = (e) => {
     const { value, checked } = e.target;
     let updatedRisks = [...formValues.user_risks];
@@ -139,26 +135,27 @@ export default function Releaseforms() {
     validateField("user_consent", formValues.user_consent);
   };
 
+  /**
+   *
+   * @handleInputChange functionality for file size validation and allowing the user to change values of unput fields
+   */
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     const newValue = files ? files[0] : value;
 
     if (name === "my_file" && files) {
       const selectedFile = files[0];
-      handleImageChange(selectedFile); // Call the image compression function
+      // Call the image compression function
+      handleImageChange(selectedFile);
       return;
     }
 
-    const isValidEmail = (email) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    };
-
+    //allow user to change form values
     setFormValues((prevValues) => ({
       ...prevValues,
       [name]: newValue,
     }));
-
+    //then validate field
     validateField(name, newValue);
 
     // If user_consent is filled, trigger validation for my_file
@@ -170,7 +167,6 @@ export default function Releaseforms() {
   // Validate form fields
   const validateField = (field, value) => {
     let isValid = true;
-
     switch (field) {
       case "artist_name":
         isValid = value.trim() !== "";
@@ -191,7 +187,7 @@ export default function Releaseforms() {
       default:
         break;
     }
-
+    //set validation error message if the form field is not filled out and the users in on to another form field
     setValidationError((prevErrors) => ({
       ...prevErrors,
       [field]: !isValid,
@@ -239,15 +235,14 @@ export default function Releaseforms() {
     if (isFormValid) {
       if (compressedImage) {
         const formData = new FormData(form.current);
+        // Attach compressed image
+        formData.set("my_file", compressedImage, "compressed-image.jpg");
 
-        formData.set("my_file", compressedImage, "compressed-image.jpg"); // Attach compressed image
-
-        const fileInput = form.current.querySelector('input[name="my_file"]');
+        /*const fileInput = form.current.querySelector('input[name="my_file"]');
         if (fileInput) {
           console.log("File input before sending:", fileInput.files[0]); // Log the file being sent
-        }
+        }*/
       }
-
       // Proceed with sending the email
       sendEmail();
     } else {
@@ -261,10 +256,10 @@ export default function Releaseforms() {
 
     emailjs
       .sendForm(
-        "service_5she545", // Your service ID
-        "template_6a8lzj9", // Your template ID
-        form.current, // The HTML form reference
-        "N8iJs0OwqbPvxYuRo" // Your user ID
+        "service_5she545",
+        "template_6a8lzj9",
+        form.current,
+        "N8iJs0OwqbPvxYuRo"
       )
       .then(
         () => {
@@ -533,7 +528,7 @@ export default function Releaseforms() {
         </div>
         <label className={styles.releaseContent} id={styles.emailParagraph}>
           If you would like to receive a copy of your release form please enter
-          your email address:{" "}
+          your email address:
         </label>
         <input
           className={styles.form}
