@@ -117,12 +117,6 @@ export async function getServerSideProps() {
       slug: "mercytats",
     },
     {
-      name: "Trevor Aarsvold",
-      image:
-        "https://res.cloudinary.com/dzpne110u/image/upload/v1724293055/wildWindSite/trevorTattoos/DSC_5860_dkqsbm.jpg",
-      slug: "trevortats",
-    },
-    {
       name: "Allie Sider",
       image:
         "https://res.cloudinary.com/dzpne110u/image/upload/v1725317810/wildWindSite/allieTattoos/0-13_1_1_e3s1kl.png",
