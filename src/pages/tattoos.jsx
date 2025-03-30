@@ -111,12 +111,6 @@ export async function getServerSideProps() {
       slug: "richtats",
     },
     {
-      name: "Mercy Wright",
-      image:
-        "https://res.cloudinary.com/dzpne110u/image/upload/v1720058329/wildWindSite/mercedesTats/mercedesTwo_clbmtt.jpg",
-      slug: "mercytats",
-    },
-    {
       name: "Allie Sider",
       image:
         "https://res.cloudinary.com/dzpne110u/image/upload/v1725317810/wildWindSite/allieTattoos/0-13_1_1_e3s1kl.png",
