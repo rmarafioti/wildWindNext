@@ -87,22 +87,11 @@ export default function Home() {
         />
       </div>
       <article className={styles.home}>
-        <div className={styles.walkinsLink}>
-          <p className={styles.welcome}>Walk-ins Welcome!</p>
-          <p className={styles.welcomeTag}>
-            To inquire about day of availability fill out the form below or call
-            us:{" "}
-            <a className={styles.phone} href="tel:+17732272027">
-              {" "}
-              773.227.2027
-            </a>
-          </p>
-          <Link href="/contact" className={styles.welcomeLink}>
-            <p className={styles.welcomeHeader}>
-              Click here for all other appointment requests
-            </p>
-          </Link>
-        </div>
+        <p className={styles.welcome}>Now operating by appointment only!</p>
+        <p className={styles.welcomeHeader}>
+          fill out the form below to make a request
+        </p>
+
         <LandingPageForm />
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"

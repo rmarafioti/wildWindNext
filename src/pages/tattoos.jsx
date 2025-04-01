@@ -78,9 +78,6 @@ export default function Tattoos({ initialArtists }) {
         />
         <ScrollTop />
       </div>
-      <h1 className={styles.headerTag}>
-        Choose one of our talented artists to best fit your tattoo needs
-      </h1>
       <div className={styles.artistLinksContainer}>
         {artists.map((artist) => (
           <Link
@@ -109,12 +106,6 @@ export async function getServerSideProps() {
       image:
         "https://res.cloudinary.com/dzpne110u/image/upload/v1717295407/wildWindSite/gibsonGirl_ma7ldx.jpg",
       slug: "richtats",
-    },
-    {
-      name: "Allie Sider",
-      image:
-        "https://res.cloudinary.com/dzpne110u/image/upload/v1725317810/wildWindSite/allieTattoos/0-13_1_1_e3s1kl.png",
-      slug: "allietats",
     },
   ];
 
