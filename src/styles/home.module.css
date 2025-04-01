@@ -26,6 +26,7 @@
   color: var(--wildGreen);
   font-weight: bold;
   letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 .welcomeTag {
@@ -39,23 +40,12 @@
   color: var(--wildBlack);
 }
 
-.welcomeLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0rem 1rem 0rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--wildBlack);
-}
-
 .welcomeHeader {
-  color: white;
-  font-size: 18px;
+  color: var(--wildBlack);
+  font-size: 22px;
   padding: 0.8rem;
-  width: 300px;
-  background-color: var(--wildDarkGreen);
-  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+  width: 480px;
 }
 
 .shopLogo {
@@ -203,11 +193,13 @@
     margin: 0.5rem 0rem 1rem 0rem;
     padding: 0.3rem;
   }
+  .welcomeHeader {
+    width: 100%;
+  }
   .walkinsLink {
     margin-bottom: 1rem;
   }
-  .shopLogo,
-  .walkinsLink {
+  .shopLogo {
     width: 100%;
   }
   .mainHeader {

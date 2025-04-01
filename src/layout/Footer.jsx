@@ -41,21 +41,10 @@ export default function Footer() {
             </p>
             <div className={styles.hours}>
               <p className={styles.times} id={styles.timesTop}>
-                <b className={styles.bold}>Open 7 days a week</b>
-              </p>
-              <p className={styles.times}>
-                <b className={styles.bold}>
-                  *hours vary daily please call ahead*
-                </b>{" "}
+                <b className={styles.bold}>By appointment only</b>
               </p>
             </div>
           </section>
-          <div className={styles.contactInfo}>
-            PHONE:
-            <p className={styles.contactInfoValue} id={styles.phone}>
-              <a href="tel:+17732272027"> 773.227.2027</a>
-            </p>
-          </div>
           <div className={styles.contactInfo}>
             EMAIL:
             <p className={styles.contactInfoValue} id={styles.email}>

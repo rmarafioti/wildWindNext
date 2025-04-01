@@ -113,9 +113,6 @@ export default function Navbar() {
             <Link className={styles.subLink} href="/richtats">
               <li className={styles.subItem}>Rich Marafioti</li>
             </Link>
-            <Link className={styles.subLink} href="/allietats">
-              <li className={styles.subItem}>Allie Sider</li>
-            </Link>
           </ul>
         </li>
         <li className={styles.navItem}>
@@ -193,11 +190,6 @@ export default function Navbar() {
               <div className={styles.subCategory}>
                 <Link className={styles.subLink} href="/richtats">
                   <p className={styles.subItem}>Rich Marafioti</p>
-                </Link>
-                <Link className={styles.subLink} href="/allietats">
-                  <p className={styles.subItem} id={styles.subItemBottom}>
-                    Allie Sider
-                  </p>
                 </Link>
               </div>
             </div>
