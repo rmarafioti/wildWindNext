@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </section>
       </div>
-      <div id={styles.footerIcons}>
+      {/*<div id={styles.footerIcons}>
         <a
           className={styles.footerIcon}
           href="https://www.instagram.com/wildwindtattoo/?hl=en"
@@ -70,7 +70,7 @@ export default function Footer() {
         >
           <FaFacebookSquare />
         </a>
-      </div>
+      </div>*/}
       <p id={styles.footerTag}>copyright 2024 Marf inc.</p>
     </footer>
   );
