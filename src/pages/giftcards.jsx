@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import CheckoutForm from "@/components/CheckoutForm";
 import SEO from "@/components/SEO";
 import { getSeoData, siteConfig } from "@/config/siteConfig";
 
@@ -55,9 +54,8 @@ export default function GiftCards() {
         />
       </div>
       <h1 className={styles.faqTagline}>
-        Treat a friend or family member to a Wild Wind Tattoo gift card
+        We no longer offer gift cards, apologies for the inconvenience 😭
       </h1>
-      <CheckoutForm />
     </article>
   );
 }
