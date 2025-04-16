@@ -124,19 +124,12 @@ export default function Navbar() {
         </li>
         <li className={styles.navItem}>
           <Link className={styles.navContainer} href="/faqs">
-            <h4 className={styles.link} role="navbar element Contact">
-              FAQs
-            </h4>
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.navContainer} href="/giftcards">
             <h4
               className={styles.link}
-              id={styles.giftCards}
-              role="navbar element Giftcards"
+              id={styles.faqs}
+              role="navbar element Contact"
             >
-              GIFTCARDS
+              FAQs
             </h4>
           </Link>
         </li>
@@ -206,13 +199,6 @@ export default function Navbar() {
           <Link className={styles.navContainer} href="/faqs">
             <h4 className={styles.link} role="heading">
               FAQs
-            </h4>
-          </Link>
-        </div>
-        <div className={styles.navItem}>
-          <Link className={styles.navContainer} href="/giftcards">
-            <h4 className={styles.link} id={styles.giftCards} role="heading">
-              GIFTCARDS
             </h4>
           </Link>
         </div>
