@@ -44,8 +44,25 @@
   color: var(--wildBlack);
   font-size: 22px;
   padding: 0.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 480px;
+}
+
+.shops {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.shopItem {
+  padding: 1rem;
+}
+
+.shop {
+  color: var(--wildGreen);
+  font-size: 20px;
 }
 
 .shopLogo {

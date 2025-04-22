@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+#navRight {
+  visibility: hidden;
+}
+
 #navLeft {
   margin-left: auto; 
   margin-right: 0rem;
@@ -193,7 +197,7 @@
   #contactContainer {
     display: none;
   }
-  .contactHomeButton {
+  /*.contactHomeButton {
     font-size: 20px;
     font-weight: bold;
     color: var(--wildBlack);
@@ -205,7 +209,7 @@
     width: 90%;
     display: block;
     text-decoration: none;
-  }
+  }*/
 
   /* hamburger */
 

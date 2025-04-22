@@ -40,9 +40,6 @@ export default function Custom404() {
         <div className={styles.contactInfo}>
           <p>Need help? Contact us:</p>
           <p className={styles.contactInfoValue}>
-            <a href="tel:+17732272027">773.227.2027</a>
-          </p>
-          <p className={styles.contactInfoValue}>
             <a href="mailto:wildwindtattoo@gmail.com">
               wildwindtattoo@gmail.com
             </a>
