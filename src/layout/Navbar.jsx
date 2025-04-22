@@ -31,8 +31,8 @@ export default function Navbar() {
         <section className={styles.navelements}>
           <Link
             id={styles.contactContainer}
-            href="/contact"
-            aria-label="icon which links to the website's contact page"
+            href="/404"
+            aria-label="icon which links to the website's contact page that is disabled for now"
           >
             <div id={styles.navLeft}>
               <button className={styles.contactButton}>Contact Us</button>
@@ -60,8 +60,8 @@ export default function Navbar() {
           </div>
           <Link
             id={styles.contactContainer}
-            href="/contact"
-            aria-label="icon which links to the website's contact page"
+            href="/404" /*href is 404 to hide contact form page*/
+            aria-label="icon which links to the website's contact page that is disabled for now"
           >
             <div id={styles.navRight}>
               <button className={styles.contactButton}>Contact Us</button>

@@ -41,7 +41,9 @@ export default function Footer() {
             </p>
             <div className={styles.hours}>
               <p className={styles.times} id={styles.timesTop}>
-                <b className={styles.bold}>By appointment only</b>
+                <b className={styles.bold}>
+                  Not open to the public at this time.
+                </b>
               </p>
             </div>
           </section>

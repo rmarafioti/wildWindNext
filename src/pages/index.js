@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LandingPageForm from "@/components/LandingPageForm";
 import { IoCheckmark } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import ScrollTop from "@/components/ScrollTop";
@@ -87,12 +86,55 @@ export default function Home() {
         />
       </div>
       <article className={styles.home}>
-        <p className={styles.welcome}>Now operating by appointment only!</p>
+        {/*<p className={styles.welcome}>Now operating by appointment only!</p>*/}
         <p className={styles.welcomeHeader}>
-          fill out the form below to make a request
+          We are not taking on new clients at this time, but we recommend the
+          following Chicago tattoo shops that accept walk-ins daily:
         </p>
-
-        <LandingPageForm />
+        <ul className={styles.shops}>
+          <li className={styles.shopItem}>
+            <a
+              className={styles.shop}
+              href="https://g.co/kgs/tMGZ4VU"
+              target="_blank"
+            >
+              Chicago Tattoo Company
+            </a>
+          </li>
+          <li className={styles.shopItem}>
+            <a
+              className={styles.shop}
+              href="https://g.co/kgs/ziE8Nz5"
+              target="_blank"
+            >
+              Great Lakes Tattoo
+            </a>
+          </li>
+          <li className={styles.shopItem}>
+            <a
+              className={styles.shop}
+              href="https://g.co/kgs/R2vsAM6"
+              target="_blank"
+            >
+              Tatu Tattoo
+            </a>
+          </li>
+        </ul>
+        <p className={styles.welcomeHeader}>
+          If you&apos;re looking for a private studio environment, we also
+          recommend:
+        </p>
+        <ul className={styles.shops}>
+          <li className={styles.shopItem}>
+            <a
+              className={styles.shop}
+              href="https://g.co/kgs/8HjpMVf"
+              target="_blank"
+            >
+              Ash and Ivory
+            </a>
+          </li>
+        </ul>
         <Image
           src="https://res.cloudinary.com/dzpne110u/image/upload/w_auto,f_auto,q_auto/v1725992110/wildWindSite/IMG_7287_zchqxy.jpg"
           alt="Tattoo shop logo"
